@@ -1,2 +1,2 @@
-# website-2021
- hackdavis.io
+# HackDavis Website 2021
+ Made with ☕️ & 💛 in Davis
