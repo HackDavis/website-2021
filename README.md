@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  HackDavis Website 2021
+  HackDavis Website 2021 navbar
 </h1>
 
 Made with ☕️ & 💛 in Davis
