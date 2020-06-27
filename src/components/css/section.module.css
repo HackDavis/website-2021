@@ -1,0 +1,11 @@
+div 
+{
+    display: block;
+    height: 100vh;
+    background-color: aquamarine;
+}
+
+div:nth-child(even)
+{
+    background-color:red;
+}
