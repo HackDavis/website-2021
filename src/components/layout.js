@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
         <Section id="section2">b</Section>
         <Section id="section3">c</Section>
         <Footer></Footer>
-        
     </>
   )
 }
