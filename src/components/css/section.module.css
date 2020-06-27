@@ -1,11 +1,13 @@
-div 
+.section
 {
+    position: relative;
     display: block;
     height: 100vh;
     background-color: aquamarine;
+    padding: 10px;
 }
 
-div:nth-child(even)
+.section:nth-child(even)
 {
-    background-color:red;
+    background-color: aqua;
 }

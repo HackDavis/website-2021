@@ -1,0 +1,9 @@
+.navstyle
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: none;
+    border-bottom: 2px solid red;
+}

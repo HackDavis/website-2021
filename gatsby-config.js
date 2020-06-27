@@ -1,3 +1,4 @@
+
 module.exports = {
   siteMetadata: {
     title: `HackDavis`,
@@ -13,6 +14,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `bootstrap`,
+    `reactstrap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

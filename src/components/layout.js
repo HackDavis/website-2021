@@ -11,6 +11,8 @@ import NavBar from "./navbar"
 
 import "./css/layout.module.css"
 import Section from "./section"
+import FloatingLogo from "./floatinglogo"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   /*const data = useStaticQuery(graphql`
@@ -25,12 +27,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
-        <Section>
+        <FloatingLogo></FloatingLogo>
+        <NavBar>
           <main>{children}</main>
-        </Section>
-        <Section>a</Section>
-        <Section>b</Section>
-        <Section>c</Section>
+        </NavBar>
+        <Section>Banana</Section>
+        <Section id="section1">a</Section>
+        <Section id="section2">b</Section>
+        <Section id="section3">c</Section>
+        <Footer></Footer>
+        
     </>
   )
 }

@@ -1,11 +1,14 @@
 import React from "react"
 
-import  "./css/section.module.css"
+import styles from "./css/section.module.css"
+import { Button } from 'reactstrap';
 
-const Section = ({ children }) => {
+
+const Section = ({ children, id }) => {
     return (
         <>
-            <div>{children}</div>
+        <div id={id} className={styles.section}>
+            <Button color="primary">hello i am button</Button>{' '}{children}</div>
         </>
     )
 }
