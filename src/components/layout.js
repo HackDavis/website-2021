@@ -31,10 +31,10 @@ const Layout = ({ children }) => {
         <NavBar>
           <main>{children}</main>
         </NavBar>
-        <Section>Banana</Section>
-        <Section id="section1">a</Section>
-        <Section id="section2">b</Section>
-        <Section id="section3">c</Section>
+        <Section id="section1">Section 1</Section>
+        <Section id="section2">Section 2</Section>
+        <Section id="section3">Section 3</Section>
+        <Section id="section4">Section 4</Section>
         <Footer></Footer>
     </>
   )

@@ -5,3 +5,13 @@
  */
 
 // You can delete this file if you're not using it
+exports.onCreateWebpackConfig = ({
+    actions,
+  }) => {
+    const { setWebpackConfig } = actions;
+    setWebpackConfig({
+      externals: {
+        jQuery: 'jquery', // important: 'Q' capitalized
+      }
+    })
+  }

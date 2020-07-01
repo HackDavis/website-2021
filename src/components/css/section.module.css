@@ -5,6 +5,8 @@
     height: 100vh;
     background-color: aquamarine;
     padding: 10px;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .section:nth-child(even)
