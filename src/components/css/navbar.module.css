@@ -1,5 +1,6 @@
 .navstyle
 {
+    font-size: 18px;
     position: fixed;
     top: 0;
     right: 0;
@@ -7,7 +8,41 @@
     background-color: none;
 }
 
-.selected
+div.underline
 {
-    border-bottom: 2px solid red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    bottom: -8px;
+    left: 50%;
+    width: 0%;
+    display: block;
+    border-bottom: 4px solid pink;
+    transition: 0.2s ease-in-out width;
+}
+
+div.underline.selected
+{
+    width: 100%;
+}
+
+.navitem
+{
+    position: relative;
+    margin: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100px;
+}
+
+.navitem *
+{
+    color: white !important;
+}
+
+.navbutton
+{
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    text-decoration: none !important;
 }

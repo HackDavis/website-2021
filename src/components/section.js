@@ -8,7 +8,7 @@ const Section = ({ children, id }) => {
     return (
         <>
         <div id={id} className={styles.section}>
-            <Button color="primary">hello i am button</Button>{' '}{children}</div>
+        {children}</div>
         </>
     )
 }

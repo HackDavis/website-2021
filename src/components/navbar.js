@@ -17,8 +17,9 @@ import {
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import ReactDOM from 'react-dom';
 import $ from "jquery";
-import styles from "./css/navbar.module.css"
-import styled from "styled-components"
+import styles from "./css/navbar.module.css";
+import styled from "styled-components";
+import Navitem from "./navitem";
 
 const NavBar = ( {toggle, isOpen} ) => {
 
@@ -34,6 +35,12 @@ const NavBar = ( {toggle, isOpen} ) => {
                 navItem: navItems.eq(i),
                 page: $(`#${id}`)
             }
+
+            if (i == 0)
+            {
+                $els.navItem.find(`.${styles.underline}`).addClass(styles.selected);
+            }
+
             return {id, $els};
         });
 
@@ -46,12 +53,12 @@ const NavBar = ( {toggle, isOpen} ) => {
             {
                 let anchor = anchors[i];
                 let $els = anchor.$els;
-                let anchorTop = $els.page.offset().top;
+                let anchorTop = $els.page.offset().top - ($els.page.height()/2);
 
                 if (scrollTop >= anchorTop)
                 {
-                    $(".nav-item").removeClass(styles.selected);
-                    $els.navItem.addClass(styles.selected);
+                    $(".nav-item").find(`div.${styles.underline}`).removeClass(styles.selected);
+                    $els.navItem.find(`.${styles.underline}`).addClass(styles.selected);
                     break;
                 }
                 
@@ -65,22 +72,10 @@ const NavBar = ( {toggle, isOpen} ) => {
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
               <Nav className="mr-auto" navbar>
-                <NavItem data-id="section1">
-                  <Button onClick={()=> scrollTo('#section1')}>About</Button>
-                  {/* <NavLink>About</NavLink> */}
-                </NavItem>
-                <NavItem data-id="section2">
-                  <Button onClick={()=> scrollTo('#section2')}>Recap</Button>
-                  {/* <NavLink href="/#section2">Recap</NavLink> */}
-                </NavItem>
-                <NavItem data-id="section3">
-                  <Button onClick={()=> scrollTo('#section3')}>FAQ</Button>
-                  {/* <NavLink href="/#section3">FAQ</NavLink> */}
-                </NavItem>
-                <NavItem data-id="section4">
-                  <Button onClick={()=> scrollTo('#section4')}>Sponsors</Button>
-                  {/* <NavLink href="/#section4">Sponsors</NavLink> */}
-                </NavItem>
+                  <Navitem name="About" section_id="section1"></Navitem>
+                  <Navitem name="Recap" section_id="section2"></Navitem>
+                  <Navitem name="FAQ" section_id="section3"></Navitem>
+                  <Navitem name="Sponsors" section_id="section4"></Navitem>
               </Nav>
             </Collapse>
           </Navbar>

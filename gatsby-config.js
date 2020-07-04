@@ -10,6 +10,12 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     {
+      resolve: `gatsby-plugin-anchor-links`,
+      options: {
+       offset: -100
+     }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
