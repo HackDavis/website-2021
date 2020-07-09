@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from "./css/modal.module.css"
+import { isModalOpen, setIsModalOpen } from "./modal_state"
+
 
 const Modal = ( {children}) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    return 
-        {isModalOpen && (
+    return(
+        isModalOpen && (
         <div className={styles.modal}>
             <div className={styles.background}>
                 <div className={styles.container}>
@@ -15,7 +15,7 @@ const Modal = ( {children}) => {
             </div>
         </div>
         )
-    };
-}
+    );
+};
 
 export default Modal

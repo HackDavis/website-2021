@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
   return (
     <>
         <FloatingLogo></FloatingLogo>
+        <LoginModal></LoginModal>
         <NavBar>
           <main>{children}</main>
         </NavBar>
