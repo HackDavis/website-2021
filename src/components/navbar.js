@@ -20,8 +20,19 @@ import $ from "jquery";
 import styles from "./css/navbar.module.css";
 import styled from "styled-components";
 import Navitem from "./navitem";
+import { getUser, isLoggedIn } from "../utils/auth"
 
 const NavBar = ( {toggle, isOpen} ) => {
+
+  
+  // Original working code to add the "Sign In" page to the navbar
+  // let details;
+  // if (!isLoggedIn()) {
+  //   details = ( <Button ><a href="/app/profile">Log In</a></Button> )
+  // } else {
+  //   const { displayName, email } = getUser()
+  //   details = ( <Button ><a href="/app/profile">{displayName}'s Profile</a></Button> )
+  // }
 
     useEffect(() => 
     {
@@ -76,6 +87,8 @@ const NavBar = ( {toggle, isOpen} ) => {
                   <Navitem name="Recap" section_id="section2"></Navitem>
                   <Navitem name="FAQ" section_id="section3"></Navitem>
                   <Navitem name="Sponsors" section_id="section4"></Navitem>
+                  {/* Original code to get "Sign In" button on the far right of the navbar */}
+                  {/* <Navitem>{details}</Navitem>  */}
               </Nav>
             </Collapse>
           </Navbar>
