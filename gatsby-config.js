@@ -25,7 +25,6 @@ module.exports = {
       },
     },
     `bootstrap`,
-    `reactstrap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

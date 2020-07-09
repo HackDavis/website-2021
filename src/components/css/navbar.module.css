@@ -1,4 +1,9 @@
-.navstyle
+.navbar
+{
+    position: relative;
+}
+
+.navbarcontainer
 {
     font-size: 18px;
     position: fixed;
@@ -27,22 +32,22 @@ div.underline.selected
 
 .navitem
 {
+    display: inline-block;
     position: relative;
-    margin: 20px;
+    margin: 3vh;
     font-weight: bold;
     text-align: center;
     width: 100px;
 }
 
-.navitem *
-{
-    color: white !important;
-}
-
-.navbutton
+.navbutton, .navbutton:focus
 {
     font-weight: bold;
     position: relative;
     width: 100%;
-    text-decoration: none !important;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
 }

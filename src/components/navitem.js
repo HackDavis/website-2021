@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from 'reactstrap';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import ReactDOM from 'react-dom';
-import $ from "jquery";
 import styles from "./css/navbar.module.css"
-import styled from "styled-components"
-import {AnchorLink} from 'gatsby-plugin-anchor-links';
+
+function OnClickBehavior(section_id)
+{
+    if (section_id == "login")
+    {
+        if (typeof window.location.origin === 'undefined')
+        {
+            window.location.origin = window.location.protocol + '//' + window.location.host;
+        }
+
+        window.location = `${window.location.origin}/app/login`
+    }
+    else
+    {
+        scrollTo(`#${section_id}`)
+    }
+}
 
 const Navitem = ( {name, section_id} ) => {
 
     return (
-        <NavItem className={styles.navitem} data-id={section_id}>
-            <Button color="link" className={styles.navbutton} onClick={()=> scrollTo(`#${section_id}`)}>{name}</Button>
-            <div class={styles.underline}></div>
-        </NavItem>
+        <div className={styles.navitem} data-id={section_id}>
+            <button className={styles.navbutton} onClick={()=> OnClickBehavior(section_id)}>{name}</button>
+            <div className={styles.underline}></div>
+        </div>
     );
 }
 
