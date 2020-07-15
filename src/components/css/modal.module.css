@@ -1,14 +1,32 @@
 .modal
 {
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .background
 {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 6;
 }
 
 .container
 {
-    
+    position: absolute;
+    margin: 10px;
+    left: 50vw;
+    top: 50vh;
+    padding: 10px;
+    transform: translate(-50%, -50%);
+    background-color: aliceblue;
+    border: 2px solid peru;
+    border-radius: 10px;
+    z-index: 12;
 }

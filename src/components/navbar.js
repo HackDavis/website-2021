@@ -7,7 +7,7 @@ import styled from "styled-components";
 import Navitem from "./navitem";
 import { getUser, isLoggedIn } from "../utils/auth"
 
-const NavBar = ( {toggle, isOpen} ) => {
+const NavBar = ( {setLoginModalIsOpen} ) => {
 
     useEffect(() => 
     {
@@ -63,7 +63,7 @@ const NavBar = ( {toggle, isOpen} ) => {
                 <Navitem name="Recap" section_id="section2"></Navitem>
                 <Navitem name="FAQ" section_id="section3"></Navitem>
                 <Navitem name="Sponsors" section_id="section4"></Navitem>
-                <Navitem name={isLoggedIn() ? "Profile" : "Log In"} section_id="login"></Navitem>
+                <Navitem setLoginModalIsOpen={setLoginModalIsOpen} name={isLoggedIn() ? "Profile" : "Log In"} section_id="login"></Navitem>
             </div>
         </div>
       );

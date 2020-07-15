@@ -1,6 +1,6 @@
-// import React, { useState } from 'react';
-export let isModalOpen = false;
+import React, { useState } from 'react';
+export let isModalOpen =false;
 
-export function setIsModalOpen () {
-    isModalOpen = true;
+export function setIsModalOpen (state) {
+    console.log("Modal is" + isModalOpen)
 }

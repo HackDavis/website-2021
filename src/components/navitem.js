@@ -1,25 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from "./css/navbar.module.css"
+import Modal from "./modal"
+import { isModalOpen, setIsModalOpen } from "./modal_state"
 
-function OnClickBehavior(section_id)
-{
-    if (section_id == "login")
+
+const Navitem = ( {setLoginModalIsOpen, name, section_id} ) => {
+
+    function OnClickBehavior(section_id)
     {
-        if (typeof window.location.origin === 'undefined')
+        if (section_id == "login")
         {
-            window.location.origin = window.location.protocol + '//' + window.location.host;
+            // if (typeof window.location.origin === 'undefined')
+            // {
+            //     window.location.origin = window.location.protocol + '//' + window.location.host;
+            // }
+
+            //window.location = `${window.location.origin}/app/login`
+            //Modal.setIsOpen(true);
+            setLoginModalIsOpen(true);
         }
-
-        window.location = `${window.location.origin}/app/login`
+        else
+        {
+            scrollTo(`#${section_id}`)
+        }
     }
-    else
-    {
-        scrollTo(`#${section_id}`)
-    }
-}
-
-const Navitem = ( {name, section_id} ) => {
 
     return (
         <div className={styles.navitem} data-id={section_id}>
