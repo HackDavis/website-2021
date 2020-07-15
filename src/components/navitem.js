@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from "./css/navbar.module.css"
 import Modal from "./modal"
-import { isModalOpen, setIsModalOpen } from "./modal_state"
 
 
 const Navitem = ( {setLoginModalIsOpen, name, section_id} ) => {
