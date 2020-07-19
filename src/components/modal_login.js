@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Modal from "./modal"
 import styles from "./css/modal_login.module.css"
-import Footer from './footer';
+import Login from "../pages/login.jsx"
 
-const LoginModal = ( {isOpen, setIsOpen} ) => {
+
+const LoginModal = ( props ) => {
+    
     return(
-        <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-            <h1>Login</h1>
+        <Modal {...props} id="loginmodal">
+            <div className={styles.modal}>
+                <Login {...props}></Login>
+            </div>
         </Modal>
     );
 }

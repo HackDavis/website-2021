@@ -6,16 +6,14 @@ import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { setUser, isLoggedIn } from "../utils/auth"
 import { useFirebase } from "gatsby-plugin-firebase"
 
-const Login = () => {
+const Login = ( {setIsOpen} ) => {
   const [firebase, setFirebase] = useState();
 
   useFirebase(firebase => {
     setFirebase(firebase);
   }, [])
 
-  if (isLoggedIn()) {
-    navigate(`/app/profile`)
-  }
+  // if (isLoggedIn()) { }
 
   function getUiConfig(auth) {
     return {
@@ -30,17 +28,17 @@ const Login = () => {
       callbacks: {
         signInSuccessWithAuthResult: (result) => {
           setUser(result.user);
-          navigate('/app/profile');
+          setIsOpen(false);
         }
       }
     };
   }
 
   return (
-    <ProfileView title="Log In">
-      <p>Please sign-in to access to the private route:</p>
+    <div>
+      <h1>Login</h1>
       {firebase && <StyledFirebaseAuth uiConfig={getUiConfig(firebase.auth)} firebaseAuth={firebase.auth()}/>}
-    </ProfileView>
+    </div>
   );
 
 }

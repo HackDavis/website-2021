@@ -23,9 +23,11 @@
     margin: 10px;
     left: 50vw;
     top: 50vh;
+    width: fit-content;
+    height: fit-content;
     padding: 10px;
     transform: translate(-50%, -50%);
-    background-color: aliceblue;
+    background-color: white;
     border: 2px solid peru;
     border-radius: 10px;
     z-index: 12;

@@ -2,9 +2,10 @@ import React, { useState, useEffect, useCallback } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from "./css/navbar.module.css"
 import Modal from "./modal"
+import { getUser, isLoggedIn } from "../utils/auth"
 
 
-const Navitem = ( {setLoginModalIsOpen, name, section_id} ) => {
+const Navitem = ( {setLoginModalIsOpen, setProfileModalIsOpen, name, section_id} ) => {
 
     function OnClickBehavior(section_id)
     {
@@ -17,7 +18,14 @@ const Navitem = ( {setLoginModalIsOpen, name, section_id} ) => {
 
             //window.location = `${window.location.origin}/app/login`
             //Modal.setIsOpen(true);
-            setLoginModalIsOpen(true);
+            if (!isLoggedIn())
+            {
+                setLoginModalIsOpen(true);
+            }
+            else
+            {
+                setProfileModalIsOpen(true);
+            }
         }
         else
         {

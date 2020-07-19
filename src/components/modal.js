@@ -3,33 +3,32 @@ import styles from "./css/modal.module.css"
 import $ from "jquery";
 
 
-const Modal = ( {isOpen, setIsOpen, children} ) => { 
+const Modal = ( props ) => { 
     
     useEffect(() => 
     {
         // Register event handler
-        $(`div.${styles.background}`).on("click", function()
+        $(`div.${styles.background}#${props.id}`).on("click", function()
         {
-            setIsOpen(false);
+            props.setIsOpen(false);
         })
 
         // Cleanup event handlers
         return () => {
             // clean up the event handler when the component unmounts
-            $(`div.${styles.background}`).off("click");
+            $(`div.${styles.background}#${props.id}`).off("click");
         };
     })
 
     return (
-        isOpen && (
+        props.isOpen ? (
         <div className={styles.modal}>
-            <div className={styles.background}></div>
+            <div id={props.id} className={styles.background}></div>
             <div className={styles.container}>
-                {children}  
-                <h1>This is working</h1>
+                {props.children}  
             </div>
         </div>
-        )
+        ) : null
     )
 };
 

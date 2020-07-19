@@ -6,7 +6,6 @@
  */
 
 import React, { useState } from "react"
-import PropTypes from "prop-types"
 import NavBar from "./navbar"
 
 import "./css/layout.module.css"
@@ -14,6 +13,7 @@ import Section from "./section"
 import FloatingLogo from "./floatinglogo"
 import Footer from "./footer"
 import LoginModal from "./modal_login"
+import ProfileModal from "./modal_profile"
 
 const Layout = ({ children }) => {
   /*const data = useStaticQuery(graphql`
@@ -27,13 +27,14 @@ const Layout = ({ children }) => {
   `)*/
 
   const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
-
-
+  const [profileModalIsOpen, setProfileModalIsOpen] = useState(false);
+  
   return (
     <>
-        <FloatingLogo></FloatingLogo>
         <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
-        <NavBar setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
+        <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
+        <FloatingLogo></FloatingLogo>
+        <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
         <Section id="section1">Section 1</Section>
         <Section id="section2">Section 2</Section>
         <Section id="section3">Section 3</Section>
