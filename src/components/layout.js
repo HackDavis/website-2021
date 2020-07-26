@@ -14,6 +14,11 @@ import FloatingLogo from "./floatinglogo"
 import Footer from "./footer"
 import LoginModal from "./modal_login"
 import ProfileModal from "./modal_profile"
+import FAQSection from "./section_faq"
+import LandingSection from "./section_landing"
+import ScheduleSection from "./section_schedule"
+import SocialGoodSection from "./section_socialgood"
+import StatsSection from "./section_stats"
 
 const Layout = ({ children }) => {
   /*const data = useStaticQuery(graphql`
@@ -35,10 +40,21 @@ const Layout = ({ children }) => {
         <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
         <FloatingLogo></FloatingLogo>
         <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
-        <Section id="section1">Section 1</Section>
-        <Section id="section2">Section 2</Section>
-        <Section id="section3">Section 3</Section>
-        <Section id="section4">Section 4</Section>
+        <Section id="section_landing">
+            <LandingSection></LandingSection>
+        </Section>
+        <Section id="section_about">
+            <StatsSection></StatsSection>
+        </Section>
+        <Section id="section_socialgood">
+            <SocialGoodSection></SocialGoodSection>
+        </Section>
+        <Section id="section_schedule">
+            <ScheduleSection></ScheduleSection>
+        </Section>
+        <Section id="section_FAQ">
+            <FAQSection></FAQSection>
+        </Section>
         <Footer></Footer>
     </>
   )

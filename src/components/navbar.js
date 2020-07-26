@@ -56,10 +56,10 @@ const NavBar = ( {setProfileModalIsOpen, setLoginModalIsOpen} ) => {
     return (
         <div className={styles.navbarcontainer}>
             <div className={styles.navbar}>
-                <Navitem name="About" section_id="section1"></Navitem>
-                <Navitem name="Recap" section_id="section2"></Navitem>
-                <Navitem name="FAQ" section_id="section3"></Navitem>
-                <Navitem name="Sponsors" section_id="section4"></Navitem>
+                <Navitem name="Home" section_id="section_landing"></Navitem>
+                <Navitem name="About" section_id="section_about"></Navitem>
+                <Navitem name="Schedule" section_id="section_schedule"></Navitem>
+                <Navitem name="FAQ" section_id="section_FAQ"></Navitem>
                 <Navitem setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} name={isLoggedIn() ? "Profile" : "Log In"} section_id="login"></Navitem>
             </div>
         </div>

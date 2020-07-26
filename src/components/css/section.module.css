@@ -1,12 +1,27 @@
+@font-face
+{
+    src: url("../../static/fonts/Retrograde-Bold.otf");
+    font-family: 'Retrograde';
+    font-weight: bold;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/Retrograde-Regular.otf");
+    font-family: 'Retrograde';
+    font-weight: normal;
+}
+
 .section
 {
+    font-family: 'Retrograde';
     position: relative;
     display: block;
     height: 100vh;
+    max-height: fit-content;
     background-color: aquamarine;
-    padding: 10px;
     font-size: 50px;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 .section:nth-child(even)
