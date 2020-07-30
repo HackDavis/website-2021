@@ -5,20 +5,30 @@ import Typed from 'typed.js';
 
 const LandingSection = () => {
 
+    let typed;
+
     useEffect(() => {
         // set typed
-        var typed = new Typed('#typed', {
-        strings: ['// code for social good'],
-        typeSpeed: 30,
-        backSpeed: 8,
-        backDelay: 3500,
-        startDelay: 1000,
-        fadeOut: false,
-        loop: true,
-        shuffle: false,
-        cursorChar: '_'
+        typed = new Typed('#typed', {
+            strings: ['// code for social good'],
+            typeSpeed: 30,
+            backSpeed: 8,
+            backDelay: 3500,
+            startDelay: 1000,
+            fadeOut: false,
+            loop: true,
+            shuffle: false,
+            cursorChar: '_'
         });
+        
+        // Cleanup event handlers
+        return () => {
+            // clean up the event handler when the component unmounts
+            typed.destroy();
+        };
     })
+
+
 
     return (
         <div className={styles.background}>

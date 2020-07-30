@@ -9,7 +9,9 @@ const ProfileModal = ( props ) => {
     
     return(
         <Modal {...props} id="profilemodal">
-            <h1>Profile</h1>
+            <div className={styles.modal}>
+                <h1>Profile</h1>
+            </div>
         </Modal>
             
     ); 

@@ -17,7 +17,7 @@ const Login = ( {setIsOpen} ) => {
 
   function getUiConfig(auth) {
     return {
-      signInFlow: 'redirect',
+      signInFlow: 'popup',
       signInOptions: [
         auth.EmailAuthProvider.PROVIDER_ID,
         auth.GoogleAuthProvider.PROVIDER_ID,
