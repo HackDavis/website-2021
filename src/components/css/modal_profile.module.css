@@ -4,3 +4,28 @@
     height: 50rem;
     border: 2px solid red;
 }
+
+.title
+{
+    border: 2px solid blue;
+}
+
+.applicationcontainer
+{
+    border: 2px solid red;
+}
+
+.teamfindercontainer
+{
+    border: 2px solid cyan;
+}
+
+.badgescontainer
+{
+    border: 2px solid yellow;
+}
+
+.red
+{
+    color: red;
+}
