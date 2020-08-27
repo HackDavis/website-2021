@@ -1,8 +1,8 @@
 @font-face
 {
-    src: url("../../static/fonts/Retrograde-Bold.otf");
-    font-family: 'Retrograde';
-    font-weight: bold;
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
 }
 
 @font-face

@@ -5,12 +5,10 @@ import Modal from "./modal"
 import { getUser, isLoggedIn } from "../utils/auth"
 
 
-const Navitem = ( {setLoginModalIsOpen, setProfileModalIsOpen, name, section_id} ) => {
+const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id }) => {
 
-    function OnClickBehavior(section_id)
-    {
-        if (section_id == "login")
-        {
+    function OnClickBehavior(section_id) {
+        if (section_id == "login") {
             // if (typeof window.location.origin === 'undefined')
             // {
             //     window.location.origin = window.location.protocol + '//' + window.location.host;
@@ -18,29 +16,40 @@ const Navitem = ( {setLoginModalIsOpen, setProfileModalIsOpen, name, section_id}
 
             //window.location = `${window.location.origin}/app/login`
             //Modal.setIsOpen(true);
-            if (!isLoggedIn())
-            {
+            if (!isLoggedIn()) {
                 setLoginModalIsOpen(true);
             }
-            else
-            {
+            else {
                 setProfileModalIsOpen(true);
             }
         }
-        else
-        {
+        else {
             scrollTo(`#${section_id}`)
         }
     }
 
+    const is_profile_button = section_id == "login" && isLoggedIn();
+
+    let button_text = isLoggedIn() ? name : "Log In";
+
+    if (is_profile_button) {
+        const { displayName } = getUser();
+        button_text = displayName;
+    }
+
+    console.log(is_profile_button)
+
     return (
-        <div className={styles.navitem} data-id={section_id}>
-            <button className={styles.navbutton} onClick={()=> OnClickBehavior(section_id)}>{name}</button>
+        <div class={`${styles.navitem}`} data-id={section_id}>
+            <button class={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(section_id)}>
+                {is_profile_button && <div class={styles.circle} ></div>}
+                {button_text}
+            </button>
             <div className={styles.underline}></div>
-        </div>
+        </div >
     );
 }
 
 export default Navitem
 
-{/* hidden comment in this file if you find it then you get a cookie! email nicholas@hackdavis.io for a cookie*/}
+{/* hidden comment in this file if you find it then you get a cookie! email nicholas@hackdavis.io for a cookie*/ }

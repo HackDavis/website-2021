@@ -3,14 +3,16 @@ import styles from "./css/modal.module.css"
 import $ from "jquery";
 
 
-const Modal = ( props ) => { 
-    
-    useEffect(() => 
-    {
+const Modal = (props) => {
+
+    useEffect(() => {
         // Register event handler
-        $(`div.${styles.background}#${props.id}`).on("click", function()
-        {
-            props.setIsOpen(false);
+        $(`div.${styles.background}#${props.id}`).on("click", function () {
+            $(`div.${styles.background}#${props.id}`).parent().animate({
+                opacity: 0,
+            }, 200, function () {
+                props.setIsOpen(false);
+            })
         })
 
         // Cleanup event handlers
@@ -22,12 +24,12 @@ const Modal = ( props ) => {
 
     return (
         props.isOpen ? (
-        <div className={styles.modal}>
-            <div id={props.id} className={styles.background}></div>
-            <div className={styles.container}>
-                {props.children}  
+            <div className={styles.modal}>
+                <div id={props.id} className={styles.background}></div>
+                <div className={styles.container}>
+                    {props.children}
+                </div>
             </div>
-        </div>
         ) : null
     )
 };

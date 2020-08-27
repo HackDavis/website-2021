@@ -1,7 +1,7 @@
 .modal
 {
-    width: 80rem;
-    height: 50rem;
+    width: 27rem;
+    height: 35rem;
     border: 2px solid red;
 }
 
@@ -17,25 +17,20 @@
 .applicationcontainer
 {
     border: 2px solid red;
-    min-height: 20rem;
+    min-height: 5rem;
     margin: 1rem;
-    margin-top: .5rem;
-    margin-right: .5rem;
 }
 
 .teamfindercontainer
 {
     border: 2px solid cyan;
-    min-height: 20rem;
+    min-height: 13rem;
     margin: 1rem;
-    margin-right: .5rem;
 }
 
 .badgescontainer
 {
     border: 2px solid yellow;
-    min-height: 41rem;
+    min-height: 8rem;
     margin: 1rem;
-    margin-left: .5rem;
-    margin-top: .5rem;
 }

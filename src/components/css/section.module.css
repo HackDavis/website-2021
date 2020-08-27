@@ -1,8 +1,8 @@
 @font-face
 {
-    src: url("../../static/fonts/Retrograde-Bold.otf");
-    font-family: 'Retrograde';
-    font-weight: bold;
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
 }
 
 @font-face
@@ -14,7 +14,7 @@
 
 .section
 {
-    font-family: 'Retrograde';
+    font-family: 'Proxima Nova';
     position: relative;
     display: block;
     height: 100vh;
