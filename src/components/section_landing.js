@@ -2,6 +2,7 @@ import React, { useEffect } from "react"
 
 import styles from "./css/section_landing.module.css"
 import Typed from 'typed.js';   
+import Login from "../pages/login";
 
 const LandingSection = () => {
 

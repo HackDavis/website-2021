@@ -1,19 +1,21 @@
 import React from "react"
 import { navigate } from '@reach/router';
 import ProfileView from "../components/profile_view"
-import { useState} from "react"
+import { useState } from "react"
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import { setUser, isLoggedIn } from "../utils/auth"
 import { useFirebase } from "gatsby-plugin-firebase"
 
-const Login = ( {setIsOpen} ) => {
+const Login = ( props ) => {
   const [firebase, setFirebase] = useState();
 
   useFirebase(firebase => {
     setFirebase(firebase);
   }, [])
 
-  // if (isLoggedIn()) { }
+//   if (isLoggedIn()) {
+//     navigate(`/app/profile`)
+//   }
 
   function getUiConfig(auth) {
     return {
@@ -28,17 +30,17 @@ const Login = ( {setIsOpen} ) => {
       callbacks: {
         signInSuccessWithAuthResult: (result) => {
           setUser(result.user);
-          setIsOpen(false);
+          props.setIsOpen(false);
         }
       }
     };
   }
 
   return (
-    <div>
-      <h1>Login</h1>
-      {firebase && <StyledFirebaseAuth uiConfig={getUiConfig(firebase.auth)} firebaseAuth={firebase.auth()}/>}
-    </div>
+    <ProfileView title="Log In">
+      <p>Please sign-in to access to the private route:</p>
+      {firebase && <StyledFirebaseAuth uiConfig={getUiConfig(firebase.auth)} firebaseAuth={firebase.auth()} />}
+    </ProfileView>
   );
 
 }

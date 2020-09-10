@@ -9,13 +9,6 @@ const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id 
 
     function OnClickBehavior(section_id) {
         if (section_id == "login") {
-            // if (typeof window.location.origin === 'undefined')
-            // {
-            //     window.location.origin = window.location.protocol + '//' + window.location.host;
-            // }
-
-            //window.location = `${window.location.origin}/app/login`
-            //Modal.setIsOpen(true);
             if (!isLoggedIn()) {
                 setLoginModalIsOpen(true);
             }
@@ -28,16 +21,22 @@ const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id 
         }
     }
 
-    const is_profile_button = section_id == "login" && isLoggedIn();
+    let button_text = name;
 
-    let button_text = isLoggedIn() ? name : "Log In";
-
-    if (is_profile_button) {
-        const { displayName } = getUser();
-        button_text = displayName;
+    if (section_id == "login")
+    {
+        if (isLoggedIn())
+        {
+            const { displayName } = getUser();
+            button_text = displayName;
+        }
+        else
+        {
+            button_text = "Log In";
+        }
     }
 
-    console.log(is_profile_button)
+    const is_profile_button = section_id == "login" && isLoggedIn();
 
     return (
         <div class={`${styles.navitem}`} data-id={section_id}>
