@@ -50,6 +50,7 @@ div.underline.selected
     text-align: center;
     min-width: 100px;
     width: fit-content;
+    transition: 0.2s ease-in-out transform;
 }
 
 .navbutton, .navbutton:focus
@@ -67,7 +68,7 @@ div.underline.selected
     padding-bottom: 1vh;
 }
 
-.profile
+.profile, .profile:focus
 {
     background: white;
     border-radius: 2000px;
@@ -85,4 +86,9 @@ div.underline.selected
     border-radius: 50%;
     margin-right: 4px;
     margin-left: 6px;
+}
+
+.navitem:hover
+{
+    transform: scale(1.1, 1.1);
 }

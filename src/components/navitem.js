@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from "./css/navbar.module.css"
-import Modal from "./modal"
 import { getUser, isLoggedIn } from "../utils/auth"
 
 
@@ -41,7 +40,7 @@ const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id 
     return (
         <div class={`${styles.navitem}`} data-id={section_id}>
             <button class={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(section_id)}>
-                {is_profile_button && <div class={styles.circle} ></div>}
+                {is_profile_button && <img class={styles.circle} src={getUser().photoURL} />}
                 {button_text}
             </button>
             <div className={styles.underline}></div>
