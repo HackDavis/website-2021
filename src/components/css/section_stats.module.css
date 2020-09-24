@@ -19,7 +19,7 @@ div.background
     font-weight: normal;
     font-size: 4rem;
     padding-left: 4rem;
-    background-color: #E2EFDD;
+    /* background-color: #E2EFDD; */
     position: relative;
     display: block;
     min-height: 100%;

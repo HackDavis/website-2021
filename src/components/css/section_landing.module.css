@@ -7,8 +7,8 @@
 
 @font-face
 {
-    src: url("../../static/fonts/Retrograde-Regular.otf");
-    font-family: 'Retrograde';
+    src: url("../../static/fonts/SourceCodePro-Medium.ttf");
+    font-family: 'Source Code Pro';
     font-weight: normal;
 }
 
@@ -37,7 +37,10 @@ div.landingContainer
 }
 
 div.title{
-    font-size: 5rem;
+    font-family: 'Proxima Nova';
+    font-size: 7rem;
+    font-weight: 500;
+    color: #354142;
     border: 2px solid blue;
     position: relative;
     text-align:center;
@@ -45,8 +48,16 @@ div.title{
     padding:0;
 }
 
+.boldTitle
+{
+    font-weight: 700;
+}
+
 .typedtext
 {
+    font-family: Source Code Pro;
+    font-size: 2rem;
+    color: #354142;
     display: inline-block;
 }
 
@@ -55,32 +66,29 @@ div.title{
     font-size: 2rem;
 }
 
-div.subtext {
-    border: 2px solid green;
-    position: relative;
-    text-align: center;
-    height: fit-content;
-    padding: 0;
-    margin-top: 2.5rem;
-    font: 30px Arial;
-}
-
 div.sponsorImage {
     margin-top: 1rem;
     position: relative;
-    height: 5rem;
+    height: 1rem;
     background-color: gray;
+    visibility: hidden;
 }
 
 div.buttoncontainer
 {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: 2rem;
 }
 
 div.buttoncontainer > button
 {
     margin: 1rem;
-    width: 40%;
-    height: fit-content;
+    width: 9rem;
+    height: 2.5rem;
+    font-family: Proxima Nova;
+    background-color: #3A6E65;
+    border-radius: 50px;
+    border: 0px;
+    color: white;
+    font-size: 1rem;
 }

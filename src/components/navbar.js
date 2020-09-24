@@ -17,15 +17,12 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen }) => {
                 page: $(`#${id}`)
             }
 
-            if (i == 0) {
-                $els.navItem.find(`.${styles.underline}`).addClass(styles.selected);
-            }
-
             return { id, $els };
         });
 
-        $(window).scroll(function () {
-            let scrollTop = $(this).scrollTop();
+        function OnScroll()
+        {
+            let scrollTop = $(window).scrollTop();
 
             // Detect scrolled to anchor
             for (let i = anchors.length - 1; i >= 0; i--) {
@@ -41,8 +38,13 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen }) => {
                         break;
                     }
                 }
-
             }
+        }
+
+        OnScroll();
+
+        $(window).on("scroll", function () {
+            OnScroll();
         });
     })
 

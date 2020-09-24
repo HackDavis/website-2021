@@ -19,12 +19,7 @@
     display: block;
     height: 100vh;
     max-height: fit-content;
-    background-color: aquamarine;
     font-size: 50px;
     font-weight: normal;
-}
-
-.section:nth-child(even)
-{
-    background-color: aqua;
+    border: 6px solid black;
 }

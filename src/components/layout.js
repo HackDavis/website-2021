@@ -19,6 +19,7 @@ import LandingSection from "./section_landing"
 import ScheduleSection from "./section_schedule"
 import SocialGoodSection from "./section_socialgood"
 import StatsSection from "./section_stats"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Layout = ({ children }) => {
   /*const data = useStaticQuery(graphql`
@@ -40,21 +41,23 @@ const Layout = ({ children }) => {
         <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
         <FloatingLogo></FloatingLogo>
         <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
-        <Section id="section_landing">
-            <LandingSection></LandingSection>
-        </Section>
-        <Section id="section_about">
-            <StatsSection></StatsSection>
-        </Section>
-        <Section id="section_socialgood">
-            <SocialGoodSection></SocialGoodSection>
-        </Section>
-        <Section id="section_schedule">
-            <ScheduleSection></ScheduleSection>
-        </Section>
-        <Section id="section_FAQ">
-            <FAQSection></FAQSection>
-        </Section>
+        <ParallaxProvider>
+            <Section id="section_landing">
+                <LandingSection></LandingSection>
+            </Section>
+            <Section id="section_about">
+                <StatsSection></StatsSection>
+            </Section>
+            <Section id="section_socialgood">
+                <SocialGoodSection></SocialGoodSection>
+            </Section>
+            <Section id="section_schedule">
+                <ScheduleSection></ScheduleSection>
+            </Section>
+            <Section id="section_FAQ">
+                <FAQSection></FAQSection>
+            </Section>
+        </ParallaxProvider>
         <Footer></Footer>
     </>
   )
