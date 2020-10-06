@@ -4,6 +4,12 @@
     font-family: 'Proxima Nova';
     font-weight: normal;
 }
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
 
 @font-face
 {
@@ -50,7 +56,7 @@ div.title{
 
 .boldTitle
 {
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .typedtext
