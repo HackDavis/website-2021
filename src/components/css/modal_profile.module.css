@@ -1,0 +1,36 @@
+.modal
+{
+    width: 27rem;
+    height: 35rem;
+    border: 2px solid red;
+}
+
+.title
+{
+    border: 2px solid blue;
+    min-height: 3rem;
+    margin: 1rem;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.applicationcontainer
+{
+    border: 2px solid red;
+    min-height: 5rem;
+    margin: 1rem;
+}
+
+.teamfindercontainer
+{
+    border: 2px solid cyan;
+    min-height: 13rem;
+    margin: 1rem;
+}
+
+.badgescontainer
+{
+    border: 2px solid yellow;
+    min-height: 8rem;
+    margin: 1rem;
+}

@@ -1,0 +1,11 @@
+.footerstyle 
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    bottom: 0;
+    background-color: #3f3f3f;
+    color: #d5d5d5;
+    text-align: center;
+    padding-bottom: 1px;
+}

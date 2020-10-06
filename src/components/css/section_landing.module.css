@@ -1,0 +1,94 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/SourceCodePro-Medium.ttf");
+    font-family: 'Source Code Pro';
+    font-weight: normal;
+}
+
+div.background
+{
+    background-color: lightblue;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+div.landingContainer 
+{
+    border: 2px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+    padding:0;
+    color:black;
+    transform: translate(-50%, -50%);
+}
+
+div.title{
+    font-family: 'Proxima Nova';
+    font-size: 7rem;
+    font-weight: 500;
+    color: #354142;
+    border: 2px solid blue;
+    position: relative;
+    text-align:center;
+    height: fit-content;
+    padding:0;
+}
+
+.boldTitle
+{
+    font-weight: 700;
+}
+
+.typedtext
+{
+    font-family: Source Code Pro;
+    font-size: 2rem;
+    color: #354142;
+    display: inline-block;
+}
+
+.typedcontainer
+{
+    font-size: 2rem;
+}
+
+div.sponsorImage {
+    margin-top: 1rem;
+    position: relative;
+    height: 1rem;
+    background-color: gray;
+    visibility: hidden;
+}
+
+div.buttoncontainer
+{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+div.buttoncontainer > button
+{
+    margin: 1rem;
+    width: 9rem;
+    height: 2.5rem;
+    font-family: Proxima Nova;
+    background-color: #3A6E65;
+    border-radius: 50px;
+    border: 0px;
+    color: white;
+    font-size: 1rem;
+}

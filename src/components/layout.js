@@ -5,15 +5,24 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { useState } from "react"
+import NavBar from "./navbar"
 
-import Header from "./header"
-import "./layout.css"
+import "./css/layout.module.css"
+import Section from "./section"
+import FloatingLogo from "./floatinglogo"
+import Footer from "./footer"
+import LoginModal from "./modal_login"
+import ProfileModal from "./modal_profile"
+import FAQSection from "./section_faq"
+import LandingSection from "./section_landing"
+import ScheduleSection from "./section_schedule"
+import SocialGoodSection from "./section_socialgood"
+import StatsSection from "./section_stats"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  /*const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -21,29 +30,37 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `)*/
 
+  const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
+  const [profileModalIsOpen, setProfileModalIsOpen] = useState(false);
+  
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © HackDavis 2021
-        </footer>
-      </div>
+        <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
+        <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
+        <FloatingLogo></FloatingLogo>
+        <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
+        <ParallaxProvider>
+            <Section id="section_landing">
+                <LandingSection></LandingSection>
+            </Section>
+            <Section id="section_about">
+                <StatsSection></StatsSection>
+            </Section>
+            <Section id="section_socialgood">
+                <SocialGoodSection></SocialGoodSection>
+            </Section>
+            <Section id="section_schedule">
+                <ScheduleSection></ScheduleSection>
+            </Section>
+            <Section id="section_FAQ">
+                <FAQSection></FAQSection>
+            </Section>
+        </ParallaxProvider>
+        <Footer></Footer>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

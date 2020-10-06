@@ -1,3 +1,6 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: `HackDavis`,
@@ -6,6 +9,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-smoothscroll`,
+    {
+      resolve: `gatsby-plugin-anchor-links`,
+      options: {
+       offset: -100
+     }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,6 +24,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `bootstrap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -30,5 +42,19 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        features: {
+          auth: true,
+          database: true,
+          firestore: true,
+          storage: false,
+          messaging: true,
+          functions: false,
+          performance: false
+        }
+      }
+    }
   ],
 }

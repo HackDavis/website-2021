@@ -1,0 +1,25 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/Retrograde-Regular.otf");
+    font-family: 'Retrograde';
+    font-weight: normal;
+}
+
+.section
+{
+    font-family: 'Proxima Nova';
+    position: relative;
+    display: block;
+    height: 100vh;
+    max-height: fit-content;
+    font-size: 50px;
+    font-weight: normal;
+    border: 6px solid black;
+}

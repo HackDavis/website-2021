@@ -1,0 +1,47 @@
+
+@keyframes appear
+{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes disappear {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.modal
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    animation: appear 0.2s ease-in-out;
+    -webkit-animation: appear 0.2s ease-in-out;
+}
+
+
+.background
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    z-index: 6;
+}
+
+.container
+{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    right: 5vh;
+    top: calc(4vh + 18px);
+    margin-top: 4vh;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 12;
+}
