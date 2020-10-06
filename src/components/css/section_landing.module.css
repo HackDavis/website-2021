@@ -4,11 +4,20 @@
     font-family: 'Proxima Nova';
     font-weight: normal;
 }
+
 @font-face
 {
     src: url("../../static/fonts/ProximaNova-Bold.otf");
     font-family: 'Proxima Nova';
     font-weight: bold;
+}
+
+/* Condensed bold font for "VIEW WINNERS"  */
+@font-face
+{
+    src: url("../../static/fonts/Proxima Nova Alt Condensed Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: 800;
 }
 
 @font-face
