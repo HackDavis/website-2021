@@ -6,7 +6,7 @@ import logo from "../images/hd-logo.svg"
 
 function OnClickBehavior2()
 {
-    scrollTo('#section1')
+    scrollTo('#section_landing')
 }
 
 const FloatingLogo = () => {
