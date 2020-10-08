@@ -1,8 +1,23 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
 .modal
 {
     width: 27rem;
     height: 35rem;
     border: 2px solid red;
+    font-family: 'Proxima Nova';
 }
 
 .title
@@ -18,19 +33,31 @@
 {
     border: 2px solid red;
     min-height: 5rem;
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 .teamfindercontainer
 {
     border: 2px solid cyan;
     min-height: 13rem;
-    margin: 1rem;
+    /* margin: 1rem; */
 }
 
 .badgescontainer
 {
     border: 2px solid yellow;
     min-height: 8rem;
-    margin: 1rem;
+    overflow-y: scroll;
+    /* margin: 1rem; */
+}
+
+.modalsectiontitle
+{
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.modalsectioncontent
+{
+    
 }

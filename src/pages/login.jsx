@@ -17,6 +17,15 @@ const Login = ( props ) => {
 //     navigate(`/app/profile`)
 //   }
 
+  function initializeUserDocument(email, uid) {
+    var db = firebase.db();
+    // doc id should really be uid, haven't made writing a thing yet 
+    var statusRef = db.collection("users");
+
+    statusRef.doc(uid).set({
+      userEmail: email, status: "Not Applied" });
+  }
+
   function getUiConfig(auth) {
     return {
       signInFlow: 'popup',
@@ -31,6 +40,7 @@ const Login = ( props ) => {
         signInSuccessWithAuthResult: (result) => {
           setUser(result.user);
           props.setIsOpen(false);
+          initializeUserDocument(result.user.email, result.user.uid);
         }
       }
     };
