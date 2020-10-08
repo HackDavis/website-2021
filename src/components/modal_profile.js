@@ -59,37 +59,39 @@ const ProfileModal = (props) => {
                     </div>
                     <hr></hr>
                     <div class="col col-xs-12">
-                        <div className={styles.modalsectiontitle}>Badges</div>
-                        <div className={styles.modalsectioncontent}>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={false}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={false}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={false}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={false}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={false}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={false}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
-                            <Badge active={true}></Badge>
+                        <div className={styles.badgescontainer}>
+                            <div className={styles.modalsectiontitle}>Badges</div>
+                            <div className={styles.modalsectioncontent}>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={false}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={false}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={false}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={false}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={false}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={false}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                                <Badge active={true}></Badge>
+                            </div>
                         </div>
                     </div>
                 </div>
