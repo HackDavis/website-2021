@@ -25,29 +25,46 @@ div.background
 
 div.statscontainer
 {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 4rem;
-    line-height: 66px;
     border: 2px solid red;
     color: black;
     width: fit-content;
     height: fit-content;
     position: absolute;
-    top: 50%;
+    top: 46%;
     right: 24%;
     padding:0;
     max-width: 90%;
     transform: translateY(-50%);
 }
+div.stats
+{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 66px;
+}
 div.viewWinner
 {
+    position: absolute;
     font-family: 'Proxima Nova';
     font-style: normal;
     line-height:37px;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 800;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid blue;
+    margin-top: 69px;
+}
+
+div.cloud
+{
+    position: absolute;
+    left:0.05%;
+    right: 53.48%;
+    top:52.6%;
+    bottom: 38.64%;
 }
 
 a 
