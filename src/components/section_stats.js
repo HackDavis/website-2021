@@ -12,7 +12,9 @@ const StatsSection = () => {
                 24 HOURS<br></br>
                 100+ PROJECTS<br></br>
                 $25,000+ PRIZES<br></br><br></br>
-                <a href="https://hackdavis2020.devpost.com/" target="_blank">VIEW 2020 WINNERS</a>
+                <div className={styles.viewWinner}>
+                    <a href="https://hackdavis2020.devpost.com/" target="_blank">VIEW 2020 WINNERS</a>
+                </div>
             </div>
         </div>
     )

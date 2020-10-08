@@ -15,10 +15,6 @@
 
 div.background
 {
-    font-family: 'Retrograde';
-    font-weight: normal;
-    font-size: 4rem;
-    padding-left: 4rem;
     /* background-color: #E2EFDD; */
     position: relative;
     display: block;
@@ -29,15 +25,42 @@ div.background
 
 div.statscontainer
 {
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4rem;
+    line-height: 66px;
     border: 2px solid red;
     color: black;
     width: fit-content;
     height: fit-content;
     position: absolute;
     top: 50%;
-    left: 5rem;
+    right: 24%;
+    padding:0;
     max-width: 90%;
     transform: translateY(-50%);
+}
+div.viewWinner
+{
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    line-height:37px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+a 
+{
+    /* modify anchor attributes and remove underline */
+    color: black;
+    text-decoration: none;
+}
+
+a:hover 
+{
+    /* remove underline */
+    text-decoration:none;
 }
 
 @media screen and (max-width: 800px) 
