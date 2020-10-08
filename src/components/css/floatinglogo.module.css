@@ -4,10 +4,12 @@
     top: 0;
     left: 0;
     margin: 20px;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80.12px;
     outline: none;
     border: none;
-    background-color: rgba(200, 0, 200, 0.5);
+    /* background-color: rgba(200, 0, 200, 0.5); */
+    background:url("../../images/hd-logo.svg");
+    background-size: 80px 80.12px;
     z-index: 6;
 }

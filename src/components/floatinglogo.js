@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import styles from "./css/floatinglogo.module.css"
 import { Link } from "gatsby"
+import logo from "../images/hd-logo.svg"
 
 function OnClickBehavior2()
 {
