@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Modal from "./modal"
 import Badge from "./badge"
 import styles from "./css/modal_profile.module.css"
-import { getUser, logout } from "../utils/auth"
+import { getUser, isLoggedIn, logout } from "../utils/auth"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 
@@ -19,22 +19,25 @@ const ProfileModal = props => {
   useEffect(() => {
     if (!firebase) return
 
-    var db = firebase.firestore()
-    console.log(db)
-    var docRef = db.collection("users").doc(uid)
+    // this check is only necessary because of the useEffect glitch
+    if (isLoggedIn()) {
+      var db = firebase.firestore()
+      console.log(db)
+      var docRef = db.collection("users").doc(uid)
 
-    docRef
-      .get()
-      .then(function (doc) {
-        if (doc.exists) {
-          setUserStatus(doc.data().app_status)
-        } else {
-          console.log("No such document exists")
-        }
-      })
-      .catch(function (error) {
-        console.log(`Error getting document: ${error}`)
-      })
+      docRef
+        .get()
+        .then(function (doc) {
+          if (doc.exists) {
+            setUserStatus(doc.data().app_status)
+          } else {
+            console.log("No such document exists")
+          }
+        })
+        .catch(function (error) {
+          console.log(`Error getting document: ${error}`)
+        })
+    }
   })
 
   return (
