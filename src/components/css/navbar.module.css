@@ -50,6 +50,10 @@ div.underline.selected
     text-align: center;
     min-width: 100px;
     width: fit-content;
+}
+
+.navbutton
+{
     transition: 0.2s ease-in-out transform;
 }
 
@@ -88,7 +92,7 @@ div.underline.selected
     margin-left: 6px;
 }
 
-.navitem:hover
+.navbutton:hover
 {
     transform: scale(1.1, 1.1);
 }
