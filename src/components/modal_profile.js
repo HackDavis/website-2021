@@ -46,14 +46,15 @@ const ProfileModal = props => {
         <div class="container-fluid p-0">
           <div class="row no-gutters">
             <div class="col col-xs-12">
-              <a
+              <a 
+                className={styles.logout}
                 href="/"
                 onClick={event => {
                   event.preventDefault()
                   logout(firebase).then(() => props.setIsOpen(false))
                 }}
               >
-                <u>Log Out</u>
+                <div>Log Out</div>
               </a>
             </div>
           </div>

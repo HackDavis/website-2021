@@ -68,3 +68,24 @@ hr
     background-color: #C4C4C4;
     width: 100%;
 }
+
+.logout
+{
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 100px;
+    z-index: 5;
+}
+
+.logout:hover
+{
+    cursor: pointer;
+    color: aqua;
+}
