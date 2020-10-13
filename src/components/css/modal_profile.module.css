@@ -32,6 +32,7 @@
 
 .applicationcontainer
 {
+    margin-top: 10px;
     /* border: 2px solid red; */
     min-height: 5rem;
     /* margin: 1rem; */
