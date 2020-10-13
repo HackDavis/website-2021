@@ -17,7 +17,6 @@
     width: 25rem;
     height: 35rem;
     /* border: 2px solid red; */
-    overflow: hidden;
     font-family: 'Proxima Nova';
 }
 
@@ -83,10 +82,12 @@ hr
     padding-right: 8px;
     border-radius: 100px;
     z-index: 5;
+    transition: 0.2s ease-in-out all;
 }
 
 .logout:hover
 {
     cursor: pointer;
-    color: aqua;
+    color: yellow;
+    transform: scale(1.05);
 }
