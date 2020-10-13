@@ -47,7 +47,6 @@ const Login = ( props ) => {
 
   return (
     <div className={styles.Login}>
-      <p>Please sign-in to access to the private route:</p>
       {firebase && <StyledFirebaseAuth uiConfig={getUiConfig(firebase.auth)} firebaseAuth={firebase.auth()} />}
     </div>
   );
