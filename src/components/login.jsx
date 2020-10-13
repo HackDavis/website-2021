@@ -1,10 +1,9 @@
 import React from "react"
-import { navigate } from '@reach/router';
-import ProfileView from "../components/profile_view"
 import { useState } from "react"
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import { setUser, isLoggedIn } from "../utils/auth"
+import { setUser } from "../utils/auth"
 import { useFirebase } from "gatsby-plugin-firebase"
+import styles from "./css/login.module.css"
 
 const Login = ( props ) => {
   const [firebase, setFirebase] = useState();
@@ -13,44 +12,44 @@ const Login = ( props ) => {
     setFirebase(firebase);
   }, [])
 
-//   if (isLoggedIn()) {
-//     navigate(`/app/profile`)
-//   }
-
-  function initializeUserDocument(email, uid) {
-    var db = firebase.db();
-    // doc id should really be uid, haven't made writing a thing yet 
-    var statusRef = db.collection("users");
-
-    statusRef.doc(uid).set({
-      userEmail: email, status: "Not Applied" });
+  function initializeUserDoc(user_email, uid) {
+    var db = firebase.firestore()
+    console.log(db)
+    var docRef = db.collection("users").doc(uid).set({
+      email: user_email,
+      user_id: uid,
+      app_status: "Not Yet Applied",
+      badges: [],
+    })
+    .then(function() {
+      console.log("Document successfully written!")
+    })
+    .catch(function(error) {
+      console.error("Error writing document: ", error)
+    })
   }
 
   function getUiConfig(auth) {
     return {
       signInFlow: 'popup',
       signInOptions: [
-        auth.EmailAuthProvider.PROVIDER_ID,
         auth.GoogleAuthProvider.PROVIDER_ID,
-        auth.FacebookAuthProvider.PROVIDER_ID,
-        auth.GithubAuthProvider.PROVIDER_ID
       ],
-      // signInSuccessUrl: '/app/profile',
       callbacks: {
         signInSuccessWithAuthResult: (result) => {
           setUser(result.user);
+          initializeUserDoc(result.user.email, result.user.uid);
           props.setIsOpen(false);
-          initializeUserDocument(result.user.email, result.user.uid);
         }
       }
     };
   }
 
   return (
-    <ProfileView title="Log In">
+    <div className={styles.Login}>
       <p>Please sign-in to access to the private route:</p>
       {firebase && <StyledFirebaseAuth uiConfig={getUiConfig(firebase.auth)} firebaseAuth={firebase.auth()} />}
-    </ProfileView>
+    </div>
   );
 
 }

@@ -1,6 +1,5 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require("dotenv").config({ path: "./.env" })
+
 module.exports = {
   siteMetadata: {
     title: `HackDavis`,
@@ -14,8 +13,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-anchor-links`,
       options: {
-       offset: -100
-     }
+        offset: -100,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -36,7 +35,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -52,9 +51,9 @@ module.exports = {
           storage: false,
           messaging: true,
           functions: false,
-          performance: false
-        }
-      }
-    }
+          performance: false,
+        },
+      },
+    },
   ],
 }
