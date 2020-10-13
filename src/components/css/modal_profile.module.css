@@ -14,16 +14,16 @@
 
 .modal
 {
-    width: 27rem;
+    width: 25rem;
     height: 35rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     overflow: hidden;
     font-family: 'Proxima Nova';
 }
 
 .title
 {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     min-height: 3rem;
     margin: 1rem;
     margin-bottom: .5rem;
@@ -32,21 +32,21 @@
 
 .applicationcontainer
 {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     min-height: 5rem;
     /* margin: 1rem; */
 }
 
 .teamfindercontainer
 {
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     min-height: 13rem;
     /* margin: 1rem; */
 }
 
 .badgescontainer
 {
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
     min-height: 10rem;
     /* margin: 1rem; */
 }
@@ -54,7 +54,7 @@
 .modalsectiontitle
 {
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 6px;
 }
 
 .modalsectioncontent

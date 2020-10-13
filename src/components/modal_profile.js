@@ -72,7 +72,9 @@ const ProfileModal = props => {
               </div>
             </div>
           </div>
-          <hr></hr>
+          <div class="col col-xs-12">
+            <hr></hr>
+          </div>
           <div class="col col-xs-12">
             <div className={styles.badgescontainer}>
               <div className={styles.modalsectiontitle}>Badges</div>

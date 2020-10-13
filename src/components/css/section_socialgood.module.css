@@ -1,0 +1,33 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+.title{
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 62px;
+    line-height: 76px;
+}
+
+.description {
+    font-family:Proxima Nova;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    border: 2px solid red;
+    margin-top: 27px;
+}
+
+.social_good_container{
+    border: 2px solid black;
+    width: 617px;
+    height: fit-content;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
