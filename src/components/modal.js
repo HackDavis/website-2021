@@ -37,7 +37,7 @@ const Modal = props => {
     }
   })
 
-  function loadStatus(isProfile) {
+  function loadInfo(isProfile) {
     if (!isProfile) return
     if (!firebase) return
 
@@ -51,7 +51,15 @@ const Modal = props => {
         .then(function (doc) {
           if (doc.exists) {
             props.setUserStatus(doc.data().app_status)
-            console.log("Document has successfully been read")
+            console.log("User info has successfully been read")
+            // let badgesMap = doc.data().badges
+            // let userBadges = []
+            // console.log(badgesMap)
+            // badgesMap.forEach(function(value, key) {
+            //   userBadges.push(value)
+            // })
+            // console.log(userBadges)
+            // props.setUserBadges(userBadges)
           } else {
             console.log("No such document exists")
           }
@@ -64,7 +72,7 @@ const Modal = props => {
 
   return props.isOpen ? (
     <div className={styles.modal}>
-      {loadStatus(props.isProfile)}
+      {loadInfo(props.isProfile)}
       <div id={props.id} className={styles.background}></div>
       <div className={styles.container}>{props.children}</div>
     </div>
