@@ -6,6 +6,13 @@ import { getUser, isLoggedIn, logout } from "../utils/auth"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 
+const badge_ids = [1, 2, 3, 4, 5, 6]
+
+function HasBadge(badge_id)
+{
+    // return badges.contains(badge_id)
+}
+
 const ProfileModal = props => {
   const user = getUser()
   const { uid, displayName, email } = user
@@ -80,35 +87,9 @@ const ProfileModal = props => {
             <div className={styles.badgescontainer}>
               <div className={styles.modalsectiontitle}>Badges</div>
               <div className={styles.modalsectioncontent}>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={false}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={false}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={false}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={false}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={false}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={false}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
-                <Badge active={true}></Badge>
+                {badge_ids.map(function(id, index){
+                    return <Badge active={HasBadge(id)} image={`../images/badges/badge_${id}.png`}></Badge>;
+                })}
               </div>
             </div>
           </div>
