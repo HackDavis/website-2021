@@ -33,6 +33,13 @@ function SEO({lang, meta}) {
         lang,
       }}
       title={site.siteMetadata.title}
+      link = {[
+        {
+          "rel": "icon",
+          "type": "image/png",
+          "href": "favicon_url"
+        }
+      ]}
       meta={[
         {
           name: `description`,
