@@ -11,16 +11,16 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const ProfileModal = props => {
   const [firebase, setFirebase] = useState()
-  const [userStatus, setUserStatus] = useState("Loading")
-  const [userBadges, setUserBadges] = useState([])
+  const [userStatus, setUserStatus] = useState({status: "Loading", badges: []})
+  // const [userBadges, setUserBadges] = useState([])
 
   useFirebase(fb => {
     setFirebase(fb)
   }, [])
 
   function HasBadge(badge_id) {
-    console.log(`id: ${badge_id} has: ${userBadges.includes(badge_id)}`);
-    userBadges.includes(badge_id);
+    // console.log(`id: ${badge_id} has: ${userBadges.includes(badge_id)}`);
+    userStatus.badges.includes(badge_id);
   }
 
   const data = useStaticQuery(graphql`
@@ -30,6 +30,7 @@ const ProfileModal = props => {
           node {
             publicURL
             name
+            dir
           }
         }
       }
@@ -41,7 +42,7 @@ const ProfileModal = props => {
       {...props}
       isProfile={true}
       setUserStatus={setUserStatus}
-      setUserBadges={setUserBadges}
+      // setUserBadges={setUserBadges}
       id="profilemodal"
     >
       <div className={styles.modal}>
@@ -63,12 +64,12 @@ const ProfileModal = props => {
           <div class="col col-xs-12">
             <div className={styles.applicationcontainer}>
               <div className={styles.modalsectiontitle}>Application Status</div>
-              <div className={styles.modalsectioncontent}>{userStatus}</div>
+              <div className={styles.modalsectioncontent}>{userStatus.status}</div>
             </div>
             <hr></hr>
             <div className={styles.teamfindercontainer}>
               <div className={styles.modalsectiontitle}>
-                External Team Finder
+                Team Finder
               </div>
               <div className={styles.modalsectioncontent}>
                 Find your team here
@@ -81,10 +82,11 @@ const ProfileModal = props => {
           <div class="col col-xs-12">
             <div className={styles.badgescontainer}>
               <div className={styles.modalsectiontitle}>Badges</div>
-              <div>{userBadges}</div>
+              {/* <div>{userBadges}</div> */}
               <div className={styles.modalsectioncontent}>
                 {data.allFile.edges.map((file, index) => {
-                  return <Badge active={HasBadge(file.node.name)} image={file.node.publicURL}></Badge>;
+                  return file.node.dir.endsWith("badges") &&
+                  <Badge active={HasBadge(file.node.name)} image={file.node.publicURL}></Badge>;
                 })}
               </div>
             </div>

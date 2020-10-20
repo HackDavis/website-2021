@@ -50,15 +50,19 @@ const Modal = props => {
         .get()
         .then(function (doc) {
           if (doc.exists) {
-            props.setUserStatus(doc.data().app_status)
+            // props.setUserStatus(doc.data().app_status)
             console.log("User info has successfully been read")
-            // let badgesMap = doc.data().badges
-            // let userBadges = []
-            // console.log(badgesMap)
-            // badgesMap.forEach(function(value, key) {
-            //   userBadges.push(value)
-            // })
-            // console.log(userBadges)
+            let badgesMap = doc.data().badges
+            console.log(badgesMap)
+            let userBadges = []
+            console.log(badgesMap)
+            badgesMap.forEach(function(value, key) {
+              console.log(value)
+              userBadges.push(value)
+            })
+            console.log(userBadges)
+            
+            props.setUserStatus({status: doc.data().app_status, badges: []})
             // props.setUserBadges(userBadges)
           } else {
             console.log("No such document exists")
