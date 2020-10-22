@@ -2,9 +2,11 @@ require("dotenv").config({ path: "./.env" })
 
 module.exports = {
   siteMetadata: {
-    title: `HackDavis`,
-    description: `HackDavis 2021 Website (WIP)`,
-    author: `@gatsbyjs`,
+    title: `HackDavis 2021 | January 16-17 at UC Davis`,
+    author: `HackDavis`,
+    description: `HackDavis is UC Davis' annual hackathon for students, run by students.`,
+    keywords: `HackDavis, social good, tech, hackathon`,
+    og_description: `HackDavis is UC Davis' annual hackathon for students, run by students. On January 18-19, 2020, over 700 students, hackers, and creatives will come together for 24 hours of hacking. We're providing an environment to bring together the most talented students in California to address the world's most pressing social issues.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -30,13 +32,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `hd_favicon`,
+        short_name: `favicon`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/hd_logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

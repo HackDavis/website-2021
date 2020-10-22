@@ -9,51 +9,77 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-
-function SEO({ description, lang, meta, title }) {
+function SEO({lang, meta}) {
   const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
-            description
             author
+            description
+            keywords
+            og_description
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={site.siteMetadata.title}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: site.siteMetadata.description,
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords
+        },
+        {
+          name: `author`,
+          content: site.siteMetadata.author,
+        },
+        {
+          property: `og:image`,
+          content: `src/images/hd_logo.png`
         },
         {
           property: `og:title`,
-          content: title,
+          content: site.siteMetadata.title,
+        },
+        {
+          property: `og:site_name`,
+          content: site.siteMetadata.author,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: site.siteMetadata.og_description,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
+          property:`og:url`,
+          content: `hackdavis.io`
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
+        },
+        {
+          name: `twitter:image`,
+          content: `src/images/hd_logo.png`
+        },
+        {
+          name:  `twitter:site`,
+          content: `@hack_davis`
         },
         {
           name: `twitter:creator`,
@@ -61,11 +87,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: `HackDavis`,
         },
       ].concat(meta)}
     />

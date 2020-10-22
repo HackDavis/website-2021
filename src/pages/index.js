@@ -10,8 +10,11 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
+  <>
+  <SEO></SEO>
   <Layout>
   </Layout>
+  </>
 )
 
 export default IndexPage
