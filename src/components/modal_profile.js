@@ -8,10 +8,12 @@ import { logout } from "../utils/auth"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import { useStaticQuery, graphql } from "gatsby"
+import Skeleton from 'react-loading-skeleton';
 
 const ProfileModal = props => {
   const [firebase, setFirebase] = useState()
   const [userStatus, setUserStatus] = useState({status: "Loading", badges: []})
+  const [hasLoaded, setHasLoaded] = useState()
 
   useFirebase(fb => {
     setFirebase(fb)
@@ -46,6 +48,8 @@ const ProfileModal = props => {
       {...props}
       isProfile={true}
       setUserStatus={setUserStatus}
+      hasLoaded={hasLoaded}
+      setHasLoaded={setHasLoaded}
       id="profilemodal"
     >
       <div className={styles.modal}>
@@ -67,7 +71,7 @@ const ProfileModal = props => {
           <div className="col col-xs-12">
             <div className={styles.applicationcontainer}>
               <div className={styles.modalsectiontitle}>Application Status</div>
-              <div className={styles.modalsectioncontent}>{userStatus.status}</div>
+              <div className={styles.modalsectioncontent}>{hasLoaded ? userStatus.status : <Skeleton/>}</div>
             </div>
             <hr></hr>
             <div className={styles.teamfindercontainer}>
@@ -85,11 +89,10 @@ const ProfileModal = props => {
           <div className="col col-xs-12">
             <div className={styles.badgescontainer}>
               <div className={styles.modalsectiontitle}>Badges</div>
-              {/* <div>{userBadges}</div> */}
               <div className={styles.modalsectioncontent}>
                 {data.allFile.edges.map((file, index) => {
                   return file.node.dir.endsWith("badges") &&
-                  <Badge date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
+                  <Badge hasLoaded={hasLoaded} date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
                 })}
               </div>
             </div>
