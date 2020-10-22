@@ -38,9 +38,9 @@ const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id 
     const is_profile_button = section_id == "login" && isLoggedIn();
 
     return (
-        <div class={`${styles.navitem}`} data-id={section_id}>
-            <button class={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(section_id)}>
-                {is_profile_button && <img class={styles.circle} src={getUser().photoURL} />}
+        <div className={`${styles.navitem}`} data-id={section_id}>
+            <button className={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(section_id)}>
+                {is_profile_button && <img className={styles.circle} src={getUser().photoURL} />}
                 {button_text}
             </button>
             <div className={styles.underline}></div>

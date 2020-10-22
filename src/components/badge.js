@@ -6,7 +6,7 @@ import $ from "jquery";
 const Badge = (props) => {
 
     return (
-        <div className={`${styles.badge} ${!props.active && styles.inactive}`}>
+        <div alt={props.date} className={`${styles.badge} ${!props.active && styles.inactive}`}>
             <img src={props.image}></img>
         </div>
     )

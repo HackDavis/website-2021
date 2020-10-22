@@ -19,8 +19,8 @@ const Login = ( props ) => {
       email: user_email,
       user_id: uid,
       app_status: "Not Yet Applied",
-      badges: [],
-    })
+      badges: new Map([]),
+    }, {merge: true})
     .then(function() {
       console.log("Document successfully written!")
     })

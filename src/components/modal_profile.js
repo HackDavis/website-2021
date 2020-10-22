@@ -12,29 +12,33 @@ import { useStaticQuery, graphql } from "gatsby"
 const ProfileModal = props => {
   const [firebase, setFirebase] = useState()
   const [userStatus, setUserStatus] = useState({status: "Loading", badges: []})
-  // const [userBadges, setUserBadges] = useState([])
 
   useFirebase(fb => {
     setFirebase(fb)
   }, [])
 
   function HasBadge(badge_id) {
-    // console.log(`id: ${badge_id} has: ${userBadges.includes(badge_id)}`);
-    userStatus.badges.includes(badge_id);
+    return userStatus.badges && badge_id in userStatus.badges;
+  }
+
+  function GetBadgeDate(badge_id)
+  {
+    console.log(userStatus.badges[badge_id])
+    return userStatus.badges && userStatus.badges[badge_id]
   }
 
   const data = useStaticQuery(graphql`
-    {
-      allFile(filter: { extension: { eq: "png" } }) {
-        edges {
-          node {
-            publicURL
-            name
-            dir
-          }
+  {
+    allFile(filter: { extension: { eq: "png"} }, sort: {fields:[name] order: ASC}) {
+      edges {
+        node {
+          publicURL
+          name
+          dir
         }
       }
     }
+  }
   `)
 
   return (
@@ -42,13 +46,12 @@ const ProfileModal = props => {
       {...props}
       isProfile={true}
       setUserStatus={setUserStatus}
-      // setUserBadges={setUserBadges}
       id="profilemodal"
     >
       <div className={styles.modal}>
-        <div class="container-fluid p-0">
-          <div class="row no-gutters">
-            <div class="col col-xs-12">
+        <div className="container-fluid p-0">
+          <div className="row no-gutters">
+            <div className="col col-xs-12">
               <a
                 className={styles.logout}
                 href="/"
@@ -61,7 +64,7 @@ const ProfileModal = props => {
               </a>
             </div>
           </div>
-          <div class="col col-xs-12">
+          <div className="col col-xs-12">
             <div className={styles.applicationcontainer}>
               <div className={styles.modalsectiontitle}>Application Status</div>
               <div className={styles.modalsectioncontent}>{userStatus.status}</div>
@@ -76,17 +79,17 @@ const ProfileModal = props => {
               </div>
             </div>
           </div>
-          <div class="col col-xs-12">
+          <div className="col col-xs-12">
             <hr></hr>
           </div>
-          <div class="col col-xs-12">
+          <div className="col col-xs-12">
             <div className={styles.badgescontainer}>
               <div className={styles.modalsectiontitle}>Badges</div>
               {/* <div>{userBadges}</div> */}
               <div className={styles.modalsectioncontent}>
                 {data.allFile.edges.map((file, index) => {
                   return file.node.dir.endsWith("badges") &&
-                  <Badge active={HasBadge(file.node.name)} image={file.node.publicURL}></Badge>;
+                  <Badge date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
                 })}
               </div>
             </div>

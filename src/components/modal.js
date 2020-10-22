@@ -9,6 +9,7 @@ const Modal = props => {
   const { uid } = user
 
   const [firebase, setFirebase] = useState()
+  const [hasLoaded, setHasLoaded] = useState()
 
   useFirebase(fb => {
     setFirebase(fb)
@@ -50,20 +51,9 @@ const Modal = props => {
         .get()
         .then(function (doc) {
           if (doc.exists) {
-            // props.setUserStatus(doc.data().app_status)
             console.log("User info has successfully been read")
-            let badgesMap = doc.data().badges
-            console.log(badgesMap)
-            let userBadges = []
-            console.log(badgesMap)
-            badgesMap.forEach(function(value, key) {
-              console.log(value)
-              userBadges.push(value)
-            })
-            console.log(userBadges)
-            
-            props.setUserStatus({status: doc.data().app_status, badges: []})
-            // props.setUserBadges(userBadges)
+            props.setUserStatus({status: doc.data().app_status, badges: doc.data().badges})
+            setHasLoaded(true)
           } else {
             console.log("No such document exists")
           }
@@ -76,7 +66,7 @@ const Modal = props => {
 
   return props.isOpen ? (
     <div className={styles.modal}>
-      {loadInfo(props.isProfile)}
+      {!hasLoaded && loadInfo(props.isProfile)}
       <div id={props.id} className={styles.background}></div>
       <div className={styles.container}>{props.children}</div>
     </div>
