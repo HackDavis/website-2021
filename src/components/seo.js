@@ -48,7 +48,7 @@ function SEO({title,lang, meta}) {
         },
         {
           property: `og:image`,
-          content: {og_image},
+          content: og_image,
         },
         {
           property: `og:title`,
