@@ -3,6 +3,7 @@ require("dotenv").config({ path: "./.env" })
 module.exports = {
   siteMetadata: {
     title: `HackDavis 2021 | January 16-17 at UC Davis`,
+    image: `/static/hd_logo.png`,
     author: `HackDavis`,
     description: `HackDavis is UC Davis' annual hackathon for students, run by students.`,
     keywords: `HackDavis, social good, tech, hackathon`,
