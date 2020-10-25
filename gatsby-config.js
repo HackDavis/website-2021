@@ -3,7 +3,7 @@ require("dotenv").config({ path: "./.env" })
 module.exports = {
   siteMetadata: {
     title: `HackDavis 2021 | January 16-17 at UC Davis`,
-    image: `./src/images/hd_logo.png`,
+    image: `https://hackdavis2021.netlify.app/src/images/hd_logo.png`,
     author: `HackDavis`,
     description: `HackDavis is UC Davis' annual hackathon for students, run by students.`,
     keywords: `HackDavis, social good, tech, hackathon`,
@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-offline`,
+    `gatsby-plugin-open-graph-images`,
     {
       resolve: `gatsby-plugin-anchor-links`,
       options: {
