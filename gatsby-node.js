@@ -35,7 +35,7 @@ exports.createPages = async ({ actions }) => {
   const { createPage } = actions;
 
   const openGraphImage = createOpenGraphImage(createPage, {
-    path: "./src/images/hd_logo.png",
+    path: "/src/images/hd_logo.png",
     component: path.resolve(`src/components/seo.js`),
     size: {
       width: 400,
