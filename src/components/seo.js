@@ -11,23 +11,36 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import ogImage from '../images/hd_logo.png'
 function SEO({lang, meta}) {
-  const { site } = useStaticQuery(
+  const { site, file } = useStaticQuery(
     graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            domain
-            image
-            author
-            description
-            keywords
-            og_description
+    {
+      site {
+        siteMetadata {
+          title
+          domain
+          image
+          author
+          description
+          keywords
+          og_description
+        }
+      }
+      file(relativePath: {eq: "og-icon.png"}) {
+        childImageSharp {
+          fluid {
+            base64
+            aspectRatio
+            src
+            srcSet
+            sizes
           }
         }
       }
+    }
     `
   )
+
+  console.log(site)
 
   return (
     <Helmet
@@ -50,7 +63,7 @@ function SEO({lang, meta}) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.image}` ,
+          content: `${file.childImageSharp.fluid.src}` ,
         },
         {
           property: `og:title`,
