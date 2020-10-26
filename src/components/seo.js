@@ -50,7 +50,7 @@ function SEO({lang, meta}) {
         },
         {
           property: `og:image`,
-          content: `${site.siteMetadata.domain} ${ogImage}` ,
+          content: `${site.siteMetadata.image}` ,
         },
         {
           property: `og:title`,
