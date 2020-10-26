@@ -15,7 +15,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-open-graph-images`,
     {
       resolve: `gatsby-plugin-anchor-links`,
       options: {

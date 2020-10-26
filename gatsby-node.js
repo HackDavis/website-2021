@@ -30,19 +30,3 @@ exports.onCreatePage = async ({ page, actions }) => {
     createPage(page)
   }
 }
-// Implement Gatsby Open Graph Images
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions;
-
-  const openGraphImage = createOpenGraphImage(createPage, {
-    path: "/src/images/hd_logo.png",
-    component: path.resolve(`src/components/seo.js`),
-    size: {
-      width: 400,
-      height: 50,
-    },
-    context: {
-      description: "a image created with gatsby-plugin-open-graph-images",
-    },
-  });
-};
