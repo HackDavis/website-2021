@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.hackdavis.io">
-    <img alt="HackDavis" src="https://hackdavis.io/assets/img/logo-small.png" width="60" />
+    <img alt="HackDavis" src="https://github.com/HackDavis/website-2021/blob/master/src/images/hd_logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
