@@ -5,6 +5,7 @@ import Typed from "typed.js"
 import Login from "./login"
 import parallaxstyles from "./css/parallax.module.css"
 import { Parallax } from "react-scroll-parallax"
+import CowHandler from "./cows/cow_handler"
 
 const LandingSection = () => {
   let typed
@@ -53,7 +54,7 @@ const LandingSection = () => {
           <button>SPONSOR US</button>
         </div>
       </div>
-      {/* </div> */}
+      {<CowHandler></CowHandler>}
     </div>
   )
 }
