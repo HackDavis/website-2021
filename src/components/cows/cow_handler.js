@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import $ from "jquery";
 import Cow from "./cow"
-import { subscribeToTimer } from './socket';
 import { useFirebase } from 'gatsby-plugin-firebase';
+import SocketHandler from './socket';
 
 const CowHandler = (props) => {
 
-    const [cows, setCows] = useState({
-            "test id": {name: "Test Cow", pos: {x: 50, y: 50}}
-        });
+    const [myId, setMyId] = useState();
+    const [cows, setCows] = useState({});
 
-    console.log("got here")
-    subscribeToTimer();
-
-    return (
-        Object.entries(cows).map((cow) => 
-        {
-            return <Cow cow={cow} {...props}></Cow>
-        })
-    )
+    return <>
+        {<SocketHandler cow={cows} setCows={setCows} myId={myId} setMyId={setMyId}></SocketHandler>}
+        {Object.keys(cows).map((key) => {
+            return <Cow cow={cows[key]} {...props}></Cow>
+        })}</>
 };
 
 export default CowHandler

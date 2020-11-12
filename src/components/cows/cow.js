@@ -6,8 +6,8 @@ import $ from "jquery";
 const Cow = (props) => {
 
     return (
-        <div className={styles.cow_container}>
-            COW
+        <div className={styles.cow_container} style={{top: `${props.cow.pos.y * 100}%`, left: `${props.cow.pos.x * 100}%`}}>
+            {props.cow.name}
         </div>
     )
 };
