@@ -25,6 +25,13 @@ div.statscontainer
     color: black;
 }
 
+@media (max-width: 575px){
+    div.statscontainer
+    {
+        margin-top: -240px;
+    }
+}
+
 div.stats
 {
     font-size: 40px;
@@ -32,14 +39,21 @@ div.stats
     line-height: 50px;
 }
 
-div.viewWinner
+@media (max-width: 575px){
+    div.stats
+    {
+        font-size: 32px;
+    }
+}
+
+/* div.viewWinner
 {
     font-family: 'Proxima Nova';
     font-style: normal;
     font-size: 40px;
     border: 2px solid blue;
     margin-top: 40px;
-}
+} */
 
 .view_winner_button_container{
     width: 100%;
@@ -47,7 +61,7 @@ div.viewWinner
 
 .view_winner
 {
-    margin-top: 40px;
+    margin-top: 30px;
     display: inline-block;
     font-weight: bold;
     text-align: center;
@@ -62,7 +76,13 @@ div.viewWinner
     font-weight: 1000;
     letter-spacing: 2px;
     transition: 0.2s ease-in-out all;
-    
+}
+
+@media (max-width: 575px){
+    .view_winner
+    {
+        margin-top:-14px;
+    }
 }
 
 .view_winner:hover
@@ -92,9 +112,16 @@ a:hover
 
 .image_container
 {
-    border-radius: 50px;
+    border-radius: 10px;
     overflow: hidden;
     border: 2px solid red;
+}
+
+@media (max-width: 575px){
+    .image_container
+    {
+        margin-top: -40px;
+    }
 }
 
 .image

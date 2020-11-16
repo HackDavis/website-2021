@@ -8,10 +8,10 @@ const StatsSection = () => {
     return (
         <div className = "container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
-                <div className={`col-5 offset-1 ${styles.image_container}`}>
+                <div className={`col-10 offset-1 col-xl-5 offset-xl-1 ${styles.image_container}`}>
                     <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/04/CatMemeQuarantine-lede.jpg"></img>
                 </div>
-                <div className={`${styles.statscontainer} col-4 offset-1`}>
+                <div className={`${styles.statscontainer} col-12 offset-1 col-sm-5 col-xl-4 offset-xl-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={styles.stats}>
@@ -23,7 +23,7 @@ const StatsSection = () => {
                         </div>
                     </div>
                     <div className = "row no-gutters">
-                        <div className={`${styles.view_winner_button_container} col-6` }>
+                        <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
                             <div className = {styles.view_winner}>
                                 <a href="https://hackdavis2020.devpost.com/" target="_blank">
                                     <div className={styles.winnertext}>
