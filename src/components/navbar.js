@@ -55,6 +55,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen }) => {
                 <Navitem name="About" section_id="section_about"></Navitem>
                 <Navitem name="Schedule" section_id="section_schedule"></Navitem>
                 <Navitem name="FAQ" section_id="section_FAQ"></Navitem>
+                <Navitem name="Sponsors" section_id="section_sponsors"></Navitem>
                 <Navitem setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} name="Log In" section_id="login"></Navitem>
             </div>
         </div>

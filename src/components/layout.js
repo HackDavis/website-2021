@@ -19,6 +19,7 @@ import LandingSection from "./section_landing"
 import ScheduleSection from "./section_schedule"
 import SocialGoodSection from "./section_socialgood"
 import StatsSection from "./section_stats"
+import SponsorsSection from "./section_sponsors"
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 const Layout = ({ children }) => {
@@ -56,6 +57,9 @@ const Layout = ({ children }) => {
             </Section>
             <Section id="section_FAQ">
                 <FAQSection></FAQSection>
+            </Section>
+            <Section id="section_sponsors">
+              <SponsorsSection></SponsorsSection>
             </Section>
         </ParallaxProvider>
         <Footer></Footer>

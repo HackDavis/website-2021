@@ -17,7 +17,7 @@
     font-family: 'Proxima Nova';
     position: relative;
     display: block;
-    height: 100vh;
+    min-height: 100vh;
     max-height: fit-content;
     font-size: 50px;
     font-weight: normal;
