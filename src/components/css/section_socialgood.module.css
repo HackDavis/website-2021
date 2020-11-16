@@ -5,29 +5,35 @@
     font-weight: normal;
 }
 
+.background
+{
+    height: 100vh;
+}
+
+.image
+{
+    width: 100%;
+    height: auto;
+}
+
 .title{
-    font-family: Proxima Nova;
+    font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: bold;
     font-size: 62px;
-    line-height: 76px;
 }
 
 .description {
-    font-family:Proxima Nova;
+    font-family: 'Proxima Nova';
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 150%;
     border: 2px solid red;
-    margin-top: 27px;
+    margin-top: 20px;
 }
 
 .social_good_container{
-    border: 2px solid black;
-    width: 617px;
-    height: fit-content;
-    position: absolute;
-    top: 30%;
-    left: 20%;
+    border: 2px solid orange;
+    border-radius: 50px;
+    overflow: hidden;
 }
