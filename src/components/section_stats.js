@@ -11,7 +11,7 @@ const StatsSection = () => {
                 <div className={`col-10 offset-1 col-xl-5 offset-xl-1 ${styles.image_container}`}>
                     <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/04/CatMemeQuarantine-lede.jpg"></img>
                 </div>
-                <div className={`${styles.statscontainer} col-12 offset-1 col-sm-5 col-xl-4 offset-xl-1`}>
+                <div className={`${styles.statscontainer} col-10 offset-1 col-sm-5 col-xl-4 offset-xl-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={styles.stats}>
