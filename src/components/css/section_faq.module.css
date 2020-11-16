@@ -23,6 +23,13 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.qaText:not(:first-child)
+{
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
 }
 
 .qa_title {
@@ -34,8 +41,14 @@
 }
 
 .content { 
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
     font-size: 16px;
     font-weight: 400;
+    overflow: hidden;
+    opacity: 1;
+    line-height: 30px;
+    max-height: 1000px;
+    transition: max-height 0.3s ease-in-out, 0.2s ease-in-out opacity;
 }
 
 .dropdownImage {
@@ -45,4 +58,18 @@
     margin-top: 10px;
     user-select: none;
     cursor: pointer;
+    transform: rotate(0deg);
+    transition: 0.2s ease-in-out transform;
+}
+
+.imgCollapse
+{
+    transform: rotate(180deg);
+}
+
+.collapseHeight
+{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
 }

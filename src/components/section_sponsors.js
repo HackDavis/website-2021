@@ -13,7 +13,7 @@ const SponsorsSection = () => {
             <div className={`row no-gutters ${styles.background}`}>
                 <div className={'col-8 offset-2'}>
                     <h2 className={styles.headerText}>Sponsors</h2>
-                    <div className="row no-gutters">
+                    <div className="row align-items-center no-gutters">
                         <div className="col-12" align="center">
                             <h4 className={styles.labelText}>Co-Hosted by</h4>
                         </div>
@@ -29,7 +29,7 @@ const SponsorsSection = () => {
                             <img className={styles.imageStyle}src={sponsorCentene} />
                         </div>
                     </div>
-                    <div className="row no-gutters">
+                    <div className="row align-items-center no-gutters">
                         <div className="col-12" align="center">
                             <h4 className={styles.labelText}>2021 Partners</h4>
                         </div>
@@ -45,7 +45,7 @@ const SponsorsSection = () => {
                             <img className={styles.imageStyle}src={sponsorCentene} />
                         </div>
                     </div>
-                    <div className="row no-gutters">
+                    <div className="row align-items-center no-gutters">
                         <div className="col-12" align="center">
                             <h4 className={styles.labelText}>2021 Non-Profits</h4>
                         </div>

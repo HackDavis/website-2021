@@ -27,7 +27,7 @@
 }
 
 .imageStyle {
-    height: 5rem;
+    height: auto;
     width: 50%;
     user-select: none;
     cursor: pointer;
