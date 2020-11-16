@@ -28,7 +28,8 @@
 
 .imageStyle {
     height: auto;
-    width: 50%;
+    width: 75%;
+    padding: 10px;
     user-select: none;
     cursor: pointer;
     transition: transform .5s;
