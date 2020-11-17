@@ -40,7 +40,7 @@ const LandingSection = () => {
                 <Parallax y={["-300px", "300px"]}>
                     <div className={parallaxstyles.testbox2}></div>
                 </Parallax> */}
-                <div className={`col-6 offset-3 ${styles.landingContainer}`}>
+                <div className={`col-sm-10 offset-sm-1 col-xl-6 offset-xl-3 col-sm-10 offset-sm-1 ${styles.landingContainer}`}>
                     <div className={styles.title}>
                         HACK<span className={styles.boldTitle}>DAVIS</span>
                         <br></br>

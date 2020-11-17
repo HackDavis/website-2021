@@ -45,7 +45,7 @@ div.landingContainer
 
 div.title{
     font-family: 'Proxima Nova';
-    font-size: 7rem;
+    font-size: 80px;
     font-weight: 500;
     color: #354142;
     border: 2px solid blue;
@@ -60,14 +60,28 @@ div.title{
 .typedtext
 {
     font-family: Source Code Pro;
-    font-size: 2rem;
+    font-size: 30px;
     color: #354142;
     display: inline-block;
 }
 
 .typedcontainer
 {
-    font-size: 2rem;
+    font-size: 30px;
+}
+
+@media (max-width: 768px)
+{
+    div.title
+    {
+        font-size: 60px;
+    }
+    
+    .typedtext, .typedcontainer
+    {
+        font-size: 20px;
+    }
+
 }
 
 div.sponsorImage {
