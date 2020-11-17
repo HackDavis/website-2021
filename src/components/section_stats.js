@@ -8,10 +8,10 @@ const StatsSection = () => {
     return (
         <div className = "container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
-                <div className={`col-10 offset-1 col-xl-5 offset-xl-1 ${styles.image_container}`}>
+                <div className={`col-10 offset-1 col-md-5 offset-md-1 ${styles.image_container}`}>
                     <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/04/CatMemeQuarantine-lede.jpg"></img>
                 </div>
-                <div className={`${styles.statscontainer} col-10 offset-1 col-sm-5 col-xl-4 offset-xl-1`}>
+                <div className={`${styles.statscontainer} col-10 offset-1 col-sm-5 col-md-4 offset-md-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={styles.stats}>
@@ -35,6 +35,7 @@ const StatsSection = () => {
                         </div>
                     </div>
                 </div>
+                <div className={styles.bottom_diagonal}></div>
             </div>
     )
 }

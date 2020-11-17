@@ -112,20 +112,32 @@ a:hover
 
 .image_container
 {
-    border-radius: 10px;
     overflow: hidden;
     border: 2px solid red;
-}
-
-@media (max-width: 575px){
-    .image_container
-    {
-        margin-top: -40px;
-    }
+    border-radius: 50px;
 }
 
 .image
 {
     width: 100%;
     height: auto;
+}
+
+.bottom_diagonal
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+	height: 0;
+	border-bottom: 100px solid #FAFAFF;
+    border-left: 100vw solid transparent;
+}
+
+@media (max-width: 768px)
+{
+    .bottom_diagonal
+    {
+        border-bottom: 40px solid #FAFAFF;
+    }
 }

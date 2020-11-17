@@ -8,6 +8,7 @@
 .background
 {
     height: 100vh;
+    background-color: #FAFAFF;
 }
 
 .image
@@ -38,4 +39,23 @@
     border: 2px solid orange;
     border-radius: 50px;
     overflow: hidden;
+}
+
+.bottom_diagonal
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+	height: 0;
+	border-bottom: 100px solid #0B2638;
+    border-left: 100vw solid transparent;
+}
+
+@media (max-width: 768px)
+{
+    .bottom_diagonal
+    {
+        border-bottom: 40px solid #0B2638;
+    }
 }

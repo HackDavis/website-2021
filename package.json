@@ -1,12 +1,13 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "hackdavis-website-2021",
+  "description": "HackDavis 2021 Website",
+  "version": "1.0.0",
+  "author": "HackDavis Team <team@hackdavis.io>",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "babel-plugin-styled-components": "^1.10.7",
     "bootstrap": "^4.5.1",
+    "bootstrap-icons": "^1.1.0",
     "dotenv-webpack": "^1.7.0",
     "firebase": "^7.23.0",
     "gatsby": "^2.24.85",
@@ -56,7 +57,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/HackDavis/website-2021"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

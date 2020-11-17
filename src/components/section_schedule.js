@@ -11,19 +11,19 @@ const ScheduleSection = () => {
             <div className={`row no-gutters align-items-center ${styles.main_container}`}>
                 <div className='col-12'>
                     <div className={`row no-gutters ${styles.title_container}`}>
-                        <div className='col-2 offset-2'>
+                        <div align="left" className='col-10 offset-1 col-md-8 offset-md-2'>
                             <h2>Schedule</h2>
                         </div>
                     </div>
-                    <div className={`row no-gutters align-items-center ${styles.schedule_container}`}>
-                        <div className="col-3 offset-2">
-                            <div className='row no-gutters'>
+                    <div className={`row no-gutters align-items-center`}>
+                        <div className={`col-10 col-md-3 offset-1 offset-md-2 ${styles.day_container}`}>
+                            <div className={`row no-gutters`}>
                                 <div className={styles.day}>
                                     SATURDAY
                                 </div>
                             </div>
                             <div className='row no-gutters'>
-                                <div className='col-4'>
+                                <div className={`col-4 ${styles.time_container}`}>
                                     <div className={styles.time}>
                                         9:00 am <br></br>
                                         11:00 am <br></br>
@@ -32,7 +32,7 @@ const ScheduleSection = () => {
                                         7:00 pm <br></br>
                                     </div>
                                 </div>
-                                <div className='col-8'>
+                                <div className={`col-8 col-md-8 ${styles.event_text_container}`}>
                                     <div className={styles.event_text}>
                                         Check-in begins <br></br>
                                         Opening Ceremony <br></br>
@@ -43,14 +43,14 @@ const ScheduleSection = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-3 offset-2">
-                        <div className='row no-gutters'>
-                                <div className={styles.day}>
+                        <div className={`col-10 col-md-3 offset-1 offset-md-2 ${styles.day_container}`}>
+                            <div className={`row no-gutters`}>
+                                <div className={`${styles.day} ${styles.sunday}`}>
                                     SUNDAY
                                 </div>
                             </div>
                             <div className='row no-gutters'>
-                                <div className='col-4'>
+                                <div className={`col-4 ${styles.time_container}`}>
                                     <div className={styles.time}>
                                         11:30 am <br></br>
                                         6:00 pm <br></br>
@@ -59,7 +59,7 @@ const ScheduleSection = () => {
                                         9:45 pm <br></br>
                                     </div>
                                 </div>
-                                <div className='col-8'>
+                                <div className={`col-8 col-md-8 ${styles.event_text_container}`}>
                                     <div className={styles.event_text}>
                                         Lunch <br></br>
                                         Hacking Ends <br></br>
