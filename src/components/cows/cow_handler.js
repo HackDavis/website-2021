@@ -26,6 +26,13 @@ const CowHandler = (props) => {
     const [myId, setMyId] = useState();
     const [cows, setCows] = useState({});
 
+    /**
+     * Why do you have cows_real and cows as a state?
+     * 
+     * React was causing me pain. That's all.
+     * 
+     */
+
     function SetCows(cows)
     {
         cows_real = cows;
@@ -34,8 +41,32 @@ const CowHandler = (props) => {
 
     function AddCow(id, cow)
     {
-        const cows_copy = JSON.parse(JSON.stringify(cows_real));
+        let cows_copy = JSON.parse(JSON.stringify(cows_real));
         cows_copy[id] = cow;
+
+        if (cows_real[id] != undefined)
+        {
+            // Cow existed before, so we're updating its position.
+            // Store distance in pixels
+
+            if (cows_real[id].timeout)
+            {
+                clearTimeout(cows_real[id].timeout);
+            }
+
+            const diff = {x: (cow.pos.x - cows_real[id].pos.x) * $(window).width(), y: (cow.pos.y - cows_real[id].pos.y) * $(window).height()};
+            cows_copy[id].time = Math.sqrt(diff.x * diff.x + diff.y * diff.y) / 500;
+            cows_copy[id].timeout = setTimeout(() => {
+                cows_copy = JSON.parse(JSON.stringify(cows_real));
+                if (cows_copy[id])
+                {
+                    cows_copy[id].time = null;
+                    cows_copy[id].timeout = null;
+                    setCows(cows_copy);
+                }
+            }, cows_copy[id].time * 1000);
+        }
+
         cows_real = cows_copy;
         setCows(cows_copy);
     }

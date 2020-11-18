@@ -16,17 +16,23 @@
     width: 100%;
     height: auto;
     transform-origin: 50% 100%;
-    animation: cow-hop-slow 1.2s ease-in-out infinite;
+    transition: 0.1s ease-in-out all;
+    animation: cow_hop_slow 1.2s ease-in-out infinite;
 }
 
-@keyframes cow-hop-slow
+.cow_hop_fast
+{
+    animation: cow_hop_fast 0.3s ease-in-out infinite;
+}
+
+@keyframes cow_hop_slow
 {
     0% {transform: scaleY(1);}
     50% {transform: scaleY(0.9);}
     100% {transform: scaleY(1);}
 }
 
-@keyframes cow-hop-fast
+@keyframes cow_hop_fast
 {
     0% {transform: scaleY(1);}
     50% {transform: scaleY(0.8);}
