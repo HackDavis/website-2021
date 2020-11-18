@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import $ from "jquery";
 import Cow from "./cow"
+import { useStaticQuery, graphql } from "gatsby"
 import { useFirebase } from 'gatsby-plugin-firebase';
 import SocketHandler from './socket';
 
@@ -8,6 +9,20 @@ let cows_real = {}
 
 const CowHandler = (props) => {
 
+    const data = useStaticQuery(graphql`
+    {
+        allFile(filter: { name: {eq: "cowtest"} extension: { eq: "png"} }, sort: {fields:[name] order: ASC}) {
+          edges {
+            node {
+              publicURL
+              name
+              dir
+            }
+          }
+        }
+      }
+    `)
+  
     const [myId, setMyId] = useState();
     const [cows, setCows] = useState({});
 
@@ -36,7 +51,7 @@ const CowHandler = (props) => {
     return <>
         {<SocketHandler AddCow={AddCow} RemoveCow={RemoveCow} SetCows={SetCows} myId={myId} setMyId={setMyId}></SocketHandler>}
         {Object.keys(cows).map((cow) => {
-            return <Cow key={`cow_${cow}`} cow={cows[cow]}></Cow>
+            return <Cow key={`cow_${cow}`} image_src={data.allFile.edges[0].node.publicURL} cow={cows[cow]}></Cow>
         })}</>
 };
 
