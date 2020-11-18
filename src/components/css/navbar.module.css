@@ -96,3 +96,8 @@ div.underline.selected
 {
     transform: scale(1.1, 1.1);
 }
+
+.navbarcontainer_gradient
+{
+    color: #0B2638;
+}

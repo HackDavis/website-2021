@@ -35,15 +35,22 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen }) => {
                     if (scrollTop >= anchorTop) {
                         $(`.${styles.navitem}`).find(`div.${styles.underline}`).removeClass(styles.selected);
                         $els.navItem.find(`.${styles.underline}`).addClass(styles.selected);
+
+                        if (i < 2 && i > 0)
+                        {
+                            // We are in stats or social good section
+                            $(`.${styles.navitem} button`).addClass(styles.navbarcontainer_gradient)
+                        }
+                        else
+                        {
+                            // We are past the stats or social good section
+                            $(`.${styles.navitem} button`).removeClass(styles.navbarcontainer_gradient)
+                        }
+
                         break;
                     }
                 }
             }
-
-            // Check if the user is currently on the about page to alter the navbar color 
-            if (anchors[0].$els.navItem.find(`.${styles.underline}` == "section_about"))
-                console.log("yo")
-            // {console.log(anchors[0].$els.navItem.find(`.${styles.underline}`))} 
         }
 
         OnScroll();

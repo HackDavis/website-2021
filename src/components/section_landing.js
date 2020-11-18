@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-// import LandingBackground from "./landing_background"
+import LandingBackground from "./landing_background"
 import styles from "./css/section_landing.module.css"
 import Typed from "typed.js"
 import Login from "./login"
@@ -40,7 +40,7 @@ const LandingSection = () => {
     return (
         <div className="container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
-                {/* <LandingBackground></LandingBackground> */}
+                <LandingBackground></LandingBackground>
                 <div className={`col-sm-10 offset-sm-1 col-xl-6 offset-xl-3 col-sm-10 offset-sm-1 ${styles.landingContainer}`}>
                     <div className={styles.title}>
                         HACKDAVIS
