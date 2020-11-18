@@ -2,23 +2,24 @@ import React, { useState, useEffect } from 'react';
 import openSocket from 'socket.io-client';
 import $ from "jquery";
 
+const socket = openSocket('http://localhost:8080');
+
 
 const SocketHandler = (props) => {
 
-    const [socket, setSocket] = useState(openSocket('http://localhost:8080'));
-
     useEffect(() => {
 
-        console.log("SocketHandler render")
         $(window).on("click", function (e) {
             socket.emit('move cow', {
                 pos: {x: e.pageX / $(window).width(), y: e.pageY / $(window).height()}
             })
         })
 
+        socket.emit("useEffect_connected") // Tell server that we are ready on useEffect
+
         socket.on('connect', () => 
         {
-            console.log("connected")
+            console.log("connected to cows!")
         })
 
         socket.on('set id', (args) => 
@@ -28,14 +29,19 @@ const SocketHandler = (props) => {
 
         socket.on('sync cows', (sync_cows) => 
         {
-            props.setCows(sync_cows);
+            console.log('sync cows');
+            console.log(sync_cows);
+            props.SetCows(sync_cows);
+        })
+    
+        socket.on('delete cow', (args) => 
+        {
+            props.RemoveCow(args.id)
         })
     
         socket.on('sync cow', (args) => 
         {
-            const cows_copy = JSON.parse(JSON.stringify(props.cows || {}));
-            cows_copy[args.id] = args.cow;
-            props.setCows(cows_copy);
+            props.AddCow(args.id, args.cow)
         })
 
         // Cleanup event handlers
@@ -47,6 +53,8 @@ const SocketHandler = (props) => {
             socket.off('set id');
             socket.off('sync cows');
             socket.off('sync cow');
+
+
         }
     }, true)
 
