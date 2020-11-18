@@ -39,6 +39,11 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen }) => {
                     }
                 }
             }
+
+            // Check if the user is currently on the about page to alter the navbar color 
+            if (anchors[0].$els.navItem.find(`.${styles.underline}` == "section_about"))
+                console.log("yo")
+            // {console.log(anchors[0].$els.navItem.find(`.${styles.underline}`))} 
         }
 
         OnScroll();

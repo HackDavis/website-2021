@@ -21,7 +21,6 @@ div.background
 
 div.statscontainer
 {
-    border: 2px solid red;
     color: black;
 }
 
@@ -113,7 +112,6 @@ a:hover
 .image_container
 {
     overflow: hidden;
-    border: 2px solid red;
     border-radius: 50px;
 }
 

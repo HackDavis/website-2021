@@ -15,6 +15,10 @@
 {
     width: 100%;
     height: auto;
+    margin-bottom: 3rem;
+    border: 0px;
+    border-radius: 50px;
+    overflow: hidden;
 }
 
 .title
@@ -31,18 +35,12 @@
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    border: 2px solid red;
     line-height: 30px;
-}
-
-.social_good_container{
-    border: 2px solid orange;
-    border-radius: 50px;
-    overflow: hidden;
 }
 
 .bottom_diagonal
 {
+    padding-top: 10rem;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -58,4 +56,8 @@
     {
         border-bottom: 40px solid #0B2638;
     }
+}
+
+.bottom_padding {
+    padding-bottom: 10rem;
 }
