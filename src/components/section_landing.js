@@ -50,8 +50,8 @@ const LandingSection = () => {
                         </div>
                     </div>
                     <div className={styles.buttoncontainer}>
-                        <button className={styles.applyButton}>APPLY NOW</button>
-                        <button className={styles.sponsorButton}>SPONSOR 2021</button>
+                        <button className={styles.applyButton} onClick={() => window.open('https://forms.gle/dsfYsWFwjKEvnFjT8')}>PRE-REGISTER</button>
+                        <button className={styles.sponsorButton} onClick={() => window.open('mailto:team@hackdavis.io')}>SPONSOR 2021</button>
                     </div>
                 </div>
                 <div className={styles.start_button_container} onClick={()=> OnClickBehavior('section_about')}>

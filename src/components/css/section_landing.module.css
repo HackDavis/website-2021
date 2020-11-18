@@ -82,6 +82,11 @@ div.title{
         font-size: 20px;
     }
 
+    .sponsorButton
+    {
+        display: none;
+    }
+
 }
 
 div.sponsorImage {

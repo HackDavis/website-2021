@@ -185,3 +185,17 @@ img.water
     50% {transform: scale(1.05);}
     100% {transform: scale(1);}
 }
+
+
+@media (max-width: 768px)
+{
+    .right_side_container
+    {
+        display: none;
+    }
+
+    .heart
+    {
+        animation: none;
+    }
+}

@@ -56,6 +56,12 @@
     {
         border-bottom: 40px solid #0B2638;
     }
+    
+    .background
+    {
+        height: fit-content;
+        padding-bottom: 60px;
+    }
 }
 
 .bottom_padding {

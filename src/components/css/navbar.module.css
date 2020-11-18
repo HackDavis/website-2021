@@ -57,7 +57,7 @@ div.underline.selected
     transition: 0.2s ease-in-out transform;
 }
 
-.navbutton, .navbutton:focus
+.navbutton
 {
     font-weight: bold;
     position: relative;
@@ -70,6 +70,12 @@ div.underline.selected
     padding: 0.25vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
+}
+
+.navbutton:focus
+{
+    outline: none;
+    border: none;
 }
 
 .profile, .profile:focus

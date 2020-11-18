@@ -65,9 +65,9 @@ const Layout = ({ children }) => {
             <Section id="section_socialgood">
                 <SocialGoodSection></SocialGoodSection>
             </Section>
-            <Section id="section_schedule">
+            {/* <Section id="section_schedule">
                 <ScheduleSection></ScheduleSection>
-            </Section>
+            </Section> */}
             <Section id="section_FAQ">
                 <FAQSection></FAQSection>
             </Section>

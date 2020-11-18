@@ -21,8 +21,8 @@ const SocialGoodSection = () => {
                 <div className={`${styles.social_good_container} col-10 offset-1 col-md-5 offset-md-1 order-1 order-md-2`}>
                     <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/05/cat-memes-lede.jpg"></img>
                 </div>
-                <div className={styles.bottom_diagonal}></div>
             </div>
+            <div className={styles.bottom_diagonal}></div>
         </div>
     )
 }
