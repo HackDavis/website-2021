@@ -141,3 +141,11 @@ a:hover
         border-bottom: 40px solid #FAFAFF;
     }
 }
+
+.header_date{
+    font-family: 'Proxima Nova';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 30px;
+}

@@ -13,6 +13,13 @@ const StatsSection = () => {
                 </div>
                 <div className={`${styles.statscontainer} col-10 offset-1 col-sm-5 col-md-4 offset-md-1`}>
                     <div className = "row no-gutters">
+                        <div className = "col-12">
+                            <div className={styles.header_date}>
+                                January 16 - 17, 2021  |  Hosted Virtually
+                            </div>
+                        </div>
+                    </div>
+                    <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={styles.stats}>
                                 600+ HACKERS<br></br>

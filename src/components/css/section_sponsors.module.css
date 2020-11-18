@@ -14,27 +14,53 @@
 
 .headerText {
     margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     font-size: 40px;
     font-weight: 700;
 }
 
-.labelText {
-    font-size: 24px;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+@media (max-width: 575px){
+    .headerText
+    {
+        margin-bottom: 2.5rem;
+    }
 }
 
 .imageStyle {
+    margin-bottom: 4rem;
     height: auto;
-    width: 75%;
-    padding: 10px;
     user-select: none;
     cursor: pointer;
     transition: transform .5s;
 }
 
+@media (max-width: 575px){
+    .imageStyle
+    {
+        width: 100%;
+        margin-bottom: 3.5rem;
+    }
+}
+
 .imageStyle:hover {
-    transform: scale(1.25);
+    transform: scale(1.10);
+}
+
+.smallImageStyle {
+    margin-bottom: 1.5rem;
+    height: auto;
+    user-select: none;
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+@media (max-width: 575px){
+    .smallImageStyle
+    {
+        width: 100%;
+    }
+}
+
+.smallImageStyle:hover {
+    transform: scale(1.10);
 }

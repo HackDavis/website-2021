@@ -27,9 +27,15 @@
     font-weight: normal;
 }
 
+@font-face
+{
+    src: url("../../static/fonts/Retrograde-Regular.otf");
+    font-family: 'Source Code Pro';
+    font-weight: normal;
+}
+
 div.background
 {
-    background-color: lightblue;
     position: relative;
     height: 100vh;
     padding: 0;
@@ -37,7 +43,6 @@ div.background
 
 div.landingContainer 
 {
-    border: 2px solid red;
     padding: 0;
     text-align: center;
     color:black;
@@ -47,27 +52,22 @@ div.title{
     font-family: 'Proxima Nova';
     font-size: 80px;
     font-weight: 500;
-    color: #354142;
-    border: 2px solid blue;
-    padding:0;
-}
-
-.boldTitle
-{
     font-weight: bold;
+    color: #FFFFFF;
+    padding:0;
 }
 
 .typedtext
 {
-    font-family: Source Code Pro;
-    font-size: 30px;
-    color: #354142;
+    font-family: 'Retrograde';
+    font-size: 24px;
+    color: #FFFFFF;
     display: inline-block;
 }
 
 .typedcontainer
 {
-    font-size: 30px;
+    font-size: 24px;
 }
 
 @media (max-width: 768px)
@@ -92,22 +92,69 @@ div.sponsorImage {
     visibility: hidden;
 }
 
-div.buttoncontainer
-{
-    margin-top: 1rem;
-    font-size: 2rem;
-}
-
-div.buttoncontainer > button
+.buttoncontainer > button
 {
     margin: 1rem;
+    margin-top: 3rem;
     width: 9rem;
     height: 2.5rem;
     font-family: Proxima Nova;
-    background-color: blue;
+    font-size: 2rem;
     border-radius: 50px;
     border: 0px;
     font-weight: bold;
-    color: white;
     font-size: 1rem;
+    user-select: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    outline: none;
+}
+
+.buttoncontainer button:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.applyButton {
+    background-color: #FFFFFF;
+    color: #12A8B1;
+}
+
+.sponsorButton {
+    background-color: #12A8B1;
+    color: white;
+}
+
+.start_button_container
+{
+    text-align: center;
+    font-family: 'Retrograde';
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.start_button_container:hover
+{
+    opacity: 0.75;
+}
+
+.start_button_text
+{
+    font-size: 24px;
+}
+
+.start_button_button
+{
+    animation: start_button 2s ease-in-out infinite;
+}
+
+@keyframes start_button
+{
+    0% {transform: translateY(0);}
+    50% {transform: translateY(5px);}
+    100% {transform: translateY(0);}
 }
