@@ -36,25 +36,12 @@ const Layout = ({ children }) => {
   const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
   const [profileModalIsOpen, setProfileModalIsOpen] = useState(false);
 
-  function renderNavbar() {
-    if (window.screen.width > 575) {
-      {console.log("big enough screen")}
-      return (
-      <>
-        <FloatingLogo></FloatingLogo>
-        <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
-      </>
-      )
-    }
-    else
-      return null;
-  }
-  
   return (
     <>
         <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
         <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
-        {renderNavbar()}
+        <FloatingLogo></FloatingLogo>
+        <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
         <ParallaxProvider>
             <Section id="section_landing">
                 <LandingSection></LandingSection>

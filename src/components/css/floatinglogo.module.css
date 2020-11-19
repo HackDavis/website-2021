@@ -13,3 +13,11 @@
     background-size: 80px 80.12px;
     z-index: 6;
 }
+
+@media (max-width: 768px)
+{
+    .floatinglogo, .floatinglogo:focus
+    {
+        display: none;
+    }
+}
