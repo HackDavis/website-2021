@@ -83,6 +83,7 @@ const LandingBackground = (props) => {
             <img onLoad={OnImageLoad()} alt="" src={images["Glow Down Left"]} className={`${styles.glow_left} ${styles.glow_down}`}></img>
             <img onLoad={OnImageLoad()} alt="" src={images["Glow Up Right"]} className={`${styles.glow_right} ${styles.glow_up}`}></img>
             <img onLoad={OnImageLoad()} alt="" src={images["Glow Down Right"]} className={`${styles.glow_right} ${styles.glow_down}`}></img>
+            <div className={styles.notouchy}></div>
         </div>
     )
 }
