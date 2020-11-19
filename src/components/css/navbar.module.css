@@ -110,6 +110,11 @@ div.underline.selected
     transform: scale(1.1, 1.1);
 }
 
+.navitem button
+{
+    transition: 0.5s ease-in-out color;
+}
+
 .navbarcontainer_gradient
 {
     color: #0B2638;
