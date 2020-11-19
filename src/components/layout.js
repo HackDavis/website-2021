@@ -8,7 +8,7 @@
 import React, { useState } from "react"
 import NavBar from "./navbar"
 
-import "./css/layout.module.css"
+import styles from "./css/layout.module.css"
 import Section from "./section"
 import FloatingLogo from "./floatinglogo"
 import Footer from "./footer"
@@ -21,6 +21,7 @@ import SocialGoodSection from "./section_socialgood"
 import StatsSection from "./section_stats"
 import SponsorsSection from "./section_sponsors"
 import { ParallaxProvider } from 'react-scroll-parallax';
+import LoadingScreen from "./loadingscreen"
 
 const Layout = ({ children }) => {
   /*const data = useStaticQuery(graphql`
@@ -35,22 +36,32 @@ const Layout = ({ children }) => {
 
   const [loginModalIsOpen, setLoginModalIsOpen] = useState(false);
   const [profileModalIsOpen, setProfileModalIsOpen] = useState(false);
+  const [onBottomPages, setOnBottomPages] = useState(false);
+  const [coloredLogo, setColoredLogo] = useState(false);
+  const [fadeAbout, setFadeAbout] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadProgress, setLoadProgress] = useState(false);
+  const [fadeSocialGood, setFadeSocialGood] = useState(false);
 
   return (
     <>
+        {isLoading && <LoadingScreen loadProgress={loadProgress}></LoadingScreen>}
         <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
         <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
-        <FloatingLogo></FloatingLogo>
-        <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen}></NavBar>
+        <div>
+          {/* <div className={`${styles.navbarGradient} ${onBottomPages && styles.bottomGradient}`}></div> */}
+          <FloatingLogo coloredLogo={coloredLogo}></FloatingLogo>
+          <NavBar setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} setOnBottomPages={setOnBottomPages} setColoredLogo={setColoredLogo} setFadeAbout={setFadeAbout} setFadeSocialGood={setFadeSocialGood}></NavBar>
+        </div>
         <ParallaxProvider>
             <Section id="section_landing">
-                <LandingSection></LandingSection>
+                <LandingSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></LandingSection>
             </Section>
             <Section id="section_about">
-                <StatsSection></StatsSection>
+                <StatsSection fadeAbout={fadeAbout}></StatsSection>
             </Section>
             <Section id="section_socialgood">
-                <SocialGoodSection></SocialGoodSection>
+                <SocialGoodSection fadeSocialGood={fadeSocialGood}></SocialGoodSection>
             </Section>
             {/* <Section id="section_schedule">
                 <ScheduleSection></ScheduleSection>

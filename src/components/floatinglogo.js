@@ -9,11 +9,13 @@ function OnClickBehavior2()
     scrollTo('#section_landing')
 }
 
-const FloatingLogo = () => {
+const FloatingLogo = ({ coloredLogo }) => {
     
+    const logoColor = coloredLogo ? styles.colorLogo : styles.whiteLogo;
+
     return (
         <div>
-            <button className={styles.floatinglogo} onClick={()=> OnClickBehavior2()}></button>
+            <button className={`${styles.floatinglogo} ${logoColor}`} onClick={()=> OnClickBehavior2()}></button>
             {/* <div className={styles.floatinglogo}></div> */}
         </div>
       );

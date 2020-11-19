@@ -9,6 +9,7 @@
 {
     height: 100vh;
     background-color: #FAFAFF;
+    overflow-x:hidden;
 }
 
 .image
@@ -36,6 +37,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 30px;
+    opacity: 0;
 }
 
 .bottom_diagonal
@@ -69,6 +71,29 @@
     }
 }
 
+.social_good_container{
+    opacity: 0;
+}
+
 .bottom_padding {
     padding-bottom: 10rem;
+}
+
+
+@keyframes slideinleft{
+    0% {transform: translateX(-50%); opacity: 0;}
+    100% {transform: translateX(0%); opacity: 1;}
+}
+
+.slideinleft{
+    animation:slideinleft 1s forwards;
+}
+
+@keyframes slideinright {
+    0% {transform: translateX(50%); opacity: 0; }
+    100% {transform: translateX(0%);  opacity: 1;}
+}
+
+.slideinright{
+    animation: slideinright 1s forwards;
 }

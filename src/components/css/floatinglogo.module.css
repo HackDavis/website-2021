@@ -8,9 +8,16 @@
     height: 50px;
     outline: none;
     border: none;
-    background:url("../../images/hd-logo.svg");
     background-size: 100% 100%;
     z-index: 6;
+}
+
+.whiteLogo {
+    background:url("../../images/Logo\ White.svg");
+}
+
+.colorLogo {
+    background:url("../../images/Logo\ Color.svg");
 }
 
 @media (max-width: 768px)

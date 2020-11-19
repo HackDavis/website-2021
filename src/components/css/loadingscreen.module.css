@@ -1,0 +1,91 @@
+@font-face
+{
+    src: url("../../static/fonts/Retrograde-Regular.otf");
+    font-family: 'Source Code Pro';
+    font-weight: normal;
+}
+
+
+div.background
+{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    user-select: none;
+    font-family: 'Retrograde';
+    font-size: 32px;
+    padding: 0;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .background {
+        font-size: 24px;
+    }
+}
+
+.pageTransform  {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loadingText {
+    display: inline-block;
+}
+
+.cowImage {
+    float: right;
+    width: 60px;
+    height: 60px;
+    transform-origin: 50% 100%;
+    animation: cow_jump 1s ease-in-out infinite;
+}
+
+@keyframes cow_jump
+{
+    0% {transform: scaleY(1) translateY(0);}
+    20% {transform: scaleY(0.8) translateY(0);}
+    25% {transform: scaleY(0.7) translateY(0);}
+    60% {transform: scaleY(1.2) translateY(-50px);}
+    70% {transform: scaleY(1.1) translateY(-65px);}
+    100% {transform: scaleY(1) translateY(0);}
+}
+
+.loadingbar_outside {
+    position: relative;
+    max-width: 400px;
+    width: 75vw;
+    border: 4px solid black;
+    height: 20px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.loadingbar_inside {
+    width: 0%;
+    height: 100%;
+    transition: 1s ease-in-out width;
+    background-image: linear-gradient(to right, #C7ECD9, #5BCDE8);
+}
+
+.loadingbar_inside_full
+{
+    width: 100%;
+}
+
+.opacity_anim
+{
+    animation: opacity_anim 0.3s linear;
+    animation-delay: 1.1s;
+}
+
+@keyframes opacity_anim
+{
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-100%);}
+}

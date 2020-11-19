@@ -30,13 +30,13 @@ div.underline
     left: 50%;
     width: 0%;
     display: block;
-    border-bottom: 4px solid pink;
+    border-bottom: 4px solid #12A8B1;
     transition: 0.2s ease-in-out width;
 }
 
 div.underline.selected
 {
-    width: 100%;
+    width: 85%;
 }
 
 .navitem

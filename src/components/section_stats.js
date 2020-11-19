@@ -1,23 +1,23 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "gatsby"
-
+import $ from 'jquery'
 import styles from "./css/section_stats.module.css"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
-const StatsSection = () => {
+const StatsSection = (props) => {
     return (
         <div className = "container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
-                <div className={`col-10 offset-1 col-md-5 offset-md-1 ${styles.image_container}`}>
+                <div className={`col-10 offset-1 col-md-5 offset-md-1 ${styles.image_container} ${props.fadeAbout && styles.slideinleft}`}>
                     <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/04/CatMemeQuarantine-lede.jpg"></img>
                 </div>
-                <div className={`${styles.statscontainer} col-10 offset-1 col-md-4 offset-md-1`}>
+                <div className={`${styles.statscontainer} ${props.fadeAbout && styles.slideinright} col-10 offset-1 col-md-4 offset-md-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={styles.header_date}>
                                 January 16 - 17, 2021  |  Hosted Virtually
                             </div>
-                            <div className={styles.stats}>
+                            <div className={`${styles.stats}`}>
                                 600+ HACKERS<br></br>
                                 36 HOURS<br></br>
                                 110+ PROJECTS<br></br>

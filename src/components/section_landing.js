@@ -9,7 +9,7 @@ import { Parallax } from "react-scroll-parallax"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import scrollTo from 'gatsby-plugin-smoothscroll';
 
-const LandingSection = () => {
+const LandingSection = (props) => {
     let typed
 
     useEffect(() => {
@@ -40,7 +40,7 @@ const LandingSection = () => {
     return (
         <div className="container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
-                <LandingBackground></LandingBackground>
+                <LandingBackground {...props}></LandingBackground>
                 <div className={`col-sm-10 offset-sm-1 col-xl-6 offset-xl-3 col-sm-10 offset-sm-1 ${styles.landingContainer}`}>
                     <div className={styles.title}>
                         HackDavis

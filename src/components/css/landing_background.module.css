@@ -167,7 +167,12 @@ img.water
 .heart
 {
     transform-origin: 28.1% 67.7%;
-    animation: heart_anim 2.5s linear infinite;
+    animation: code2_anim 2s linear infinite;
+}
+
+.heart_orb
+{
+    transform-origin: 28.1% 67.7%;
 }
 
 @keyframes heart_anim
@@ -231,4 +236,21 @@ img.water
     0% {transform: translateY(0px);}
     50% {transform: translateY(-20px);}
     100% {transform: translateY(0px);}
+}
+
+div.loading_container
+{
+    width: 100vh;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 100px;
+}
+
+.loadingbar_inside_full
+{
+    width: 100% !important;
 }

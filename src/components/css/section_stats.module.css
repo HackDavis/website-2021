@@ -18,12 +18,14 @@ div.background
     min-height: fit-content;
     font-family: 'Proxima Nova';
     font-weight: 1000;
+    overflow-x: hidden;
 }
 
 div.statscontainer
 {
     color: black;
     margin-bottom: 60px;
+    opacity: 0;
 }
 
 div.stats
@@ -106,8 +108,18 @@ a:hover
 
 .image_container
 {
-    overflow: hidden;
+    overflow-x: hidden;
     border-radius: 50px;
+    opacity: 0;
+}
+
+.slideinleft{
+    animation: slideinleft 1s forwards;
+}
+
+@keyframes slideinleft{
+    0% {transform: translateX(-50%); opacity: 0;}
+    100% {transform: translateX(0%); opacity: 1;}
 }
 
 .image
@@ -141,4 +153,12 @@ a:hover
     font-style: normal;
     font-size: 18px;
     margin-bottom: 30px;
+}
+
+@keyframes slideinright {
+    0% {transform: translateX(50%); opacity: 0; }
+    100% {transform: translateX(0%);  opacity: 1;}
+}
+.slideinright{
+    animation: slideinright 1s forwards;
 }
