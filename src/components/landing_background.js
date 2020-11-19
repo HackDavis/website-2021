@@ -48,8 +48,8 @@ const LandingBackground = () => {
                 <img src={images["Layer 2-2"]} className={styles.layer2_right}></img>
                 <img src={images["Code 2"]} className={styles.code2}></img>
                 <img src={images["Code 2 Arrow"]} className={styles.heart_arrow}></img>
-                <img src={images["Waterfall 1"]}></img>
-                <img src={images["Waterfall 2"]}></img>
+                <img src={images["Waterfall 1"]} className={styles.waterfall1}></img>
+                <img src={images["Waterfall 2"]} className={styles.waterfall2}></img>
             </div>
             <div className={`${styles.left_side_container}`}>
                 <img src={images["Layer 1"]} className={styles.layer1_left}></img>

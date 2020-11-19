@@ -88,6 +88,7 @@
 .cloud3
 {
     animation: cloud3_anim 7s ease-in-out infinite;
+    animation-delay: 2s;
 }
 
 @keyframes cloud3_anim
@@ -128,6 +129,7 @@ img.water
 .glow_up
 {
     animation: glow_up 2s ease-in-out infinite;
+    animation-delay: 0.5s;
 }
 
 .glow_down
@@ -152,6 +154,7 @@ img.water
 .heart_arrow
 {
     animation: heart_arrow_anim 2s ease-in-out infinite;
+    animation-delay: 1s;
 }
 
 @keyframes heart_arrow_anim
@@ -198,4 +201,29 @@ img.water
     {
         animation: none;
     }
+}
+
+.waterfall1
+{
+    animation: waterfall1_anim 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes waterfall1_anim
+{
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(20px);}
+    100% {transform: translateY(0px);}
+}
+
+.waterfall2
+{
+    animation: waterfall2_anim 3s ease-in-out infinite;
+}
+
+@keyframes waterfall2_anim
+{
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-20px);}
+    100% {transform: translateY(0px);}
 }
