@@ -167,7 +167,7 @@ img.water
 .heart
 {
     transform-origin: 28.1% 67.7%;
-    animation: heart_anim 2s linear infinite;
+    animation: heart_anim 2.5s linear infinite;
 }
 
 @keyframes heart_anim

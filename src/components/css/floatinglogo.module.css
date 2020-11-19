@@ -3,14 +3,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    margin: 20px;
-    width: 80px;
-    height: 80.12px;
+    margin: 40px;
+    width: 50px;
+    height: 50px;
     outline: none;
     border: none;
-    /* background-color: rgba(200, 0, 200, 0.5); */
     background:url("../../images/hd-logo.svg");
-    background-size: 80px 80.12px;
+    background-size: 100% 100%;
     z-index: 6;
 }
 

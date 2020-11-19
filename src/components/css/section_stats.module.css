@@ -15,6 +15,7 @@
 div.background
 {
     height: 100vh;
+    min-height: fit-content;
     font-family: 'Proxima Nova';
     font-weight: 1000;
 }
@@ -22,13 +23,7 @@ div.background
 div.statscontainer
 {
     color: black;
-}
-
-@media (max-width: 575px){
-    div.statscontainer
-    {
-        margin-top: -240px;
-    }
+    margin-bottom: 60px;
 }
 
 div.stats

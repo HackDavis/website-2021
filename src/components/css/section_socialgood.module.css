@@ -62,6 +62,11 @@
         height: fit-content;
         padding-bottom: 60px;
     }
+
+    .social_good_container
+    {
+        margin-top: 40px;
+    }
 }
 
 .bottom_padding {

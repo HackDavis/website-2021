@@ -111,12 +111,11 @@ div.sponsorImage {
     padding: 14px;
     height: fit-content;
     font-family: Proxima Nova;
-    font-size: 2rem;
+    font-size: 16px;
     letter-spacing: 1px;
     border-radius: 50px;
     border: 0px;
     font-weight: bold;
-    font-size: 1rem;
     user-select: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
