@@ -12,6 +12,13 @@
     font-weight: bold;
 }
 
+@font-face
+{
+    src: url("../../static/fonts/Proxima\ Nova\ Extrabold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: 900;
+}
+
 /* Condensed bold font for "VIEW WINNERS"  */
 @font-face
 {
@@ -50,9 +57,8 @@ div.landingContainer
 
 div.title{
     font-family: 'Proxima Nova';
-    font-size: 80px;
-    font-weight: 500;
-    font-weight: bold;
+    font-size: 96px;
+    font-weight: 900;
     color: #FFFFFF;
     padding:0;
 }
@@ -101,10 +107,12 @@ div.sponsorImage {
 {
     margin: 1rem;
     margin-top: 3rem;
-    width: 9rem;
-    height: 2.5rem;
+    width: 170px;
+    padding: 14px;
+    height: fit-content;
     font-family: Proxima Nova;
     font-size: 2rem;
+    letter-spacing: 1px;
     border-radius: 50px;
     border: 0px;
     font-weight: bold;

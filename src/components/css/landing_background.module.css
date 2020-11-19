@@ -201,6 +201,11 @@ img.water
     {
         animation: none;
     }
+
+    .cloud1
+    {
+        display: none;
+    }
 }
 
 .waterfall1

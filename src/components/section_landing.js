@@ -43,7 +43,7 @@ const LandingSection = () => {
                 <LandingBackground></LandingBackground>
                 <div className={`col-sm-10 offset-sm-1 col-xl-6 offset-xl-3 col-sm-10 offset-sm-1 ${styles.landingContainer}`}>
                     <div className={styles.title}>
-                        HACKDAVIS
+                        HackDavis
                         <br></br>
                         <div className={styles.typedcontainer}>
                             <div className={styles.typedtext} id="typed"></div>

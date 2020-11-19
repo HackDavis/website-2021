@@ -1,6 +1,6 @@
 @font-face
 {
-    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    src: url("../../static/fonts/Proxima\ Nova\ Semibold.otf");
     font-family: 'Proxima Nova';
     font-weight: normal;
 }
@@ -46,7 +46,6 @@ div.underline.selected
     margin: 2vh;
     margin-left: 1vh;
     margin-right: 1vh;
-    font-weight: bold;
     text-align: center;
     min-width: 100px;
     width: fit-content;
