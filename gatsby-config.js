@@ -2,8 +2,8 @@ require("dotenv").config({ path: "./.env" })
 
 module.exports = {
   siteMetadata: {
-    title: `HackDavis 2021 | January 16-17 at UC Davis`,
-    domain: `https://hackdavis2021.netlify.app`,
+    title: `HackDavis 2021 | January 16-17`,
+    domain: `https://hackdavis.io`,
     image: `/src/images/hd_logo.png`,
     author: `HackDavis`,
     description: `HackDavis is UC Davis' annual hackathon for students, run by students.`,
