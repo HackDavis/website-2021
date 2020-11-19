@@ -23,7 +23,7 @@ const ProfileModal = props => {
 
   function GetBadgeDate(badge_id)
   {
-    console.log(userStatus.badges[badge_id])
+    // console.log(userStatus.badges[badge_id])
     return userStatus.badges && userStatus.badges[badge_id]
   }
 

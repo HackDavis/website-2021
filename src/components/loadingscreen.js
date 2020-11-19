@@ -41,7 +41,6 @@ const LoadingScreen = (props) => {
                 <h4 className={`${styles.loadingText}`} >LOADING...</h4>
                 <img className={styles.cowImage} src={images["Cow"]} />
                 <div className={styles.loadingbar_outside}>
-                    {console.log(`loadProgress: ${props.loadProgress}`)}
                     <div className={`${styles.loadingbar_inside} ${props.loadProgress && styles.loadingbar_inside_full}`}></div>
                 </div>
             </div>

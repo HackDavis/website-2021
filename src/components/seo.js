@@ -40,8 +40,6 @@ function SEO({lang, meta}) {
     `
   )
 
-  console.log(site)
-
   return (
     <Helmet
       htmlAttributes={{

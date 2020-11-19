@@ -44,13 +44,9 @@ const LandingBackground = (props) => {
     function OnImageLoad()
     {
         num_images_loaded++;
-        console.log(`loaded image ${num_images_loaded}/${num_images_to_load}`);
-        // $(`div.${loading_styles.loadingbar_inside}`).css('width', `${num_images_loaded / num_images_loaded * 100}%`);
 
         if (num_images_loaded == num_images_to_load)
         {
-            console.log("IMAGES LOADED!")
-
             setTimeout(() => {
                 props.setLoadProgress(true);
                 setTimeout(() => {
