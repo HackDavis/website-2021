@@ -134,7 +134,8 @@ div.sponsorImage {
 }
 
 .sponsorButton {
-    background-color: #12A8B1;
+    /* background-color: #12A8B1; */
+    background-color: red;
     color: white;
 }
 
