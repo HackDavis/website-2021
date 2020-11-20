@@ -109,7 +109,6 @@ a:hover
 .image_container
 {
     overflow-x: hidden;
-    border-radius: 50px;
     opacity: 0;
 }
 

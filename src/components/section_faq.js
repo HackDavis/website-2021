@@ -44,7 +44,7 @@ const FAQSection = () => {
         <div className="container-fluid p-0">
             <div className={`row no-gutters ${styles.background}`}>
                 <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
-                    <h2 className={styles.headerText}>Questions?</h2>
+                    <div className={styles.headerText}>Questions?</div>
                     <div>
                         <div className={styles.qaText}>
                             <h4 className={styles.qa_title}>What is a hackathon?</h4>

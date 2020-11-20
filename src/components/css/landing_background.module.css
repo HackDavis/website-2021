@@ -111,7 +111,7 @@
 img.water
 {
     bottom: 0;
-    left: 0;
+    right: 55.4vh;
     width: 100vw;
     height: 100vh;
 }
@@ -211,6 +211,11 @@ img.water
     {
         display: none;
     }
+
+    .water
+    {
+        left: 0;
+    }
 }
 
 .waterfall1
@@ -259,4 +264,17 @@ div.loading_container
     width: 100%;
     height: 100%;
     position: absolute;
+}
+
+.cow
+{
+    transform-origin: 30% 53%;
+    animation: cow_anim 2.2s ease-in-out infinite;
+}
+
+@keyframes cow_anim
+{
+    0% {transform: scaleY(1);}
+    50% {transform: scaleY(0.95);}
+    100% {transform: scaleY(1);}
 }

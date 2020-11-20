@@ -2,8 +2,39 @@ import React from "react"
 
 import styles from "./css/section_socialgood.module.css"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import { useStaticQuery, graphql } from "gatsby"
 
 const SocialGoodSection = (props) => {
+
+    const data = useStaticQuery(graphql`
+    {
+        allFile(filter: { relativeDirectory: {eq: "illustrations"} }, sort: {fields:[name] order: ASC}) {
+          edges {
+            node {
+              publicURL
+              name
+              dir
+            }
+          }
+        }
+      }
+    `)
+
+    function GetImageMap()
+    {
+        const image_data = {}
+
+        for (let i = 0; i < data.allFile.edges.length; i++)
+        {
+            const image_node = data.allFile.edges[i].node;
+            image_data[image_node.name] = image_node.publicURL;
+        }
+
+        return image_data;
+    }
+
+    const images = GetImageMap();
+
     return (
         <div className="container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
@@ -19,7 +50,7 @@ const SocialGoodSection = (props) => {
                     For the 6th year in a row, we're bringing the most talented students in California (and beyond!) to address the world’s most pressing issues.
                 </div>
                 <div className={`${styles.social_good_container} ${props.fadeSocialGood && styles.slideinright} col-10 offset-1 col-md-5 offset-md-1 order-1 order-md-2`}>
-                    <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/05/cat-memes-lede.jpg"></img>
+                    <img className={styles.image} src={images['Illustration 2']}></img>
                 </div>
             </div>
             <div className={styles.bottom_diagonal}></div>

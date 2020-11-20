@@ -1,15 +1,45 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import $ from 'jquery'
 import styles from "./css/section_stats.module.css"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 const StatsSection = (props) => {
+    
+    const data = useStaticQuery(graphql`
+    {
+        allFile(filter: { relativeDirectory: {eq: "illustrations"} }, sort: {fields:[name] order: ASC}) {
+          edges {
+            node {
+              publicURL
+              name
+              dir
+            }
+          }
+        }
+      }
+    `)
+
+    function GetImageMap()
+    {
+        const image_data = {}
+
+        for (let i = 0; i < data.allFile.edges.length; i++)
+        {
+            const image_node = data.allFile.edges[i].node;
+            image_data[image_node.name] = image_node.publicURL;
+        }
+
+        return image_data;
+    }
+
+    const images = GetImageMap();
+
     return (
         <div className = "container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
                 <div className={`col-10 offset-1 col-md-5 offset-md-1 ${styles.image_container} ${props.fadeAbout && styles.slideinleft}`}>
-                    <img className={styles.image} src="https://filmdaily.co/wp-content/uploads/2020/04/CatMemeQuarantine-lede.jpg"></img>
+                    <img className={styles.image} src={images['Illustration 1']}></img>
                 </div>
                 <div className={`${styles.statscontainer} ${props.fadeAbout && styles.slideinright} col-10 offset-1 col-md-4 offset-md-1`}>
                     <div className = "row no-gutters">
