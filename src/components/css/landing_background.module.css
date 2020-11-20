@@ -266,10 +266,14 @@ div.loading_container
     position: absolute;
 }
 
-.cow
+img.cow
 {
-    transform-origin: 30% 53%;
-    /* animation: cow_anim 2.2s ease-in-out infinite; */
+    left: 20vh;
+    top: 43vh;
+    transform-origin: 50% 100%;
+    width: 10vh;
+    height: auto;
+    animation: cow_anim 2.2s ease-in-out infinite;
 }
 
 @keyframes cow_anim
