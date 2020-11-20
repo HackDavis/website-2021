@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-        {isLoading && <LoadingScreen loadProgress={loadProgress}></LoadingScreen>}
+        {isLoading && <LoadingScreen loadProgress={loadProgress} isLoading={isLoading}></LoadingScreen>}
         <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
         <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
         <div>
