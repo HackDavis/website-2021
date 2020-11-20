@@ -269,7 +269,7 @@ div.loading_container
 .cow
 {
     transform-origin: 30% 53%;
-    animation: cow_anim 2.2s ease-in-out infinite;
+    /* animation: cow_anim 2.2s ease-in-out infinite; */
 }
 
 @keyframes cow_anim
