@@ -14,12 +14,13 @@ const Login = ( props ) => {
 
   function initializeUserDoc(user_email, uid) {
     var db = firebase.firestore()
-    console.log(db)
     var docRef = db.collection("users").doc(uid).set({
       email: user_email,
       user_id: uid,
       app_status: "Not Yet Applied",
-      badges: new Map([]),
+      badges: {},
+      group_id: "",
+      pending_groups: []
     }, {merge: true})
     .then(function() {
       console.log("Document successfully written!")

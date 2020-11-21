@@ -1,0 +1,40 @@
+.container
+{
+    padding: 8px;
+    border-top: 2px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container:hover
+{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container:first-of-type
+{
+    border-top: none;
+}
+
+.title
+{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.membercount
+{
+    float: right;
+    display: inline-block;
+}
+
+.tagscontainer
+{
+    
+}
+
+.full
+{
+    color: red;
+}

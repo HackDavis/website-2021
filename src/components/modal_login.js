@@ -5,7 +5,7 @@ import Login from "./login.jsx"
 
 const LoginModal = props => {
   return (
-    <Modal {...props} id="loginmodal">
+    <Modal {...props} isProfile={false} id="loginmodal">
       <div className={styles.modal}>
         <Login {...props}></Login>
       </div>

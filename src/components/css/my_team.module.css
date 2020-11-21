@@ -1,0 +1,182 @@
+.team_name{
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.myTeam_container
+{
+    padding: 6px;
+}
+
+.member_info{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.member_info:last-child
+{
+    border: none;
+}
+
+.team_description_container{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 4px;
+}
+
+.members_container{
+    border: 2px solid lightgray;
+    margin-top: 8px;
+}
+
+.members {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.team_tags{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.contact_email{
+    margin-top: 8px;
+}
+.leavebuttoncontainer{
+    text-align:right;
+    width: 100%;
+}
+
+.leavebutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    background-color:red;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.leavebutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.removebuttoncontainer{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.removebutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 3px;
+    text-align: center;
+    padding: 6px;
+    width: fit-content;
+    color: white;
+    background-color:red;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.removebutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.approvebutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 3px;
+    text-align: center;
+    padding: 6px;
+    width: fit-content;
+    color: white;
+    background-color:green;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.approvebutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+
+.denybutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 3px;
+    text-align: center;
+    padding: 6px;
+    width: fit-content;
+    color: white;
+    background-color:red;
+    border-radius: 300px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.denybutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.name{
+    text-align: left;
+    padding-right:2%;
+    font-size: 18px;
+}
+
+.email{
+    margin-top: 5px;
+    display:block;
+    text-overflow: clip;
+}
+
+.pendingmember
+{
+    color: red;
+}
+
+.memberstitle
+{
+    font-weight: bold;
+    margin: 8px;
+    font-size: 18px;
+}
+
+.member_buttons_container
+{
+    margin-top: 6px;
+    display: block;
+}
+
+.contact_email_title
+{
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.requestText
+{
+    margin-top: 10px;
+    color: darkred;
+}

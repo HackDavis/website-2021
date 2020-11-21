@@ -1,0 +1,23 @@
+.tag
+{
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 500px;
+    margin: 4px;
+    border: 2px solid transparent;
+    user-select: none;
+    transition: 0.1s ease-in-out all;
+}
+
+.not_filled
+{
+    color: black;
+}
+
+.filter_tag
+{
+    cursor: pointer;
+}

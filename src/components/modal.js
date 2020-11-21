@@ -2,74 +2,140 @@ import React, { useState, useEffect } from "react"
 import styles from "./css/modal.module.css"
 import $ from "jquery"
 import { getUser, isLoggedIn } from "../utils/auth"
-import { useFirebase } from "gatsby-plugin-firebase"
+import { useFirebase } from "gatsby-plugin-firebase" // need to use firebase
+import Notification from "./notification"
 
 const Modal = props => {
-  const user = getUser()
-  const { uid } = user
+    const user = getUser()
+    const { uid } = user
 
-  const [firebase, setFirebase] = useState()
+    // need next 4 lines to use firebase
+    const [firebase, setFirebase] = useState()
 
-  useFirebase(fb => {
-    setFirebase(fb)
-  }, [])
+    useFirebase(fb => {
+        setFirebase(fb)
+    }, [])
 
-  useEffect(() => {
-    // Register event handler
-    $(`div.${styles.background}#${props.id}`).on("click", function () {
-      $(`div.${styles.background}#${props.id}`)
-        .parent()
-        .animate(
-          {
-            opacity: 0,
-          },
-          200,
-          function () {
-            props.setIsOpen(false)
-          }
-        )
+    useEffect(() => {
+        // Register event handler
+        $(`div.${styles.background}#${props.id}`).on("click", function () {
+            $(`div.${styles.background}#${props.id}`)
+                .parent()
+                .animate(
+                    {
+                        opacity: 0,
+                    },
+                    200,
+                    function () {
+                        props.setIsOpen(false)
+                    }
+                )
+        })
+
+        // Cleanup event handlers
+        return () => {
+            // clean up the event handler when the component unmounts
+            $(`div.${styles.background}#${props.id}`).off("click")
+        }
     })
 
-    // Cleanup event handlers
-    return () => {
-      // clean up the event handler when the component unmounts
-      $(`div.${styles.background}#${props.id}`).off("click")
-    }
-  })
+    function loadInfo(isProfile) {
+        if (!isProfile) return
+        if (!firebase) return // if API key doesn't exist
 
-  function loadInfo(isProfile) {
-    if (!isProfile) return
-    if (!firebase) return
-
-    // this check is only necessary because of the useEffect glitch
-    if (isLoggedIn()) {
-      var db = firebase.firestore()
-      var docRef = db.collection("users").doc(uid)
-
-      docRef
-        .get()
-        .then(function (doc) {
-          if (doc.exists) {
-            console.log("User info has successfully been read")
-            props.setUserStatus({status: doc.data().app_status, badges: doc.data().badges})
+        // this check is only necessary because of the useEffect glitch
+        if (isLoggedIn()) {
+            var db = firebase.firestore() // returns the address of our db 
+            var docRef = db.collection("users").doc(uid) // creates a reference to the specified doc
             props.setHasLoaded(true)
-          } else {
-            console.log("No such document exists")
-          }
-        })
-        .catch(function (error) {
-          console.log(`Error getting document: ${error}`)
-        })
-    }
-  }
 
-  return props.isOpen ? (
-    <div className={styles.modal}>
-      {!props.hasLoaded && loadInfo(props.isProfile)}
-      <div id={props.id} className={styles.background}></div>
-      <div className={styles.container}>{props.children}</div>
-    </div>
-  ) : null
+            // user info call
+            docRef
+                .onSnapshot(function (doc) {
+                    if (doc.exists) {
+                        console.log("User info has successfully been read")
+                        props.setUserStatus({
+                            status: doc.data().app_status,
+                            badges: doc.data().badges,
+                            group_id: doc.data().group_id,
+                            pending_groups: doc.data().pending_groups,
+                            db: db
+                        }) // extracts the specific fields from the document 
+                        if (doc.data().group_id.length > 0)
+                            props.setIsInTeam(true)
+                        else
+                            props.setIsInTeam(false)
+                    } else {
+                        props.DisplayNotification("Failed to load user info!", "#c12c24", 10000)
+                        console.log("No such document exists")
+                    }
+                })
+
+            // // Regular, no snapshot call 
+            // db.collection("groups").get().then(function(querySnapshot) {
+            //     querySnapshot.forEach(function(doc) {
+            //         console.log(doc.data())
+            //         if (dataIsValid(doc.data()))
+            //             groups[doc.id] = doc.data();
+            //     })
+            //     props.setGroups(groups);
+            // })
+
+            // Regular snapshot call that SHOULD automatically update local states on db updates (but does not)
+            docRef = db.collection("groups")
+            let groups = {}
+            docRef.onSnapshot(function (querySnapshot) {
+                querySnapshot.forEach(function (doc) {
+                    console.log(doc.data())
+                    if (dataIsValid(doc.data()))
+                        groups[doc.id] = doc.data();
+                });
+                props.setGroups(groups);
+                // props.setHasLoaded(true) // does not cause the setstate update error in the console 
+            });
+
+            // // Odd snapshot call that does not automatically update local states on db updates 
+            // docRef = db.collection("groups")
+            // let groups = {}
+            // docRef.onSnapshot(function(snapshot) {
+            //     snapshot.docChanges().forEach(function(change) {
+            //         if (change.type == "added" || change.type == "modified") {
+            //             groups[change.doc.id] = change.doc.data();
+            //             props.setGroups(groups);
+            //         }
+            //         else {
+            //             console.log("Group was deleted")
+            //         }
+            //     })
+            // })
+        }
+    }
+
+    function dataIsValid(data) {
+        try {
+            return (data.description.length > 0) &&
+                (data.email.length > 0) &&
+                (Object.keys(data.members).length > 0) &&
+                (data.max_members.length > 0) &&
+                (data.name.length > 0) &&
+                (data.tags.length > 0);
+        } catch (err) {
+            return false;
+        }
+    }
+
+    return props.isOpen ? (
+        <div className={styles.modal}>
+            {!props.hasLoaded && loadInfo(props.isProfile)}
+            <div id={props.id} className={styles.background}></div>
+            <div className={styles.container}>
+                {props.notificationState && props.notificationState.active && <Notification {...props}></Notification>}
+                <div className={styles.container_padding}>
+                    {props.children}
+                </div>
+            </div>
+        </div>
+    ) : null
 }
 
 export default Modal

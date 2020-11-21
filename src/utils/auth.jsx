@@ -10,8 +10,8 @@ export const setUser = user =>
 
   export const isLoggedIn = () => {
     console.log("isLoggedIn triggered")
-  const user = getUser()
-  return !!user.email
+    const user = getUser()
+    return !!user.email
 }
 
 export const logout = (firebase) => {

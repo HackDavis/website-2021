@@ -40,6 +40,7 @@
 .teamfindercontainer
 {
     /* border: 2px solid cyan; */
+    position: relative;
     min-height: 13rem;
     /* margin: 1rem; */
 }
@@ -59,7 +60,7 @@
 
 .modalsectioncontent
 {
-    max-height: 150px;
+    position: relative;
     overflow-y: auto;
 }
 

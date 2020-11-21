@@ -1,0 +1,59 @@
+.team_name{
+    padding-top:8px;
+    font-size: 15px;
+}
+
+.inputarea{
+    margin-top:8px;
+    width: 100%;
+}
+
+.team_description{
+    margin-top: 8px;
+}
+.team_size{
+    margin-top: 8px;
+}
+
+.team_size > select{
+    margin-left:5px;
+}
+
+.tag_container{
+   margin-top: 8px;
+}
+
+.contact_email{
+    margin-top: 8px;
+}
+
+.createbuttoncontainer{
+    text-align:center;
+    width: 100%;
+}
+
+.createbutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    background-color: rgb(49, 138, 49);
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.createbutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.createteam_container
+{
+    padding: 6px;
+}

@@ -1,0 +1,96 @@
+.maincontainer
+{
+    padding: 6px;
+}
+
+.title
+{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.membercount
+{
+    float: right;
+    display: inline-block;
+}
+
+.description
+{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.tagscontainer
+{
+    margin-bottom: 5px;
+}
+
+.members
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.memberstitle, .emailtitle
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.memberscontainer, .contactemail
+{
+    margin-left: 10px;
+}
+
+.inputarea
+{
+    width: 100%;
+}
+
+.joinbuttoncontainer
+{
+    text-align: center;
+    width: 100%;
+}
+
+.joinbutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    background-color: rgb(49, 138, 49);
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+    user-select: none;
+}
+
+.joinbutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+.full
+{
+    color: red;
+}
+
+.teamfullbutton
+{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+    filter: grayscale(0.5);
+    background-color: red;
+}
+
+.textareatitle
+{
+    font-weight: bold;
+}

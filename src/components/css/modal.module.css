@@ -37,11 +37,17 @@
     position: absolute;
     width: fit-content;
     height: fit-content;
-    padding: 10px;
     right: 5vh;
     top: calc(4vh + 18px);
     margin-top: 4vh;
     background-color: white;
     border-radius: 20px;
     z-index: 12;
+    overflow: hidden;
+}
+
+.container_padding
+{
+    position: relative;
+    padding: 10px;
 }

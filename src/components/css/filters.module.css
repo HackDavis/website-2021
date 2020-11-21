@@ -1,0 +1,63 @@
+.container
+{
+    margin: 6px;
+}
+
+.selectioncontainer{
+    
+}
+
+.selectall{
+    display:inline-block;
+}
+
+.deselectall{
+    display: inline-block;
+}
+
+.buttoncontainer{
+    width: 100%;
+}
+
+.selectallbutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    background-color:red;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.selectallbutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+
+
+.deselectallbutton
+{
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    background-color:green;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+}
+
+.deselectallbutton:hover
+{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
