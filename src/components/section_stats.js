@@ -39,7 +39,7 @@ const StatsSection = (props) => {
         <div className = "container-fluid p-0">
             <div className={`row no-gutters align-items-center ${styles.background}`}>
                 <div className={`col-10 offset-1 col-md-5 offset-md-1 ${styles.image_container} ${props.fadeAbout && styles.slideinleft}`}>
-                    <img className={styles.image} src={images['lllustration 1']}></img>
+                    <img className={styles.image} src={images['Illustration 1']}></img>
                 </div>
                 <div className={`${styles.statscontainer} ${props.fadeAbout && styles.slideinright} col-10 offset-1 col-md-4 offset-md-1`}>
                     <div className = "row no-gutters">
