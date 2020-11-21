@@ -73,3 +73,18 @@ div#copyright {
     color: white;
     margin: 20px;
 }
+
+.logo
+{
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.logo svg
+{
+    display: inline-block;
+}
