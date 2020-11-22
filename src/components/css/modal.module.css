@@ -1,24 +1,20 @@
 
 @keyframes appear
 {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {right: -100%;}
+    100% {right: 0;}
 }
 
-@keyframes disappear {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
 .modal
 {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    animation: appear 0.2s ease-in-out;
-    -webkit-animation: appear 0.2s ease-in-out;
+    animation: appear 0.5s ease-in-out;
+    -webkit-animation: appear 0.5s ease-in-out;
 }
 
 
@@ -36,18 +32,18 @@
 {
     position: absolute;
     width: fit-content;
-    height: fit-content;
-    right: 5vh;
-    top: calc(4vh + 18px);
-    margin-top: 4vh;
+    height: 100vh;
+    right: 0;
+    top: 0;
     background-color: white;
-    border-radius: 20px;
     z-index: 12;
     overflow: hidden;
+    box-shadow: -2px 0px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 .container_padding
 {
     position: relative;
     padding: 10px;
+    height: 100%;
 }

@@ -1,15 +1,25 @@
+
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
 .section
 {
     user-select: none;
     position: relative;
     display:inline-block;
-    color: gray;
-    border: 2px solid black;
+    color:black;
+    /* border: 2px solid black; */
     padding: 6px;
     text-align: center;
+    font-weight: bold;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
     cursor: pointer;
-    transition: 0.2s ease-in-out font-weight, 0.2s ease-in-out background-color;
-    background-color: lightgray;
+    /* transition: 0.2s ease-in-out font-weight, 0.2s ease-in-out background-color; */
+    /* background-color: lightgray; */
 }
 
 /* .section_container{
@@ -29,18 +39,10 @@
     color: black;
 }
 
-.selected
-{
-    font-weight: bold;
-    color: black;
-    border-bottom: none;
-    background-color: white;
-}
-
 .content{
     border: 2px solid black;
     border-top: none;
-    height: 15vh;
+    height: 100%;
     overflow: auto;
 }
 
@@ -69,4 +71,8 @@
 .filterbutton
 {
     transform: scale(1.75) translateY(-50%);
+}
+
+.selected{
+    border-bottom: 4px solid #12A8B1;
 }

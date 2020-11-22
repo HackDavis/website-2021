@@ -23,9 +23,9 @@ const Modal = props => {
                 .parent()
                 .animate(
                     {
-                        opacity: 0,
+                        right: "-100%",
                     },
-                    200,
+                    500,
                     function () {
                         props.setIsOpen(false)
                     }
@@ -86,7 +86,7 @@ const Modal = props => {
             let groups = {}
             docRef.onSnapshot(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
-                    console.log(doc.data())
+                    // console.log(doc.data())
                     if (dataIsValid(doc.data()))
                         groups[doc.id] = doc.data();
                 });

@@ -8,9 +8,12 @@ import { getUser } from "../../utils/auth"
 
 const MemberInfo = (props) => {
 
+    const [memberExists, setMemberExists] = useState(true)
+
     function removeMember() {
-        var all_members = props.allMembers
+        var all_members = props.team_info.members
         delete all_members[props.member[0]]
+        props.team_info.allMembers = all_members
         props.db.collection("groups").doc(props.teamid).update({
             members: all_members
         })
@@ -19,31 +22,42 @@ const MemberInfo = (props) => {
                 group_id: "",
             })
         })
+
+        props.setGroups(props.allGroups)
+        setMemberExists(false);
     }
 
     function declineRequest() {
-        var pending_members = props.pendingMembers
+        var pending_members = props.team_info.pending_members
         if (Object.entries(pending_members).length > 1)
             delete pending_members[props.member[0]]
         else
             pending_members = {}
+        props.team_info.pending_members = pending_members;
         props.db.collection("groups").doc(props.teamid).update({
             pending_members: pending_members
         });
+
+        props.setGroups(props.allGroups)
+        setMemberExists(false);
     }
 
     function acceptRequest() {
-        var pending_members = props.pendingMembers
+        var pending_members = props.team_info.pending_members
         if (Object.entries(pending_members).length > 1)
             delete pending_members[props.member[0]]
         else
             pending_members = {}
+        props.team_info.pending_members = pending_members;
         props.db.collection("groups").doc(props.teamid).update({
             pending_members: pending_members
         });
 
-        var all_members = props.allMembers
+        props.setGroups(props.allGroups)
+
+        var all_members = props.team_info.members
         all_members[props.member[0]] = [props.member[1][0], props.member[1][1], false]
+        props.team_info.allMembers = all_members
         props.db.collection("groups").doc(props.teamid).update({
             members: all_members
         })
@@ -53,9 +67,12 @@ const MemberInfo = (props) => {
                 pending_groups: {}
             })
         })
+
+        props.setGroups(props.allGroups)
+        // can i get jquery here to change the style of the text color to red so they look like they've been accepted thanks i hate this 
     }
 
-    return (
+    return memberExists ? (
         <div className={`${styles.member_info} ${props.pending && styles.pendingmember}`}>
             <span className={styles.name}>{props.member[1][0]}{props.pending && " (Pending)"}</span>
             <span className={styles.email}>{props.member[1][1]}</span>
@@ -69,7 +86,7 @@ const MemberInfo = (props) => {
                 }
             </div>
         </div>
-    )
+    ) : null;
 }
 
 const MyTeam = (props) => {
@@ -96,18 +113,30 @@ const MyTeam = (props) => {
         })
 
         var cur_team = props.team_info.members
-        delete cur_team[name]
+        delete cur_team[uid]
         props.team_info.members = cur_team
-        db.collection("groups").doc(old_group_id).set({
-            members:props.team_info.members
-        }, {merge: true})
-        .then(function() {
-            props.setIsInTeam(false)
-        })
-        .catch(function(error) {
-            props.DisplayNotification("Failed to leave group! [2]", "#c12c24", 5000)
-            // console.error("Error writing document: ", error)
-        })
+
+        if (isOwner) {
+            db.collection("groups").doc(old_group_id).delete().then(function() {
+                console.log("Document successfully deleted"); 
+            })
+            .then(function() {
+                props.setIsInTeam(false)
+            }).catch(function(error) {
+                console.error("Error removing document: ", error);
+            })
+        } else {
+            db.collection("groups").doc(old_group_id).set({
+                members: props.team_info.members
+            }, {merge: true})
+            .then(function() {
+                props.setIsInTeam(false)
+            })
+            .catch(function(error) {
+                props.DisplayNotification("Failed to leave group! [2]", "#c12c24", 5000)
+                // console.error("Error writing document: ", error)
+            })
+        }
     }
 
     return (
@@ -123,11 +152,11 @@ const MyTeam = (props) => {
                 <div className={styles.members}>
                     {Object.entries(props.team_info.members).map((element) => 
                     {
-                        return <MemberInfo member={element} allMembers={props.team_info.members} teamid={props.userStatus.group_id} uid={uid} isOwner={isOwner} db={props.userStatus.db}></MemberInfo>
+                        return <MemberInfo member={element} team_info={props.team_info} allMembers={props.team_info.members} teamid={props.userStatus.group_id} uid={uid} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
                     })}
                     {Object.entries(props.team_info.pending_members).length > 0 && Object.entries(props.team_info.pending_members).map((element) => 
                     {
-                        return <MemberInfo member={element} pendingMembers={props.team_info.pending_members} allMembers={props.team_info.members} pending={true} teamid={props.userStatus.group_id} uid={uid} isOwner={isOwner} db={props.userStatus.db}></MemberInfo>
+                        return <MemberInfo member={element} team_info={props.team_info} pendingMembers={props.team_info.pending_members} allMembers={props.team_info.members} pending={true} teamid={props.userStatus.group_id} uid={uid} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
                     })}
                 </div>
             </div>

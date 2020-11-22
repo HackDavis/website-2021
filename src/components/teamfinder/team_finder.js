@@ -77,7 +77,7 @@ const TeamFinder = (props) => {
         else
         {
             // The Create a team / my team tab is open
-            return props.userStatus.group_id.length > 0 ? <MyTeam {...props} setIsInTeam={props.setIsInTeam} setUserStatus={props.setUserStatus} userStatus={props.userStatus} team_info={props.groups[props.userStatus.group_id]}></MyTeam> : <CreateATeam userStatus={props.userStatus}></CreateATeam>
+            return props.userStatus.group_id.length > 0 ? <MyTeam {...props} setIsInTeam={props.setIsInTeam} setUserStatus={props.setUserStatus} userStatus={props.userStatus} team_info={props.groups[props.userStatus.group_id]} allGroups={props.groups} setGroups={props.setGroups}></MyTeam> : <CreateATeam userStatus={props.userStatus}></CreateATeam>
         }
     }
     
@@ -96,8 +96,11 @@ const TeamFinder = (props) => {
                             </svg>
                         }
                         Join a team
+                        <div className={styles.underline}></div>
                     </div>
-                    <div className={`${styles.section} my-team col col-xs-6`}>{props.isInTeam ? `My Team` : `Create a Team`}</div>
+                    <div className={`${styles.section} my-team col col-xs-6`}>{props.isInTeam ? `My Team` : `Create a Team`} 
+                        <div className={styles.underline}></div>
+                    </div>
                 </div>
                 <div className="row no-gutters flex-grow-1 h-100">
                     <div className={`${styles.content} col col-xs-12`} id="content">
