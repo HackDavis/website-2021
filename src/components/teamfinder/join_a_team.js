@@ -4,6 +4,7 @@ import Skeleton from 'react-loading-skeleton';
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import TeamPreview from "./team_preview"
 import styles from "../css/total_teams_section.module.css"
+import { useStaticQuery, graphql } from "gatsby"
 
 const JoinATeam = (props) => {
     
