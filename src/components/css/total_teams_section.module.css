@@ -1,0 +1,28 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+
+.container{
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+.total_teams{
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    left: 24px;
+}
+
+.filter_image{
+    float:right;
+    margin-right: 23px;
+}
+
+.filter_button{
+    cursor:pointer;
+}

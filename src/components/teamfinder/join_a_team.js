@@ -81,7 +81,7 @@ const JoinATeam = (props) => {
                         63 teams
                     </div>
                     <div className={`${styles.filter_button} col-6`}>
-                        <img className={styles.filter_image} src={data.allFile.edges[0].node.publicURL} />
+                        <img className={styles.filter_image} id="filterbutton" src={data.allFile.edges[0].node.publicURL} />
                     </div>
                 </div>
             </div>

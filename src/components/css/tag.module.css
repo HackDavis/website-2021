@@ -1,9 +1,17 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
 .tag
 {
     display: inline-block;
     color: white;
     font-size: 12px;
-    font-weight: bold;
+    font-family: 'Proxima Nova';
+    font-style: normal;
     padding: 5px;
     border-radius: 500px;
     margin: 4px;

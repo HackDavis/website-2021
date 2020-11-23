@@ -1,8 +1,17 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
 .container
 {
-    padding: 8px;
-    border-top: 2px solid gray;
+    /* padding: 8px; */
+    border-bottom: 1px solid #EEEEEE;
     padding-top: 10px;
+    width: 90%;
+    margin-left: 24px;
     padding-bottom: 10px;
 }
 
@@ -12,28 +21,33 @@
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-.container:first-of-type
+/* .container:first-child
 {
     border-top: none;
-}
+} */
 
 .title
 {
     display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-style: normal;
 }
 
 .membercount
 {
-    float: right;
-    display: inline-block;
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    margin-top: 2px;
 }
 
-.tagscontainer
-{
-    
+.tagscontainer{
+    margin-left: -3px;
+    margin-top: 8px;
 }
-
 .full
 {
     color: red;
