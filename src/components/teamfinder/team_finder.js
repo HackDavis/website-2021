@@ -96,10 +96,8 @@ const TeamFinder = (props) => {
                             </svg>
                         }
                         Join a team
-                        <div className={styles.underline}></div>
                     </div>
                     <div className={`${styles.section} my-team col col-xs-6`}>{props.isInTeam ? `My Team` : `Create a Team`} 
-                        <div className={styles.underline}></div>
                     </div>
                 </div>
                 <div className="row no-gutters flex-grow-1 h-100">
