@@ -9,6 +9,7 @@ import { getUser } from "../../utils/auth"
 const MemberInfo = (props) => {
 
     const [memberExists, setMemberExists] = useState(true)
+    const [isPending, setIsPending] = useState(props.pending);
 
     function removeMember() {
         var all_members = props.team_info.members
@@ -68,18 +69,19 @@ const MemberInfo = (props) => {
             })
         })
 
+        props.member[1][2] = false
         props.setGroups(props.allGroups)
-        // can i get jquery here to change the style of the text color to red so they look like they've been accepted thanks i hate this 
+        setIsPending(false)
     }
 
     return memberExists ? (
-        <div className={`${styles.member_info} ${props.pending && styles.pendingmember}`}>
-            <span className={styles.name}>{props.member[1][0]}{props.pending && " (Pending)"}</span>
+        <div className={`${styles.member_info} ${isPending && styles.pendingmember}`}>
+            <span className={styles.name}>{props.member[1][0]}{isPending && " (Pending)"}</span>
             <span className={styles.email}>{props.member[1][1]}</span>
-            {props.pending && <div className={styles.requestText}>{props.member[1][2]}</div>}
+            {isPending && <div className={styles.requestText}>{props.member[1][2]}</div>}
             <div className={styles.member_buttons_container}>
                 {
-                    !props.pending ? 
+                    !isPending ? 
                     props.isOwner && props.member[0] != props.uid ? <div onClick={removeMember} className={styles.removebutton}> Remove</div> : null :
                     <div><div onClick={acceptRequest} className={styles.approvebutton}>Approve</div>
                     <div onClick={declineRequest} className={styles.denybutton}>Deny</div></div>
@@ -152,7 +154,7 @@ const MyTeam = (props) => {
                 <div className={styles.members}>
                     {Object.entries(props.team_info.members).map((element) => 
                     {
-                        return <MemberInfo member={element} team_info={props.team_info} allMembers={props.team_info.members} teamid={props.userStatus.group_id} uid={uid} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
+                        return <MemberInfo member={element} team_info={props.team_info} allMembers={props.team_info.members} teamid={props.userStatus.group_id} uid={uid} pending={false} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
                     })}
                     {Object.entries(props.team_info.pending_members).length > 0 && Object.entries(props.team_info.pending_members).map((element) => 
                     {
