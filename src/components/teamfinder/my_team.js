@@ -154,11 +154,11 @@ const MyTeam = (props) => {
                 <div className={styles.members}>
                     {Object.entries(props.team_info.members).map((element) => 
                     {
-                        return <MemberInfo member={element} team_info={props.team_info} allMembers={props.team_info.members} teamid={props.userStatus.group_id} uid={uid} pending={false} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
+                        return <MemberInfo member={element} team_info={props.team_info} teamid={props.userStatus.group_id} uid={uid} pending={false} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
                     })}
                     {Object.entries(props.team_info.pending_members).length > 0 && Object.entries(props.team_info.pending_members).map((element) => 
                     {
-                        return <MemberInfo member={element} team_info={props.team_info} pendingMembers={props.team_info.pending_members} allMembers={props.team_info.members} pending={true} teamid={props.userStatus.group_id} uid={uid} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
+                        return <MemberInfo member={element} team_info={props.team_info} teamid={props.userStatus.group_id} uid={uid} pending={true} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
                     })}
                 </div>
             </div>
