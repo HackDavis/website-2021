@@ -1,7 +1,7 @@
 
 @keyframes appear
 {
-    0% {right: -100%;}
+    0% {right: max(-100%, -450px);}
     100% {right: 0;}
 }
 
@@ -13,8 +13,6 @@
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    animation: appear 0.5s ease-in-out;
-    -webkit-animation: appear 0.5s ease-in-out;
 }
 
 
@@ -31,15 +29,18 @@
 .container
 {
     position: absolute;
-    width: fit-content;
     height: 100vh;
+    width: min(100%, 450px);
     right: 0;
     top: 0;
     background-color: white;
     z-index: 12;
     overflow: hidden;
     box-shadow: -2px 0px 10px 4px rgba(0, 0, 0, 0.25);
+    animation: appear 0.5s ease-in-out;
+    -webkit-animation: appear 0.5s ease-in-out;
 }
+
 
 .container_padding
 {

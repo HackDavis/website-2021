@@ -5,8 +5,20 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import styles from "../css/team_display.module.css"
 import TeamTag from "./tag"
 import { getUser } from "../../utils/auth"
+import { useStaticQuery, graphql } from "gatsby"
 
 const TeamDisplay = (props) => {
+    
+    useEffect(() =>{
+        $(`#backbutton`).on("click", function(){
+            props.setSelectedTeamId(0)
+            props.setfiltersOpen(false)
+        })
+        return()=>{
+            $(`#backbutton`).off("click")
+        }
+    })
+    
     const user = getUser()
     const { displayName, email, uid } = user
     var group_pending_members = new Map([])
@@ -43,14 +55,34 @@ const TeamDisplay = (props) => {
             })
         }
         else {
+            console.log(props.userStatus.group_id)
+            console.log(props.userStatus.pending_groups.length < 5)
+            console.log(props.userStatus.group_id.length == 0) 
+            console.log(!props.userStatus.pending_groups.includes(props.selectedTeamId))
             props.DisplayNotification("Error joining team! [3]", "#c12c24");
         }
     }
+
+    const data = useStaticQuery(graphql`
+    {
+        allFile(filter: { name: {eq: "leftarrow"}, extension: { eq: "svg"} }, sort: {fields:[name] order: ASC}) {
+          edges {
+            node {
+              publicURL
+              name
+              dir
+            }
+          }
+        }
+      }
+    `)
+
 
     return (
         <div className={styles.maincontainer}>
             {console.log("TEAM DISPLAY INFO")}
             {console.log(props.team_info)}
+            <img className={styles.leftarrow} id="backbutton" src={data.allFile.edges[0].node.publicURL} />
             <div className={styles.title}>{props.team_info.name}</div>
             {Object.keys(props.team_info.members).length != props.team_info.max_members ?
                 <div className={styles.membercount}>{Object.keys(props.team_info.members).length}/{props.team_info.max_members}</div> :

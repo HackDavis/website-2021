@@ -13,6 +13,7 @@
     width: 90%;
     margin-left: 24px;
     padding-bottom: 10px;
+    position: relative;
 }
 
 .container:hover
@@ -51,4 +52,10 @@
 .full
 {
     color: red;
+}
+
+.rightarrow{
+    position:absolute;
+    align-items:center;
+    right:0;
 }

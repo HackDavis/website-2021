@@ -9,7 +9,6 @@ export const setUser = user =>
   isBrowser() && window.localStorage.setItem("user", JSON.stringify(user))
 
   export const isLoggedIn = () => {
-    console.log("isLoggedIn triggered")
     const user = getUser()
     return !!user.email
 }

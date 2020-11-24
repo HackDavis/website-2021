@@ -21,4 +21,11 @@
     max-height: 100vh;
     border: 2px solid red; 
     font-family: 'Proxima Nova';
+    overflow: scroll;
+}
+
+.badge_icon
+{
+    display: inline-block;
+    margin-left: 10px;
 }

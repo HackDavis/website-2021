@@ -20,7 +20,8 @@ const Login = ( props ) => {
       app_status: "Not Yet Applied",
       badges: {},
       group_id: "",
-      pending_groups: []
+      pending_groups: [],
+      staff: user_email.substr(user_email.lastIndexOf("@")+1) == "hackdavis.io" ? true : false
     }, {merge: true})
     .then(function() {
       console.log("Document successfully written!")

@@ -17,7 +17,6 @@ const ProfileModal = props => {
   const [userStatus, setUserStatus] = useState({status: "Loading", badges: [], group_id: "", pending_groups: []})
   const [groups, setGroups] = useState({})
   const [hasLoaded, setHasLoaded] = useState()
-  const [groupsHasLoaded, setGroupsHasLoaded] = useState()
   const [isInTeam, setIsInTeam] = useState()
   const [notificationState, setNotificationState] = useState({ active: false })
   const [badgesOpen, setBadgesOpen] = useState(false); // True if badges page is open
@@ -99,8 +98,6 @@ const ProfileModal = props => {
       setGroups={setGroups}
       hasLoaded={hasLoaded}
       setHasLoaded={setHasLoaded}
-      groupsHasLoaded = {groupsHasLoaded}
-      setGroupsHasLoaded = {setGroupsHasLoaded}
       setIsInTeam={setIsInTeam} 
       isInTeam={isInTeam}
       id="profilemodal"
@@ -115,6 +112,7 @@ const ProfileModal = props => {
           href="/"
           onClick={event => {
             event.preventDefault()
+            window.location.reload(true)
             logout(firebase).then(() => props.setIsOpen(false))
           }}
         >
@@ -125,33 +123,35 @@ const ProfileModal = props => {
           <div className={styles.applicationcontainer}>
             <div className={styles.modalsectiontitle}>Application Status</div>
             <div className={styles.modalsectioncontent}>{hasLoaded ? userStatus.status : <Skeleton/>}</div>
+            {/* <div className={styles.hr}></div> */}
           </div>
-          <hr></hr>
-          <a
-            className={styles.badge_button}
-            href="/"
-            onClick={event => {
-                event.preventDefault()
-                setBadgesOpen(true);
-            }}
-          >
+          
           <div className={styles.badgescontainer}>
-            <div className={styles.modalsectiontitle}>
-            Badges
-            <div className={styles.badge_icon}>
-              <svg width="0.6em" height="0.6em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-              </svg>
-            </div></div>
+            <a
+              className={styles.badge_button}
+              href="/"
+              onClick={event => {
+                  event.preventDefault()
+                  setBadgesOpen(true);
+              }}
+            >
+              <div className={styles.modalsectiontitle}>
+                Badges
+                <div className={styles.badge_icon}>
+                  <svg width="0.6em" height="0.6em" viewBox="0 0 16 16" class="bi bi-chevron-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
             <div className={styles.modalsectioncontent}>
               {data.allFile.edges.map((file, index) => {
                 return file.node.dir.endsWith("badges") &&
                 <Badge hasLoaded={hasLoaded} date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
               })}
             </div>
+            {/* <div className={styles.hr}></div> */}
           </div>
-        </a>
-        <hr></hr>
           <div className={styles.teamfindercontainer}>
             <div className={styles.team_finder}>
               Team Finder

@@ -1,0 +1,52 @@
+.badge
+{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 4px;
+}
+
+.inactive
+{
+    filter: grayscale(1.0);
+}
+
+.badge *
+{
+    width: 50px;
+    height: 50px;
+}
+
+.skeletonmargin
+{
+    display: inline-block;
+    margin: 4px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-height: 50%;
+    max-width: 50%;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  .banana {
+      max-height: 100px;
+      max-width: 100px;
+      margin:0 0 0 15px;
+  }
+

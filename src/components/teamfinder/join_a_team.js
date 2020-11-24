@@ -77,8 +77,7 @@ const JoinATeam = (props) => {
             <div className="container-fluid p-0">
                 <div className={`${styles.container} row no-gutters`}>
                     <div className={`${styles.total_teams} col-6`}>
-                        {/* Pass in total number of teams*/}
-                        63 teams
+                        {Object.keys(props.groups).length} teams
                     </div>
                     <div className={`${styles.filter_button} col-6`}>
                         <img className={styles.filter_image} id="filterbutton" src={data.allFile.edges[0].node.publicURL} />

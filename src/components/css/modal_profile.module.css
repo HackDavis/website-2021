@@ -17,6 +17,17 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: stretch;
+    height: 96%;
+}
+
+.relative > div
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal
@@ -27,33 +38,63 @@
     font-family: 'Proxima Nova';
 }
 
-.title
+.logout
 {
-    border: 2px solid blue;
-    height: 10%;
-    margin: 1rem;
-    text-align: center;
+    display: block;
+    color: rgb(78, 78, 78);
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 100px;
+    width: fit-content;
+    outline: none;
+    height: 4%;
+    z-index: 5;
+    transition: 0.2s ease-in-out all;
+}
+
+.logout:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.signout_button
+{
+    display: inline;
+    width: 16px;
+    height: 16px;
+    margin-top: -4px;
+    margin-right: 8px;
+    outline: none;
+    border: none;
 }
 
 .applicationcontainer
 {
     margin-top: 10px;
     border: 2px solid red;
-    flex: 0.15;
 }
 
 .teamfindercontainer
 {
+    position: absolute;
     border: 2px solid cyan;
     position: relative;
-    flex: 1;
+    max-height: 70%;
 }
 
 .badgescontainer
 {
     border: 2px solid yellow;
-    flex: 0.2;
     width: 100%;
+}
+
+div.hr
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid lightgray;
 }
 
 .modalsectiontitle
@@ -85,37 +126,6 @@ hr
 {
     background-color: #C4C4C4;
     width: 100%;
-}
-
-.logout
-{
-    display: block;
-    color: rgb(78, 78, 78);
-    padding: 6px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 100px;
-    width: fit-content;
-    outline: none;
-    z-index: 5;
-    transition: 0.2s ease-in-out all;
-}
-
-.logout:hover
-{
-    cursor: pointer;
-    opacity: 0.8;
-}
-
-.signout_button
-{
-    display: inline;
-    width: 16px;
-    height: 16px;
-    margin-top: -4px;
-    margin-right: 8px;
-    outline: none;
-    border: none;
 }
 
 .badge_icon

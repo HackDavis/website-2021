@@ -19,17 +19,17 @@ const Modal = props => {
     useEffect(() => {
         // Register event handler
         $(`div.${styles.background}#${props.id}`).on("click", function () {
-            $(`div.${styles.background}#${props.id}`)
-                .parent()
-                .animate(
-                    {
-                        right: "-100%",
-                    },
-                    500,
-                    function () {
-                        props.setIsOpen(false)
-                    }
-                )
+            // $(`div#modal_container_${props.id}`)
+            //     .animate(
+            //         {
+            //             right: "max(-100%, -450px)",
+            //         },
+            //         500,
+            //         function () {
+            //             props.setIsOpen(false)
+            //         }
+            //     )
+            $(`div#modal_container_${props.id}`).css('right', `max(-100%, -450px)`)
         })
 
         // Cleanup event handlers
@@ -127,8 +127,8 @@ const Modal = props => {
     return props.isOpen ? (
         <div className={styles.modal}>
             {!props.hasLoaded && loadInfo(props.isProfile)}
-            <div id={props.id} className={styles.background}></div>
-            <div className={styles.container}>
+            <div className={styles.background} id={props.id}></div>
+            <div id={`modal_container_${props.id}`} className={styles.container} >
                 {props.notificationState && props.notificationState.active && <Notification {...props}></Notification>}
                 <div className={styles.container_padding}>
                     {props.children}

@@ -1,3 +1,11 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
+
 .maincontainer
 {
     padding: 6px;
@@ -5,8 +13,11 @@
 
 .title
 {
-    display: inline-block;
-    font-size: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style:normal;
+    font-family: 'Proxima Nova';
+    margin-top: 16px;
 }
 
 .membercount
@@ -93,4 +104,8 @@
 .textareatitle
 {
     font-weight: bold;
+}
+
+.leftarrow{
+    cursor:pointer;
 }
