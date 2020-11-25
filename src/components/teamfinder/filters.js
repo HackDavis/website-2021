@@ -6,8 +6,22 @@ import TeamTag from "./tag"
 import tag_styles from "../css/tag.module.css"
 import tag_list from "./team_tags_list.js"
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-
+import {graphql, useStaticQuery} from "gatsby"
 const Filters = props => {
+
+    const data = useStaticQuery(graphql`
+    {
+        allFile(filter: { name: {eq: "leftarrow"}, extension: { eq: "svg"} }, sort: {fields:[name] order: ASC}) {
+          edges {
+            node {
+              publicURL
+              name
+              dir
+            }
+          }
+        }
+      }
+    `)
 
     useEffect(() => 
     {
@@ -51,20 +65,22 @@ const Filters = props => {
 
     return (
         <div className={styles.container}>
-            <div className={styles.title}>Filter Teams</div>
-            <div className={styles.selectioncontainer}> 
-              <div className={styles.buttoncontainer}>
-                <div className={styles.selectallbutton}>Select All</div>
-                <div className={styles.deselectallbutton}> Deselect All</div>
-              </div>
+            <img className={styles.backbutton} id="backbutton" src={data.allFile.edges[0].node.publicURL} />
+            <div className={styles.title}>
+                Filter Teams
+                <div className={styles.selectioncontainer}> 
+                    <div className={styles.buttoncontainer}>
+                        <div className={styles.selectallbutton}>Select All</div>
+                        <div className={styles.deselectallbutton}> Clear</div>
+                    </div>
+                </div>
             </div>
-      
-            <div>
+            <div className={styles.radio_container}>
                 <label for="any_tags">
                     <input type="radio" name="tagState" id="any_tags" value="Any" onChange={SelectRadioButton} checked={props.tagState == "Any" && "checked"} required /> Any of these tags
                 </label>
                 <br></br>
-                <label for="only_tags">
+                <label for="only_tags" className={styles.only_tag}>
                     <input type="radio" name="tagState" id="only_tags" value="Only" onChange={SelectRadioButton} checked={props.tagState == "Only" && "checked"} required /> Only these tags
                 </label>
             </div>

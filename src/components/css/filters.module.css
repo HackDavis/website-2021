@@ -1,18 +1,15 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
 .container
 {
-    margin: 6px;
-}
+    margin-right: 24px;
+    margin-left: 24px;
 
-.selectioncontainer{
-    
-}
-
-.selectall{
-    display:inline-block;
-}
-
-.deselectall{
-    display: inline-block;
 }
 
 .buttoncontainer{
@@ -21,17 +18,14 @@
 
 .selectallbutton
 {
+    font-family: 'Proxima Nova';
     display: inline-block;
-    font-weight: bold;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    width: fit-content;
-    color: white;
-    background-color:red;
-    border-radius: 500px;
+    font-weight: normal;
+    color: #12A8B1;
     cursor: pointer;
     transition: 0.2s ease-in-out all;
+    font-size: 14px;
+    margin-right: 16px;
 }
 
 .selectallbutton:hover
@@ -43,16 +37,12 @@
 
 .deselectallbutton
 {
+    font-family: 'Proxima Nova';
     display: inline-block;
-    font-weight: bold;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    width: fit-content;
-    color: white;
-    background-color:green;
-    border-radius: 500px;
+    font-weight: normal;
+    color: #E86560;
     cursor: pointer;
+    font-size: 14px;
     transition: 0.2s ease-in-out all;
 }
 
@@ -60,4 +50,36 @@
 {
     opacity: 0.9;
     transform: scale(1.1);
+}
+
+.backbutton{
+    margin-top: 20px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.backbutton:hover{
+    opacity: 0.9;
+    transform: scale(1.2)
+}
+
+.title{
+    font-weight: bold;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    margin-top: 16px;
+}
+.selectioncontainer{
+    float:right;
+}
+
+.radio_container{
+    margin-top: 16px;
+    font-size: 14px;
+    font-family: 'Proxima Nova';
+    margin-bottom: 22px;
+}
+
+.only_tag{
+    margin-top: 15px;
 }
