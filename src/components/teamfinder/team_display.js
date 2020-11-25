@@ -94,9 +94,9 @@ const TeamDisplay = (props) => {
                     return <TeamTag tagname={tagname}></TeamTag>
                 })}
             </div>
-            <hr></hr>
+            {/* <hr className={styles.hr}></hr> */}
             <div className={styles.members}>
-                <div className={styles.memberstitle}>Team Members</div>
+                <div className={styles.memberstitle}>Members</div>
                 <div className={styles.memberscontainer}>
                     {Object.keys(props.team_info.members).map((id) => {
                         return <div className={styles.membername}>{props.team_info.members[id][0]}</div>
@@ -107,7 +107,7 @@ const TeamDisplay = (props) => {
                 <div className={styles.emailtitle}>Contact Email</div>
                 <div className={styles.contactemail}>{props.team_info.email}</div>
             </div>
-            <hr></hr>
+            
             <div className={styles.applycontainer}>
                 <div className={styles.textareatitle}>Why do you want to join this team?</div>
                 <br></br>
