@@ -79,7 +79,7 @@ const TeamFinder = (props) => {
         else
         {
             // The Create a team / my team tab is open
-            return props.userStatus.group_id.length > 0 ? <MyTeam {...props} setIsInTeam={props.setIsInTeam} setUserStatus={props.setUserStatus} userStatus={props.userStatus} team_info={props.groups[props.userStatus.group_id]} allGroups={props.groups} setGroups={props.setGroups}></MyTeam> : <CreateATeam userStatus={props.userStatus}></CreateATeam>
+            return props.userStatus.group_id.length > 0 ? <MyTeam {...props} setIsInTeam={props.setIsInTeam} setUserStatus={props.setUserStatus} userStatus={props.userStatus} team_info={props.groups[props.userStatus.group_id]} allGroups={props.groups} setGroups={props.setGroups}></MyTeam> : <CreateATeam {...props} userStatus={props.userStatus}></CreateATeam>
         }
     }
 
