@@ -19,17 +19,16 @@ const Modal = props => {
     useEffect(() => {
         // Register event handler
         $(`div.${styles.background}#${props.id}`).on("click", function () {
-            // $(`div#modal_container_${props.id}`)
-            //     .animate(
-            //         {
-            //             right: "max(-100%, -450px)",
-            //         },
-            //         500,
-            //         function () {
-            //             props.setIsOpen(false)
-            //         }
-            //     )
-            $(`div#modal_container_${props.id}`).css('right', `max(-100%, -450px)`)
+            $(`div.${styles.container}`)
+                .animate(
+                    {
+                        right: "-100%",
+                    },
+                    500,
+                    function () {
+                        props.setIsOpen(false)
+                    }
+                )
         })
 
         // Cleanup event handlers
