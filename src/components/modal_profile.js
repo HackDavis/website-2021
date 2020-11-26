@@ -123,8 +123,8 @@ const ProfileModal = props => {
           <div className={styles.applicationcontainer}>
             <div className={styles.modalsectiontitle}>Application Status</div>
             <div className={styles.modalsectioncontent}>{hasLoaded ? userStatus.status : <Skeleton/>}</div>
-            {/* <div className={styles.hr}></div> */}
           </div>
+          <hr></hr>
           
           <div className={styles.badgescontainer}>
             <a
@@ -150,8 +150,8 @@ const ProfileModal = props => {
                 <Badge hasLoaded={hasLoaded} date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
               })}
             </div>
-            {/* <div className={styles.hr}></div> */}
           </div>
+          <hr></hr>
           <div className={styles.teamfindercontainer}>
             <div className={styles.team_finder}>
               Team Finder

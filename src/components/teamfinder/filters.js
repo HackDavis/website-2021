@@ -65,7 +65,9 @@ const Filters = props => {
 
     return (
         <div className={styles.container}>
-            <img className={styles.backbutton} id="backbutton" src={data.allFile.edges[0].node.publicURL} />
+            <div className={styles.backbutton} id="backbutton">
+                <img src={data.allFile.edges[0].node.publicURL} />
+            </div>
             <div className={styles.title}>
                 Filter Teams
                 <div className={styles.selectioncontainer}> 

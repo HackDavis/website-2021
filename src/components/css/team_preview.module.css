@@ -10,10 +10,10 @@
     /* padding: 8px; */
     border-bottom: 1px solid #EEEEEE;
     padding-top: 10px;
-    width: 90%;
-    margin-left: 24px;
+    padding-left: 24px;
     padding-bottom: 10px;
     position: relative;
+    width: 100%;
 }
 
 .container:hover
@@ -57,5 +57,5 @@
 .rightarrow{
     position:absolute;
     align-items:center;
-    right:0;
+    right: 20px;
 }

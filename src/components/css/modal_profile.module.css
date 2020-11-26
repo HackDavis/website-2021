@@ -23,7 +23,6 @@
 
 .relative > div
 {
-    flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
     display: flex;
@@ -73,28 +72,27 @@
 .applicationcontainer
 {
     margin-top: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    flex-grow: 0.1;
+    /* height: 10%; */
 }
 
 .teamfindercontainer
 {
     position: absolute;
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     position: relative;
-    max-height: 70%;
+    height: 55%;
+    flex-grow: 0.7;
 }
 
 .badgescontainer
 {
-    border: 2px solid yellow;
+    /* border: 2px solid purple; */
     width: 100%;
-}
-
-div.hr
-{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid lightgray;
+    height: 15%;
+    flex-grow: 0.2;
+    margin-bottom: 16px;
 }
 
 .modalsectiontitle
@@ -108,7 +106,7 @@ div.hr
 .team_finder{
     font-weight: bold;
     font-family: 'Proxima Nova';
-    margin-top: 24px;
+    margin-top: 10px;
     margin-bottom: 16px;
     font-size: 24px;
     text-align:center;
@@ -117,7 +115,7 @@ div.hr
 
 .modalsectioncontent
 {
-    border: 2px dashed orange;
+    /* border: 2px dashed orange; */
     position: relative;
     overflow-y: auto;
 }

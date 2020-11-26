@@ -56,11 +56,11 @@
     margin-top: 20px;
     transition: 0.2s ease-in-out;
     cursor: pointer;
+    width: 20%;
 }
 
 .backbutton:hover{
-    opacity: 0.9;
-    transform: scale(1.2)
+    opacity: 0.75;
 }
 
 .title{
