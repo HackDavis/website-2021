@@ -19,6 +19,7 @@ const TeamFinder = (props) => {
     const [filtersOpen, setfiltersOpen] = useState(false)
     const [selectedTags, setSelectedTags] = useState(tag_list);
     const [tagState, setTagState] = useState("Any")
+    const [tagRoomState, setTagRoomState] = useState('')
 
     
     useEffect(() => {
@@ -67,7 +68,7 @@ const TeamFinder = (props) => {
             // They have the find team tab open
             if (filtersOpen)
             {
-                return <Filters setTagState={setTagState} tagState={tagState} selectedTags={selectedTags} setSelectedTags={setSelectedTags}></Filters>
+                return <Filters setTagState={setTagState} tagState={tagState} selectedTags={selectedTags} setSelectedTags={setSelectedTags} tagRoomState={tagRoomState} setTagRoomState={setTagRoomState}></Filters>
                 // return
             }
 

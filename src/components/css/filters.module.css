@@ -84,6 +84,9 @@
     margin-top: 15px;
 }
 
+.teams_with_room{
+    margin-top: 15px;
+}
 
 .search_bar_container
 {
@@ -96,6 +99,7 @@
     display: inline-block;
     font-family: 'Proxima Nova';
     font-weight: bold;
+    font-size: 14px;
     letter-spacing: 0.05em;
     margin-top: 24px;
     text-align: center;

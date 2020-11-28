@@ -60,9 +60,17 @@ const Filters = props => {
 
     function SelectRadioButton(e)
     {
+    
         props.setTagState(e.currentTarget.value);
     }
 
+    function SelectCheckBox(e){
+        if(props.tagRoomState != 'Available'){
+            props.setTagRoomState(e.currentTarget.value);
+        } else {
+            props.setTagRoomState('')
+        }
+    }
     return (
         <div className={styles.container}>
             <div className={styles.backbutton} id="backbutton">
@@ -84,6 +92,10 @@ const Filters = props => {
                 <br></br>
                 <label for="only_tags" className={styles.only_tag}>
                     <input type="radio" name="tagState" id="only_tags" value="Only" onChange={SelectRadioButton} checked={props.tagState == "Only" && "checked"} required /> Only these tags
+                </label>
+                <br></br>
+                <label for="teams_with_room" className={styles.teams_with_room}>
+                    <input type="radio" name="tagRoomState" id="available_room_checkbox" onChange={SelectCheckBox} checked={props.tagRoomState == "Available" && "checked"} value="Available"  required/> Teams with room
                 </label>
             </div>
             <div className={styles.tagcontainer}>
