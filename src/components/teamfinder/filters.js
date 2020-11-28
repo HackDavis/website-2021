@@ -92,6 +92,9 @@ const Filters = props => {
                     return <TeamTag tagname={tag} filter_tag={true} setSelectedTags={props.setSelectedTags} selectedTags={props.selectedTags} not_filled={!props.selectedTags.includes(tag)}></TeamTag>
                 })}
             </div>
+            <div className={styles.search_bar_container} id="search_button">
+                <div className={styles.search_bar}>SEARCH</div>
+            </div>
         </div>
     )
 }

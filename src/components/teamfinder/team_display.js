@@ -118,7 +118,7 @@ const TeamDisplay = (props) => {
             {props.team_info.members.length != props.team_info.max_members ?
                 
                 <div onClick={joinRequest} className={styles.joinbuttoncontainer}>
-                    <div className={styles.joinbutton}>Request to Join Team</div>
+                    <div className={styles.joinbutton}>REQUEST TO JOIN TEAM</div>
                 </div> :
                 
                 <div className={styles.joinbuttoncontainer}>

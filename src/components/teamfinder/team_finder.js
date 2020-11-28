@@ -41,6 +41,11 @@ const TeamFinder = (props) => {
             setfiltersOpen(false)
         })
 
+        $(`#search_button`).on("click", function(){
+            setSelectedTeamId(0)
+            setfiltersOpen(false)
+        })
+
         $(`#filterbutton`).on("click", function(){
             setfiltersOpen(!filtersOpen)
         })
@@ -51,6 +56,7 @@ const TeamFinder = (props) => {
             $(`div.${styles.section}`).off("click")
             $(`#backbutton`).off("click")
             $(`#filterbutton`).off("click")
+            $(`#search_button`).off("click")
         }
     })
 

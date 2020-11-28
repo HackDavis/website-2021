@@ -83,3 +83,36 @@
 .only_tag{
     margin-top: 15px;
 }
+
+
+.search_bar_container
+{
+    text-align: center;
+    width: 100%;
+}
+
+.search_bar
+{
+    display: inline-block;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 24px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 40%;
+    padding-left: 40%;
+    width: fit-content;
+    color: white;
+    background-color: #12A8B1;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+    user-select: none;
+}
+.search_bar:hover
+{
+    opacity: 0.9;
+}
