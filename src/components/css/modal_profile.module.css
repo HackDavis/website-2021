@@ -99,7 +99,7 @@
 {
     font-weight: bold;
     font-family: 'Proxima Nova';
-    margin-bottom: 16px;
+    margin-bottom: 6px;
     font-size: 24px;
 }
 
@@ -130,4 +130,53 @@ hr
 {
     display: inline-block;
     margin-left: 10px;
+}
+
+.app_status
+{
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 100px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.app_status_apply
+{
+    display: block;
+    margin-top: 10px;
+    width: fit-content;
+    padding: 14px;
+    height: fit-content;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 0px;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.2s ease-in-out transform;
+    background-color: #12A8B1;
+    color: white;
+}
+
+.app_status_apply:hover {
+    /* transform: scale(1.1); */
+    opacity: 0.9;
+}
+
+.smallnote
+{
+    color: gray;
+    margin-top: 6px;
+    font-size: 14px;
+    font-style: italic;
 }

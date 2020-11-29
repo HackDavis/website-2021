@@ -20,6 +20,7 @@ const TeamFinder = (props) => {
     const [selectedTags, setSelectedTags] = useState(tag_list);
     const [tagState, setTagState] = useState("Any")
     const [tagRoomState, setTagRoomState] = useState('')
+    const [availableRooms, setAvailableRooms] = useState([])
 
     
     useEffect(() => {
@@ -68,13 +69,13 @@ const TeamFinder = (props) => {
             // They have the find team tab open
             if (filtersOpen)
             {
-                return <Filters setTagState={setTagState} tagState={tagState} selectedTags={selectedTags} setSelectedTags={setSelectedTags} tagRoomState={tagRoomState} setTagRoomState={setTagRoomState}></Filters>
-                // return
+                return <Filters setTagState={setTagState} tagState={tagState} selectedTags={selectedTags} setSelectedTags={setSelectedTags} tagRoomState={tagRoomState} setTagRoomState={setTagRoomState} availableRooms={availableRooms} setAvailableRooms={setAvailableRooms}></Filters>
+                // return //
             }
 
             if (selectedTeamId == 0)
             {
-                return  <JoinATeam {...props} tagState={tagState} selectedTags={selectedTags} setSelectedTeamId={setSelectedTeamId} groups={props.groups}></JoinATeam>
+                return  <JoinATeam {...props} tagState={tagState} selectedTags={selectedTags} setSelectedTeamId={setSelectedTeamId} tagRoomState={tagRoomState} availableRooms ={availableRooms} groups={props.groups}></JoinATeam>
             }
             else
             {

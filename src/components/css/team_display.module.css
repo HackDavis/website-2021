@@ -73,6 +73,7 @@
 {
     width: 100%;
     border-radius: 8px;
+    padding: 8px;
 }
 
 .joinbuttoncontainer
@@ -110,7 +111,7 @@
 
 .full
 {
-    color: red;
+    color: rgb(192, 0, 0);
 }
 
 .teamfullbutton
@@ -120,6 +121,12 @@
     opacity: 0.7;
     filter: grayscale(0.5);
     background-color: red;
+}
+
+.left_arrow_container
+{
+    width: 25%;
+    cursor:pointer;
 }
 
 .textareatitle
@@ -134,9 +141,9 @@
     margin-top: 30px;
     transition: 0.2s ease-in-out all;
 }
-.leftarrow:hover{
+
+.textareatitle:hover{
     opacity: 0.9;
-    transform: scale(1.2);
 }
 
 .membername, .contactemail{

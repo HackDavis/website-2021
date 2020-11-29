@@ -5,6 +5,10 @@ import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import styles from "../css/tag.module.css"
 import seedrandom from "seedrandom"
 
+const tag_colors = 
+[
+    "#E86560", "#FFC75A", "#B6CF69", "#12A8B1", "916AFF"
+]
 
 const TeamTag = (props) => {
 
@@ -18,6 +22,7 @@ const TeamTag = (props) => {
     function GetTagColor(tagname)
     {
         const rng = seedrandom(tagname);
+        return tag_colors[Math.floor(rng() * (tag_colors.length - 1))];
         return `hsl(${rng() * 255}, ${(rng() * 0.3 + 0.7) * 100}%, ${(rng() * 0.3 + 0.2) * 100}%)`;
     }
 

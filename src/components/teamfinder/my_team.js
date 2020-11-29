@@ -29,6 +29,25 @@ const MemberInfo = (props) => {
     }
 
     function declineRequest() {
+        var pending_groups
+        props.db.collection("users").doc(props.member[0]).get().then(function(doc) {
+            if (doc.exists)
+                pending_groups = doc.data().pending_groups;
+            else
+                console.log("this document does not currently exist");
+        })
+        .then(function (response) {
+            console.log(`PENDING GROUPS ARE: ${pending_groups}`)
+            var pending_groups_copy = JSON.parse(JSON.stringify(pending_groups));
+            if (Object.entries(pending_groups_copy).length > 1)
+                pending_groups_copy = pending_groups_copy.filter((teamid) => teamid != props.teamid);
+            else
+                pending_groups_copy = []
+            props.db.collection("users").doc(props.member[0]).update({
+                pending_groups: pending_groups_copy
+            })
+        })
+
         var pending_members = props.team_info.pending_members
         if (Object.entries(pending_members).length > 1)
             delete pending_members[props.member[0]]
@@ -99,6 +118,7 @@ const MyTeam = (props) => {
     {console.log(props.team_info.members)}
     if (props.team_info.members[uid][2])
         isOwner=true
+    let leaveText = (isOwner) ? "Disband Team" : "Leave Team" 
 
     function leaveGroup() {
         var db = props.userStatus.db;
@@ -111,7 +131,6 @@ const MyTeam = (props) => {
         })
         .catch(function(error) {
             props.DisplayNotification("Failed to leave group! [1]", "#c12c24", 5000)
-            // console.error("Error writing document: ", error)
         })
 
         var cur_team = props.team_info.members
@@ -119,6 +138,8 @@ const MyTeam = (props) => {
         props.team_info.members = cur_team
 
         if (isOwner) {
+            delete props.allGroups[props.userStatus.group_id]
+            props.setGroups(props.allGroups)
             db.collection("groups").doc(old_group_id).delete().then(function() {
                 console.log("Document successfully deleted"); 
             })
@@ -136,7 +157,6 @@ const MyTeam = (props) => {
             })
             .catch(function(error) {
                 props.DisplayNotification("Failed to leave group! [2]", "#c12c24", 5000)
-                // console.error("Error writing document: ", error)
             })
         }
     }
@@ -172,7 +192,7 @@ const MyTeam = (props) => {
                 {props.team_info.email}
             </div>
             <div onClick={leaveGroup} className={styles.leavebuttoncontainer}>
-                <div onClick={leaveGroup} className={styles.leavebutton}>Leave Team</div>
+                <div className={styles.leavebutton}>{leaveText}</div>
             </div>
         </div>
     )

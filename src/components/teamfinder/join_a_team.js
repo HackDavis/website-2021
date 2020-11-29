@@ -14,37 +14,75 @@ const JoinATeam = (props) => {
      */
     function ShouldTeamDisplay(group)
     {
-        if (props.tagState == "Any")
-        {
-            for (let i = 0; i < props.selectedTags.length; i++)
+        // Include only avaible rooms 
+        if(props.tagRoomState == "Available") {
+            
+            if (props.tagState == "Any")
             {
-                if (group.tags.includes(props.selectedTags[i]))
-                {
-                    return true;
+                if(Object.keys(group.members).length != group.max_members) {
+                    for (let i = 0; i < props.selectedTags.length; i++)
+                    {
+                        if (group.tags.includes(props.selectedTags[i]))
+                        {
+                            return true;
+                        }
+                    }
+                    return false;
+                } else {
+                    return false; 
                 }
             }
-            return false;
-        }
-        else
-        {
-            // "Only"
-            // Loop through all selected tags. If this group does not have one of them, return false
-            for (let i = 0; i < props.selectedTags.length; i++)
+            else
             {
-                if (!group.tags.includes(props.selectedTags[i]))
-                {
+                if(Object.keys(group.members).length != group.max_members) {
+                    // "Only"
+                    // Loop through all selected tags. If this group does not have one of them, return false
+                    for (let i = 0; i < props.selectedTags.length; i++)
+                    {
+                        if (!group.tags.includes(props.selectedTags[i]))
+                        {
+                            return false;
+                        }
+                    }
+                    return props.selectedTags.length > 0;
+                } else {
                     return false;
                 }
             }
-
-            return props.selectedTags.length > 0;
+        } 
+        // Include all the rooms  
+        else {
+            if (props.tagState == "Any")
+            {
+                for (let i = 0; i < props.selectedTags.length; i++)
+                {
+                    if (group.tags.includes(props.selectedTags[i]))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                // "Only"
+                // Loop through all selected tags. If this group does not have one of them, return false
+                for (let i = 0; i < props.selectedTags.length; i++)
+                {
+                    if (!group.tags.includes(props.selectedTags[i]))
+                    {
+                        return false;
+                    }
+                }
+                return props.selectedTags.length > 0;
+            }
         }
-
     }
 
     function DisplayTeamPreviews()
     {
         const previews = [];
+
         Object.keys(props.groups).forEach((group_id) => {
             const group = props.groups[group_id];
             if (ShouldTeamDisplay(group))
@@ -53,9 +91,11 @@ const JoinATeam = (props) => {
             }
         })
 
+        $(`div.${styles.total_teams}`).text(`${previews.length} teams`);
+
         return previews
     }
-
+    
     const data = useStaticQuery(graphql`
     {
         allFile(filter: { name: {eq: "filter"}, extension: { eq: "svg"} }, sort: {fields:[name] order: ASC}) {
@@ -77,7 +117,7 @@ const JoinATeam = (props) => {
             <div className="container-fluid p-0">
                 <div className={`${styles.container} row no-gutters`}>
                     <div className={`${styles.total_teams} col-6`}>
-                        {Object.keys(props.groups).length} teams
+                        0 teams
                     </div>
                     <div className={`${styles.filter_button} col-6`}>
                         <img className={styles.filter_image} id="filterbutton" src={data.allFile.edges[0].node.publicURL} />

@@ -59,6 +59,15 @@ div.underline.selected
     }
 }
 
+@media(min-width:769px){
+    .hamburger_menu {
+        display:none;
+    }
+}
+.hamburger_menu{
+    margin-top: 20px;
+    margin-right: 10px;
+}
 .navbutton
 {
     font-weight: bold;

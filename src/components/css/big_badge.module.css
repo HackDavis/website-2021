@@ -1,23 +1,36 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/Proxima Nova Alt Condensed Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
 .badge
 {
     display: inline-block;
+    font-family: 'Proxima Nova';
     width: 50px;
     height: 50px;
-    background-color: gray;
     border-radius: 50px;
     overflow: hidden;
-    margin: 4px;
+    /* margin: 4px; */
+}
+
+.background
+{
+    margin-right: 0px;
 }
 
 .inactive
 {
     filter: grayscale(1.0);
-}
-
-.badge *
-{
-    width: 50px;
-    height: 50px;
 }
 
 .skeletonmargin
@@ -27,26 +40,77 @@
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
     transition: 0.3s;
-    max-height: 50%;
-    max-width: 50%;
-  }
+    max-height: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom:24px;
+    color: white;
+    user-select: none;
+}
   
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  /* Add some padding inside the card container */
-  .container {
-    padding: 2px 16px;
-  }
 
-  .banana {
-      max-height: 100px;
-      max-width: 100px;
-      margin:0 0 0 15px;
-  }
+.bigBadge {
+    margin-top: 7px;
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 50%;
+    /* border: 2px solid blue; */
+}
 
+.badgeName {   
+    font-weight: bold;
+    font-size: 20px;
+    font-style: normal;
+    text-align: left;
+    margin-bottom: 8px;
+    /* border: 2px solid cyan; */
+
+}
+
+.badgeDesc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom:32px;
+    /* border: 2px solid greenyellow; */
+}
+.badgeDate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    /* border: 2px solid blue; */
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 43px;
+}
+
+.spacing {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+
+@media (min-width: 768px)
+{
+    .badgeName {   
+        font-size: 26px;
+    }
+
+    .badgeDesc {
+        font-size: 16px;
+    }
+    .badgeDate {
+        font-size: 14px;
+    }
+
+}

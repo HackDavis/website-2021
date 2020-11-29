@@ -23,12 +23,35 @@ const TeamDisplay = (props) => {
     const { displayName, email, uid } = user
     var group_pending_members = new Map([])
 
+    function CanJoinTeam()
+    {
+        return props.userStatus.group_id.length == 0
+    }
+
     function joinRequest() {
+
+        if (props.userStatus.pending_groups.length >= 5)
+        {
+            props.DisplayNotification("Max team join request limit of 5 reached!", "#c12c24");
+            return;
+        }
+
+        if (props.userStatus.group_id.length > 0)
+        {
+            props.DisplayNotification("You are already in a team!", "#c12c24");
+            return;
+        }
+
         // various checks to see if the user is valid to join a group.
         if (props.userStatus.pending_groups.length < 5 && 
             props.userStatus.group_id.length == 0 && 
             (!props.userStatus.pending_groups.includes(props.selectedTeamId)))
         {
+            if ($('#applicantReason').val().length > 500) {
+                props.DisplayNotification("Max join request reason limit is 500 characters", "#c12c24");
+                return
+            }
+
             var db = props.userStatus.db;
             
             props.userStatus.pending_groups.push(props.selectedTeamId)
@@ -37,6 +60,7 @@ const TeamDisplay = (props) => {
             }, {merge: true})
             .then(function() {
                 console.log("Pending user groups successfully updated in members collection.")
+                // props.DisplayNotification("Requested to join team!", "#2ac124");
             })
             .catch(function(error) {
                 props.DisplayNotification("Error joining team! [1]", "#c12c24", 5000);
@@ -48,19 +72,48 @@ const TeamDisplay = (props) => {
             }, {merge: true})
             .then(function() {
                 console.log("Pending member list has been successfully updated.")
-                props.setSelectedTeamId(0) 
             })
             .catch(function(error) {
-                props.DisplayNotification("Error joining team! [2]", "#c12c24");
+                props.DisplayNotification("You currently cannot join a team [2]", "#c12c24");
             })
         }
         else {
-            console.log(props.userStatus.group_id)
-            console.log(props.userStatus.pending_groups.length < 5)
-            console.log(props.userStatus.group_id.length == 0) 
-            console.log(!props.userStatus.pending_groups.includes(props.selectedTeamId))
-            props.DisplayNotification("Error joining team! [3]", "#c12c24");
+            props.DisplayNotification("You currently cannot join a team [3]", "#c12c24");
         }
+    }
+
+    function cancelJoinRequest() {
+        console.log("CANCEL JOIN REQUEST")
+        var db = props.userStatus.db;
+
+        let pending_groups = JSON.parse(JSON.stringify(props.userStatus.pending_groups));
+        if (Object.entries(props.userStatus.pending_groups).length > 1)
+            pending_groups = pending_groups.filter((group_id) => group_id != props.selectedTeamId);
+        else 
+            pending_groups = []
+        db.collection("users").doc(uid).set({
+            pending_groups: pending_groups
+        }, { merge: true })
+        .then(function (response) {
+            console.log("Successfully removed the pending group from the user doc")
+        })
+        .catch(function (error) {
+            props.DisplayNotification("Error canceling joing request! [1]", "#c12c24", 5000);
+        })
+
+        if (Object.entries(props.team_info.pending_members).length > 1)
+            delete props.team_info.pending_members[uid]
+        else
+            props.team_info.pending_members = {}
+        db.collection("groups").doc(props.selectedTeamId).set({
+            pending_members: props.team_info.pending_members
+        }, { merge: true })
+        .then(function (response) {
+            console.log("Sucessfully removed the pending member from the group doc")
+        })
+        .catch(function (error) {
+            props.DisplayNotification("Error canceling joing request! [1]", "#c12c24");
+        })
     }
 
     const data = useStaticQuery(graphql`
@@ -80,9 +133,9 @@ const TeamDisplay = (props) => {
 
     return (
         <div className={styles.maincontainer}>
-            {console.log("TEAM DISPLAY INFO")}
-            {console.log(props.team_info)}
-            <img className={styles.leftarrow} id="backbutton" src={data.allFile.edges[0].node.publicURL} />
+            <div className={styles.left_arrow_container} id="backbutton">
+                <img className={styles.leftarrow} src={data.allFile.edges[0].node.publicURL} />
+            </div>
             <div className={styles.title}>{props.team_info.name}</div>
             {Object.keys(props.team_info.members).length != props.team_info.max_members ?
                 <div className={styles.membercount}>{Object.keys(props.team_info.members).length}/{props.team_info.max_members}</div> :
@@ -115,15 +168,34 @@ const TeamDisplay = (props) => {
                     <textarea id="applicantReason" className={styles.inputarea} rows="5" cols="60" name="text" placeholder="Tell us about your skills and passions!"></textarea>
                 </div>
             </div>
-            {props.team_info.members.length != props.team_info.max_members ?
+            
+            {Object.keys(props.team_info.members).length != props.team_info.max_members && !props.userStatus.pending_groups.includes(props.selectedTeamId) ?
                 
-                <div onClick={joinRequest} className={styles.joinbuttoncontainer}>
-                    <div className={styles.joinbutton}>REQUEST TO JOIN TEAM</div>
-                </div> :
+                (CanJoinTeam() ? 
+                    <div onClick={joinRequest} className={styles.joinbuttoncontainer}>
+                        <div className={styles.joinbutton}>REQUEST TO JOIN TEAM</div>
+                    </div> : 
+                    
+                    <div></div>
+                    
+                    )
+                 :
                 
-                <div className={styles.joinbuttoncontainer}>
-                    <div className={`${styles.joinbutton} ${styles.teamfullbutton}`}>Team is Full</div>
-                </div>
+                (props.userStatus.pending_groups.includes(props.selectedTeamId) ? 
+                
+                    <div className={styles.joinbuttoncontainer}>
+                        <div className={`${styles.joinbutton}`} onClick={cancelJoinRequest} style={{backgroundColor: "gray"}}>
+                            CANCEL REQUEST
+                        </div>
+                    </div>
+                : 
+                    <div className={styles.joinbuttoncontainer}>
+                        <div className={`${styles.joinbutton} ${styles.teamfullbutton}`}>
+                            TEAM IS FULL
+                        </div>
+                    </div>
+                )
+
             }
         </div>
     )

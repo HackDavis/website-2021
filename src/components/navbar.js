@@ -3,8 +3,22 @@ import $ from "jquery";
 import styles from "./css/navbar.module.css";
 import Navitem from "./navitem";
 import { getUser, isLoggedIn } from "../utils/auth"
-
-const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, setColoredLogo, setFadeAbout, setFadeSocialGood }) => {
+import { useStaticQuery, graphql } from "gatsby"
+const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, setColoredLogo, setFadeAbout, setFadeSocialGood, setHamburgerMenuIsOpen, hamburgerMenuIsOpen}) => {
+    
+    const data = useStaticQuery(graphql`
+    {
+        allFile(filter: { name: {eq: "HamburgerMenu"}, extension: { eq: "svg"} }, sort: {fields:[name] order: ASC}) {
+          edges {
+            node {
+              publicURL
+              name
+              dir
+            }
+          }
+        }
+      }
+    `)
 
     useEffect(() => {
         // Init anchor scrolling
@@ -86,11 +100,29 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
         $(window).on("scroll", function () {
             OnScroll();
         });
+
+        $(`.${styles.hamburger_menu}`).on("click",function() {
+            if(hamburgerMenuIsOpen == true) {
+                console.log('Hamburger is open')
+                console.log('Close hamburger')
+                setHamburgerMenuIsOpen(false);
+            } else {
+                console.log('Hamburger is not open')
+                setHamburgerMenuIsOpen(true);
+                console.log('Open Hamburger')
+            }
+        })
+        // Cleanup event handlers
+        return () => {
+            // clean up the event handler when the component unmounts
+            $(`.${styles.hamburger_menu}`).off("click")
+        }
     })
 
     return (
         <div className={styles.navbarcontainer}>
             <div className={styles.navbar}>
+                <img className={styles.hamburger_menu} src={data.allFile.edges[0].node.publicURL}/>
                 <Navitem name="Home" section_id="section_landing"></Navitem>
                 <Navitem name="About" section_id="section_about"></Navitem>
                 {/* <Navitem name="Schedule" section_id="section_schedule"></Navitem> */}

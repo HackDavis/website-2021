@@ -90,7 +90,7 @@ const Modal = props => {
                         groups[doc.id] = doc.data();
                 });
                 props.setGroups(groups);
-                // props.setHasLoaded(true) // does not cause the setstate update error in the console 
+                // props.setHasLoaded(true) // does n>ot cause the setstate update error in the console 
             });
 
             // // Odd snapshot call that does not automatically update local states on db updates 

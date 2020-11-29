@@ -1,18 +1,40 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
 .team_name{
     padding-top:8px;
-    font-size: 15px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-style:normal;
+    font-size: 14px;
 }
 
 .inputarea{
     margin-top:8px;
     width: 100%;
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    padding: 6px;
 }
 
 .team_description{
     margin-top: 8px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-style:normal;
+    font-size: 14px;
+
 }
 .team_size{
     margin-top: 8px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-style:normal;
+    font-size: 14px;
 }
 
 .team_size > select{
@@ -20,40 +42,74 @@
 }
 
 .tag_container{
-   margin-top: 8px;
+   margin-top: 20px;
+   font-family: 'Proxima Nova';
+   font-weight: bold;
+   font-style:normal;
+   font-size: 14px;
+}
+
+.tagcontainer
+{
+    margin-top: 8px;
+    margin-left: -3px;
 }
 
 .contact_email{
-    margin-top: 8px;
+    margin-top: 20px;
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+    font-style:normal;
+    font-size: 14px;
 }
 
 .createbuttoncontainer{
+    margin-top: 30px;
     text-align:center;
     width: 100%;
 }
 
 .createbutton
 {
-    display: inline-block;
+    display: block;
+    margin-top: 10px;
+    padding: 14px;
+    height: fit-content;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 0px;
     font-weight: bold;
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-    width: fit-content;
-    color: white;
-    background-color: rgb(49, 138, 49);
-    border-radius: 500px;
+    user-select: none;
     cursor: pointer;
-    transition: 0.2s ease-in-out all;
+    outline: none;
+    background-color: #12A8B1;
+    color: white;
 }
 
 .createbutton:hover
 {
     opacity: 0.9;
-    transform: scale(1.1);
 }
 
 .createteam_container
 {
     padding: 6px;
+}
+
+.selectTag
+{
+    display: inline-block;
+    color: white;
+    background-color: red;
+    font-size: 12px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    padding: 5px;
+    border-radius: 500px;
+    margin: 4px;
+    border: 2px solid red;
+    user-select: none;
+    transition: 0.1s ease-in-out all;
 }
