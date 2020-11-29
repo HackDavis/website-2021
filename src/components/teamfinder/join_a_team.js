@@ -82,7 +82,6 @@ const JoinATeam = (props) => {
     function DisplayTeamPreviews()
     {
         const previews = [];
-
         Object.keys(props.groups).forEach((group_id) => {
             const group = props.groups[group_id];
             if (ShouldTeamDisplay(group))

@@ -47,18 +47,6 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                     let anchorTop = $els.page.offset().top - ($els.page.height() / 2);
                     let anchorTop_full = $els.page.offset().top;
 
-                    // if (scrollTop >= anchorTop_full)
-                    // {
-                    //     if (i < 2)
-                    //     {
-                    //         setOnBottomPages(false)
-                    //     }
-                    //     else
-                    //     {
-                    //         setOnBottomPages(true)
-                    //     }
-                    // }
-
                     if (i == 1 && scrollTop >= $els.page.offset().top + ($els.page.height() * 0.3))
                     {
                         setFadeSocialGood(true);
@@ -102,16 +90,15 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
         });
 
         $(`.${styles.hamburger_menu}`).on("click",function() {
-            if(hamburgerMenuIsOpen == true) {
-                console.log('Hamburger is open')
-                console.log('Close hamburger')
-                setHamburgerMenuIsOpen(false);
-            } else {
-                console.log('Hamburger is not open')
                 setHamburgerMenuIsOpen(true);
-                console.log('Open Hamburger')
+                if(!isLoggedIn()){
+                    setLoginModalIsOpen(true);
+                }
+                else {
+                    setProfileModalIsOpen(true);
+                }
             }
-        })
+        )
         // Cleanup event handlers
         return () => {
             // clean up the event handler when the component unmounts

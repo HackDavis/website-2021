@@ -12,6 +12,14 @@
     font-weight: bold;
 }
 
+.top_section{
+    width:100%;
+}
+.x_button{
+    cursor:pointer;
+    float:right;
+    margin-top: -4.5%;
+}
 .relative
 {
     position: relative;

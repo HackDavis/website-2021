@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import Modal from "./modal"
 import Badge from "./badge"
 import styles from "./css/modal_profile.module.css"
-import { logout, getUser } from "../utils/auth"
+import { logout, getUser, isLoggedIn } from "../utils/auth"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import { useStaticQuery, graphql } from "gatsby"
@@ -68,6 +68,10 @@ const ProfileModal = props => {
         return userStatus.badges && userStatus.badges[badge_id]
     }
 
+    function ExitModal() {
+        props.setIsOpen(false);
+    }
+
     const data = useStaticQuery(graphql`
   {
     allFile(filter: { extension: { eq: "png"} }, sort: {fields:[name] order: ASC}) {
@@ -81,6 +85,7 @@ const ProfileModal = props => {
     }
   }
   `)
+
 
     function GetImageMap() {
         const image_data = {}
@@ -113,18 +118,22 @@ const ProfileModal = props => {
             {badgesOpen ?
                 <BadgePage {...props} data={data} hasLoaded={hasLoaded} GetBadgeDate={GetBadgeDate} HasBadge={HasBadge} setBadgesOpen={setBadgesOpen}></BadgePage>
                 : <div className={styles.modal}>
-                    <a
-                        className={styles.logout}
-                        href="/"
-                        onClick={event => {
-                            event.preventDefault()
-                            window.location.reload(true)
-                            logout(firebase).then(() => props.setIsOpen(false))
-                        }}
-                    >
-                        <img className={styles.signout_button} src={images["signout"]}></img>
-                        <div style={{ display: "inline-block" }}>Sign Out</div>
-                    </a>
+                    <div className={styles.top_section}>
+                        <a
+                            className={styles.logout}
+                            href="/"
+                            onClick={event => {
+                                event.preventDefault()
+                                window.location.reload(true)
+                                logout(firebase).then(() => props.setIsOpen(false))
+                            }}
+                        >
+                                <img className={styles.signout_button} src={images["signout"]}></img>
+                                <div style={{ display: "inline-block" }}>Sign Out</div>
+                        </a>
+                        <div className={styles.x_button} onClick={ExitModal}> X</div>
+                    </div>
+                    <hr></hr>
                     <div className={`${styles.relative}`}>
                         <div className={styles.applicationcontainer}>
                             <div className={styles.modalsectiontitle}>{getUser().displayName}</div>
