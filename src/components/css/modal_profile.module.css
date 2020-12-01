@@ -14,11 +14,21 @@
 
 .top_section{
     width:100%;
+    position: relative;
+    padding-bottom: 20px;
 }
+
+.signout_container{
+    position: absolute;
+    left: 0;
+    top: 50%;    
+}
+
 .x_button{
     cursor:pointer;
-    float:right;
-    margin-top: -4.5%;
+    position:absolute;
+    right: 0;
+    top: 50%;
 }
 .relative
 {
@@ -81,8 +91,8 @@
 {
     margin-top: 10px;
     /* border: 2px solid red; */
-    flex-grow: 0.1;
-    /* height: 10%; */
+    flex-grow: 0.15;
+    height: calc(90px + 1%);
 }
 
 .teamfindercontainer
@@ -90,16 +100,16 @@
     position: absolute;
     /* border: 2px solid cyan; */
     position: relative;
-    height: 55%;
-    flex-grow: 0.7;
+    height: calc(40% - 70px);
+    flex-grow: 0.5;
 }
 
 .badgescontainer
 {
     /* border: 2px solid purple; */
     width: 100%;
-    height: 15%;
-    flex-grow: 0.2;
+    height: 10%;
+    flex-grow: 0.1;
     margin-bottom: 16px;
 }
 

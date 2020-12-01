@@ -79,9 +79,10 @@ const JoinATeam = (props) => {
         }
     }
 
+    let previews = [];
     function DisplayTeamPreviews()
     {
-        const previews = [];
+        previews = [];
         Object.keys(props.groups).forEach((group_id) => {
             const group = props.groups[group_id];
             if (ShouldTeamDisplay(group))
@@ -94,6 +95,11 @@ const JoinATeam = (props) => {
 
         return previews
     }
+
+    useEffect(() => 
+    {
+        $(`div.${styles.total_teams}`).text(`${previews.length} teams`);
+    })
     
     const data = useStaticQuery(graphql`
     {

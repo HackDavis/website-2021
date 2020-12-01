@@ -5,6 +5,11 @@
     font-weight: bold;
 }
 
+*
+{
+    outline: none;
+}
+
 .container
 {
     margin-right: 24px;
@@ -86,6 +91,11 @@
 
 .teams_with_room{
     margin-top: 15px;
+}
+
+.teams_with_room input, .teams_with_room input:focus{
+    outline: none;
+    box-shadow: none;
 }
 
 .search_bar_container

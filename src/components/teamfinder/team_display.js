@@ -10,10 +10,12 @@ import { useStaticQuery, graphql } from "gatsby"
 const TeamDisplay = (props) => {
     
     useEffect(() =>{
+
         $(`#backbutton`).on("click", function(){
             props.setSelectedTeamId(0)
             props.setfiltersOpen(false)
         })
+
         return()=>{
             $(`#backbutton`).off("click")
         }
@@ -132,7 +134,7 @@ const TeamDisplay = (props) => {
 
 
     return (
-        <div className={styles.maincontainer}>
+        <div className={styles.maincontainer} id="content_team">
             <div className={styles.left_arrow_container} id="backbutton">
                 <img className={styles.leftarrow} src={data.allFile.edges[0].node.publicURL} />
             </div>
@@ -142,12 +144,13 @@ const TeamDisplay = (props) => {
                 <div className={`${styles.membercount} ${styles.full}`}>Full</div>
             }
             <div className={styles.description}>{props.team_info.description}</div> 
-            <div className={styles.tagscontainer}>
+            {/* <hr className={styles.hr}></hr> */}
+            <div className={styles.tagscontainer} style={{marginTop: "10px"}}>
                 {props.team_info.tags.map((tagname) => {
                     return <TeamTag tagname={tagname}></TeamTag>
                 })}
             </div>
-            {/* <hr className={styles.hr}></hr> */}
+
             <div className={styles.members}>
                 <div className={styles.memberstitle}>Members</div>
                 <div className={styles.memberscontainer}>
@@ -156,7 +159,7 @@ const TeamDisplay = (props) => {
                     })}
                 </div>
             </div>
-            <div className={styles.email}>
+            <div className={styles.email} style={{marginTop: "20px"}}>
                 <div className={styles.emailtitle}>Contact Email</div>
                 <div className={styles.contactemail}>{props.team_info.email}</div>
             </div>

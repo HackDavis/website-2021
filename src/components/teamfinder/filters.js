@@ -94,8 +94,8 @@ const Filters = props => {
                     <input type="radio" name="tagState" id="only_tags" value="Only" onChange={SelectRadioButton} checked={props.tagState == "Only" && "checked"} required /> Only these tags
                 </label>
                 <br></br>
-                <label for="teams_with_room" className={styles.teams_with_room}>
-                    <input type="radio" name="tagRoomState" id="available_room_checkbox" onChange={SelectCheckBox} checked={props.tagRoomState == "Available" && "checked"} value="Available"  required/> Teams with room
+                <label for="available_room_checkbox" className={styles.teams_with_room}>
+                    <input type="checkbox" name="tagRoomState" id="available_room_checkbox" onChange={SelectCheckBox} checked={props.tagRoomState == "Available" && "checked"} value="Available"  required/> Only show teams with room
                 </label>
             </div>
             <div className={styles.tagcontainer}>
