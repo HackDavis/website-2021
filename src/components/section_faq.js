@@ -125,6 +125,15 @@ const FAQSection = () => {
                                 
                             </div>
                         </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>When do applications close?</h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                                Applications close at midnight on December 20, 2020. Make sure to apply before then!
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
