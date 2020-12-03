@@ -27,10 +27,10 @@ const BigBadge = (props) => {
                         <div className={`row no-gutters ${styles.spacing}`}>
                             <div className={`col-8`}>
                                 <div className={`row no-gutters`}>
-                                    <div className={`${styles.badgeName}`}>Badge Name</div>
+                                    <div className={`${styles.badgeName}`}>{props.info ? props.info.name : "Badge Name"}</div>
                                 </div>
                                 <div className={`row no-gutters`}>
-                                    <div className={`${styles.badgeDesc}`}>{"This is currently a temporary description for your badge."}</div>
+                                    <div className={`${styles.badgeDesc}`}>{props.info ? props.info.description : "This is currently a temporary description for your badge."}</div>
                                 </div>
                             </div>
                             <div className={`col-4`}>

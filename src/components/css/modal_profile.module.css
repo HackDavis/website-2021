@@ -119,6 +119,8 @@
     font-family: 'Proxima Nova';
     margin-bottom: 6px;
     font-size: 24px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 .team_finder{
@@ -153,7 +155,6 @@ hr
 .app_status
 {
     margin-top: 10px;
-    background-color: red;
     color: white;
     border-radius: 100px;
     padding: 10px;
