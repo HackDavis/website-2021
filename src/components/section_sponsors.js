@@ -44,7 +44,7 @@ const SponsorsSection = () => {
                         </div>
                         <div className="col-md-1" />
                         <div className="col-10 col-md-5 offset-1 offset-md-0" align="center">
-                            <a href="https://www.tensorflow.org/">
+                            <a href="https://www.tensorflow.org/js/">
                                 <img className={styles.imageStyle} src={images["tensorflow"]} />
                             </a>
                         </div>
