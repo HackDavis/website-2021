@@ -37,57 +37,57 @@ const SponsorsSection = () => {
     return (
         <div className="container-fluid p-0">
             <div className={`row no-gutters ${styles.background}`}>
-                <div className={'col-10 offset-1 col-md-8 offset-md-2'}>
+                <div className={'col-10 offset-1 col-lg-8 offset-lg-2'}>
                     <div className={`row align-items-center no-gutters`}>
                         <div className="col-12" align="center">
                             <h2 className={styles.headerText}>Sponsors</h2>
                         </div>
-                        <div className="col-md-1" />
-                        <div className="col-10 col-md-5 offset-1 offset-md-0" align="center">
+                        <div className="col-lg-1" />
+                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
                             <a href="https://www.tensorflow.org/js/">
                                 <img className={styles.imageStyle} src={images["tensorflow"]} />
                             </a>
                         </div>
-                        <div className="col-10 col-md-5 offset-1 offset-md-0" align="center">
+                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
                             <a href="https://www.confluent.io/">
                                 <img className={styles.imageStyle} src={images["confluent"]} />
                             </a>
                         </div>
-                        <div className="col-md-1" />
+                        <div className="col-lg-1" />
                     </div>
                     <div className={`row align-items-center no-gutters`}>
-                        <div className="col-md-1" />
-                        <div className="col-10 col-md-5 offset-1 offset-md-0" align="center">
+                        <div className="col-lg-1" />
+                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
                             <a href="https://www.twilio.com/">
                                 <img className={styles.imageStyle} src={images["twiliologo"]} />
                             </a>
                         </div>
-                        <div className="col-10 col-md-5 offset-1 offset-md-0" align="center">
+                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
                             <a href="https://globalaffairs.ucdavis.edu/">
                                 <img className={styles.imageStyle} src={images["ucdglobalaffairs"]} />
                             </a>
                         </div>
-                        <div className="col-md-1" />
+                        <div className="col-lg-1" />
                     </div>
                     <div className={`row align-items-center no-gutters`}>
-                        <div className="col-5 col-md-3 offset-0 offset-md-0" align="center">
+                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
                             <a href="https://contrarycap.com/">
                                 <img className={styles.smallImageStyle} src={images["contrary"]} />
                             </a>
                         </div>
-                        <div className="col-2 col-md-auto" />
-                        <div className="col-5 col-md-3 offset-0 offset-md-0" align="center">
+                        <div className="col-2 col-lg-auto" />
+                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
                             <a href="https://www.sketch.com/">
                                 <img className={styles.smallImageStyle} src={images["sketch"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-md-3 offset-0 offset-md-0" align="center">
+                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
                             <a href="https://lettersandscience.ucdavis.edu/">
                                 <img className={styles.smallImageStyle} src={images["ucdcls"]} />
                             </a>
                         </div>
-                        <div className="col-2 col-md-auto" />
-                        <div className="col-5 col-md-3 offset-0 offset-md-0" align="center">
+                        <div className="col-2 col-lg-auto" />
+                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
                             <a href="https://ece.ucdavis.edu/">
                                 <img className={styles.smallImageStyle} src={images["ucdece"]} />
                             </a>

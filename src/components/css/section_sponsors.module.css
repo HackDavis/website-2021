@@ -29,6 +29,8 @@
 .imageStyle {
     margin-bottom: 4rem;
     height: auto;
+    width: 100%;
+    padding: 20px;
     user-select: none;
     cursor: pointer;
     transition: transform .5s;
@@ -49,6 +51,8 @@
 .smallImageStyle {
     margin-bottom: 1.5rem;
     height: auto;
+    width: 100%;
+    padding: 16px;
     user-select: none;
     cursor: pointer;
     transition: transform .5s;
