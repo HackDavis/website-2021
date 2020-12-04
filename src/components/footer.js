@@ -56,6 +56,9 @@ const Footer = () => {
                 <a className={styles.smallbutton1} href="https://www.instagram.com/hackdavis" target="_blank" rel="noopener noreferrer">
                     <i className={`fab fa-instagram ${styles.icon}`} aria-hidden="true"></i>
                 </a>
+                <a className={styles.smallbutton1} href="https://discord.gg/wc6QQEc" target="_blank" rel="noopener noreferrer">
+                    <i className={`fab fa-discord ${styles.icon}`} aria-hidden="true"></i>
+                </a>
             </div>
             <div id="copyright">
                 <span>&copy; 2021 HackDavis • Made with ☕️ & 💛 in Davis</span>
