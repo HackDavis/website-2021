@@ -102,10 +102,13 @@ const MemberInfo = (props) => {
                 {
                     !isPending ? 
                     props.isOwner && props.member[0] != props.uid ? <div onClick={removeMember} className={styles.removebutton}> Remove</div> : null :
-                    <div><div onClick={acceptRequest} className={styles.approvebutton}>Approve</div>
-                    <div onClick={declineRequest} className={styles.denybutton}>Deny</div></div>
+                    <div className={styles.status_container}>
+                        <div onClick={acceptRequest} className={`${styles.status_button} ${styles.approvebutton}`}>Approve</div>
+                        <div onClick={declineRequest} className={`${styles.status_button} ${styles.denybutton}`}>Deny</div>
+                    </div>
                 }
             </div>
+            <hr></hr>
         </div>
     ) : null;
 }
@@ -165,12 +168,24 @@ const MyTeam = (props) => {
         <div className={styles.myTeam_container}>
             <div className={styles.team_name}>
                 {props.team_info.name}
+                <div className={styles.membercount}>{Object.keys(props.team_info.members).length}/{props.team_info.max_members}</div>
             </div>
             <div className={styles.team_description_container}>
                 {props.team_info.description}
             </div>
+            <div className={styles.team_tags}> 
+                {props.team_info.tags.map((tagname) => {
+                    return <TeamTag tagname={tagname}></TeamTag>
+                })}
+            </div>
+            <hr></hr>
+            <div className={styles.contact_email}>
+                <div className={styles.contact_email_title}>Contact Email</div>
+                {props.team_info.email}
+            </div>
+            <hr></hr>
             <div className={styles.members_container}>
-                <div className={styles.memberstitle}>Members {Object.keys(props.team_info.members).length}/{props.team_info.max_members}</div>
+                <div className={styles.memberstitle}>Members</div>
                 <div className={styles.members}>
                     {Object.entries(props.team_info.members).map((element) => 
                     {
@@ -181,15 +196,6 @@ const MyTeam = (props) => {
                         return <MemberInfo member={element} team_info={props.team_info} teamid={props.userStatus.group_id} uid={uid} pending={true} isOwner={isOwner} allGroups={props.allGroups} setGroups={props.setGroups} db={props.userStatus.db}></MemberInfo>
                     })}
                 </div>
-            </div>
-            <div className={styles.team_tags}> 
-                {props.team_info.tags.map((tagname) => {
-                    return <TeamTag tagname={tagname}></TeamTag>
-                })}
-            </div>
-            <div className={styles.contact_email}>
-                <div className={styles.contact_email_title}>Contact Email</div>
-                {props.team_info.email}
             </div>
             <div onClick={leaveGroup} className={styles.leavebuttoncontainer}>
                 <div className={styles.leavebutton}>{leaveText}</div>

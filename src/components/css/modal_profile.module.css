@@ -39,6 +39,11 @@
     height: 96%;
 }
 
+.relative *
+{
+    color: #3F3F3F;
+}
+
 .relative > div
 {
     flex-shrink: 1;

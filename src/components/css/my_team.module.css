@@ -1,6 +1,6 @@
 .team_name{
     margin-top: 8px;
-    font-size: 20px;
+    font-weight: bold;
 }
 
 .myTeam_container
@@ -8,11 +8,14 @@
     padding: 6px;
 }
 
+.membercount
+{
+    margin-top: 10px;
+}
+
 .member_info{
+    position: relative;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid gray;
 }
 
 .member_info:last-child
@@ -23,17 +26,14 @@
 .team_description_container{
     margin-top: 16px;
     margin-bottom: 16px;
-    margin-left: 4px;
 }
 
 .members_container{
-    border: 2px solid lightgray;
     margin-top: 8px;
 }
 
 .members {
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-top: 10px;
 }
 
 .team_tags{
@@ -42,7 +42,8 @@
 }
 
 .contact_email{
-    margin-top: 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .leavebuttoncontainer{
     text-align:right;
@@ -52,22 +53,17 @@
 .leavebutton
 {
     display: inline-block;
-    font-weight: bold;
-    margin: 10px;
+    margin-top: 16px;
     text-align: center;
-    padding: 10px;
     width: fit-content;
-    color: white;
-    background-color:red;
+    color: #E86560;
     border-radius: 500px;
     cursor: pointer;
-    transition: 0.2s ease-in-out all;
 }
 
 .leavebutton:hover
 {
-    opacity: 0.9;
-    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .removebuttoncontainer{
@@ -77,76 +73,62 @@
 
 .removebutton
 {
+    position: absolute;
+    top: 0;
+    right: 0;
     display: inline-block;
-    font-weight: bold;
-    margin: 3px;
     text-align: center;
-    padding: 6px;
     width: fit-content;
-    color: white;
-    background-color:red;
-    border-radius: 500px;
+    color: #E86560;
     cursor: pointer;
-    transition: 0.2s ease-in-out all;
 }
 
 .removebutton:hover
 {
-    opacity: 0.9;
-    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.status_container
+{
+    display: block;
+    height: 40px;
+}
+
+.status_button
+{
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 500px;
+    cursor: pointer;
+    width: 47%;
+}
+
+.status_button:hover
+{
+    opacity: 0.8;
 }
 
 .approvebutton
 {
-    display: inline-block;
-    font-weight: bold;
-    margin: 3px;
-    text-align: center;
-    padding: 6px;
-    width: fit-content;
-    color: white;
-    background-color:green;
-    border-radius: 500px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out all;
+    float: left;
+    background-color: #12A8B1;
 }
-
-.approvebutton:hover
-{
-    opacity: 0.9;
-    transform: scale(1.1);
-}
-
 
 .denybutton
 {
-    display: inline-block;
-    font-weight: bold;
-    margin: 3px;
-    text-align: center;
-    padding: 6px;
-    width: fit-content;
-    color: white;
-    background-color:red;
-    border-radius: 300px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out all;
-}
-
-.denybutton:hover
-{
-    opacity: 0.9;
-    transform: scale(1.1);
+    float: right;
+    background-color: #E86560;
 }
 
 .name{
     text-align: left;
-    padding-right:2%;
-    font-size: 18px;
 }
 
 .email{
-    margin-top: 5px;
+    margin-top: 8px;
     display:block;
     text-overflow: clip;
 }
@@ -159,13 +141,12 @@
 .memberstitle
 {
     font-weight: bold;
-    margin: 8px;
-    font-size: 18px;
 }
 
 .member_buttons_container
 {
     margin-top: 6px;
+    height: fit-content;
     display: block;
 }
 
@@ -177,6 +158,6 @@
 
 .requestText
 {
-    margin-top: 10px;
-    color: darkred;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
