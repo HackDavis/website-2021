@@ -134,6 +134,18 @@ const FAQSection = () => {
                                 
                             </div>
                         </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>What are the rules?</h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                                We will be following <a href='http://mlh.io/code-of-conduct' target="_blank" style={{color: "lightblue"}}>MLH's Code of Conduct</a>.
+                                <br></br>
+                                <br></br>
+                                HackDavis may also add additional rules and guidelines for the event, which will be listed below. These are subject to change.
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
