@@ -63,23 +63,20 @@ const MemberInfo = (props) => {
     }
 
     function acceptRequest() {
+        var all_members = props.team_info.members
+        all_members[props.member[0]] = [props.member[1][0], props.member[1][1], false]
+        props.team_info.allMembers = all_members;
+
         var pending_members = props.team_info.pending_members
         if (Object.entries(pending_members).length > 1)
             delete pending_members[props.member[0]]
         else
             pending_members = {}
         props.team_info.pending_members = pending_members;
+
         props.db.collection("groups").doc(props.teamid).update({
+            members: all_members,
             pending_members: pending_members
-        });
-
-        props.setGroups(props.allGroups)
-
-        var all_members = props.team_info.members
-        all_members[props.member[0]] = [props.member[1][0], props.member[1][1], false]
-        props.team_info.allMembers = all_members
-        props.db.collection("groups").doc(props.teamid).update({
-            members: all_members
         })
         .then(function() {
             props.db.collection("users").doc(props.member[0]).update({
