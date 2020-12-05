@@ -36,6 +36,21 @@
     transition: transform .5s;
 }
 
+.imageStyle_twilio{
+    width:100%;
+    height:auto;
+    margin-bottom: 4rem;
+    user-select: none;
+    cursor: pointer; 
+    transition:transform 0.5s;
+    transform: scale(0.8, 0.8);
+}
+
+.imageStyle_twilio:hover {
+    transform: scale(0.9);
+}
+
+
 @media (max-width: 575px){
     .imageStyle
     {
