@@ -164,7 +164,7 @@ const ProfileModal = props => {
                                     (userStatus.status == "Not Yet Applied" ? 
                                         <div>
                                             Not Yet Applied
-                                            <div className={styles.smallnote}>May take up to 24 hours to update</div>
+                                            {/* <div className={styles.smallnote}>May take up to 24 hours to update</div> */}
                                             <button className={styles.app_status_apply} onClick={() => window.open('https://hackdavis.typeform.com/to/t4ghuDHw')}>APPLY</button>
                                         </div> : 
                                         <div>
@@ -175,9 +175,10 @@ const ProfileModal = props => {
                                 }
                             </div>
                         </div>
-                        <hr></hr>
+                        {/* ALL COMMENTED CONTENT BELOW IS THE BADGES CONTENT */}
+                        {/* <hr></hr> */}
 
-                        <div className={styles.badgescontainer}>
+                        {/* <div className={styles.badgescontainer}>
                             <a
                                 className={styles.badge_button}
                                 href="/"
@@ -202,7 +203,7 @@ const ProfileModal = props => {
                                         <Badge hasLoaded={hasLoaded} date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
                                 })}
                             </div>
-                        </div>
+                        </div> */}
                         <hr></hr>
                         <div className={styles.teamfindercontainer}>
                             <div className={styles.team_finder}>

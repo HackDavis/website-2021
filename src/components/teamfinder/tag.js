@@ -27,7 +27,7 @@ const TeamTag = (props) => {
     }
 
     return (
-        <div data-tagname={props.tagname} className={`${styles.tag} ${props.filter_tag && styles.filter_tag} ${props.not_filled && styles.not_filled}`} style={props.not_filled ? {"border-color": tagColor, "color": tagColor} : {"backgroundColor": tagColor}}>
+        <div data-tagname={props.tagname} className={`${styles.tag} ${props.filter_tag && styles.filter_tag} ${props.not_filled && styles.not_filled}`} style={props.not_filled ? {"borderColor": tagColor, "color": tagColor} : {"backgroundColor": tagColor}}>
             {props.tagname}
         </div>
     )

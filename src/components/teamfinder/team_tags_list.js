@@ -8,6 +8,8 @@ export default [
     "Game Dev",
     "Unity",
     "Firebase",
+    "MongoDB",
+    "SQL",
     "Python",
     "Web",
     "Data Science",
@@ -22,8 +24,11 @@ export default [
     "Environment",
     "Education",
     "Health",
-    "C#"
-    // Sponsored Hack Tags
+    "C#",
+    "Sketch",
+    "TensorFlow.js",
+    "Contrary",
+    "Interdisciplinary"
 ]
 
 

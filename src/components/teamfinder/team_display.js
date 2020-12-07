@@ -44,6 +44,12 @@ const TeamDisplay = (props) => {
             return;
         }
 
+        if (Object.keys(props.team_info.pending_members).length >= 5) 
+        {
+            props.DisplayNotification("This team already has the max amount of join requests!", "#c12c24");
+            return;
+        }
+
         // various checks to see if the user is valid to join a group.
         if (props.userStatus.pending_groups.length < 5 && 
             props.userStatus.group_id.length == 0 && 

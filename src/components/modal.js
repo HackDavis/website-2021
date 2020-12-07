@@ -58,6 +58,8 @@ const Modal = props => {
                             badges: doc.data().badges,
                             group_id: doc.data().group_id,
                             pending_groups: doc.data().pending_groups,
+                            staff: doc.data().staff,
+                            wants_refresh: doc.data().wants_refresh,
                             db: db
                         }) // extracts the specific fields from the document 
                         if (doc.data().group_id.length > 0)
@@ -82,15 +84,16 @@ const Modal = props => {
 
             // Regular snapshot call that SHOULD automatically update local states on db updates (but does not)
             docRef = db.collection("groups")
-            let temp_groups = {}
             docRef.onSnapshot(function (querySnapshot) {
+                let temp_groups = {}
                 querySnapshot.forEach(function (doc) {
-                    // console.log(doc.data())
                     if (dataIsValid(doc.data()))
+                    {
                         temp_groups[doc.id] = doc.data();
+                    }
                 });
                 props.setGroups(JSON.parse(JSON.stringify(temp_groups)));
-                // props.setHasLoaded(true) // does n>ot cause the setstate update error in the console 
+                // props.setHasLoaded(true) // does not cause the setstate update error in the console 
             });
 
             // // Odd snapshot call that does not automatically update local states on db updates 

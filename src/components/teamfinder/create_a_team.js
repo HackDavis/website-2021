@@ -60,10 +60,10 @@ const CreateATeam = (props) => {
             .then(function(docRef) {
                 props.DisplayNotification("Team successfully created!", "#2ac124", 3000)
                 // console.log("Group successfully created")
-                db.collection("users").doc(uid).set({
+                db.collection("users").doc(uid).update({
                     group_id: docRef.id,
                     pending_groups: [],
-                }, {merge: true})
+                })
             }).then(function(docRef) {
                 // console.log("Removing user other requests from other groups");
                 pending_groups.forEach((group_id) => {

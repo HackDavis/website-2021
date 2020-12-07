@@ -19,8 +19,16 @@ const MemberInfo = (props) => {
             members: all_members
         })
         .then(function() {
-            props.db.collection("users").doc(props.member[0]).update({
-                group_id: "",
+            let usersCurGroup;
+            props.db.collection("users").doc(props.member[0]).get().then(function(doc) {
+                usersCurGroup = doc.data().group_id;
+            })
+            .then(function() {
+                if (usersCurGroup == props.teamid) {
+                    props.db.collection("users").doc(props.member[0]).update({
+                        group_id: "",
+                    })
+                }
             })
         })
 
@@ -176,7 +184,7 @@ const MyTeam = (props) => {
 
     var isOwner = false
     // {console.log(props.team_info.members)}
-    if (props.team_info.members[uid][2])
+    if (props.team_info.members[uid] && props.team_info.members[uid][2])
         isOwner=true
     let leaveText = (isOwner) ? "Disband Team" : "Leave Team" 
 
@@ -224,9 +232,9 @@ const MyTeam = (props) => {
                         if (doc.exists) {
                             pendingGroups = doc.data().pending_groups;
                             pendingGroups = pendingGroups.filter((element) => element != props.userStatus.group_id);
-                            db.collection("users").doc(key).set({
+                            db.collection("users").doc(key).update({
                                 pending_groups: pendingGroups,
-                            }, {merge: true});
+                            });
                         } else {
                             // console.log("Error getting document");
                         }
@@ -237,9 +245,9 @@ const MyTeam = (props) => {
                 // console.error("Error removing document: ", error);
             })
         } else {
-            db.collection("groups").doc(old_group_id).set({
-                members: props.team_info.members
-            }, {merge: true})
+            db.collection("groups").doc(old_group_id).update({
+                members: JSON.parse(JSON.stringify(cur_team))
+            })
             .then(function() {
                 props.setIsInTeam(false)
             })
