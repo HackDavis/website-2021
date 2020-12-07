@@ -67,14 +67,14 @@ const MemberInfo = (props) => {
         all_members[props.member[0]] = [props.member[1][0], props.member[1][1], false]
         // props.team_info.allMembers = all_members;
         props.team_info.members = all_members;
-        console.log(props.team_info.members);
-        console.log(Object.keys(props.team_info.members).length);
+        // console.log(props.team_info.members);
+        // console.log(Object.keys(props.team_info.members).length);
 
         var pending_members = props.team_info.pending_members
         if (Object.entries(pending_members).length > 1 && Object.keys(props.team_info.members).length != props.team_info.max_members)
             delete pending_members[props.member[0]]
         else
-            pending_members = [];
+            pending_members = {};
             
         const old_pending_members = JSON.parse(JSON.stringify(props.team_info.pending_members));
         props.team_info.pending_members = pending_members;
@@ -87,7 +87,6 @@ const MemberInfo = (props) => {
         }).then(function()
         {
             props.db.collection("users").doc(props.member[0]).get().then(function(doc) {
-                console.log("got user pending groups")
                 pending_groups = doc.data().pending_groups;
             }).then(function() {
                 props.db.collection("users").doc(props.member[0]).update({
@@ -96,8 +95,8 @@ const MemberInfo = (props) => {
                 }).then(function() {
                     if (Object.keys(props.team_info.members).length == props.team_info.max_members) {
                         var pendingIDsToClear = old_pending_members;
-                        console.log("pendingIDsToClear: ")
-                        console.log(pendingIDsToClear);
+                        // console.log("pendingIDsToClear: ")
+                        // console.log(pendingIDsToClear);
                         Object.keys(pendingIDsToClear).forEach(function(key) {
                             let pendingGroups = []
                             props.db.collection("users").doc(key).get().then(function(doc) {
@@ -107,24 +106,16 @@ const MemberInfo = (props) => {
                                     props.db.collection("users").doc(key).update({
                                         pending_groups: pendingGroups,
                                     })
-                                    .then(function() { 
-                                        // props.member[1][2] = false
-                                        // props.setGroups(props.allGroups)
-                                        // setIsPending(false)
-
-                                    }).catch(function(error)
+                                    .catch(function(error)
                                     {
-                                        console.log(`Failed to update user: ${error}`);
+                                        // console.log(`Failed to update user: ${error}`);
                                     })
                                 } else {
-                                    console.log("Error getting document");
+                                    // console.log("Error getting document");
                                 }
                             })
                         })
                     } 
-                    else {
-                        console.log("in the else, team still has room ")
-                    }
                 }).then(function(doc)
                 {
                     // console.log("removing old requests...")
@@ -205,6 +196,7 @@ const MyTeam = (props) => {
         })
         .catch(function(error) {
             props.DisplayNotification("Failed to leave group! [1]", "#c12c24", 5000)
+            return;
         })
 
         var cur_team = props.team_info.members
@@ -216,8 +208,8 @@ const MyTeam = (props) => {
             var pendingGroupsToClear = props.allGroups[props.userStatus.group_id].pending_members;
             delete props.allGroups[props.userStatus.group_id]
             props.setGroups(props.allGroups)
-            db.collection("groups").doc(old_group_id).delete().then(function() {
-                // console.log( "Document successfully deleted"); 
+            db.collection("groups").doc(old_group_id).delete().then(function() { 
+
             })
             .then(function() {
                 Object.keys(groupIDsToClear).forEach(function(key) {
@@ -227,24 +219,22 @@ const MyTeam = (props) => {
                 })
                 Object.keys(pendingGroupsToClear).forEach(function(key) {
                     let pendingGroups = []
-                    console.log("KEY:", key);
+                    // console.log("KEY:", key);
                     db.collection("users").doc(key).get().then(function(doc) {
                         if (doc.exists) {
                             pendingGroups = doc.data().pending_groups;
-                            console.log("INITIAL PENDING GROUPS:", pendingGroups); // logs the correct array 
                             pendingGroups = pendingGroups.filter((element) => element != props.userStatus.group_id);
-                            console.log("MODIFIED PENDING GROUPS:", pendingGroups); // logs the same array 
                             db.collection("users").doc(key).set({
                                 pending_groups: pendingGroups,
                             }, {merge: true});
                         } else {
-                            console.log("Error getting document");
+                            // console.log("Error getting document");
                         }
                     })
                 })
                 props.setIsInTeam(false)
             }).catch(function(error) {
-                console.error("Error removing document: ", error);
+                // console.error("Error removing document: ", error);
             })
         } else {
             db.collection("groups").doc(old_group_id).set({
