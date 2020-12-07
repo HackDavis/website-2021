@@ -61,13 +61,13 @@ const MemberInfo = (props) => {
             delete pending_members[props.member[0]]
         else
             pending_members = {}
-        props.team_info.pending_members = pending_members;
+        // props.team_info.pending_members = pending_members;
         props.db.collection("groups").doc(props.teamid).update({
             pending_members: pending_members
         });
 
-        props.setGroups(props.allGroups)
-        setMemberExists(false);
+        // props.setGroups(props.allGroups)
+        // setMemberExists(false);
     }
 
     function acceptRequest() {
@@ -184,7 +184,7 @@ const MyTeam = (props) => {
 
     var isOwner = false
     // {console.log(props.team_info.members)}
-    if (props.team_info.members[uid] && props.team_info.members[uid][2])
+    if (props.team_info && props.team_info.members && props.team_info.members[uid] && props.team_info.members[uid][2])
         isOwner=true
     let leaveText = (isOwner) ? "Disband Team" : "Leave Team" 
 

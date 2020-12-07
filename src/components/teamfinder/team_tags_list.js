@@ -27,8 +27,7 @@ export default [
     "C#",
     "Sketch",
     "TensorFlow.js",
-    "Contrary",
-    "Interdisciplinary"
+    "Contrary"
 ]
 
 

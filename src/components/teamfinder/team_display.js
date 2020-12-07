@@ -109,18 +109,26 @@ const TeamDisplay = (props) => {
             props.DisplayNotification("Error canceling joing request! [1]", "#c12c24", 5000);
         })
 
-        if (Object.entries(props.team_info.pending_members).length > 1)
-            delete props.team_info.pending_members[uid]
-        else
-            props.team_info.pending_members = {}
-        db.collection("groups").doc(props.selectedTeamId).set({
-            pending_members: props.team_info.pending_members
-        }, { merge: true })
-        .then(function (response) {
-            // console.log("Sucessfully removed the pending member from the group doc")
-        })
-        .catch(function (error) {
-            props.DisplayNotification("Error canceling joing request! [1]", "#c12c24");
+        db.collection("groups").doc(props.selectedTeamId).get().then(function(doc) {
+                
+            let pending_members = JSON.parse(JSON.stringify(doc.data().pending_members));
+
+            if (Object.entries(props.team_info.pending_members).length > 1)
+            {
+                delete pending_members[uid]
+            }
+            else
+                pending_members = {}
+            
+            db.collection("groups").doc(props.selectedTeamId).update({
+                pending_members: pending_members
+            })
+            .then(function (response) {
+                // console.log("Sucessfully removed the pending member from the group doc")
+            })
+            .catch(function (error) {
+                props.DisplayNotification("Error canceling joing request! [1]", "#c12c24");
+            })
         })
     }
 
