@@ -12,54 +12,136 @@
     font-weight: bold;
 }
 
+.top_section{
+    width:100%;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.signout_container{
+    position: absolute;
+    left: 0;
+    top: 50%;    
+}
+
+.x_button{
+    cursor:pointer;
+    position:absolute;
+    right: 0;
+    top: 50%;
+}
+.relative
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 96%;
+}
+
+.relative *
+{
+    color: #3F3F3F;
+}
+
+.relative > div
+{
+    flex-shrink: 1;
+    flex-basis: auto;
+    display: flex;
+    flex-direction: column;
+}
+
 .modal
 {
-    width: 25rem;
-    height: 35rem;
-    /* border: 2px solid red; */
+    position: relative;
+    width: 100%;
+    height: 100%;
     font-family: 'Proxima Nova';
 }
 
-.title
+.logout
 {
-    /* border: 2px solid blue; */
-    min-height: 3rem;
-    margin: 1rem;
-    margin-bottom: .5rem;
-    text-align: center;
+    display: block;
+    color: rgb(78, 78, 78);
+    padding: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 100px;
+    width: fit-content;
+    outline: none;
+    height: 4%;
+    z-index: 5;
+    transition: 0.2s ease-in-out all;
+}
+
+.logout:hover
+{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.signout_button
+{
+    display: inline;
+    width: 16px;
+    height: 16px;
+    margin-top: -4px;
+    margin-right: 8px;
+    outline: none;
+    border: none;
 }
 
 .applicationcontainer
 {
     margin-top: 10px;
     /* border: 2px solid red; */
-    min-height: 5rem;
-    /* margin: 1rem; */
+    flex-grow: 0.15;
+    height: calc(90px + 1%);
 }
 
 .teamfindercontainer
 {
+    position: absolute;
     /* border: 2px solid cyan; */
-    min-height: 13rem;
-    /* margin: 1rem; */
+    position: relative;
+    height: calc(40% - 70px);
+    flex-grow: 0.5;
 }
 
 .badgescontainer
 {
-    /* border: 2px solid yellow; */
-    min-height: 10rem;
-    /* margin: 1rem; */
+    /* border: 2px solid purple; */
+    width: 100%;
+    height: 10%;
+    flex-grow: 0.1;
+    margin-bottom: 16px;
 }
 
 .modalsectiontitle
 {
     font-weight: bold;
+    font-family: 'Proxima Nova';
     margin-bottom: 6px;
+    font-size: 24px;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
+
+.team_finder{
+    font-weight: bold;
+    font-family: 'Proxima Nova';
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    text-align:center;
+}
+
 
 .modalsectioncontent
 {
-    max-height: 150px;
+    /* border: 2px dashed orange; */
+    position: relative;
     overflow-y: auto;
 }
 
@@ -69,25 +151,56 @@ hr
     width: 100%;
 }
 
-.logout
+.badge_icon
 {
-    font-weight: bold;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: black;
-    color: white;
-    padding: 6px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 100px;
-    z-index: 5;
-    transition: 0.2s ease-in-out all;
+    display: inline-block;
+    margin-left: 10px;
 }
 
-.logout:hover
+.app_status
 {
+    margin-top: 10px;
+    color: white;
+    border-radius: 100px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.app_status_apply
+{
+    display: block;
+    margin-top: 10px;
+    width: fit-content;
+    padding: 14px;
+    height: fit-content;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 0px;
+    font-weight: bold;
+    user-select: none;
     cursor: pointer;
-    color: yellow;
-    transform: scale(1.05);
+    outline: none;
+    transition: 0.2s ease-in-out transform;
+    background-color: #12A8B1;
+    color: white;
+}
+
+.app_status_apply:hover {
+    /* transform: scale(1.1); */
+    opacity: 0.9;
+}
+
+.smallnote
+{
+    color: gray;
+    margin-top: 6px;
+    font-size: 14px;
+    font-style: italic;
 }

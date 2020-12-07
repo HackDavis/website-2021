@@ -1,0 +1,164 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+.maincontainer
+{
+    margin-left:23px;
+    margin-right: 23px;
+}
+
+.title
+{
+    font-size: 14px;
+    font-weight: bold;
+    font-style:normal;
+    font-family: 'Proxima Nova';
+    margin-top: 16px;
+}
+
+.membercount
+{
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    font-style:normal;
+    font-family: 'Proxima Nova';
+}
+
+.description
+{
+    margin-top: 14px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: normal;
+    font-style:normal;
+    font-family: 'Proxima Nova';
+}
+
+.tagscontainer
+{
+    padding-bottom: 24px;
+    margin-top: 10px;
+    margin-left: -3px;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.members
+{
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+.memberstitle, .emailtitle
+{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Proxima Nova';
+}
+
+
+.inputarea
+{
+    width: 100%;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.joinbuttoncontainer
+{
+    text-align: center;
+    width: 100%;
+}
+
+.joinbutton
+{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25%;
+    padding-left: 25%;
+    width: 100%;
+    color: white;
+    background-color: #12A8B1;
+    border-radius: 500px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out all;
+    user-select: none;
+}
+
+.joinbutton:hover
+{
+    opacity: 0.9;
+    /* transform: scale(1.1); */
+}
+
+.full
+{
+    color: rgb(192, 0, 0);
+}
+
+.teamfullbutton
+{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+    filter: grayscale(0.5);
+    background-color: red;
+}
+
+.left_arrow_container
+{
+    width: 25%;
+    cursor:pointer;
+}
+
+.textareatitle
+{
+    font-weight: bold;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+}
+
+.leftarrow{
+    cursor:pointer;
+    margin-top: 30px;
+    transition: 0.2s ease-in-out all;
+}
+
+.textareatitle:hover{
+    opacity: 0.9;
+}
+
+.membername, .contactemail{
+    margin-top:6px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Proxima Nova';
+}
+
+.email{
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 24px;
+}
+
+.applycontainer{
+    margin-top: 24px;
+
+}

@@ -63,7 +63,7 @@ module.exports = {
           database: true,
           firestore: true,
           storage: false,
-          messaging: true,
+          messaging: false,
           functions: false,
           performance: false,
         },

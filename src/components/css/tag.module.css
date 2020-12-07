@@ -1,0 +1,33 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+.tag
+{
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    padding: 5px;
+    border-radius: 500px;
+    margin: 4px;
+    margin-left: 0;
+    margin-right: 8px;
+    border: 2px solid transparent;
+    user-select: none;
+    transition: 0.1s ease-in-out all;
+}
+
+.not_filled
+{
+    color: black;
+}
+
+.filter_tag
+{
+    cursor: pointer;
+}

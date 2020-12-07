@@ -1,0 +1,139 @@
+
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+.section
+{
+    user-select: none;
+    position: relative;
+    display:inline-block;
+    color:black;
+    /* border: 2px solid black; */
+    padding: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    cursor: pointer;
+    /* transition: 0.2s ease-in-out font-weight, 0.2s ease-in-out background-color; */
+    /* background-color: lightgray; */
+}
+
+/* .section_container{
+    position: fixed;
+} */
+
+
+.section:nth-child(even)
+{
+    border-left: none;
+}
+
+.section:hover
+{
+    background-color: white;
+    font-weight: bold;
+    color: black;
+}
+
+.content{
+    border-top: none;
+    height: 100%;
+    overflow: auto;
+}
+
+.main_container
+{
+    position: relative;
+    height: 100%;
+}
+
+.nav_button
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    fill: gray;
+    float: left;
+    transform: scale(2) translateY(-50%);
+    margin: 6px;
+}
+
+.nav_button:hover
+{
+    fill: black;
+}
+
+.filterbutton
+{
+    transform: scale(1.75) translateY(-50%);
+}
+
+.selected{
+    border-bottom: 4px solid #12A8B1;
+}
+
+.locked_teams
+{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.refresh_button
+{
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: fit-content;
+    font-weight: bold;
+    color: white;
+    background-color: #12A8B1;
+    cursor: pointer;
+    border-radius: 100px;
+    user-select: none;
+}
+
+.refresh_button:hover
+{
+    opacity: 0.8;
+}
+
+.refresh_button_disabled
+{
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: grayscale(0.5);
+    opacity: 0.8;
+}
+
+.refresh_button_disabled:hover
+{
+    opacity: 1;
+}
+
+.refresh_anim
+{
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    height: 3px;
+    background-color: white;
+    border-radius: 50px;
+    animation: refresh_anim 1.25s ease-in-out infinite;
+}
+
+@keyframes refresh_anim
+{
+    0% {transform: translate(-50%, -50%) translateX(-70px);}
+    50% {transform: translate(-50%, -50%) translateX(70px);}
+    100% {transform: translate(-50%, -50%) translateX(-70px);}
+}

@@ -1,0 +1,164 @@
+.team_name{
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.myTeam_container
+{
+    padding: 6px;
+}
+
+.membercount
+{
+    margin-top: 10px;
+}
+
+.member_info{
+    position: relative;
+    width: 100%;
+}
+
+.member_info:last-child
+{
+    border: none;
+}
+
+.team_description_container{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 12px;
+}
+
+.members_container{
+    margin-top: 8px;
+}
+
+.members {
+    margin-top: 10px;
+}
+
+.team_tags{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.contact_email{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.leavebuttoncontainer{
+    text-align:right;
+    width: 100%;
+}
+
+.leavebutton
+{
+    display: inline-block;
+    margin-top: 16px;
+    text-align: center;
+    width: fit-content;
+    color: #E86560;
+    border-radius: 500px;
+    cursor: pointer;
+}
+
+.leavebutton:hover
+{
+    opacity: 0.8;
+}
+
+.removebuttoncontainer{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.removebutton
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    text-align: center;
+    width: fit-content;
+    color: #E86560;
+    cursor: pointer;
+}
+
+.removebutton:hover
+{
+    opacity: 0.8;
+}
+
+.status_container
+{
+    display: block;
+    height: 40px;
+}
+
+.status_button
+{
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 500px;
+    cursor: pointer;
+    width: 47%;
+}
+
+.status_button:hover
+{
+    opacity: 0.8;
+}
+
+.approvebutton
+{
+    float: left;
+    background-color: #12A8B1;
+}
+
+.denybutton
+{
+    float: right;
+    background-color: #E86560;
+}
+
+.name{
+    text-align: left;
+}
+
+.email{
+    margin-top: 8px;
+    display:block;
+    text-overflow: clip;
+}
+
+.pendingmember
+{
+    color: red;
+}
+
+.memberstitle
+{
+    font-weight: bold;
+}
+
+.member_buttons_container
+{
+    margin-top: 6px;
+    height: fit-content;
+    display: block;
+}
+
+.contact_email_title
+{
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.requestText
+{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}

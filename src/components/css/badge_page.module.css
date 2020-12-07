@@ -1,0 +1,60 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
+.badgePage
+{
+    position: relative;
+    width: 100%;
+    margin: 5px;
+    height: fit-content;
+    max-height: 100vh;
+    /* border: 2px solid red;  */
+    font-family: 'Proxima Nova';
+    overflow: scroll;
+}
+
+.titleContainer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 11px;
+    /* border: 2px solid cyan; */
+}
+
+.title_container_real, .title_container_real:focus
+{
+    position: relative;
+    outline: none;
+}
+
+.cardContainer {
+    margin-top:36px;
+
+}
+.titleText {
+    position: relative;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+.badge_icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    text-align: center;
+    float: left;
+    transform: translateY(-50%) rotate(180deg);
+}

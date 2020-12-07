@@ -59,11 +59,15 @@ div.underline.selected
     }
 }
 
-.navbutton
-{
-    transition: 0.2s ease-in-out transform;
+@media(min-width:769px){
+    .hamburger_menu {
+        display:none;
+    }
 }
-
+.hamburger_menu{
+    margin-top: 20px;
+    margin-right: 10px;
+}
 .navbutton
 {
     font-weight: bold;
@@ -77,6 +81,7 @@ div.underline.selected
     padding: 0.25vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    transition: 0.5s ease-in-out color, 0.2s ease-in-out transform;
 }
 
 .navbutton:focus
@@ -108,11 +113,6 @@ div.underline.selected
 .navbutton:hover
 {
     transform: scale(1.1, 1.1);
-}
-
-.navitem button
-{
-    transition: 0.5s ease-in-out color;
 }
 
 .navbarcontainer_gradient
