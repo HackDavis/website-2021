@@ -52,7 +52,7 @@ const Modal = props => {
             docRef
                 .onSnapshot(function (doc) {
                     if (doc.exists) {
-                        console.log("User info has successfully been read")
+                        // console.log("User info has successfully been read")
                         props.setUserStatus({
                             status: doc.data().app_status,
                             badges: doc.data().badges,
@@ -66,7 +66,7 @@ const Modal = props => {
                             props.setIsInTeam(false)
                     } else {
                         props.DisplayNotification("Failed to load user info!", "#c12c24", 10000)
-                        console.log("No such document exists")
+                        // console.log("No such document exists")
                     }
                 })
 
@@ -82,14 +82,14 @@ const Modal = props => {
 
             // Regular snapshot call that SHOULD automatically update local states on db updates (but does not)
             docRef = db.collection("groups")
-            let groups = {}
+            let temp_groups = {}
             docRef.onSnapshot(function (querySnapshot) {
                 querySnapshot.forEach(function (doc) {
                     // console.log(doc.data())
                     if (dataIsValid(doc.data()))
-                        groups[doc.id] = doc.data();
+                        temp_groups[doc.id] = doc.data();
                 });
-                props.setGroups(groups);
+                props.setGroups(JSON.parse(JSON.stringify(temp_groups)));
                 // props.setHasLoaded(true) // does n>ot cause the setstate update error in the console 
             });
 

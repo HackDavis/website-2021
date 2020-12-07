@@ -42,6 +42,9 @@ const CreateATeam = (props) => {
             props.DisplayNotification("Team size must be between 2 and 4 members [5]", "#c12c24");
             return
         }
+        
+        // store copy before cleared 
+        const pending_groups = props.userStatus.pending_groups;
 
         if (team_name.length != 0 && team_description.length != 0 && team_email.length != 0 && team_tags.length != 0) {
             var db = props.userStatus.db
@@ -56,10 +59,26 @@ const CreateATeam = (props) => {
             })
             .then(function(docRef) {
                 props.DisplayNotification("Team successfully created!", "#2ac124", 3000)
-                console.log("Group successfully created")
+                // console.log("Group successfully created")
                 db.collection("users").doc(uid).set({
-                    group_id: docRef.id
+                    group_id: docRef.id,
+                    pending_groups: [],
                 }, {merge: true})
+            }).then(function(docRef) {
+                // console.log("Removing user other requests from other groups");
+                pending_groups.forEach((group_id) => {
+                    db.collection("groups").doc(group_id).get().then(function(doc) {
+                        const pending_group_members = doc.data().pending_members;
+                        delete pending_group_members[uid];
+
+                        db.collection("groups").doc(group_id).update({
+                            pending_members: pending_group_members,
+                        }).then(function(docRef) {
+                            // console.log("this should have updated pending members")
+                            // console.log(group_id)
+                        })
+                    })
+                });
             })
             .catch(function(error) {
                 props.DisplayNotification("Failed to create team!", "#c12c24", 5000)

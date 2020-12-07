@@ -118,7 +118,6 @@ const JoinATeam = (props) => {
 
     return (
         <div>
-            {/* Display total number of teams and put filter button on the same line */}
             <div className="container-fluid p-0">
                 <div className={`${styles.container} row no-gutters`}>
                     <div className={`${styles.total_teams} col-6`}>
@@ -130,7 +129,7 @@ const JoinATeam = (props) => {
                 </div>
             </div>
             {DisplayTeamPreviews()}
-            {Object.keys(props.groups).length == 0 && <TeamPreview {...props} skeleton={true} team_data={{}}></TeamPreview>}
+            {!props.hasLoaded && <TeamPreview {...props} skeleton={true} team_data={{}}></TeamPreview>}
         </div>
     )
 };

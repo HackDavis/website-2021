@@ -30,6 +30,7 @@ const TeamFinder = (props) => {
         // Register event handler
         $(`div.${styles.section}`).on("click", function () {
             // Switch tabs
+            if (!props.hasLoaded) {return;}
             if ($(this).hasClass(styles.selected)) {return;}
 
             $(`div.${styles.section}.${styles.selected}`).removeClass(styles.selected)
@@ -49,6 +50,7 @@ const TeamFinder = (props) => {
         })
 
         $(`#filterbutton`).on("click", function(){
+            if (!props.hasLoaded) {return;}
             setfiltersOpen(!filtersOpen)
         })
 
@@ -91,6 +93,11 @@ const TeamFinder = (props) => {
         }
     }
 
+    function UserHasAppliedOrBeenAccepted()
+    {
+        return props.userStatus.status == "Pending Review" || props.userStatus.status == "Application Accepted";
+    }
+
     return (
         <div className={`${styles.main_container}`}>
             <div className="container-fluid p-0">
@@ -109,7 +116,7 @@ const TeamFinder = (props) => {
                 </div>
                   <div className="row no-gutters flex-grow-1 h-100">
                     <div className={`${styles.content} col col-xs-12`} id="content">
-                        {Display()}
+                        {UserHasAppliedOrBeenAccepted() ? Display() : <div className={styles.locked_teams}>Please apply to join or create a team!</div>}
                     </div>
                 </div>
             </div>

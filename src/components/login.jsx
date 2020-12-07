@@ -24,7 +24,7 @@ const Login = ( props ) => {
       staff: user_email.substr(user_email.lastIndexOf("@")+1) == "hackdavis.io" ? true : false
     }, {merge: true})
     .then(function() {
-      console.log("Document successfully written!")
+      // console.log("Document successfully written!")
     })
     .catch(function(error) {
       console.error("Error writing document: ", error)

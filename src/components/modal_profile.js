@@ -31,6 +31,14 @@ const ProfileModal = props => {
     const [notificationState, setNotificationState] = useState({ active: false })
     const [badgesOpen, setBadgesOpen] = useState(false); // True if badges page is open
 
+    useEffect(()=>{
+        // scroll to the top of the container by default
+        const content = document.getElementById('content');
+        if (content != null)
+        {
+            content.scrollTo(0,0);
+        }
+    })
     // Displays a notification on success/failure
     function DisplayNotification(text, bg_color, time_to_display) {
         // Show notification
@@ -174,6 +182,7 @@ const ProfileModal = props => {
                                 className={styles.badge_button}
                                 href="/"
                                 onClick={event => {
+                                    if (!hasLoaded) {return;}
                                     event.preventDefault()
                                     setBadgesOpen(true);
                                 }}
@@ -199,7 +208,7 @@ const ProfileModal = props => {
                             <div className={styles.team_finder}>
                                 Team Finder
                             </div>
-                            <div className={styles.modalsectioncontent}>
+                            <div className={styles.modalsectioncontent} id="content">
                                 <TeamFinder
                                     {...props}
                                     setIsInTeam={setIsInTeam}

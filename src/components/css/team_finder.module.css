@@ -75,3 +75,11 @@
 .selected{
     border-bottom: 4px solid #12A8B1;
 }
+
+.locked_teams
+{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -61,7 +61,7 @@ const TeamDisplay = (props) => {
                 pending_groups: props.userStatus.pending_groups
             }, {merge: true})
             .then(function() {
-                console.log("Pending user groups successfully updated in members collection.")
+                // console.log("Pending user groups successfully updated in members collection.")
                 // props.DisplayNotification("Requested to join team!", "#2ac124");
             })
             .catch(function(error) {
@@ -73,7 +73,7 @@ const TeamDisplay = (props) => {
                 pending_members: props.team_info.pending_members
             }, {merge: true})
             .then(function() {
-                console.log("Pending member list has been successfully updated.")
+                // console.log("Pending member list has been successfully updated.")
             })
             .catch(function(error) {
                 props.DisplayNotification("You currently cannot join a team [2]", "#c12c24");
@@ -85,7 +85,7 @@ const TeamDisplay = (props) => {
     }
 
     function cancelJoinRequest() {
-        console.log("CANCEL JOIN REQUEST")
+        // console.log("CANCEL JOIN REQUEST")
         var db = props.userStatus.db;
 
         let pending_groups = JSON.parse(JSON.stringify(props.userStatus.pending_groups));
@@ -97,7 +97,7 @@ const TeamDisplay = (props) => {
             pending_groups: pending_groups
         }, { merge: true })
         .then(function (response) {
-            console.log("Successfully removed the pending group from the user doc")
+            // console.log("Successfully removed the pending group from the user doc")
         })
         .catch(function (error) {
             props.DisplayNotification("Error canceling joing request! [1]", "#c12c24", 5000);
@@ -111,7 +111,7 @@ const TeamDisplay = (props) => {
             pending_members: props.team_info.pending_members
         }, { merge: true })
         .then(function (response) {
-            console.log("Sucessfully removed the pending member from the group doc")
+            // console.log("Sucessfully removed the pending member from the group doc")
         })
         .catch(function (error) {
             props.DisplayNotification("Error canceling joing request! [1]", "#c12c24");
