@@ -6,6 +6,13 @@ import { getUser, isLoggedIn } from "../utils/auth"
 
 const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id }) => {
 
+    const [sectionId, setSectionId] = useState("");
+
+    useEffect(() => 
+    {
+        setSectionId(section_id);
+    })
+
     function OnClickBehavior(section_id) {
         if (section_id == "login") {
             if (!isLoggedIn()) {
@@ -35,11 +42,11 @@ const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id 
         }
     }
 
-    const is_profile_button = section_id == "login" && isLoggedIn();
+    const is_profile_button = sectionId == "login" && isLoggedIn();
 
     return (
         <div className={`${styles.navitem}`} data-id={section_id}>
-            <button className={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(section_id)}>
+            <button className={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(sectionId)}>
                 {is_profile_button && <img className={styles.circle} src={getUser().photoURL} />}
                 {button_text}
             </button>

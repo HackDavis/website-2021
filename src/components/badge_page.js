@@ -9,15 +9,15 @@ import steal from "./css/modal_profile.module.css"
 
 const badge_info = 
 {
-  "0": {name: `You've Applied! (2021)`, description: `You submitted your application to HackDavis 2021!`},
-  "1": {name: `Attended a Pre-Event Workshop (2021)`, description: `You attended one of our Fall 2020 pre-event workshops!`},
-  "2": {name: `RSVP to HackDavis (2021)`, description: `You’ve been accepted to HackDavis and have confirmed your spot!`},
-  "3": {name: `Yummy (2021)`, description: `You got a meal code from HackDavis for DoorDash and used it to get some food!`},
-  "4": {name: `Submitted! (2021)`, description: `You submitted your project! Awesome job!`},
-  "5": {name: `Looking for Team (2021)`, description: `You checked out five different teams in the HackDavis team finder!`},
-  "6": {name: `Teaming Up! (2021)`, description: `You joined or created a team on the HackDavis team finder!`},
-  "7": {name: `Mentored (2021)`, description: `You got help and worked with your mentor!`},
-  "8": {name: `Attended a Workshop (2021)`, description: `You attended a workshop at HackDavis!`},
+  "Applied": {name: `You've Applied! (2021)`, description: `You submitted your application to HackDavis 2021!`},
+  "Pre-event": {name: `Attended a Pre-Event Workshop (2021)`, description: `You attended one of our Fall 2020 pre-event workshops!`},
+  "RSVP": {name: `RSVP to HackDavis (2021)`, description: `You’ve been accepted to HackDavis and have confirmed your spot!`},
+  "Yummy": {name: `Yummy (2021)`, description: `You got a meal code from HackDavis for DoorDash and used it to get some food!`},
+  "Submitted": {name: `Submitted! (2021)`, description: `You submitted your project! Awesome job!`},
+  "Looking": {name: `Looking for Team (2021)`, description: `You checked out five different teams in the HackDavis team finder!`},
+  "Teaming": {name: `Teaming Up! (2021)`, description: `You joined or created a team on the HackDavis team finder!`},
+  "Mentored": {name: `Mentored (2021)`, description: `You got help and worked with your mentor!`},
+  "Workshop": {name: `Attended a Workshop (2021)`, description: `You attended a workshop at HackDavis!`},
 }
 
 const BadgePage = (props) => {

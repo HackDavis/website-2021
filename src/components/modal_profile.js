@@ -175,10 +175,9 @@ const ProfileModal = props => {
                                 }
                             </div>
                         </div>
-                        {/* ALL COMMENTED CONTENT BELOW IS THE BADGES CONTENT */}
-                        {/* <hr></hr> */}
+                        {/* <hr></hr>
 
-                        {/* <div className={styles.badgescontainer}>
+                        <div className={styles.badgescontainer}>
                             <a
                                 className={styles.badge_button}
                                 href="/"

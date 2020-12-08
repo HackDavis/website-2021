@@ -172,3 +172,23 @@ div.sponsorImage {
     50% {transform: translateY(5px);}
     100% {transform: translateY(0);}
 }
+
+.trust_badge
+{
+    display:block;
+    max-width:100px;
+    min-width:60px;
+    position:fixed;
+    left:140px;
+    top:0;
+    width:10%;
+    z-index:10000;
+}
+
+@media (max-width: 768px)
+{
+    .trust_badge
+    {
+        left: 40px;
+    }
+}

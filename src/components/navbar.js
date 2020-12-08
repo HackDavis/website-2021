@@ -63,16 +63,20 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                             $(`.${styles.navitem} button`).addClass(styles.navbarcontainer_gradient)
                             setColoredLogo(true);
                             setFadeAbout(true);
+
+                            $(`.${styles.navitem} button.${styles.profile}`).addClass(styles.navbarcontainer_gradient_profile);
                         }
                         else if (i == 0)
                         {
                             // We are on the landing page 
                             $(`.${styles.navitem} button`).removeClass(styles.navbarcontainer_gradient)
+                            $(`.${styles.navitem} button.${styles.profile}`).removeClass(styles.navbarcontainer_gradient_profile);
                             setColoredLogo(false);
                         }
                         else {
                             // We are past the stats or social good section
                             $(`.${styles.navitem} button`).removeClass(styles.navbarcontainer_gradient)
+                            $(`.${styles.navitem} button.${styles.profile}`).removeClass(styles.navbarcontainer_gradient_profile);
                             setColoredLogo(false);
                         }
 
