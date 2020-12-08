@@ -8,8 +8,29 @@ import { getUser } from "../../utils/auth"
 import { useStaticQuery, graphql } from "gatsby"
 
 const TeamDisplay = (props) => {
+    const user = getUser()
+    const { displayName, email, uid } = user
     
     useEffect(() =>{
+
+        let teams_visited = localStorage.getItem("teams_visited") != null ? JSON.parse(localStorage.getItem("teams_visited")) : {};
+        teams_visited[props.selectedTeamId] = true
+        localStorage.setItem('teams_visited', JSON.stringify(teams_visited));
+
+        if (Object.keys(teams_visited).length == 5 && !props.userStatus.badges["Looking"])
+        {
+            const new_badges = JSON.parse(JSON.stringify(props.userStatus.badges))
+            new_badges["Looking"] = new Date(Date.now()).toDateString();
+            props.userStatus.db.collection("users").doc(uid).update({
+                badges: new_badges
+            })
+            .then(function() {
+                // props.DisplayNotification("Badge earned: Looking for Team!", "#12A8B1");
+            })
+            .catch(function(error) {
+                // console.log(`Error: ${error}`)
+            })
+        }
 
         $(`#backbutton`).on("click", function(){
             props.setSelectedTeamId(0)
@@ -21,8 +42,6 @@ const TeamDisplay = (props) => {
         }
     })
     
-    const user = getUser()
-    const { displayName, email, uid } = user
     var group_pending_members = new Map([])
 
     function CanJoinTeam()

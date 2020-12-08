@@ -48,29 +48,38 @@ const Modal = props => {
             var docRef = db.collection("users").doc(uid) // creates a reference to the specified doc
             props.setHasLoaded(true)
 
-            // user info call
             docRef
-                .onSnapshot(function (doc) {
-                    if (doc.exists) {
-                        // console.log("User info has successfully been read")
-                        props.setUserStatus({
-                            status: doc.data().app_status,
-                            badges: doc.data().badges,
-                            group_id: doc.data().group_id,
-                            pending_groups: doc.data().pending_groups,
-                            staff: doc.data().staff,
-                            wants_refresh: doc.data().wants_refresh,
-                            db: db
-                        }) // extracts the specific fields from the document 
-                        if (doc.data().group_id.length > 0)
-                            props.setIsInTeam(true)
-                        else
-                            props.setIsInTeam(false)
-                    } else {
-                        props.DisplayNotification("Failed to load user info!", "#c12c24", 10000)
-                        // console.log("No such document exists")
-                    }
-                })
+            .onSnapshot(function (doc) {
+                if (doc.exists) {
+                    // console.log("User info has successfully been read")
+                    props.setUserStatus({
+                        status: doc.data().app_status,
+                        badges: doc.data().badges,
+                        group_id: doc.data().group_id,
+                        pending_groups: doc.data().pending_groups,
+                        staff: doc.data().staff,
+                        wants_refresh: doc.data().wants_refresh,
+                        db: db
+                    }) // extracts the specific fields from the document 
+                    if (doc.data().group_id.length > 0)
+                        props.setIsInTeam(true)
+                    else
+                        props.setIsInTeam(false)
+                } else {
+                    props.DisplayNotification("Failed to load user info!", "#c12c24", 10000)
+                    // console.log("No such document exists")
+                }
+            })
+
+            docRef.update({
+                wants_refresh: true,
+            })
+            .catch(function(error)
+            {
+                // console.log(`Error: ${error}`);
+            })
+
+            // user info call
 
             // // Regular, no snapshot call 
             // db.collection("groups").get().then(function(querySnapshot) {

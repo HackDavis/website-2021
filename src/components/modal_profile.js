@@ -175,7 +175,7 @@ const ProfileModal = props => {
                                 }
                             </div>
                         </div>
-                        {/* <hr></hr>
+                        <hr></hr>
 
                         <div className={styles.badgescontainer}>
                             <a
@@ -202,7 +202,7 @@ const ProfileModal = props => {
                                         <Badge hasLoaded={hasLoaded} date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
                                 })}
                             </div>
-                        </div> */}
+                        </div>
                         <hr></hr>
                         <div className={styles.teamfindercontainer}>
                             <div className={styles.team_finder}>

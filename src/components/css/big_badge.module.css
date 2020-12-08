@@ -52,6 +52,7 @@
   
 
 .bigBadge {
+    margin-left: 16px;
     margin-top: 7px;
     max-height: 100px;
     max-width: 100px;
