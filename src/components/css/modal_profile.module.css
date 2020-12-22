@@ -94,7 +94,6 @@
 
 .applicationcontainer
 {
-    margin-top: 10px;
     /* border: 2px solid red; */
     flex-grow: 0.15;
     height: calc(90px + 1%);
@@ -185,7 +184,7 @@ hr
 
 .app_status
 {
-    margin-top: 10px;
+    margin-top: 6px;
     color: white;
     border-radius: 100px;
     padding: 4px 16px 4px 16px;

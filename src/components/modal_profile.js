@@ -173,9 +173,9 @@ const ProfileModal = props => {
                     <hr></hr>
                     <div className={`${styles.relative}`}>
                         <div className={styles.applicationcontainer}>
-                            <div className={styles.modalsectiontitle}>{getUser().displayName}</div>
+                            <div className={styles.modalsectiontitle} style={{marginBottom: "0px"}}>{getUser().displayName}</div>
                             {hasLoaded && isInTeam && groups[userStatus.group_id] ? <div style={{fontWeight: "bold", marginBottom: "6px"}}>{groups[userStatus.group_id].name}</div> : <div />}
-                            <div className={styles.modalsectioncontent} style={{ marginTop: "12px", overflow: "visible" }}>
+                            <div className={styles.modalsectioncontent} style={{ marginTop: "6px", overflow: "visible" }}>
                                 {
                                     hasLoaded ? 
                                     (userStatus.status == "Not Yet Applied" ? 
