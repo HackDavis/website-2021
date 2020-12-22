@@ -3,7 +3,7 @@ import Modal from "./modal"
 import Badge from "./badge"
 import styles from "./css/modal_profile.module.css"
 import styles_modal from "./css/modal.module.css"
-import { logout, getUser, isLoggedIn } from "../utils/auth"
+import { logout, getUser } from "../utils/auth"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import { useFirebase } from "gatsby-plugin-firebase"
 import { useStaticQuery, graphql } from "gatsby"
@@ -19,7 +19,9 @@ const application_status_colors =
     "Pending Review": "#FFC75A",
     "Application Accepted": "#B6CF69",
     "Application Denied": "#C0C0C0",
-    "Waitlisted": "#FFC75A"
+    "Waitlisted": "#FFC75A",
+    "Yes": "#B6CF69",
+    "No": "#EF8F71",
 }
 
 const ProfileModal = props => {
@@ -30,6 +32,7 @@ const ProfileModal = props => {
     const [isInTeam, setIsInTeam] = useState()
     const [notificationState, setNotificationState] = useState({ active: false })
     const [badgesOpen, setBadgesOpen] = useState(false); // True if badges page is open
+    const [RSVPVisibility, setRSVPVisibility] = useState(false);
 
     useEffect(()=>{
         // scroll to the top of the container by default
@@ -68,6 +71,19 @@ const ProfileModal = props => {
     useFirebase(fb => {
         setFirebase(fb)
     }, [])
+
+    function RSVPResponse(response) {
+        let db = userStatus.db
+        let userChoice = response ? "Yes" : "No"
+        console.log(response);
+
+        db.collection("users").doc(userStatus.uid).set({
+            RSVP: userChoice
+        }, { merge: true })
+        .then(function() {
+            setRSVPVisibility(false);
+        });
+    }
 
     function HasBadge(badge_id) {
         return userStatus.badges && badge_id in userStatus.badges;
@@ -128,6 +144,7 @@ const ProfileModal = props => {
             hasLoaded={hasLoaded}
             setHasLoaded={setHasLoaded}
             setIsInTeam={setIsInTeam}
+            setRSVPVisibility={setRSVPVisibility}
             isInTeam={isInTeam}
             id="profilemodal"
             DisplayNotification={DisplayNotification}
@@ -164,12 +181,20 @@ const ProfileModal = props => {
                                     (userStatus.status == "Not Yet Applied" ? 
                                         <div>
                                             Not Yet Applied
-                                            {/* <div className={styles.smallnote}>May take up to 24 hours to update</div> */}
                                             <button className={styles.app_status_apply} onClick={() => window.open('https://hackdavis.typeform.com/to/t4ghuDHw')}>APPLY</button>
                                         </div> : 
                                         <div>
                                             Application Status
                                             <div className={styles.app_status} style={{backgroundColor: application_status_colors[userStatus.status]}}>{userStatus.status}</div>
+                                            {
+                                                RSVPVisibility ? 
+                                                <div>
+                                                    Please RSVP
+                                                    <button className={styles.RSVP_button} onClick={() => RSVPResponse(true)} style={{backgroundColor: application_status_colors["Yes"]}}>Yes</button>
+                                                    <button className={styles.RSVP_button} onClick={() => RSVPResponse(false)} style={{backgroundColor: application_status_colors["No"]}}>No</button>
+                                                </div> 
+                                                : <></>
+                                            }
                                         </div>) :
                                     <Skeleton />
                                 }

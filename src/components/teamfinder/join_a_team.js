@@ -7,6 +7,8 @@ import styles from "../css/total_teams_section.module.css"
 import { useStaticQuery, graphql } from "gatsby"
 
 const JoinATeam = (props) => {
+
+    const [isFirstFrame, setIsFirstFrame] = useState(true);
     
     /**
      * Decides whether or not a team should be displayed in the list based on filter tags and preferences
@@ -117,7 +119,7 @@ const JoinATeam = (props) => {
   
 
     return (
-        <div>
+        !isFirstFrame ? <div>
             <div className="container-fluid p-0">
                 <div className={`${styles.container} row no-gutters`}>
                     <div className={`${styles.total_teams} col-6`}>
@@ -130,7 +132,7 @@ const JoinATeam = (props) => {
             </div>
             {DisplayTeamPreviews()}
             {!props.hasLoaded && <TeamPreview {...props} skeleton={true} team_data={{}}></TeamPreview>}
-        </div>
+        </div> : setIsFirstFrame(false)
     )
 };
 

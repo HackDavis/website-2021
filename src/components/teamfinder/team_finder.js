@@ -28,6 +28,7 @@ const TeamFinder = (props) => {
 
 
     useEffect(() => {
+
         // scroll to the top of the container by default
         const content = document.getElementById('content')
         content.scrollTo(0, 0);

@@ -59,18 +59,25 @@ const Modal = props => {
                         pending_groups: doc.data().pending_groups,
                         staff: doc.data().staff,
                         wants_refresh: doc.data().wants_refresh,
+                        uid: uid,
                         db: db
                     }) // extracts the specific fields from the document 
                     if (doc.data().group_id.length > 0)
                         props.setIsInTeam(true)
                     else
                         props.setIsInTeam(false)
+                    if (doc.data().app_status == "Application Accepted" && doc.data().RSVP == "Pending")
+                        props.setRSVPVisibility(true)
+                    else
+                        props.setRSVPVisibility(false);
                 } else {
                     props.DisplayNotification("Failed to load user info!", "#c12c24", 10000)
                     // console.log("No such document exists")
                 }
             })
 
+            // We will need to talk about and update this before we start handling application acceptances, or else it might cause an issue 
+            // asking for a refresh when the user's status is not "Not Yet Applied" 
             docRef.update({
                 wants_refresh: true,
             })

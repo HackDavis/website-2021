@@ -202,3 +202,19 @@ hr
     font-size: 14px;
     font-style: italic;
 }
+
+.RSVP_button {
+    margin-top: 10px;
+    color: white;
+    border-radius: 100px;
+    border: 0px solid transparent;
+    padding: 4px 16px 4px 16px;
+    width: fit-content;
+    font-weight: bold;
+    margin-left: 16px; 
+    display: inline-block;
+}
+
+.RSVP_button:hover {
+    cursor: pointer;
+}
