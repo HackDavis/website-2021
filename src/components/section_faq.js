@@ -130,7 +130,9 @@ const FAQSection = () => {
                             <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
                             
                             <div className={`${styles.collapseHeight} ${styles.content}`}>
-                                Applications close at midnight on December 20, 2020. Make sure to apply before then!
+                                <strike>Applications close at midnight on December 20, 2020. Make sure to apply before then!</strike>
+                                <br></br>
+                                Application deadline extended to January 1, 2021! 😊
                                 
                             </div>
                         </div>
@@ -139,11 +141,13 @@ const FAQSection = () => {
                             <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
                             
                             <div className={`${styles.collapseHeight} ${styles.content}`}>
-                                We will be following <a href='http://mlh.io/code-of-conduct' target="_blank" style={{color: "lightblue"}}>MLH's Code of Conduct</a>.
+                                We will be following MLH's <a href='http://mlh.io/code-of-conduct' target="_blank" style={{color: "lightblue"}}>Code of Conduct</a> and <a href='https://github.com/MLH/mlh-hackathon-rules' target="_blank" style={{color: "lightblue"}}>Rules</a>.
                                 <br></br>
                                 <br></br>
                                 HackDavis may also add additional rules and guidelines for the event, which will be listed below. These are subject to change.
-                                
+                                <br></br>
+                                <br></br>
+                                1. All work done on a submitted project must be completed during the hackathon time limits. Small bugfixes and changes are allowed after time ends before judging.
                             </div>
                         </div>
                     </div>

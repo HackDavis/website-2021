@@ -70,24 +70,33 @@ const SponsorsSection = () => {
                         <div className="col-lg-1" />
                     </div>
                     <div className={`row align-items-center no-gutters`}>
-                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://contrarycap.com/">
                                 <img className={styles.smallImageStyle} src={images["contrary"]} />
                             </a>
                         </div>
-                        <div className="col-2 col-lg-auto" />
-                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://www.sketch.com/">
                                 <img className={styles.smallImageStyle} src={images["sketch"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="https://www.digitalocean.com/">
+                                <img className={styles.smallImageStyle} src={images["digitalocean"]} />
+                            </a>
+                        </div>
+                        
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="https://www.stickermule.com/">
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://lettersandscience.ucdavis.edu/">
                                 <img className={styles.smallImageStyle} src={images["ucdcls"]} />
                             </a>
                         </div>
-                        <div className="col-2 col-lg-auto" />
-                        <div className="col-5 col-lg-3 offset-0 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://ece.ucdavis.edu/">
                                 <img className={styles.smallImageStyle} src={images["ucdece"]} />
                             </a>
