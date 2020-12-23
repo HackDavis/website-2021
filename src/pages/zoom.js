@@ -8,7 +8,7 @@ const ZoomPage = () => {
   
     useEffect(() => 
     {
-        window.location = `https://ucdavis.zoom.us/meeting/register/tJMqd-2upz4iHNYMb-c1tY8_puW87Y3xVkgG`
+        window.location = `https://ucdavis.zoom.us/meeting/register/tJErdOCtrzIiGNbCFjlDIlFuv6b2h6Kqj8M-`
     })
 
     return <></>
