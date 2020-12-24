@@ -104,7 +104,6 @@
     position: absolute;
     /* border: 2px solid cyan; */
     position: relative;
-    height: calc(40% - 70px);
     flex-grow: 0.5;
 }
 
@@ -134,8 +133,18 @@
     margin-bottom: 16px;
     font-size: 24px;
     text-align:center;
+    display: inline-block;
 }
 
+.expand_button {
+    font-family: 'Proxima Nova';
+    display: inline-block;
+    float: right;
+}
+
+.expand_button:hover {
+    cursor: pointer;
+}
 
 .modalsectioncontent
 {

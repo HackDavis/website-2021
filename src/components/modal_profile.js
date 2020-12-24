@@ -33,6 +33,8 @@ const ProfileModal = props => {
     const [notificationState, setNotificationState] = useState({ active: false })
     const [badgesOpen, setBadgesOpen] = useState(false); // True if badges page is open
     const [RSVPVisibility, setRSVPVisibility] = useState(false);
+    const [showOthers, setShowOthers] = useState(true);
+    const [teamFinderHeight, setTeamFinderHeight] = useState("calc(40% - 70px)");
 
     useEffect(()=>{
         // scroll to the top of the container by default
@@ -77,12 +79,27 @@ const ProfileModal = props => {
         let userChoice = response ? "Yes" : "No"
         console.log(response);
 
+        let new_badges;
+        new_badges = JSON.parse(JSON.stringify(userStatus.badges))
+        new_badges["RSVP"] = new Date(Date.now()).toDateString();
+
         db.collection("users").doc(userStatus.uid).set({
-            RSVP: userChoice
+            RSVP: userChoice,
+            badges: new_badges
         }, { merge: true })
         .then(function() {
             setRSVPVisibility(false);
         });
+    }
+
+    function changeTeamFinderSize() {
+        if (showOthers) {
+            setShowOthers(false);
+            setTeamFinderHeight("calc(100% - 70px)");
+        } else {
+            setShowOthers(true);
+            setTeamFinderHeight("calc(40% - 70px)");
+        }
     }
 
     function HasBadge(badge_id) {
@@ -133,6 +150,7 @@ const ProfileModal = props => {
     }
 
     const images = GetImageMap();
+    console.log(showOthers);
 
     return (
         <Modal
@@ -172,7 +190,7 @@ const ProfileModal = props => {
                     </div>
                     <hr></hr>
                     <div className={`${styles.relative}`}>
-                        <div className={styles.applicationcontainer}>
+                        {showOthers && <div className={styles.applicationcontainer}>
                             <div className={styles.modalsectiontitle} style={{marginBottom: "0px"}}>{getUser().displayName}</div>
                             {hasLoaded && isInTeam && groups[userStatus.group_id] ? <div style={{fontWeight: "bold", marginBottom: "6px"}}>{groups[userStatus.group_id].name}</div> : <div />}
                             <div className={styles.modalsectioncontent} style={{ marginTop: "6px", overflow: "visible" }}>
@@ -186,6 +204,7 @@ const ProfileModal = props => {
                                         <div>
                                             Application Status
                                             <div className={styles.app_status} style={{backgroundColor: application_status_colors[userStatus.status]}}>{userStatus.status}</div>
+                                            {userStatus.status == "Pending Review" ? <div style={{marginTop: "6px"}}>Accepted but your status is not updated? Please wait up to 24 hours for it to update.</div> : <div />}
                                             {
                                                 RSVPVisibility ? 
                                                 <div>
@@ -199,10 +218,10 @@ const ProfileModal = props => {
                                     <Skeleton />
                                 }
                             </div>
-                        </div>
-                        <hr></hr>
+                        </div> }
+                        {showOthers && <hr></hr>}
 
-                        <div className={styles.badgescontainer}>
+                        {showOthers && <div className={styles.badgescontainer}>
                             <a
                                 className={styles.badge_button}
                                 href="/"
@@ -227,11 +246,12 @@ const ProfileModal = props => {
                                         <Badge hasLoaded={hasLoaded} date={GetBadgeDate(file.node.name)} active={HasBadge(file.node.name)} image={file.node.publicURL} key={index}></Badge>;
                                 })}
                             </div>
-                        </div>
-                        <hr></hr>
-                        <div className={styles.teamfindercontainer}>
+                        </div> }
+                        {showOthers && <hr></hr>}
+                        <div className={styles.teamfindercontainer} style={{height: teamFinderHeight}}>
                             <div className={styles.team_finder}>
                                 Team Finder
+                                <img className={styles.expand_button} onClick={changeTeamFinderSize} src={images['teamfinder_size']} />
                             </div>
                             <div className={styles.modalsectioncontent} id="content">
                                 <TeamFinder
