@@ -148,6 +148,8 @@ const FAQSection = () => {
                                 <br></br>
                                 <br></br>
                                 1. All work done on a submitted project must be completed during the hackathon time limits. Small bugfixes and changes are allowed after time ends before judging.
+                                <br></br>
+                                2. Projects submitted must only be submitted to HackDavis and no other hackathons. Submitting the same project to multiple hackathons in the same weekend is a violation of fairness.
                             </div>
                         </div>
                     </div>
