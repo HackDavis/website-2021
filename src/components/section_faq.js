@@ -101,7 +101,7 @@ const FAQSection = () => {
                             <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
                             
                             <div className={`${styles.collapseHeight} ${styles.content}`}>
-                            Don't worry! You can use our team finder by clicking on our profile to find a team with an idea that interests you! Teams will have tags describing what they plan to work on/what roles they need that you can easily search by to find a project that interests you!<br /><br />
+                            Don't worry! You can use our team finder by clicking on your profile to find a team with an idea that interests you! Teams will have tags describing what they plan to work on/what roles they need that you can easily search by to find a project that interests you!<br /><br />
                             
                             We're also hosting a virtual mixer before HackDavis, so please check out our Facebook page for more announcements about that.
                                 
