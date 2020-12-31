@@ -14,11 +14,11 @@ const CreateATeam = (props) => {
     const [selectedTags, setSelectedTags] = useState([]);
 
     function createTeam() {
-        var team_name = $('#teamName').val();
-        var team_description = $('#teamDescription').val();
+        var team_name = $('#teamName').val().trim();
+        var team_description = $('#teamDescription').val().trim();
         var team_size = $("#slct option:selected").val();
         var team_tags = selectedTags
-        var team_email = $('#teamEmail').val()
+        var team_email = $('#teamEmail').val().trim()
         var team_pending_members = {}
         var team_members = {} 
         team_members[uid] = [displayName, email, true] 
