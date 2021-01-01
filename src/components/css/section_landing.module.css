@@ -104,10 +104,17 @@ div.sponsorImage {
     visibility: hidden;
 }
 
+.buttoncontainer
+{
+    display: inline-block;
+    width: 500px;
+    max-width: 75vw;
+    margin-top: 3rem;
+}
+
 .buttoncontainer > button
 {
     margin: 1rem;
-    margin-top: 3rem;
     width: 170px;
     padding: 14px;
     height: fit-content;
