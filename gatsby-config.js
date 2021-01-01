@@ -37,8 +37,8 @@ module.exports = {
         name: `hd_favicon`,
         short_name: `favicon`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#03cafc`,
+        theme_color: `#03cafc`,
         display: `minimal-ui`,
         icon: `src/images/hd_logo.png`, // This path is relative to the root of the site.
       },

@@ -59,6 +59,8 @@ const Modal = props => {
                         pending_groups: doc.data().pending_groups,
                         staff: doc.data().staff,
                         wants_refresh: doc.data().wants_refresh,
+                        RSVP: doc.data().RSVP,
+                        checkedIn: doc.data().checkedIn,
                         uid: uid,
                         db: db
                     }) // extracts the specific fields from the document 

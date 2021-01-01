@@ -28,7 +28,7 @@ const Login = (props) => {
                 group_id: "",
                 pending_groups: [],
                 staff: user_email.substr(user_email.lastIndexOf("@") + 1) == "hackdavis.io",
-                wants_refresh: false
+                wants_refresh: false,
             }, { merge: true })
                 .then(function () {
                     // console.log("Document successfully written!")

@@ -202,9 +202,12 @@ const ProfileModal = props => {
                                             <button className={styles.app_status_apply} onClick={() => window.open('https://hackdavis.typeform.com/to/t4ghuDHw')}>APPLY</button>
                                         </div> : 
                                         <div>
+                                            {/* {
+                                                userStatus.status == "Application Accepted" && userStatus.RSVP == "Yes" && userStatus.checkedIn == false ? <button className={styles.check_in_button} onClick={() => window.open('https://hackdavis.io/checkin')}>Check-in Now</button> : <></>
+                                            } */}
                                             Application Status
                                             <div className={styles.app_status} style={{backgroundColor: application_status_colors[userStatus.status]}}>{userStatus.status}</div>
-                                            {userStatus.status == "Pending Review" ? <div style={{marginTop: "6px"}}>Accepted but your status is not updated? Please wait up to 24 hours for it to update.</div> : <div />}
+                                            {userStatus.status == "Pending Review" ? <div style={{marginTop: "6px"}}></div> : <div />}
                                             {
                                                 RSVPVisibility ? 
                                                 <div>
