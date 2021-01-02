@@ -51,7 +51,7 @@ const StatsSection = (props) => {
                                 600+ HACKERS<br></br>
                                 36 HOURS<br></br>
                                 110+ PROJECTS<br></br>
-                                $25,000+ PRIZES<br></br>
+                                $12,000+ PRIZES<br></br>
                             </div>
                         </div>
                     </div>
