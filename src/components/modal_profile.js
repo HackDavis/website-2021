@@ -199,7 +199,6 @@ const ProfileModal = props => {
                                     (userStatus.status == "Not Yet Applied" ? 
                                         <div>
                                             Not Yet Applied
-                                            <button className={styles.app_status_apply} onClick={() => window.open('https://hackdavis.typeform.com/to/t4ghuDHw')}>APPLY</button>
                                         </div> : 
                                         <div>
                                             {/* {

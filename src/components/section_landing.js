@@ -51,7 +51,6 @@ const LandingSection = (props) => {
                         </div>
                     </div>
                     <div className={styles.buttoncontainer}>
-                        <button className={styles.applyButton} onClick={() => window.open('https://hackdavis.typeform.com/to/t4ghuDHw')}>APPLY</button>
                         <button className={styles.applyButton} onClick={() => window.open('https://hackdavis.typeform.com/to/l8vIKWhD')}>MENTOR</button>
                         <button className={styles.sponsorButton} onClick={() => window.open('mailto:team@hackdavis.io')}>SPONSOR 2021</button>
                     </div>
