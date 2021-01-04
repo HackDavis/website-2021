@@ -1,0 +1,38 @@
+@font-face
+{
+    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/Proxima Nova Alt Condensed Bold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: bold;
+}
+
+.background{
+    background-color: #0B2638;
+    min-height: 100vh;
+    font-family: 'Proxima Nova';
+    color: #FFFFFF;
+}
+
+.headerText {
+    margin-top: 10rem;
+    margin-bottom: 2.5rem;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  }
+  
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
