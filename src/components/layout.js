@@ -20,6 +20,8 @@ import ScheduleSection from "./section_schedule"
 import SocialGoodSection from "./section_socialgood"
 import StatsSection from "./section_stats"
 import SponsorsSection from "./section_sponsors"
+import LivestreamSection from "./section_livestream"
+import PrizesSection from "./section_prizes"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import LoadingScreen from "./loadingscreen"
 
@@ -55,12 +57,18 @@ const Layout = ({ children }) => {
             <Section id="section_socialgood">
                 <SocialGoodSection fadeSocialGood={fadeSocialGood}></SocialGoodSection>
             </Section>
+            <Section id="section_livestream">
+                <LivestreamSection></LivestreamSection>
+            </Section>
+            <Section id="section_prizes">
+                <PrizesSection></PrizesSection>
+            </Section>
             {/* <Section id="section_schedule">
                 <ScheduleSection></ScheduleSection>
             </Section> */}
-            <Section id="section_FAQ">
+            {/* <Section id="section_FAQ">
                 <FAQSection></FAQSection>
-            </Section>
+            </Section> */}
             <Section id="section_sponsors">
               <SponsorsSection></SponsorsSection>
             </Section>
