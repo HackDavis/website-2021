@@ -24,7 +24,7 @@ const PrizeSection = () => {
         })
 
         return () => {
-            $(`.${styles.qa_title}`).off("click")
+            $(`.${styles.prizeName}`).off("click")
         }
     })
 

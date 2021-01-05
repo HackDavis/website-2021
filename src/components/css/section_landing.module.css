@@ -212,3 +212,10 @@ div.sponsorImage {
         left: 40px;
     }
 }
+
+.icon
+{
+    font-size: 20px;
+    margin-right: 10px;
+    transform: translateY(2px);
+}
