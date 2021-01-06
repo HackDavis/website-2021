@@ -20,10 +20,12 @@
     background: rgba(18, 168, 177, 0.2);
     backdrop-filter: blur(30px);
     border-radius: 20px;
+    margin-left: 24px;
 }
 
 .header {
     font-size: 24px;
+    padding-top: 32px;
     font-family: 'Proxima Nova';
     font-weight: 900;
     color: white; 
@@ -32,6 +34,7 @@
 }
 
 .time {
+    padding-top: 28px;
     font-size: 104px;
     color: white;
     font-family: 'Source Code Pro';

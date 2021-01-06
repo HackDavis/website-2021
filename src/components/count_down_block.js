@@ -5,7 +5,7 @@ const CountDownBlock = (props) => {
     return (
         <div className={styles.block}>
             <div className={styles.header}> {props.header}</div>
-            <div className={styles.time}>36</div>
+            <div className={styles.time}>{props.time}</div>
         </div>
     )
 }
