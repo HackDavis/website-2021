@@ -1,0 +1,85 @@
+{
+    "Saturday":
+    {
+        "6:30 am": 
+        [
+            {
+                "type": "event",
+                "title": "Check-in Begins"
+            }
+        ],
+        "8:30 am": 
+        [
+            {
+                "type": "event",
+                "title": "Opening Ceremony"
+            }
+        ],
+        "9:00 am": 
+        [
+            {
+                "type": "event",
+                "title": "Hacking Begins"
+            },
+            {
+                "type": "event",
+                "title": "Team Mixer",
+                "link": "hackdavis.io"
+            }
+        ],
+        "9:30 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "Introduction to TensorFlow.js",
+                "description": "TensorFlow.js",
+                "link": "hackdavis.io"
+            }
+        ],
+        "10:30 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "Confluent",
+                "link": "hackdavis.io"
+            }
+        ],
+        "11:00 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "From Idea to Fruition",
+                "description": "Shubham Jagani | Amelia",
+                "link": "hackdavis.io"
+            }
+        ],
+        "1:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Sponsors Meet and Greet",
+                "link": "hackdavis.io"
+            }
+        ],
+        "3:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "From Idea to Fruition",
+                "description": "Kevin Phung | FORA",
+                "link": "hackdavis.io"
+            },
+            {
+                "type": "workshop",
+                "title": "Twilio",
+                "link": "hackdavis.io"
+            },
+            {
+                "type": "activity",
+                "title": "Zumba Class",
+                "description": "UC Davis ARC",
+                "link": "hackdavis.io"
+            }
+        ]
+    }
+}
