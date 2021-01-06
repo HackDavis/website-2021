@@ -12,19 +12,43 @@ const LivestreamSection = (props) => {
                 <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
                     <div className={styles.headerText}>Livestreams</div>
                     {/* idk why this is broke but documentation: https://github.com/CookPete/react-player#props */}
-                    <div className='player-wrapper'>
+                    <div className={styles.player_wrapper}>
                         <ReactPlayer
-                            className='react-player'
-                            url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
-                            width='100%'
-                            height='100%'
+                        url='https://www.youtube.com/watch?v=5qap5aO4i9A'
+                        className={styles.react_player}
+                        width='100%'
+                        height='100%'
                         />
                     </div>
-                    <ReactPlayer
-                            url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
-                            width='100%'
-                            height='50%'
-                    />
+                </div>
+                <div className={`col-1 col-md-2`} />
+                <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
+                    <div className={`row no-gutters`}>
+                        <div className={`col-12 col-md-6`}>
+                            <div className={styles.rightpadding}>
+                                <div className={styles.player_wrapper}>
+                                    <ReactPlayer
+                                    url='https://www.youtube.com/watch?v=5qap5aO4i9A'
+                                    className={styles.react_player}
+                                    width='100%'
+                                    height='100%'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div className={`col-12 col-md-6`}>
+                            <div className = {styles.leftpadding}>
+                                <div className={styles.player_wrapper}>
+                                    <ReactPlayer
+                                    url='https://www.youtube.com/watch?v=5qap5aO4i9A'
+                                    className={styles.react_player}
+                                    width='100%'
+                                    height='100%'
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

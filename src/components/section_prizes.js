@@ -5,6 +5,23 @@ import { useStaticQuery, graphql } from "gatsby"
 import PrizeDropdown from "./prize_dropdown"
 import styles from "./css/section_faq.module.css"
 
+const prizes1 = 
+{
+    "Best Hack for Social Good": "You can win this by creating an awesome hack geared towards social good! Each member of the winning team gets a Nintendo Switch.",
+    "Best Beginner Hack": "This must be every team member's first hackathon! Each member of the winning team gets a Smart TV.",
+    "Best Interdisciplinary Hack": "At least one member of your team must not be a Computer Science (or similar) major! Each member of the winning team gets a Fitbit.",
+    "Best Global Hack": "Best Global Hack goes to the team that offers a way to address one or more of the 17 <a href='https://www.un.org/sustainabledevelopment/sustainable-development-goals/' style={{'textDecoration': 'underline'}}>UN Sustainable Development Goals</a> and goes to the best project by a team of hackers from multiple (at least 2) time zones.! Each member of the winning team gets an Amazon Kindle.",
+    "Best Pitch with Contrary": "Winning team gets a $500 cash prize."
+}
+
+const prizes2 = 
+{
+    "Best Use of TensorFlow.js": "Use TensorFlow.js in your project! Each member of the winning team gets a Pixel 4A smart phone.",
+    "Best Use of Twilio API": "Create a design with Sketch for your project! Each member of the winning team gets a Sketch License.",
+    "Best Use of Confluent Platforms": "Use Confluent Platforms in your project! Each member of the winning team gets a $500 Amazon Gift Card",
+    "Best Design with Sketch": "Create a design with Sketch for your project! Each member of the winning team gets a Sketch License.",
+    "Best Design with Sketch": "Create a design with Sketch for your project! Each member of the winning team gets a Sketch License.",
+}
 
 const PrizeSection = () => {
 
@@ -48,13 +65,19 @@ const PrizeSection = () => {
                 <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
                     <div className={styles.headerText}>Prizes</div>
                     <div className={`row no-gutters`}>
-                        <div className={`col-6`} style={{"paddingRight": "10px"}}>
-                            <PrizeDropdown name={"Test Prize 123"} description={"You can win this prize by using the HackDavis API in your project! Nintendo switch!"}></PrizeDropdown>
-                            <PrizeDropdown name={"Test Prize 123"} description={"You can win this prize by using the HackDavis API in your project! Nintendo switch!"}></PrizeDropdown>
+                        <div className={`col-12 col-md-6`}>
+                            <div className={styles.rightpadding}>
+                                {Object.keys(prizes1).map((key) => {
+                                    return <PrizeDropdown name={key} description={prizes1[key]}></PrizeDropdown>;
+                                })}
+                            </div>
                         </div>
-                        <div className={`col-6`} style={{"paddingLeft": "10px"}}>
-                            <PrizeDropdown name={"Test Prize 123 Big Long Title hehe"} description={"You can win this prize by using the HackDavis API in your project! Nintendo switch!"}></PrizeDropdown>
-                            <PrizeDropdown name={"Test Prize 123"} description={"You can win this prize by using the HackDavis API in your project! Nintendo switch!"}></PrizeDropdown>
+                        <div className={`col-12 col-md-6 ${styles.leftpadding}`}>
+                            <div className={styles.leftpadding}>                            
+                                {Object.keys(prizes2).map((key) => {
+                                    return <PrizeDropdown name={key} description={prizes2[key]}></PrizeDropdown>;
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>

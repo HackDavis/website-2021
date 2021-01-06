@@ -66,10 +66,10 @@
     transition: 0.3s;
     max-height: 100%;
     max-width: 100%;
+    width: 100%;
     padding: 20px;
     margin-bottom: 20px;
     color: white;
-    user-select: none;
     background-color: #0E3955;
 }
 
@@ -79,6 +79,7 @@
     font-style: normal;
     text-align: left;
     cursor: pointer;
+    user-select: none;
     /* border: 2px solid cyan; */
 }
 
@@ -86,6 +87,7 @@
     font-style: normal;
     /* border-top: 2px solid rgba(255, 255, 255, 0.25); */
     font-weight: 500;
+    width: 100%;
     font-size: 14px;
     text-align: left;
     margin-top: 10px;
@@ -93,7 +95,21 @@
     /* border: 2px solid greenyellow; */
 }
 
-@media (min-width: 768px)
+.rightpadding
+{
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+}
+
+.leftpadding
+{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px)
 {
     .prizeName {   
         font-size: 26px;
@@ -103,7 +119,18 @@
         font-size: 16px;
     }
 
+    .rightpadding
+    {
+        padding-right: 0;
+    }
+    
+    .leftpadding
+    {
+        padding-left: 0;
+    }
+    
 }
+
 
 .collapseHeight
 {

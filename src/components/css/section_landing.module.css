@@ -95,10 +95,10 @@ div.title{
         height: 20px;
     }
 
-    .sponsorButton
+    /* .sponsorButton
     {
         display: none;
-    }
+    } */
 
 }
 
@@ -224,4 +224,9 @@ div.sponsorImage {
     font-size: 20px;
     margin-right: 10px;
     transform: translateY(2px);
+}
+
+
+.counter_container {
+    padding-top: 32px;
 }

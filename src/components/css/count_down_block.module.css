@@ -1,0 +1,41 @@
+@font-face
+{
+    src: url("../../static/fonts/Retrograde-Regular.otf");
+    font-family: 'Source Code Pro';
+    font-weight: normal;
+}
+
+@font-face
+{
+    src: url("../../static/fonts/Proxima\ Nova\ Extrabold.otf");
+    font-family: 'Proxima Nova';
+    font-weight: 900;
+}
+
+.block {
+    display: inline-block;
+    width: 214px;
+    height: 214px;
+    max-width: 75vw;
+    background: rgba(18, 168, 177, 0.2);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+}
+
+.header {
+    font-size: 24px;
+    font-family: 'Proxima Nova';
+    font-weight: 900;
+    color: white; 
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.time {
+    font-size: 104px;
+    color: white;
+    font-family: 'Source Code Pro';
+    font-weight: normal;
+    text-align: center;
+    text-shadow: 0px 4px 24px rgba(16, 49, 75, 0.1);
+}

@@ -16,7 +16,7 @@ import LoginModal from "./modal_login"
 import ProfileModal from "./modal_profile"
 import FAQSection from "./section_faq"
 import LandingSection from "./section_landing"
-import ScheduleSection from "./section_schedule"
+import LiveScheduleSection from "./section_live_schedule"
 import SocialGoodSection from "./section_socialgood"
 import StatsSection from "./section_stats"
 import SponsorsSection from "./section_sponsors"
@@ -60,15 +60,12 @@ const Layout = ({ children }) => {
             <Section id="section_livestream">
                 <LivestreamSection></LivestreamSection>
             </Section>
+            <Section id="section_schedule">
+                <LiveScheduleSection></LiveScheduleSection>
+            </Section>
             <Section id="section_prizes">
                 <PrizesSection></PrizesSection>
             </Section>
-            {/* <Section id="section_schedule">
-                <ScheduleSection></ScheduleSection>
-            </Section> */}
-            {/* <Section id="section_FAQ">
-                <FAQSection></FAQSection>
-            </Section> */}
             <Section id="section_sponsors">
               <SponsorsSection></SponsorsSection>
             </Section>

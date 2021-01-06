@@ -14,8 +14,7 @@
 
 div.background
 {
-    height: 100vh;
-    min-height: fit-content;
+    min-height: 100vh;
     font-family: 'Proxima Nova';
     font-weight: 1000;
     overflow-x: hidden;
@@ -113,6 +112,17 @@ a:hover
 {
     overflow-x: hidden;
     opacity: 0;
+}
+
+@media (max-width: 768px){
+    .image_container
+    {
+        padding-top: 50px;
+    }
+
+    .statscontainer {
+        padding-top: 50px;
+    }
 }
 
 .slideinleft{

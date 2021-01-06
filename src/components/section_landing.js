@@ -8,6 +8,7 @@ import parallaxstyles from "./css/parallax.module.css"
 import { Parallax } from "react-scroll-parallax"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import scrollTo from 'gatsby-plugin-smoothscroll';
+import CountDownBlock from './count_down_block'
 
 const LandingSection = (props) => {
     let typed
@@ -49,6 +50,11 @@ const LandingSection = (props) => {
                         <div className={styles.typedcontainer}>
                             <div className={styles.typedtext} id="typed"></div>
                         </div>
+                    </div>
+                    <div className={styles.counter_container}>
+                        <CountDownBlock header={'HOURS'} time={'36'}></CountDownBlock>
+                        <CountDownBlock header={'MINUTES'} time={'00'}></CountDownBlock>
+                        <CountDownBlock header={'SECONDS'} time ={'00'}></CountDownBlock>
                     </div>
                     <div className={styles.buttoncontainer}>
                         <button className={styles.applyButton} onClick={() => window.open('https://hackdavis.typeform.com/to/l8vIKWhD')}>SUBMIT PROJECT</button>

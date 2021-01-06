@@ -51,9 +51,11 @@ const StatsSection = (props) => {
                     </div>
                     <div className = "row no-gutters">
                         <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
-                            <div className = {styles.view_winner}>
-                                <a href="https://gather.town/app/4p1hbpvhjPi2eVjV/HackDavis">GO TO VIRTUAL VENUE</a>
-                            </div>
+                            <a href="https://gather.town/app/4p1hbpvhjPi2eVjV/HackDavis">
+                                <div className = {styles.view_winner}>
+                                    GO TO VIRTUAL VENUE
+                                </div>
+                            </a>
                         </div>
                     </div>
                     <div className = "row no-gutters">
@@ -68,11 +70,11 @@ const StatsSection = (props) => {
                     </div>
                     <div className = "row no-gutters">
                         <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
+                        <a href="https://discord.gg/wc6QQEc" target="_blank">
                             <div className = {styles.view_winner}>
-                                <a href="https://discord.gg/wc6QQEc" target="_blank">
                                     JOIN DISCORD
-                                </a>
                             </div>
+                        </a>
                         </div>
                     </div>
                 </div>

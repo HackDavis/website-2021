@@ -36,8 +36,8 @@ const PrizeDropdown = (props) => {
                                 <img className={arrow.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
                             </div>
                         </div>
-                        <div className={`${styles.prizeDesc} ${styles.collapseHeight}`}>
-                            {props.description}
+                        <div dangerouslySetInnerHTML={{__html: props.description}} className={`${styles.prizeDesc} ${styles.collapseHeight}`}>
+                            {/* {props.description} */}
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,12 @@
+.scheduleContainer {
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+    width:100%;
+}
+
+.timeText {
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
