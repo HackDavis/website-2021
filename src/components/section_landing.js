@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 import LandingBackground from "./landing_background"
 import styles from "./css/section_landing.module.css"
@@ -11,7 +11,19 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import CountDownBlock from './count_down_block'
 
 const LandingSection = (props) => {
-    let typed
+
+    const [hour, setHour] = useState("");
+    const [minutes, setMinutes] = useState("");
+    const [seconds, setSeconds] = useState("");
+    const end_date = new Date('Jan 8, 2021 03:00:00') // TOdo: SPECIFY TIMEZONE
+    
+    let typed;
+    let countdown_interval;
+
+    function EnsureTwoDigits(num)
+    {
+        return num < 10 ? `0${num}` : num;
+    }
 
     useEffect(() => {
         // set typed
@@ -27,10 +39,39 @@ const LandingSection = (props) => {
             cursorChar: "_",
         })
 
+        countdown_interval = setInterval(() => 
+        {
+            const now = Date.now();
+            const timeLeft = end_date - now;
+            console.log(timeLeft)
+            let seconds = Math.floor(timeLeft / 1000) % 60;
+            let minutes = Math.floor(timeLeft / 1000 / 60) % 60;
+            let hours = Math.floor(timeLeft / 1000 / 60 / 60);
+
+            if (hours >= 36)
+            {
+                seconds = 0;
+                minutes = 0;
+                hours = 36;
+            }
+
+            // 969159077
+            // const minutes = timeLeft.getMinutes();
+            // const seconds = timeLeft.getSeconds();
+            // var hours = Math.floor((timeLeft /(1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            // var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            // var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            setHour(EnsureTwoDigits(Math.max(0, hours)))
+            setMinutes(EnsureTwoDigits(Math.max(0, minutes)))
+            setSeconds(EnsureTwoDigits(Math.max(0,seconds)))
+            // Do stuff every second
+        }, 1000)
+        
         // Cleanup event handlers
         return () => {
             // clean up the event handler when the component unmounts
             typed.destroy()
+            clearInterval(countdown_interval);
         }
     })
 
@@ -52,9 +93,9 @@ const LandingSection = (props) => {
                         </div>
                     </div>
                     <div className={styles.counter_container}>
-                        <CountDownBlock header={'HOURS'} time={'36'}></CountDownBlock>
-                        <CountDownBlock header={'MINUTES'} time={'00'}></CountDownBlock>
-                        <CountDownBlock header={'SECONDS'} time ={'00'}></CountDownBlock>
+                        <CountDownBlock header={'HOURS'} time={hour}></CountDownBlock>
+                        <CountDownBlock header={'MINUTES'} time={minutes}></CountDownBlock>
+                        <CountDownBlock header={'SECONDS'} time ={seconds}></CountDownBlock>
                     </div>
                     <div className={styles.buttoncontainer}>
                         <button className={styles.applyButton} onClick={() => window.open('https://hackdavis.typeform.com/to/l8vIKWhD')}>SUBMIT PROJECT</button>

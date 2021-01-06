@@ -1,0 +1,46 @@
+.bigrow
+{
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-family: 'Proxima Nova';
+}
+
+.line {
+    border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+.line:last-child {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+} 
+
+
+.event:hover
+{
+    text-decoration: underline;
+}
+
+.event_time {
+    font-size: 14px;
+    font-weight: 500;
+}
+.event_title {
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    padding-right: 20px;
+    margin-bottom: 12px;
+}
+.event_description {
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    padding-right: 20px;
+}
+
+.type_workshop {
+    color: #84DCDE;
+}
+
+.type_activity
+{
+    color: #A0E66D;
+}
