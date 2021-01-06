@@ -115,7 +115,6 @@ div.sponsorImage {
     display: inline-block;
     width: 500px;
     max-width: 75vw;
-    margin-top: 3rem;
 }
 
 .buttoncontainer > button
@@ -216,6 +215,11 @@ div.sponsorImage {
     .trust_badge
     {
         left: 40px;
+    }
+
+    .start_button_container
+    {
+        display: none;
     }
 }
 
