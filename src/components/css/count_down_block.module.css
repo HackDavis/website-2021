@@ -70,17 +70,17 @@
 {
     .block {
         display: inline-block;
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .header {
         font-size: 20px;
-        padding-top: 24px;
+        padding-top: 20px;
     }
     
     .time {
-        font-size: 72px;
+        font-size: 60px;
     }
     
 }
