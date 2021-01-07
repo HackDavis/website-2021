@@ -23,8 +23,7 @@
             },
             {
                 "type": "event",
-                "title": "Team Mixer",
-                "link": "hackdavis.io"
+                "title": "Team Mixer"
             }
         ],
         "9:30 am": 
@@ -232,8 +231,7 @@
             {
                 "type": "activity",
                 "title": "Cooking Class",
-                "description": "Leon C Brunson",
-                "link": "hackdavis.io"
+                "description": "Leon C Brunson"
             }
         ],
         "4:00 pm": 
