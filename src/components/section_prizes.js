@@ -11,16 +11,14 @@ const prizes1 =
     "Best Beginner Hack": "This must be every team member's first hackathon! Each member of the winning team gets a Smart TV.",
     "Best Interdisciplinary Hack": "At least one member of your team must not be a Computer Science (or similar) major! Each member of the winning team gets a Fitbit.",
     "Best Global Hack": "Best Global Hack goes to the team that offers a way to address one or more of the 17 <a href='https://www.un.org/sustainabledevelopment/sustainable-development-goals/' style={{'textDecoration': 'underline'}}>UN Sustainable Development Goals</a> and goes to the best project by a team of hackers from multiple (at least 2) time zones.! Each member of the winning team gets an Amazon Kindle.",
-    "Best Pitch with Contrary": "Winning team gets a $500 cash prize."
 }
 
 const prizes2 = 
 {
     "Best Use of TensorFlow.js": "Use TensorFlow.js in your project! Each member of the winning team gets a Pixel 4A smart phone.",
-    "Best Use of Twilio API": "Create a design with Sketch for your project! Each member of the winning team gets a Sketch License.",
-    "Best Use of Confluent Platforms": "Use Confluent Platforms in your project! Each member of the winning team gets a $500 Amazon Gift Card",
-    "Best Design with Sketch": "Create a design with Sketch for your project! Each member of the winning team gets a Sketch License.",
-    "Best Design with Sketch": "Create a design with Sketch for your project! Each member of the winning team gets a Sketch License.",
+    "Best Use of Twilio API": "Use the Twilio API in your project! Each member of the winning team gets a Logitech Webcam.",
+    "Best Use of Confluent Platforms": "Use Confluent Platforms in your project! Winning team gets a $500 Amazon Gift Card.",
+    "Best Pitch with Contrary": "Attend the Contrary event on Sunday to be eligible. Winning team gets a $500 cash prize."
 }
 
 const PrizeSection = () => {
