@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "src/css/count_down_block.module.css"
+import styles from "./css/count_down_block.module.css"
 
 const CountDownBlock = (props) => {
     return (
