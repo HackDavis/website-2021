@@ -10,7 +10,7 @@ const prizes1 =
     "Best Hack for Social Good": "You can win this by creating an awesome hack geared towards social good! Each member of the winning team gets a Nintendo Switch.",
     "Best Beginner Hack": "This must be every team member's first hackathon! Each member of the winning team gets a Smart TV.",
     "Best Interdisciplinary Hack": "At least one member of your team must not be a Computer Science (or similar) major! Each member of the winning team gets a Fitbit.",
-    "Best Global Hack": "Best Global Hack goes to the team that offers a way to address one or more of the 17 <a href='https://www.un.org/sustainabledevelopment/sustainable-development-goals/' style={{'textDecoration': 'underline'}}>UN Sustainable Development Goals</a> and goes to the best project by a team of hackers from multiple (at least 2) time zones.! Each member of the winning team gets an Amazon Kindle.",
+    "Best Global Hack": "Best Global Hack goes to the team that offers a way to address one or more of the 17 <a href='https://www.un.org/sustainabledevelopment/sustainable-development-goals/' style={{'textDecoration': 'underline'}}>UN Sustainable Development Goals</a> and goes to the best project by a team of hackers from multiple (at least 2) time zones! Each member of the winning team gets an Amazon Kindle.",
 }
 
 const prizes2 = 
