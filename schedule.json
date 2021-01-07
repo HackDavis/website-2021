@@ -247,14 +247,16 @@
         [
             {
                 "type": "event",
-                "title": "Hacking Ends"
+                "title": "Hacking Ends",
+                "link": "https://hackdavis2021.devpost.com/"
             }
         ],
         "7:30 pm": 
         [
             {
                 "type": "event",
-                "title": "Demos and Judging"
+                "title": "Demos and Judging",
+                "link": "https://hackdavis2021.devpost.com/"
             }
         ],
         "9:45 pm": 
