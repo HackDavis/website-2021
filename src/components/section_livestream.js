@@ -36,7 +36,7 @@ const LivestreamSection = (props) => {
                                     width='100%'
                                     height='100%'
                                     playing={true}
-                                    volume={1}
+                                    volume={0.5}
                                     muted={true}
                                     controls={true} 
                                     />
@@ -52,7 +52,7 @@ const LivestreamSection = (props) => {
                                     width='100%'
                                     height='100%'
                                     playing={true}
-                                    volume={1}
+                                    volume={0.5}
                                     muted={true}
                                     controls={true} 
                                     />
