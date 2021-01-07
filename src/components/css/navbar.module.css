@@ -1,8 +1,8 @@
 @font-face
 {
-    src: url("../../static/fonts/Proxima\ Nova\ Semibold.otf");
+    src: url("../../static/fonts/Proxima\ Nova\ Semibold.ttf");
     font-family: 'Proxima Nova';
-    font-weight: normal;
+    font-weight: 750;
 }
 
 .navbar
@@ -70,7 +70,7 @@ div.underline.selected
 }
 .navbutton
 {
-    font-weight: bold;
+    font-weight: 750;
     position: relative;
     width: 100%;
     text-decoration: none;

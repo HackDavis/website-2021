@@ -15,7 +15,7 @@ const LandingSection = (props) => {
     const [hour, setHour] = useState("");
     const [minutes, setMinutes] = useState("");
     const [seconds, setSeconds] = useState("");
-    const end_date = new Date('Jan 8, 2021 03:00:00') // TOdo: SPECIFY TIMEZONE
+    const end_date = new Date(Date.UTC(2021, 0, 18, 2, 0, 0, 0));
     
     let typed;
     let countdown_interval;
@@ -43,7 +43,6 @@ const LandingSection = (props) => {
         {
             const now = Date.now();
             const timeLeft = end_date - now;
-            console.log(timeLeft)
             let seconds = Math.floor(timeLeft / 1000) % 60;
             let minutes = Math.floor(timeLeft / 1000 / 60) % 60;
             let hours = Math.floor(timeLeft / 1000 / 60 / 60);
@@ -55,16 +54,9 @@ const LandingSection = (props) => {
                 hours = 36;
             }
 
-            // 969159077
-            // const minutes = timeLeft.getMinutes();
-            // const seconds = timeLeft.getSeconds();
-            // var hours = Math.floor((timeLeft /(1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            // var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            // var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
             setHour(EnsureTwoDigits(Math.max(0, hours)))
             setMinutes(EnsureTwoDigits(Math.max(0, minutes)))
             setSeconds(EnsureTwoDigits(Math.max(0,seconds)))
-            // Do stuff every second
         }, 1000)
         
         // Cleanup event handlers
