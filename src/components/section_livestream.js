@@ -14,10 +14,11 @@ const LivestreamSection = (props) => {
                     {/* idk why this is broke but documentation: https://github.com/CookPete/react-player#props */}
                     <div className={styles.player_wrapper}>
                         <ReactPlayer
-                        url='https://www.youtube.com/watch?v=5qap5aO4i9A'
+                        url='https://youtu.be/jfE69gbqOF8'
                         className={styles.react_player}
                         width='100%'
                         height='100%'
+                        controls={true} 
                         />
                     </div>
                 </div>
@@ -32,6 +33,7 @@ const LivestreamSection = (props) => {
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
+                                    controls={true} 
                                     />
                                 </div>
                             </div>
@@ -44,6 +46,7 @@ const LivestreamSection = (props) => {
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
+                                    controls={true} 
                                     />
                                 </div>
                             </div>
