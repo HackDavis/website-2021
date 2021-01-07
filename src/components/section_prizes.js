@@ -11,6 +11,7 @@ const prizes1 =
     "Best Beginner Hack": "This must be every team member's first hackathon! Each member of the winning team gets a Smart TV.",
     "Best Interdisciplinary Hack": "At least one member of your team must not be a Computer Science (or similar) major! Each member of the winning team gets a Fitbit.",
     "Best Global Hack": "Best Global Hack goes to the team that offers a way to address one or more of the 17 <a href='https://www.un.org/sustainabledevelopment/sustainable-development-goals/' style={{'textDecoration': 'underline'}}>UN Sustainable Development Goals</a> and goes to the best project by a team of hackers from multiple (at least 2) time zones! Each member of the winning team gets an Amazon Kindle.",
+    "DigitalOcean Credits": "DigitalOcean credits will be given to the winning teams for Best Hack for Social Good, Best Beginner Hack, and Best Interdisciplinary Hack. Each member of each winning team gets $125 in DigitalOcean credits.",
 }
 
 const prizes2 = 
