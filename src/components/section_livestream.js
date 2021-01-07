@@ -31,7 +31,7 @@ const LivestreamSection = (props) => {
                             <div className={styles.rightpadding}>
                                 <div className={styles.player_wrapper}>
                                     <ReactPlayer
-                                    url='https://www.youtube.com/watch?v=5qap5aO4i9A'
+                                    url='https://youtu.be/nZ8fCpeqqFo'
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
@@ -47,7 +47,7 @@ const LivestreamSection = (props) => {
                             <div className = {styles.leftpadding}>
                                 <div className={styles.player_wrapper}>
                                     <ReactPlayer
-                                    url='https://www.youtube.com/watch?v=5qap5aO4i9A'
+                                    url='https://youtu.be/QDfDngmR6Wc'
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
