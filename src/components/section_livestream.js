@@ -18,6 +18,8 @@ const LivestreamSection = (props) => {
                         className={styles.react_player}
                         width='100%'
                         height='100%'
+                        playing={true}
+                        volume={0.5}
                         controls={true} 
                         />
                     </div>
@@ -33,6 +35,9 @@ const LivestreamSection = (props) => {
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
+                                    playing={true}
+                                    volume={1}
+                                    muted={true}
                                     controls={true} 
                                     />
                                 </div>
@@ -46,6 +51,9 @@ const LivestreamSection = (props) => {
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
+                                    playing={true}
+                                    volume={1}
+                                    muted={true}
                                     controls={true} 
                                     />
                                 </div>
