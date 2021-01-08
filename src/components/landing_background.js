@@ -74,7 +74,7 @@ const LandingBackground = (props) => {
             <div className={styles.right_side_container}>
                 <img onLoad={OnImageLoad()} alt="" src={images["Layer 1-2"]}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Layer 2-2"]} className={styles.layer2_right}></img>
-                <img onLoad={OnImageLoad()} alt="" src={images["Code 2"]} className={styles.code2}></img>
+                {/* <img onLoad={OnImageLoad()} alt="" src={images["Code 2"]} className={styles.code2}></img> */}
                 <img onLoad={OnImageLoad()} alt="" src={images["Code 2 Arrow"]} className={styles.heart_arrow}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Waterfall 1"]} className={styles.waterfall1}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Waterfall 2"]} className={styles.waterfall2}></img>

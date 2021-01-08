@@ -44,8 +44,8 @@ const Layout = ({ children }) => {
         <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
         <div>
           {/* <div className={`${styles.navbarGradient} ${onBottomPages && styles.bottomGradient}`}></div> */}
-          <FloatingLogo coloredLogo={coloredLogo}></FloatingLogo>
-          <NavBar hamburgerMenuIsOpen={hamburgerMenuIsOpen} setHamburgerMenuIsOpen={setHamburgerMenuIsOpen} setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} setOnBottomPages={setOnBottomPages} setColoredLogo={setColoredLogo} setFadeAbout={setFadeAbout} setFadeSocialGood={setFadeSocialGood}></NavBar>
+          {/* <FloatingLogo coloredLogo={coloredLogo}></FloatingLogo> */}
+          {/* <NavBar hamburgerMenuIsOpen={hamburgerMenuIsOpen} setHamburgerMenuIsOpen={setHamburgerMenuIsOpen} setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} setOnBottomPages={setOnBottomPages} setColoredLogo={setColoredLogo} setFadeAbout={setFadeAbout} setFadeSocialGood={setFadeSocialGood}></NavBar> */}
         </div>
         <ParallaxProvider>
             <Section id="section_landing">
