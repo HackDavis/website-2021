@@ -72,15 +72,16 @@
         display: inline-block;
         width: 100px;
         height: 100px;
+        margin-left: 16px;
     }
 
     .header {
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 15px;
+        padding-top: 10px;
     }
     
     .time {
-        font-size: 60px;
+        font-size: 50px;
     }
     
 }
