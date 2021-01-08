@@ -35,6 +35,7 @@
 }
 
 .time {
+    /* Remove padding for Netlify */
     /* padding-top: 28px; */
     font-size: 104px;
     color: white;
