@@ -58,6 +58,11 @@
                 "type": "workshop",
                 "title": "Sponsors Meet and Greet",
                 "link": "hackdavis.io"
+            },
+            {
+                "type": "activity",
+                "title": "USAF Cybersecurity Challenge",
+                "description": "MLH Mini-Event"
             }
         ],
         "3:00 pm": 
@@ -104,10 +109,9 @@
                 "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
             },
             {
-                "type": "workshop",
-                "title": "AI/ML Workshop",
-                "description": "AI Society",
-                "link": "https://ucdavis.zoom.us/j/98742957716?pwd=dXlwamNtb0k2c29wSGJoK09ZWUtZQT09"
+                "type": "activity",
+                "title": "Bob Ross MS Paint",
+                "description": "MLH Mini-Event"
             }
         ],
         "6:00 pm": 
