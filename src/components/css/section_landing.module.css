@@ -52,6 +52,7 @@ div.landingContainer
 {
     padding: 0;
     text-align: center;
+    /* transform: translate(0%, 12.5%); */
     color:black;
 }
 
