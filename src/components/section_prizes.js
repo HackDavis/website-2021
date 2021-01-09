@@ -13,7 +13,7 @@ const prizes1 =
     "Best Global Hack": "Best Global Hack goes to the team that offers a way to address one or more of the 17 <a href='https://www.un.org/sustainabledevelopment/sustainable-development-goals/' style={{'textDecoration': 'underline'}}>UN Sustainable Development Goals</a> and goes to the best project by a team of hackers from multiple (at least 2) time zones! Each member of the winning team gets an Amazon Kindle.",
     "Best Domain Registered with Domain.com": "Register a .tech, .space, or .online domain name using <a href='https://domain.com'>Domain.com</a> during the weekend. Each team may submit one entry per person on the team. Each winning team member will receive a PowerSquare Qi Wireless Phone Charger & Domain.com Backpack.",
     "Best Use of Google Cloud": "Build your hackathon project with a suite of secure storage, powerful compute, and integrated data analytics products provided by Google Cloud. See full list of products here: <a href='https://g.co/cloud'>g.co/cloud</a>. Each winning team member will receive a Google Branded Parkland Academy Backpack.",
-    "Best Hack for Inclusion Sponsored by CITRIS": "iPad Mini for each team member"
+    "Best Hack For Inclusion": "Developing tech solutions for an audience that has less access to technology, ensuring the innovation of AI is fair, accountable, and trustworthy. Each team member of the winning team will receive an iPad mini!"
 }
 
 const prizes2 = 
@@ -24,7 +24,7 @@ const prizes2 =
     "DigitalOcean Credits": "DigitalOcean credits will be given to each member of the winning teams for Best Hack for Social Good ($250 each), Best Beginner Hack ($125 each), and Best Interdisciplinary Hack ($125 each).",
     "Best Hardware Hack Sponsored by Digi-Key": "Using your preferred hardware or hardware emulator, build a hack for your chance to win a Grove Beginner Kit, with Arduino Uno R3 included. We select two winning teams for this category. Each winning team member will receive a prize!",
     "Best Use of DataStax Astra": "Apache Cassandra is one of the most widely used database technologies in modern computing with a proven track record of scalability. Just ask Apple, Netflix and eBay. Build a hack using DataStax Astra’s Cassandra-made-easy service and gain in-demand skills along with a chance to win Blue Snowball Microphones for you and your whole team. It’s easy to sign up with 5GB free and no credit card needed. Start becoming a Cassandra expert today!",
-    "Best Health Hack Sponsored by CITRIS": "Wireless PowerBeats Pro for each team member"
+    "Best Health Hack": "Create an emotional and mental health hack that can help people mid-pandemic form connections and cope at home while social distancing. The winning team for this prize category will receive a Wireless PowerBeats Pro per team member!"
 }
 
 const PrizeSection = () => {
