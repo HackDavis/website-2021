@@ -43,11 +43,11 @@
     user-select: none;
     cursor: pointer; 
     transition:transform 0.5s;
-    transform: scale(0.75, 0.75);
+    transform: scale(0.5, 0.5);
 }
 
 .imageStyle_twilio:hover {
-    transform: scale(0.9);
+    transform: scale(0.6);
 }
 
 
@@ -83,4 +83,8 @@
 
 .smallImageStyle:hover {
     transform: scale(1.10);
+}
+
+.sponsor_offset {
+    margin-top: 2rem;
 }

@@ -28,12 +28,20 @@
     width: 100%;
     padding-right: 20px;
     margin-bottom: 12px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .event_description {
     font-size: 14px;
     font-weight: 500;
     width: 100%;
     padding-right: 20px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .type_workshop {
