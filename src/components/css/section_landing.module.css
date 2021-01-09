@@ -46,6 +46,7 @@ div.background
     position: relative;
     height: 100vh;
     padding: 0;
+    background-color: #153249;
 }
 
 div.landingContainer 
@@ -54,6 +55,7 @@ div.landingContainer
     text-align: center;
     /* transform: translate(0%, 12.5%); */
     color:black;
+    background-color: #153249;
 }
 
 div.title{
