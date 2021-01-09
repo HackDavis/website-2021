@@ -76,7 +76,7 @@ const LandingSection = (props) => {
             <div className={`row no-gutters align-items-center ${styles.background}`}>
                 <LandingBackground {...props}></LandingBackground>
                 <a id="mlh-trust-badge" className={styles.trust_badge} href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" alt="Major League Hacking 2021 Hackathon Season" style={{width: "100%"}} /></a>
-                <div className={`col-sm-10 offset-sm-1 col-xl-6 offset-xl-3 col-sm-10 offset-sm-1 ${styles.landingContainer}`}>
+                <div className={`col-sm-10 offset-sm-1 col-xl-10 offset-xl-1 col-sm-10 offset-sm-1 ${styles.landingContainer}`}>
                     <div className={styles.title}>
                         HackDavis
                         <div className={styles.typedcontainer}>
