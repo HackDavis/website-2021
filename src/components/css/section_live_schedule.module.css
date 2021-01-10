@@ -1,0 +1,22 @@
+.background{
+    background-color: #0B2638;
+    min-height: 100vh;
+    font-family: 'Proxima Nova';
+    color: #FFFFFF;
+}
+
+.headerText {
+    margin-top: 10rem;
+    margin-bottom: 2.5rem;
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.dateText {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 25px;
+}
+

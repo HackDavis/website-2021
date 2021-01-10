@@ -1,6 +1,6 @@
 @font-face
 {
-    src: url("../../static/fonts/ProximaNova-Regular.otf");
+    src: url("../../static/fonts/SourceCodePro-Medium.ttf");
     font-family: 'Proxima Nova';
     font-weight: normal;
 }
@@ -59,17 +59,91 @@
     transition: max-height 0.3s ease-in-out, 0.2s ease-in-out opacity, margin-top 0.2s ease-in-out, padding-top 0.2s ease-in-out;
 }
 
-.content.collapseHeight
+
+
+.card {
+    border-radius: 14px;
+    transition: 0.3s;
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #0E3955;
+}
+
+.prizeName {   
+    font-weight: bold;
+    font-size: 24px;
+    font-style: normal;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    /* border: 2px solid cyan; */
+}
+
+.prizeDesc {
+    font-style: normal;
+    /* border-top: 2px solid rgba(255, 255, 255, 0.25); */
+    font-weight: 500;
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+    transition: max-height 0.3s ease-in-out, 0.2s ease-in-out opacity, margin-top 0.2s ease-in-out, padding-top 0.2s ease-in-out;
+    /* border: 2px solid greenyellow; */
+}
+
+.rightpadding
+{
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+}
+
+.leftpadding
+{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px)
+{
+    .prizeName {   
+        font-size: 26px;
+    }
+
+    .prizeDesc {
+        font-size: 16px;
+    }
+
+    .rightpadding
+    {
+        padding-right: 0;
+    }
+    
+    .leftpadding
+    {
+        padding-left: 0;
+    }
+    
+}
+
+
+.collapseHeight
 {
     margin-top: 0;
     padding-top: 0;
+    margin: 0;
 }
 
 .dropdownImage {
     float: right;
     width: 20px;
     height: 10px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     user-select: none;
     cursor: pointer;
     transform: rotate(0deg);

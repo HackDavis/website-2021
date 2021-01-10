@@ -5,13 +5,6 @@
     font-weight: normal;
 }
 
-@font-face
-{
-    src: url("../../static/fonts/Proxima Nova Alt Condensed Bold.otf");
-    font-family: 'Proxima Nova';
-    font-weight: bold;
-}
-
 .badge
 {
     display: inline-block;

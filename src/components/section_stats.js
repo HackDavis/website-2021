@@ -44,32 +44,43 @@ const StatsSection = (props) => {
                 <div className={`${styles.statscontainer} ${props.fadeAbout && styles.slideinright} col-10 offset-1 col-md-4 offset-md-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
-                            <div className={styles.header_date}>
-                                January 16 - 17, 2021  |  Hosted Virtually
-                            </div>
                             <div className={`${styles.stats}`}>
-                                600+ HACKERS<br></br>
-                                36 HOURS<br></br>
-                                110+ PROJECTS<br></br>
-                                $12,000+ PRIZES<br></br>
+                                Join our virtual venue! Interact with other hackers on gather.town!
                             </div>
                         </div>
                     </div>
                     <div className = "row no-gutters">
                         <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
-                            <div className = {styles.view_winner}>
-                                <a href="https://hackdavis2020.devpost.com/" target="_blank">
-                                    <div className={styles.winnertext}>
-                                        VIEW 2020 WINNERS
-                                    </div>
-                                </a>
+                            <a href="https://gather.town/app/4p1hbpvhjPi2eVjV/HackDavis">
+                                <div className = {styles.view_winner}>
+                                    GO TO VIRTUAL VENUE
                                 </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div className = "row no-gutters">
+                        <div className = {`${styles.join_discord} col-12 col-sm-12`}>
+                            Join our discord to speak with mentors and connect with hackers.
+                        </div>
+                    </div>
+                    <div div className = "row no-gutters"> 
+                        <div className = {`${styles.join_discord_description} col-12 col-sm-12`}>
+                            Read and follow popup instructions to gain access to the server. Discord will be the fastest way to reach the HackDavis team. 
+                        </div>
+                    </div>
+                    <div className = "row no-gutters">
+                        <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
+                        <a href="https://discord.gg/wc6QQEc" target="_blank">
+                            <div className = {styles.view_winner}>
+                                    JOIN DISCORD
                             </div>
+                        </a>
                         </div>
                     </div>
                 </div>
-                <div className={styles.bottom_diagonal}></div>
             </div>
+            <div className={styles.bottom_diagonal}></div>
+        </div>
     )
 }
 

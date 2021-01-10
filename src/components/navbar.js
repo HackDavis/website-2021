@@ -57,7 +57,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                         $els.navItem.find(`.${styles.underline}`).addClass(styles.selected);
 
                         
-                        if (i < 2 && i > 0)
+                        if (i == 1)
                         {
                             // We are in stats or social good section
                             $(`.${styles.navitem} button`).addClass(styles.navbarcontainer_gradient)
@@ -65,13 +65,6 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                             setFadeAbout(true);
 
                             $(`.${styles.navitem} button.${styles.profile}`).addClass(styles.navbarcontainer_gradient_profile);
-                        }
-                        else if (i == 0)
-                        {
-                            // We are on the landing page 
-                            $(`.${styles.navitem} button`).removeClass(styles.navbarcontainer_gradient)
-                            $(`.${styles.navitem} button.${styles.profile}`).removeClass(styles.navbarcontainer_gradient_profile);
-                            setColoredLogo(false);
                         }
                         else {
                             // We are past the stats or social good section
@@ -114,12 +107,12 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
         <div className={styles.navbarcontainer}>
             <div className={styles.navbar}>
                 <img className={styles.hamburger_menu} src={data.allFile.edges[0].node.publicURL}/>
-                <Navitem name="Home" section_id="section_landing"></Navitem>
-                <Navitem name="About" section_id="section_about"></Navitem>
-                {/* <Navitem name="Schedule" section_id="section_schedule"></Navitem> */}
-                <Navitem name="FAQ" section_id="section_FAQ"></Navitem>
-                <Navitem name="Sponsors" section_id="section_sponsors"></Navitem>
-                <Navitem setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} name="Log In" section_id="login"></Navitem>
+                <Navitem name="Home" section_id="section_landing" visibility={false}></Navitem>
+                <Navitem name="About" section_id="section_about" visibility={true}></Navitem>
+                <Navitem name="Livestreams" section_id="section_livestream" visibility={true}></Navitem>
+                <Navitem name="Schedule" section_id="section_schedule" visibility={true}></Navitem>
+                <Navitem name="Sponsors" section_id="section_sponsors" visibility={true}></Navitem>
+                <Navitem setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} name="Log In" section_id="login" visibility={true}></Navitem>
             </div>
         </div>
     );

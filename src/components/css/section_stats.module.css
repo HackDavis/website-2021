@@ -14,8 +14,7 @@
 
 div.background
 {
-    height: 100vh;
-    min-height: fit-content;
+    min-height: 100vh;
     font-family: 'Proxima Nova';
     font-weight: 1000;
     overflow-x: hidden;
@@ -30,15 +29,15 @@ div.statscontainer
 
 div.stats
 {
-    font-size: 40px;
-    letter-spacing: 2px;
-    line-height: 50px;
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Proxima Nova'
 }
 
 @media (max-width: 575px){
     div.stats
     {
-        font-size: 32px;
+        font-size: 24px;
     }
 }
 
@@ -57,8 +56,10 @@ div.stats
 
 .view_winner
 {
-    margin-top: 30px;
+    /* margin-top: 20px; */
+    font-size: 16px;
     display: inline-block;
+    font-style: normal;
     font-weight: bold;
     text-align: center;
     padding: 12px;
@@ -69,8 +70,8 @@ div.stats
     background-color: #57B8BE;
     border-radius: 500px;
     cursor: pointer;
-    font-weight: 1000;
-    letter-spacing: 2px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
     transition: 0.2s ease-in-out all;
 }
 
@@ -96,7 +97,7 @@ div.stats
 a 
 {
     /* modify anchor attributes and remove underline */
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -104,12 +105,24 @@ a:hover
 {
     /* remove underline */
     text-decoration:none;
+    color: white;
 }
 
 .image_container
 {
     overflow-x: hidden;
     opacity: 0;
+}
+
+@media (max-width: 768px){
+    .image_container
+    {
+        padding-top: 50px;
+    }
+
+    .statscontainer {
+        padding-top: 50px;
+    }
 }
 
 .slideinleft{
@@ -160,4 +173,18 @@ a:hover
 }
 .slideinright{
     animation: slideinright 1s forwards;
+}
+
+.join_discord {
+    font-size: 24px;
+    margin-top: 56px;
+}
+
+.join_discord_description{
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Proxima Nova';
+    font-weight: normal;
+    margin-top: 8px;
+    line-height: 150%;
 }

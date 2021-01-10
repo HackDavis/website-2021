@@ -42,67 +42,118 @@ const SponsorsSection = () => {
                         <div className="col-12" align="center">
                             <h2 className={styles.headerText}>Sponsors</h2>
                         </div>
-                        <div className="col-lg-1" />
-                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://www.tensorflow.org/js/">
                                 <img className={styles.imageStyle} src={images["tensorflow_new"]} />
                             </a>
                         </div>
-                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://www.confluent.io/">
                                 <img className={styles.imageStyle} src={images["confluent"]} />
                             </a>
                         </div>
-                        <div className="col-lg-1" />
-                    </div>
-                    <div className={`row align-items-center no-gutters`}>
-                        <div className="col-lg-1" />
-                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://www.twilio.com/">
                                 <img className={styles.imageStyle_twilio} src={images["twiliologo"]} />
                             </a>
                         </div>
-                        <div className="col-10 col-lg-5 offset-1 offset-lg-0" align="center">
-                            <a href="https://globalaffairs.ucdavis.edu/">
-                                <img className={styles.imageStyle} src={images["ucdglobalaffairs"]} />
-                            </a>
-                        </div>
-                        <div className="col-lg-1" />
                     </div>
                     <div className={`row align-items-center no-gutters`}>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href="https://contrarycap.com/">
                                 <img className={styles.smallImageStyle} src={images["contrary"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href="https://www.sketch.com/">
                                 <img className={styles.smallImageStyle} src={images["sketch"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href="https://www.digitalocean.com/">
                                 <img className={styles.smallImageStyle} src={images["digitalocean"]} />
                             </a>
                         </div>
                         
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
                                 <img className={styles.smallImageStyle} src={images["stickermule"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                    </div>
+                </div>
+                    <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
+                        <div className="col-12" align="center">
+                                <h2 className={styles.headerText}>Partners</h2>
+                        </div>
+                        <div className={`row align-items-center no-gutters`}>
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="https://mlh.io/">
+                                <img className={styles.imageStyle_twilio} src={images["mlh"]} />
+                            </a>
+                        </div>
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="http://citris.ucdavis.edu/">
+                                <img className={styles.imageStyle} src={images["citris"]} />
+                            </a>
+                        </div>
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="https://globalaffairs.ucdavis.edu/">
+                                <img className={styles.imageStyle} src={images["ucdglobalaffairs"]} />
+                            </a>
+                        </div>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-1" align="center">
                             <a href="https://lettersandscience.ucdavis.edu/">
                                 <img className={styles.smallImageStyle} src={images["ucdcls"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-2" align="center">
                             <a href="https://ece.ucdavis.edu/">
                                 <img className={styles.smallImageStyle} src={images["ucdece"]} />
                             </a>
                         </div>
                     </div>
                 </div>
+                {/* <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
+                    <div className="col-12" align="center">
+                            <h2 className={styles.headerText}>Non-Profits</h2>                            
+                    </div>
+                    <div className="col-lg-1" />
+                    <div className={`row align-items-center no-gutters`}>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                    </div>
+                    <div className={`row align-items-center no-gutters`}>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            </a>
+                        </div>
+                    </div>
+                </div> */}
             </div>
         </div>
     )

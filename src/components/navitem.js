@@ -4,7 +4,7 @@ import styles from "./css/navbar.module.css"
 import { getUser, isLoggedIn } from "../utils/auth"
 
 
-const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id }) => {
+const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id, visibility }) => {
 
     const [sectionId, setSectionId] = useState("");
 
@@ -45,7 +45,7 @@ const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id 
     const is_profile_button = sectionId == "login" && isLoggedIn();
 
     return (
-        <div className={`${styles.navitem}`} data-id={section_id}>
+        <div className={`${styles.navitem}`} data-id={section_id} style={visibility ? {} : {"display": "none"}}>
             <button className={`${styles.navbutton} ${is_profile_button && styles.profile}`} onClick={() => OnClickBehavior(sectionId)}>
                 {is_profile_button && <img className={styles.circle} src={getUser().photoURL} />}
                 {button_text}
