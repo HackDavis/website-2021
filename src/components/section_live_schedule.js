@@ -10,11 +10,14 @@ const ScheduleSection = () => {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        $.getJSON('https://raw.githubusercontent.com/HackDavis/website-2021/schedule-data/schedule.json', function(data) {
-            // JSON result in `data` variable
-            console.log(data);
-            setScheduleData(data);
-            setLoaded(true);
+        $.ajax({
+            cache: false,
+            url: "https://raw.githubusercontent.com/HackDavis/website-2021/schedule-data/schedule.json",
+            dataType: "json",
+            success: function(data) {
+                setScheduleData(data);
+                setLoaded(true);
+            }
         });
     }, true)
 
