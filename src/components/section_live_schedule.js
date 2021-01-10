@@ -25,7 +25,7 @@ const ScheduleSection = () => {
                     <div className={styles.headerText}>Schedule
                         <div className={`row no-gutters`}>
                             <div className={`col-12`}>
-                                <div className={styles.dateText}>SATURDAY</div>
+                                <div className={styles.dateText}>Saturday, Jan 16</div>
                                 <div>
                                 {scheduleData["Saturday"] && Object.keys(scheduleData["Saturday"]).map((key) => 
                                 {
@@ -36,7 +36,7 @@ const ScheduleSection = () => {
                         </div>
                         <div className={`row no-gutters`}>
                             <div className={`col-12`}>
-                                <div className={styles.dateText}>SUNDAY</div>
+                                <div className={styles.dateText}>Sunday, Jan 17</div>
                                 <div>
                                 {scheduleData["Sunday"] && Object.keys(scheduleData["Sunday"]).map((key) => 
                                 {
