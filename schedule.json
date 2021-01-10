@@ -60,6 +60,12 @@
                 "link": "hackdavis.io"
             },
             {
+                "type": "workshop",
+                "title": "Google Cloud Platform",
+                "description": "Thomas Munduchira",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
+            },
+            {
                 "type": "activity",
                 "title": "USAF Cybersecurity Challenge",
                 "description": "MLH Mini-Event"
