@@ -44,7 +44,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                 let $els = anchor.$els;
 
                 if ($els.page.length > 0) {
-                    let anchorTop = $els.page.offset().top - ($els.page.height() / 2);
+                    let anchorTop = $els.page.offset().top - ($els.page.height() * 0.2);
                     let anchorTop_full = $els.page.offset().top;
 
                     if (i == 1 && scrollTop >= $els.page.offset().top + ($els.page.height() * 0.3))
