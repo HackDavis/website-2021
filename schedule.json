@@ -61,15 +61,18 @@
                 "link": "https://www.flow.page/sponsor_booths"
             },
             {
+                "type": "activity",
+                "title": "USAF Cybersecurity Challenge",
+                "description": "MLH Mini-Event"
+            }
+        ],
+        "2:00 pm": 
+        [
+            {
                 "type": "workshop",
                 "title": "Google Cloud Platform",
                 "description": "Thomas Munduchira",
                 "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
-            },
-            {
-                "type": "activity",
-                "title": "USAF Cybersecurity Challenge",
-                "description": "MLH Mini-Event"
             }
         ],
         "3:00 pm": 
