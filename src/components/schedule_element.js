@@ -24,7 +24,7 @@ const ScheduleElement = (props) => {
                         return <div className={`col col-md-3`}>
                             {
                                 props.data[index] && 
-                                <a className={styles.event} href={props.data[index].link || "javascript:void(0)"} onClick={() => props.data[index].link ? null : scrollTo(`#section_livestream`)}>
+                                <a className={styles.event} target={props.data[index].link ? "_blank" : ""} href={props.data[index].link || "javascript:void(0)"} onClick={() => props.data[index].link ? null : scrollTo(`#section_livestream`)}>
                                     <div className={`row ${styles.event_title} ${styles[`type_${props.data[index].type}`]}`}>{props.data[index].title}</div>
                                     {
                                         props.data[index].description && 
