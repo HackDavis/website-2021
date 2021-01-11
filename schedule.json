@@ -1,0 +1,286 @@
+{
+    "Saturday":
+    {
+        "7:00 am": 
+        [
+            {
+                "type": "event",
+                "title": "Check-in Begins"
+            }
+        ],
+        "8:30 am": 
+        [
+            {
+                "type": "event",
+                "title": "Opening Ceremony"
+            }
+        ],
+        "9:00 am": 
+        [
+            {
+                "type": "event",
+                "title": "Hacking Begins"
+            },
+            {
+                "type": "event",
+                "title": "Team Mixer",
+                "link": "https://ucdavis.zoom.us/j/98742957716?pwd=dXlwamNtb0k2c29wSGJoK09ZWUtZQT09"
+            }
+        ],
+        "9:30 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "Introduction to TensorFlow.js",
+                "description": "TensorFlow.js",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            }
+        ],
+        "10:30 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "Confluent",
+                "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
+            }
+        ],
+        "11:00 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "From Idea to Fruition",
+                "description": "Shubham Jagani | Amelia",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            }
+        ],
+        "1:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Sponsors Meet and Greet",
+                "link": "https://www.flow.page/sponsor_booths"
+            },
+            {
+                "type": "activity",
+                "title": "USAF Cybersecurity Challenge",
+                "description": "MLH Mini-Event"
+            }
+        ],
+        "2:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Google Cloud Platform",
+                "description": "Thomas Munduchira",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
+            }
+        ],
+        "3:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "From Idea to Fruition",
+                "description": "Kevin Phung | FORA",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Build a SMS and Voice Chatbot with ML and Twilio",
+                "description": "Twilio",
+                "link": "https://ucdavis.zoom.us/j/98742957716?pwd=dXlwamNtb0k2c29wSGJoK09ZWUtZQT09"
+            },
+            {
+                "type": "activity",
+                "title": "Zumba Class",
+                "description": "UC Davis ARC",
+                "link": "https://zoom.us/j/4619358450?pwd=d29scHh4bllpRTFZSktEd0Q3b1U3dz09"
+            }
+        ],
+        "4:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Firebase Workshop",
+                "description": "Developer Student Club",
+                "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Intro to Game Development with Unity",
+                "description": "Ben Ankiel",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
+            }
+        ],
+        "5:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "From Idea to Fruition",
+                "description": "Neelkanth Patel | HeraldHQ",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "activity",
+                "title": "Bob Ross MS Paint",
+                "description": "MLH Mini-Event"
+            }
+        ],
+        "6:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "React Native Development",
+                "description": "Aakash Adesara",
+                "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
+            }
+        ],
+        "8:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Intro to Web Development",
+                "description": "#include",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Android Mobile Development",
+                "description": "Davis Computer Science Club",
+                "link": "https://ucdavis.zoom.us/j/98742957716?pwd=dXlwamNtb0k2c29wSGJoK09ZWUtZQT09"
+            },
+            {
+                "type": "activity",
+                "title": "Trivia Night",
+                "link": "https://zoom.us/j/4619358450?pwd=d29scHh4bllpRTFZSktEd0Q3b1U3dz09"
+            }
+        ],
+        "9:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Intro to Prototyping",
+                "description": "Design Interactive",
+                "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Intro to APIs",
+                "description": "Ryan Yang",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
+            }
+        ],
+        "10:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Befriending Your Imposter Syndrome",
+                "description": "Angie Ni",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "workshop",
+                "title": "How to Pick Your Tech Stack",
+                "description": "HackDavis Tech Team",
+                "link": "https://ucdavis.zoom.us/j/98742957716?pwd=dXlwamNtb0k2c29wSGJoK09ZWUtZQT09"
+            },
+            {
+                "type": "activity",
+                "title": "E-Game Night",
+                "description": "Join us on Discord to play games!"
+            }
+        ],
+        "11:00 pm": 
+        [
+            {
+                "type": "activity",
+                "title": "Secret Activity",
+                "description": "Join the livestream for a fun time!"
+            }
+        ]
+    },
+    "Sunday":
+    {
+        "1:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Tech Futures: SWE",
+                "description": "Google, Salesforce, Optimizely, Gusto",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Design Workshop",
+                "description": "UCD Design Department",
+                "link": "https://ucdavis.zoom.us/j/98742957716?pwd=dXlwamNtb0k2c29wSGJoK09ZWUtZQT09"
+            },
+            {
+                "type": "activity",
+                "title": "Caricature Artist",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
+            }
+        ],
+        "2:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Tech Futures: Grad School",
+                "description": "UC Davis, Stanford, Cornell",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Pitch Competition + Workshop with Contrary",
+                "description": "Contrary",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
+            }
+        ],
+        "3:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Tech Futures: Non-SWE",
+                "description": "Facebook, Workday, ETTMA, Box",
+                "link": "https://ucdavis.zoom.us/j/97837977887?pwd=OHBPV2FjTFVDai9FMXBmKzhlOHI4Zz09"
+            },
+            {
+                "type": "activity",
+                "title": "Cooking Class",
+                "description": "Leon C Brunson",
+                "link": "https://www.twitch.tv/leoncbrunson"
+            }
+        ],
+        "4:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Tech Interview Prep",
+                "description": "Alisha Nanda",
+                "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
+            }
+        ],
+        "6:00 pm": 
+        [
+            {
+                "type": "event",
+                "title": "Hacking Ends",
+                "link": "https://hackdavis2021.devpost.com/"
+            }
+        ],
+        "7:30 pm": 
+        [
+            {
+                "type": "event",
+                "title": "Demos and Judging",
+                "link": "https://hackdavis2021.devpost.com/"
+            }
+        ],
+        "9:45 pm": 
+        [
+            {
+                "type": "event",
+                "title": "Closing Ceremony"
+            }
+        ]
+    }
+}
