@@ -42,12 +42,17 @@ const SponsorsSection = () => {
                         <div className="col-12" align="center">
                             <h2 className={styles.headerText}>Sponsors</h2>
                         </div>
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-2" align="center">
+                            <a href="https://cloud.google.com/">
+                                <img className={styles.imageStyle} src={images["gcp"]} />
+                            </a>
+                        </div>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://www.tensorflow.org/js/">
                                 <img className={styles.imageStyle} src={images["tensorflow_new"]} />
                             </a>
                         </div>
-                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-2" align="center">
                             <a href="https://www.confluent.io/">
                                 <img className={styles.imageStyle} src={images["confluent"]} />
                             </a>
