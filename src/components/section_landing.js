@@ -89,8 +89,7 @@ const LandingSection = (props) => {
                         <CountDownBlock header={'SECONDS'} time ={seconds}></CountDownBlock>
                     </div>
                     <div className={styles.buttoncontainer}>
-                        <button className={styles.applyButton} onClick={() => window.open('https://hackdavis.typeform.com/to/l8vIKWhD')}>MENTOR</button>
-                        {/* <button className={styles.applyButton} onClick={() => window.open('https://hackdavis2021.devpost.com/')}>SUBMIT PROJECT</button> */}
+                        <button className={styles.applyButton} onClick={() => window.open('https://hackdavis2021.devpost.com/')}>SUBMIT PROJECT</button>
                         <button className={`${styles.sponsorButton}`} onClick={() => window.open('https://discord.gg/wc6QQEc')}>
                             <i className={`fab fa-discord ${styles.icon}`} aria-hidden="true"></i>
                             HELP
