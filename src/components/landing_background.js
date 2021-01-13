@@ -43,7 +43,7 @@ const LandingBackground = (props) => {
 
     function OnImageLoad()
     {
-        num_images_loaded++;
+        num_images_loaded = num_images_to_load;
 
         if (num_images_loaded == num_images_to_load)
         {
@@ -57,24 +57,24 @@ const LandingBackground = (props) => {
     }
 
     return (
-        <div className={styles.background}>
-            <div className={styles.clouds_background}>
+    <div className={styles.background}>
+        <div className={styles.clouds_background}>
                 <img onLoad={OnImageLoad()} alt="" src={images["Cloud 1"]} className={styles.cloud1}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Cloud 2"]} className={styles.cloud2}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Cloud 3"]} className={styles.cloud3}></img>
             </div>
             <div className={`${styles.left_side_container}`}>
-                <img onLoad={OnImageLoad()} alt="" src={images["Layer 1"]} style={{display: "none"}} className={styles.layer1_left}></img>
+                <img onLoad={OnImageLoad()} alt="" src={images["Layer 1"]} className={styles.layer1_left}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Layer 2"]}></img>
-                <img onLoad={OnImageLoad()} alt="" src={images["Heart Orb"]} style={{display: "none"}} className={styles.heart_orb}></img>
-                <img onLoad={OnImageLoad()} alt="" src={images["Heart"]} style={{display: "none"}} className={styles.heart}></img>
-                <img onLoad={OnImageLoad()} alt="" src={images["Heart Arrow"]} style={{display: "none"}} className={styles.heart_arrow}></img>
+                <img onLoad={OnImageLoad()} alt="" src={images["Heart Orb"]} className={styles.heart_orb}></img>
+                <img onLoad={OnImageLoad()} alt="" src={images["Heart"]} className={styles.heart}></img>
+                <img onLoad={OnImageLoad()} alt="" src={images["Heart Arrow"]} className={styles.heart_arrow}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Cow"]} className={styles.cow}></img>
             </div>
             <div className={styles.right_side_container}>
                 <img onLoad={OnImageLoad()} alt="" src={images["Layer 1-2"]}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Layer 2-2"]} className={styles.layer2_right}></img>
-                <img onLoad={OnImageLoad()} alt="" src={images["Code 2"]} style={{display: "none"}} className={styles.code2}></img>
+                <img onLoad={OnImageLoad()} alt="" src={images["Code 2"]} className={styles.code2}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Code 2 Arrow"]} className={styles.heart_arrow}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Waterfall 1"]} className={styles.waterfall1}></img>
                 <img onLoad={OnImageLoad()} alt="" src={images["Waterfall 2"]} className={styles.waterfall2}></img>
