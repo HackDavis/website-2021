@@ -203,7 +203,8 @@
             {
                 "type": "activity",
                 "title": "E-Game Night",
-                "description": "Join us on Discord to play games!"
+                "description": "Join us on Discord to play games!",
+                "link": "https://hackdavis.io/join/"
             }
         ],
         "11:00 pm": 
