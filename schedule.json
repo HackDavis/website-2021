@@ -40,7 +40,8 @@
         [
             {
                 "type": "workshop",
-                "title": "Confluent",
+                "title": "Intro to Events Streams with Confluent Cloud",
+                "description": "Confluent",
                 "link": "https://hackdavis.io/workshop_a2"
             },
             {
@@ -107,7 +108,7 @@
             },
             {
                 "type": "workshop",
-                "title": "Build a SMS and Voice Chatbot with ML and Twilio",
+                "title": "How to Add SMS, Voice, and More to your Apps with Twilio",
                 "description": "Twilio",
                 "link": "https://hackdavis.io/workshop_b1"
             },
