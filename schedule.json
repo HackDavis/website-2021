@@ -42,6 +42,12 @@
                 "type": "workshop",
                 "title": "Confluent",
                 "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
+            },
+            {
+                "type": "workshop",
+                "title": "Q&A With Industry Executive: Finance",
+                "description": "Mohit Daswani | CFO @ Thoughtspot",
+                "link": "https://ucdavis.zoom.us/j/97766756342?pwd=UXlFQ0NvNmxZclM2ZUxXQURoNjBYUT09"
             }
         ],
         "11:30 am": 
@@ -57,7 +63,7 @@
         [
             {
                 "type": "workshop",
-                "title": "Q/A With Industry Executive",
+                "title": "Q&A With Industry Executive: Product",
                 "description": "Rajat Shroff | VP, Product @ Doordash",
                 "link": "https://ucdavis.zoom.us/j/92961189236?pwd=RnNtWUpHWFJ6L3pROUplU1BLWjRyZz09"
             }
