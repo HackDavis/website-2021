@@ -36,6 +36,15 @@
                 "link": "https://hackdavis.io/workshop_a1"
             }
         ],
+        "10:00 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "Maximizing Your Workshop Experience",
+                "description": "Ghanshyam Patel",
+                "link": "https://hackdavis.io/workshop_b2"
+            }
+        ],
         "10:30 am": 
         [
             {
@@ -158,13 +167,22 @@
                 "link": "https://hackdavis.io/workshop_a2"
             }
         ],
+        "7:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Thinking Like a Product Manager",
+                "description": "Milap Patel",
+                "link": "https://hackdavis.io/workshop_a1"
+            }
+        ],
         "8:00 pm": 
         [
             {
                 "type": "workshop",
                 "title": "Intro to Web Development",
                 "description": "#include",
-                "link": "https://hackdavis.io/workshop_a1"
+                "link": "https://hackdavis.io/workshop_a2"
             },
             {
                 "type": "workshop",
@@ -184,7 +202,7 @@
                 "type": "workshop",
                 "title": "Intro to Prototyping",
                 "description": "Design Interactive",
-                "link": "https://hackdavis.io/workshop_a2"
+                "link": "https://hackdavis.io/workshop_a1"
             },
             {
                 "type": "workshop",
@@ -199,7 +217,7 @@
                 "type": "workshop",
                 "title": "Befriending Your Imposter Syndrome",
                 "description": "Angie Ni",
-                "link": "https://hackdavis.io/workshop_a1"
+                "link": "https://hackdavis.io/workshop_a2"
             },
             {
                 "type": "workshop",
