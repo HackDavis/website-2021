@@ -43,55 +43,55 @@ const SponsorsSection = () => {
                             <h2 className={styles.headerText}>Sponsors</h2>
                         </div>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-2" align="center">
-                            <a href="https://cloud.google.com/">
+                            <a href="https://cloud.google.com/" target="_blank">
                                 <img className={styles.imageStyle} src={images["gcp"]} />
                             </a>
                         </div>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href="https://www.tensorflow.org/js/">
+                            <a href="https://www.tensorflow.org/js/" target="_blank">
                                 <img className={styles.imageStyle} src={images["tensorflow_new"]} />
                             </a>
                         </div>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-2" align="center">
-                            <a href="https://www.confluent.io/">
+                            <a href="https://www.confluent.io/" target="_blank">
                                 <img className={styles.imageStyle} src={images["confluent"]} />
                             </a>
                         </div>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href="https://www.twilio.com/">
+                            <a href="https://www.twilio.com/" target="_blank">
                                 <img className={styles.imageStyle_twilio} src={images["twiliologo"]} />
                             </a>
                         </div>
                     </div>
                     <div className={`row align-items-center no-gutters`}>
                         <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
-                            <a href="https://contrarycap.com/">
+                            <a href="https://contrarycap.com/" target="_blank">
                                 <img className={styles.smallImageStyle} src={images["contrary"]} />
                             </a>
                         </div>
                         <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
-                            <a href="https://www.sketch.com/">
+                            <a href="https://www.sketch.com/" target="_blank">
                                 <img className={styles.smallImageStyle} src={images["sketch"]} />
                             </a>
                         </div>
                         <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
-                            <a href="https://www.digitalocean.com/">
+                            <a href="https://www.digitalocean.com/" target="_blank">
                                 <img className={styles.smallImageStyle} src={images["digitalocean"]} />
                             </a>
                         </div>
                         
                         <div className="col-5 col-lg-3 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
+                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`} target="_blank">
                                 <img className={styles.smallImageStyle} src={images["stickermule"]} />
                             </a>
                         </div>
                     </div>
                 </div>
-                    <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
-                        <div className="col-12" align="center">
-                                <h2 className={styles.headerText}>Partners</h2>
-                        </div>
-                        <div className={`row align-items-center no-gutters`}>
+                <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
+                    <div className="col-12" align="center">
+                            <h2 className={styles.headerText}>Partners</h2>
+                    </div>
+                    <div className={`row align-items-center no-gutters`}>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
                             <a href="https://mlh.io/">
                                 <img className={styles.imageStyle_twilio} src={images["mlh"]} />
@@ -119,46 +119,28 @@ const SponsorsSection = () => {
                         </div>
                     </div>
                 </div>
-                {/* <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
+                <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
                     <div className="col-12" align="center">
-                            <h2 className={styles.headerText}>Non-Profits</h2>                            
-                    </div>
-                    <div className="col-lg-1" />
-                    <div className={`row align-items-center no-gutters`}>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
-                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
-                            </a>
-                        </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
-                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
-                            </a>
-                        </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
-                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
-                            </a>
-                        </div>
+                        <h2 className={styles.headerText} style={{"marginBottom": "0"}}>Non-Profits</h2>
                     </div>
                     <div className={`row align-items-center no-gutters`}>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
-                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="https://gamersoutreach.org/" target="_blank">
+                                <img className={styles.smallImageStyle} src={images["gamersoutreach"]} />
+                            </a>
+                        </div>
+                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                            <a href="https://www.greenbelt.org/" target="_blank">
+                                <img className={styles.smallImageStyle} src={images["greenbelt"]} />
                             </a>
                         </div>
                         <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
-                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
-                            </a>
-                        </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
-                            <a href={`https://www.stickermule.com/unlock?ref_id=0539570701&utm_source=sponsorship&utm_campaign=mlh-sponsorship-2019&utm_medium=referral`}>
-                                <img className={styles.smallImageStyle} src={images["stickermule"]} />
+                            <a href="https://www.pawswithacause.org/" target="_blank">
+                                <img className={styles.smallImageStyle} src={images["paws"]} />
                             </a>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     )
