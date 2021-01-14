@@ -51,7 +51,7 @@ const StatsSection = (props) => {
                     </div>
                     <div className = "row no-gutters">
                         <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
-                            <a href="https://gather.town/app/4p1hbpvhjPi2eVjV/HackDavis">
+                            <a href="https://gather.town/app/4p1hbpvhjPi2eVjV/HackDavis" target='_blank'>
                                 <div className = {styles.view_winner}>
                                     GO TO VIRTUAL VENUE
                                 </div>
