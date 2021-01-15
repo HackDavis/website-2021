@@ -72,7 +72,7 @@
         "12:00 pm": 
         [
             {
-                "type": "workshop",
+                "type": "event",
                 "title": "Check-in Closes"
             }
         ],
