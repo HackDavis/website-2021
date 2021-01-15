@@ -124,19 +124,24 @@ const SponsorsSection = () => {
                         <h2 className={styles.headerText} style={{"marginBottom": "0"}}>Non-Profits</h2>
                     </div>
                     <div className={`row align-items-center no-gutters`}>
-                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href="https://gamersoutreach.org/" target="_blank">
                                 <img className={styles.smallImageStyle} src={images["gamersoutreach"]} />
                             </a>
                         </div>
-                        <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href="https://www.greenbelt.org/" target="_blank">
                                 <img className={styles.smallImageStyle} src={images["greenbelt"]} />
                             </a>
                         </div>
-                        <div className="col-5 col-lg-4 offset-1 offset-lg-0" align="center">
+                        <div className="col-10 col-lg-3 offset-1 offset-lg-0" align="center">
                             <a href="https://www.pawswithacause.org/" target="_blank">
                                 <img className={styles.smallImageStyle} src={images["paws"]} />
+                            </a>
+                        </div>
+                        <div className="col-10 col-lg-3 offset-1 offset-lg-0" align="center">
+                            <a href="https://sacbreathe.org/" target="_blank">
+                                <img className={styles.smallImageStyle} src={images["breathe"]} />
                             </a>
                         </div>
                     </div>
