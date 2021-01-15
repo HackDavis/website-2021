@@ -308,6 +308,12 @@
                 "type": "event",
                 "title": "Hacking Ends",
                 "link": "https://hackdavis2021.devpost.com/"
+            },
+            {
+                "type": "workshop",
+                "title": "How to Submit Your Project",
+                "description": "Nadia Etemadi and Ben Ankiel",
+                "link": "https://hackdavis.io/workshop_a2"
             }
         ],
         "7:30 pm": 
