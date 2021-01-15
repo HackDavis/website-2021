@@ -69,6 +69,13 @@
                 "link": "https://hackdavis.io/workshop_a1"
             }
         ],
+        "12:00 pm": 
+        [
+            {
+                "type": "workshop",
+                "title": "Check-in Closes"
+            }
+        ],
         "12:30 pm": 
         [
             {
