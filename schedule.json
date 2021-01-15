@@ -251,6 +251,15 @@
     },
     "Sunday":
     {
+        "11:00 am": 
+        [
+            {
+                "type": "workshop",
+                "title": "Intro to Webscraping in Python",
+                "description": "Vishnu Rangiah",
+                "link": "https://hackdavis.io/workshop_a1"
+            }
+        ],
         "1:00 pm": 
         [
             {
