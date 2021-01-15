@@ -5,7 +5,8 @@
         [
             {
                 "type": "event",
-                "title": "Check-in Begins"
+                "title": "Check-in Begins",
+                "link": "https://hackdavis.io/checkin"
             }
         ],
         "8:30 am": 
