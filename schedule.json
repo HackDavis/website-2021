@@ -40,7 +40,7 @@
         [
             {
                 "type": "workshop",
-                "title": "Maximizing Your Workshop Experience",
+                "title": "Maximizing Your Hackathon Experience",
                 "description": "Ghanshyam Patel",
                 "link": "https://hackdavis.io/workshop_b2"
             }
@@ -138,7 +138,7 @@
             },
             {
                 "type": "workshop",
-                "title": "Intro to Game Development with Unity",
+                "title": "Intro to Game Development with Unity (2 hours)",
                 "description": "Ben Ankiel",
                 "link": "https://hackdavis.io/workshop_b2"
             }
@@ -247,7 +247,7 @@
         [
             {
                 "type": "workshop",
-                "title": "Tech Futures: SWE",
+                "title": "Tech Futures Panel: SWE",
                 "description": "Google, Salesforce, Optimizely, Gusto",
                 "link": "https://hackdavis.io/workshop_a1"
             },
@@ -267,13 +267,13 @@
         [
             {
                 "type": "workshop",
-                "title": "Tech Futures: Grad School",
+                "title": "Tech Futures Panel: Grad School",
                 "description": "UC Davis, Stanford, Cornell",
                 "link": "https://hackdavis.io/workshop_a1"
             },
             {
                 "type": "workshop",
-                "title": "Pitch Competition + Workshop with Contrary",
+                "title": "Pitch Competition + Workshop with Contrary (2 hours)",
                 "description": "Contrary",
                 "link": "https://hackdavis.io/workshop_b2"
             }
@@ -282,7 +282,7 @@
         [
             {
                 "type": "workshop",
-                "title": "Tech Futures: Non-SWE",
+                "title": "Tech Futures Panel: Non-SWE",
                 "description": "Facebook, Workday, ETTMA, Box",
                 "link": "https://hackdavis.io/workshop_a1"
             },
