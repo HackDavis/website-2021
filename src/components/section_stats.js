@@ -45,7 +45,7 @@ const StatsSection = (props) => {
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={`${styles.stats}`}>
-                                Join our virtual venue! Interact with other hackers on gather.town! (Opens on Jan 16)
+                                Join our virtual venue! Interact with other hackers on gather.town!
                             </div>
                         </div>
                     </div>
