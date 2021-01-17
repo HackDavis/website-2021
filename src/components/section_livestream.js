@@ -31,11 +31,11 @@ const LivestreamSection = (props) => {
                             <div className={styles.rightpadding}>
                                 <div className={styles.player_wrapper}>
                                     <ReactPlayer
-                                    url='https://youtu.be/nZ8fCpeqqFo'
+                                    url='https://youtu.be/MfEcWYL_Lws'
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
-                                    playing={true}
+                                    playing={false}
                                     volume={0.5}
                                     muted={true}
                                     controls={true} 
@@ -47,11 +47,11 @@ const LivestreamSection = (props) => {
                             <div className = {styles.leftpadding}>
                                 <div className={styles.player_wrapper}>
                                     <ReactPlayer
-                                    url='https://youtu.be/QDfDngmR6Wc'
+                                    url='https://youtu.be/bcJ62KOCTJY'
                                     className={styles.react_player}
                                     width='100%'
                                     height='100%'
-                                    playing={true}
+                                    playing={false}
                                     volume={0.5}
                                     muted={true}
                                     controls={true} 
