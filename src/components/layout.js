@@ -37,6 +37,8 @@ const Layout = ({ children }) => {
   const [loadProgress, setLoadProgress] = useState(false);
   const [fadeSocialGood, setFadeSocialGood] = useState(false);
 
+  // Main page layout for all the different sections of the website
+
   return (
     <>
         {isLoading && <LoadingScreen loadProgress={loadProgress} isLoading={isLoading}></LoadingScreen>}
@@ -57,14 +59,8 @@ const Layout = ({ children }) => {
             <Section id="section_socialgood">
                 <SocialGoodSection fadeSocialGood={fadeSocialGood}></SocialGoodSection>
             </Section>
-            <Section id="section_livestream">
-                <LivestreamSection></LivestreamSection>
-            </Section>
-            <Section id="section_schedule">
-                <LiveScheduleSection></LiveScheduleSection>
-            </Section>
-            <Section id="section_prizes">
-                <PrizesSection></PrizesSection>
+            <Section id= "section_faq">
+              <FAQSection></FAQSection>
             </Section>
             <Section id="section_sponsors">
               <SponsorsSection></SponsorsSection>

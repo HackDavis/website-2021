@@ -46,8 +46,8 @@ const SocialGoodSection = (props) => {
                     its participants to hack for social good, and create an opportunity for us to explore the intersection between technology and society.
                     <br></br>
                     <br></br>
-                    On January 16-17, over 700 students, hackers, and creators will come together virtually for 36 hours of hacking. 
-                    For the 6th year in a row, we're bringing the most talented students in California (and beyond!) to address the world’s most pressing issues.
+                    On January 16-17, over 700 students, hackers, and creators came together virtually for 36 hours of hacking. 
+                    For the 6th year in a row, we brought the most talented students in California (and beyond!) to address the world’s most pressing issues.
                 </div>
                 <div className={`${styles.social_good_container} ${props.fadeSocialGood && styles.slideinright} col-10 offset-1 col-md-5 offset-md-1 order-1 order-md-2`}>
                     <img className={styles.image} src={images['Illustration 2']}></img>

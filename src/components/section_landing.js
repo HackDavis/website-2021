@@ -12,6 +12,7 @@ import CountDownBlock from './count_down_block'
 
 const LandingSection = (props) => {
 
+    // States to manage countdown timer 
     const [hour, setHour] = useState("");
     const [minutes, setMinutes] = useState("");
     const [seconds, setSeconds] = useState("");
@@ -20,11 +21,13 @@ const LandingSection = (props) => {
     let typed;
     let countdown_interval;
 
+    // Used for the countdown timer 
     function EnsureTwoDigits(num)
     {
         return num < 10 ? `0${num}` : num;
     }
 
+    // Typing animation
     useEffect(() => {
         // set typed
         typed = new Typed("#typed", {
@@ -41,6 +44,7 @@ const LandingSection = (props) => {
 
         countdown_interval = setInterval(() => 
         {
+            // Date calculation
             const now = Date.now();
             const timeLeft = end_date - now;
             let seconds = Math.floor(timeLeft / 1000) % 60;
@@ -82,18 +86,9 @@ const LandingSection = (props) => {
                         <div className={styles.typedcontainer}>
                             <div className={styles.typedtext} id="typed"></div>
                         </div>
-                    </div>
-                    <div className={styles.counter_container}>
-                        <CountDownBlock header={'HOURS'} time={hour}></CountDownBlock>
-                        <CountDownBlock header={'MINUTES'} time={minutes}></CountDownBlock>
-                        <CountDownBlock header={'SECONDS'} time ={seconds}></CountDownBlock>
-                    </div>
-                    <div className={styles.buttoncontainer}>
-                        <button className={styles.applyButton} onClick={() => window.open('https://hackdavis2021.devpost.com/')}>SUBMIT PROJECT</button>
-                        <button className={`${styles.sponsorButton}`} onClick={() => window.open('https://discord.gg/wc6QQEc')}>
-                            <i className={`fab fa-discord ${styles.icon}`} aria-hidden="true"></i>
-                            HELP
-                        </button>
+                        <div className={styles.thankyou}>
+                            Thank you for attending HackDavis 2021! <br/>Keep an eye out for HackDavis 2022! 
+                        </div>
                     </div>
                 </div>
                 <div className={styles.start_button_container} onClick={()=> OnClickBehavior('section_about')}>

@@ -126,14 +126,11 @@ const FAQSection = () => {
                             </div>
                         </div>
                         <div className={styles.qaText}>
-                            <h4 className={styles.qa_title}>When do applications close?</h4>
+                            <h4 className={styles.qa_title}>When do applications open?</h4>
                             <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
                             
                             <div className={`${styles.collapseHeight} ${styles.content}`}>
-                                <strike>Applications close at midnight on December 20, 2020. Make sure to apply before then!</strike>
-                                <br></br>
-                                Application deadline extended to January 1, 2021! 😊
-                                
+                                Applications typically open in late fall!
                             </div>
                         </div>
                         <div className={styles.qaText}>

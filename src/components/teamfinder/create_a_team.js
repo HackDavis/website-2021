@@ -13,6 +13,7 @@ const CreateATeam = (props) => {
     const { displayName, email, uid } = user
     const [selectedTags, setSelectedTags] = useState([]);
 
+    // Called when the user clicks the "create a team" button after filling out the fields
     function createTeam() {
         var team_name = $('#teamName').val().trim();
         var team_description = $('#teamDescription').val().trim();
@@ -101,6 +102,7 @@ const CreateATeam = (props) => {
                 return;
             }
 
+            // Jank copy method because it doesn't work without it
             const selectedTagsCopy = JSON.parse(JSON.stringify(selectedTags));
             if (selectedTagsCopy.length < 5 || selectedTags.includes(tagname)) {
                 if (!selectedTagsCopy.includes(tagname)) {
@@ -153,6 +155,7 @@ const CreateATeam = (props) => {
             <div className={styles.tag_container}>
                 Tags (select no more than 5):
                 <div className={styles.tagcontainer}>
+                    {/* Loop through list of tags and create tags to choose from */}
                     {tag_list.map((tag) => {
                         return <TeamTag tagname={tag} filter_tag={true} setSelectedTags={setSelectedTags} selectedTags={selectedTags} not_filled={!selectedTags.includes(tag)}></TeamTag>
                     })}

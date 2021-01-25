@@ -45,36 +45,20 @@ const StatsSection = (props) => {
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={`${styles.stats}`}>
-                                Join our virtual venue! Interact with other hackers on gather.town!
+                                700+ HACKERS <br/>
+                                36 HOURS <br/>
+                                140+ PROJECTS <br/>
+                                $15,000+ PRIZES <br/>
                             </div>
                         </div>
                     </div>
                     <div className = "row no-gutters">
                         <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
-                            <a href="https://gather.town/app/4p1hbpvhjPi2eVjV/HackDavis" target='_blank'>
+                            <a href="https://hackdavis2021.devpost.com/project-gallery?page=1" target='_blank'>
                                 <div className = {styles.view_winner}>
-                                    GO TO VIRTUAL VENUE
+                                    VIEW 2021 WINNERS
                                 </div>
                             </a>
-                        </div>
-                    </div>
-                    <div className = "row no-gutters">
-                        <div className = {`${styles.join_discord} col-12 col-sm-12`}>
-                            Join our discord to speak with mentors and connect with hackers.
-                        </div>
-                    </div>
-                    <div div className = "row no-gutters"> 
-                        <div className = {`${styles.join_discord_description} col-12 col-sm-12`}>
-                            Read and follow popup instructions to gain access to the server. Discord will be the fastest way to reach the HackDavis team. 
-                        </div>
-                    </div>
-                    <div className = "row no-gutters">
-                        <div className={`${styles.view_winner_button_container} col-12 col-sm-12` }>
-                        <a href="https://discord.gg/wc6QQEc" target="_blank">
-                            <div className = {styles.view_winner}>
-                                    JOIN DISCORD
-                            </div>
-                        </a>
                         </div>
                     </div>
                 </div>

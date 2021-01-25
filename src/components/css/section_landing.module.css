@@ -62,6 +62,10 @@ div.title{
     color: #FFFFFF;
     padding:0;
 }
+div.thankyou {
+    font-size: 40px;
+    margin-top: 20px;
+}
 
 .typedtext
 {
