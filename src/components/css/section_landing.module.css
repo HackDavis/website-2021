@@ -64,8 +64,7 @@ div.landingContainer
     background: rgba(18, 168, 177, 0.25);
     backdrop-filter: blur(30px);
     border-radius: 20px;
-    margin-bottom: 20px;
-    padding-top: 30px;
+    /* margin-bottom: 20px; */
 }
 
 
@@ -78,12 +77,12 @@ div.title{
 }
 div.thankyou {
     font-size: 24px;
-    /* margin-top: 40px; */
+    margin-top: 28px;
     font-weight: normal;
 }
 
 div.keepaneye {
-    margin-top: 8px;
+    margin-top: 12px;
     font-size: 24px;
     font-weight: 900;
 }
