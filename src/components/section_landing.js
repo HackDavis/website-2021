@@ -86,8 +86,13 @@ const LandingSection = (props) => {
                         <div className={styles.typedcontainer}>
                             <div className={styles.typedtext} id="typed"></div>
                         </div>
-                        <div className={styles.thankyou}>
-                            Thank you for attending HackDavis 2021! <br/>Keep an eye out for HackDavis 2022! 
+                        <div className={styles.block}>
+                            <div className={styles.thankyou}>
+                                Thank you for attending HackDavis 2021!
+                            </div>
+                            <div className={styles.keepaneye}>
+                                Keep an eye out for HackDavis 2022!
+                            </div>
                         </div>
                     </div>
                 </div>
