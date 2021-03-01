@@ -40,7 +40,7 @@ const SponsorsSection = () => {
                 <div className={'col-10 offset-1 col-lg-8 offset-lg-2'}>
                     <div className={`row align-items-center no-gutters`}>
                         <div className="col-12" align="center">
-                            <h2 className={styles.headerText}>Sponsors</h2>
+                            <h2 className={styles.headerText}>2021 Sponsors</h2>
                         </div>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-2" align="center">
                             <a href="https://cloud.google.com/" target="_blank">
@@ -89,7 +89,7 @@ const SponsorsSection = () => {
                 </div>
                 <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
                     <div className="col-12" align="center">
-                            <h2 className={styles.headerText}>Partners</h2>
+                            <h2 className={styles.headerText}>2021 Partners</h2>
                     </div>
                     <div className={`row align-items-center no-gutters`}>
                         <div className="col-10 col-lg-4 offset-1 offset-lg-0" align="center">
@@ -121,7 +121,7 @@ const SponsorsSection = () => {
                 </div>
                 <div className={`col-10 offset-1 col-lg-8 offset-lg-2 ${styles.sponsor_offset}`}>
                     <div className="col-12" align="center">
-                        <h2 className={styles.headerText} style={{"marginBottom": "0"}}>Non-Profits</h2>
+                        <h2 className={styles.headerText} style={{"marginBottom": "0"}}>2021 Non-Profits</h2>
                     </div>
                     <div className={`row align-items-center no-gutters`}>
                         <div className="col-10 col-lg-3 offset-1 offset-lg-0" align="center">

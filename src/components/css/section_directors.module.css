@@ -15,12 +15,13 @@
 .headshot { 
     background-size: cover; 
     background-position: center center; 
-    width: 95%; 
+    width: 92.5%; 
     height: auto; 
     transition: transform 0.2s ease-in-out;
 } 
 
 .headshot:hover {
+    cursor: pointer;
     transform: scale(1.025);
 }
 

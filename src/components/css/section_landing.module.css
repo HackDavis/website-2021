@@ -84,7 +84,7 @@ div.thankyou {
 div.keepaneye {
     margin-top: 12px;
     font-size: 24px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .typedtext
@@ -140,7 +140,6 @@ div.sponsorImage {
 {
     margin: 1rem;
     margin-top: 2rem;
-    width: 250px;
     padding: 14px;
     height: fit-content;
     font-family: Proxima Nova;
@@ -175,11 +174,13 @@ div.sponsorImage {
 }
 
 .applyButton {
+    width: 260px;
     background-color: #FFFFFF;
     color: #12A8B1;
 }
 
 .sponsorButton {
+    width: 188px;
     background-color: #12A8B1;
     color: white;
 }
