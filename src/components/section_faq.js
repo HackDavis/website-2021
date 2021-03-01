@@ -46,7 +46,7 @@ const FAQSection = () => {
                 <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
                     <div className={styles.headerText}>Questions?</div>
                     <div>
-                        <div className={styles.qaText}>
+                        {/* <div className={styles.qaText}>
                             <h4 className={styles.qa_title}>What is a hackathon?</h4>
                             <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
                             
@@ -150,6 +150,75 @@ const FAQSection = () => {
                                 <br></br>
                                 <br></br>
                                 <i>HackDavis reserves the right to revoke your win or win status if there is evidence of cheating or unfair advantages.</i>
+                            </div>
+                        </div> */}
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>Who can apply?</h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            Any UC Davis undergraduate student can apply to be a HackDavis Director! We welcome all majors and all experience levels.
+                                
+                            </div>
+                        </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>Why join HackDavis? </h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            HackDavis is so much more than just a 36-hour hackathon - there’s hundreds of hours of preparation that go into making the event as great as it can be, as well as creating supplemental items like pre-event workshops and some other great stuff we have planned for this upcoming year 😉. 
+                            <br/><br/>If you want to join a community of like-minded, motivated people who want to both better themselves and create an event that will have lasting positive impacts for hundreds of other students, we’d love to have you 💖. 
+                                
+                            </div>
+                        </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>What exactly does a HackDavis Director do?</h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            A HackDavis Director’s responsibilities vary from team to team (see the team descriptions above), but in general, a director is expected to participate during the day of the hackathon, attend regularly scheduled club-wide meetings, and put their best foot forward to create both a positive community of directors and an amazing event for our hackers. 
+                                
+                            </div>
+                        </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>How does the application process work?</h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            After you submit your application, the HackDavis Team will review it and choose if you proceed to our first-round interview.
+                            <br/><br/>At your first-round interview, you’ll meet with two HackDavis Directors who will ask general questions and determine the top team you’re suited for.
+                            <br/><br/>If you proceed to our second-round interview, you’ll meet with your potential future team, who will ask more team-specific questions.
+                            <br/><br/>After your second-round interview, you’ll hear from us if you’ve been accepted :)
+                                
+                            </div>
+                        </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>How do I choose a team to apply for? </h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            While you can apply to as many teams as you’d like, we encourage you to think carefully about where your skills fit in with each team, and which tasks you’d enjoy spending time doing. 
+                                
+                            </div>
+                        </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>Can I apply for a team even if I don’t have any experience? </h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            Yes! While we’d like members of each team to be familiar with the soft skills required for each team, there are no hard requirements. Above all else, we want motivated team players who want to build a great event for other students. 
+                            <br/><br/>We’ll also provide you with any resources or knowledge you might need to help your team when you first join, so no one will be behind. 
+                                
+                            </div>
+                        </div>
+                        <div className={styles.qaText}>
+                            <h4 className={styles.qa_title}>How much of a time commitment is HackDavis? </h4>
+                            <img className={styles.dropdownImage} src={data.allFile.edges[0].node.publicURL} />
+                            
+                            <div className={`${styles.collapseHeight} ${styles.content}`}>
+                            Unfortunately, this isn’t an easy question to answer. It varies greatly from team to team, as well as on the time of year. For instance, our Marketing team won’t do much work during the summer, while others like Sponsorship will be hard at work securing funding for our event. 
+                            <br/><br/>While we expect everyone to be available for the duration of the actual event itself, we can’t give firm estimates for every team here. If you’d like more specifics, feel free to email us at hello@hackdavis.io or to ask us in your first-round interview if you qualify. 
+                                
                             </div>
                         </div>
                     </div>

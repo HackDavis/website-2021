@@ -86,14 +86,21 @@ const LandingSection = (props) => {
                         <div className={styles.typedcontainer}>
                             <div className={styles.typedtext} id="typed"></div>
                         </div>
-                        <div className={styles.block}>
+                        {/* <div className={styles.block}>
                             <div className={styles.thankyou}>
                                 Thank you for attending HackDavis 2021!
                             </div>
                             <div className={styles.keepaneye}>
                                 Keep an eye out for HackDavis 2022!
                             </div>
+                        </div> */}
+                        <div className={styles.keepaneye}>
+                            Join the 2022 HackDavis director team!
                         </div>
+                    </div>
+                    <div className={styles.buttoncontainer}>
+                        <button className={styles.applyButton} onClick={() => window.open('https://hackdavis.typeform.com/to/bZdj1Uq6')}>DIRECTOR APPLICATION</button>
+                        <button className={styles.sponsorButton} onClick={() => window.open('mailto:team@hackdavis.io')}>SPONSOR 2022</button>
                     </div>
                 </div>
                 <div className={styles.start_button_container} onClick={()=> OnClickBehavior('section_about')}>

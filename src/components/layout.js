@@ -22,6 +22,8 @@ import StatsSection from "./section_stats"
 import SponsorsSection from "./section_sponsors"
 import LivestreamSection from "./section_livestream"
 import PrizesSection from "./section_prizes"
+import TeamsSection from "./section_teams"
+import DirectorsSection from "./section_directors"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import LoadingScreen from "./loadingscreen"
 
@@ -52,6 +54,12 @@ const Layout = ({ children }) => {
         <ParallaxProvider>
             <Section id="section_landing">
                 <LandingSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></LandingSection>
+            </Section>
+            <Section id="section_teams">
+                <TeamsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></TeamsSection>
+            </Section>
+            <Section id="section_directors">
+                <DirectorsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></DirectorsSection>
             </Section>
             <Section id="section_about">
                 <StatsSection fadeAbout={fadeAbout}></StatsSection>

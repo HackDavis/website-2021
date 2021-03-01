@@ -136,18 +136,11 @@ div.sponsorImage {
     visibility: hidden;
 }
 
-.buttoncontainer
-{
-    display: inline-block;
-    width: 500px;
-    max-width: 75vw;
-}
-
 .buttoncontainer > button
 {
     margin: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    width: 250px;
     padding: 14px;
     height: fit-content;
     font-family: Proxima Nova;
@@ -247,6 +240,21 @@ div.sponsorImage {
     }
 
     .start_button_container
+    {
+        display: none;
+    }
+
+    .buttoncontainer 
+    {
+        margin-top: 0.5rem; 
+    }
+
+    .keepaneye 
+    {
+        display: none;
+    }
+
+    .sponsorButton 
     {
         display: none;
     }
