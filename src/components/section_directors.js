@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import $ from "jquery"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import styles from "./css/section_directors.module.css"
 import { useStaticQuery, graphql } from "gatsby"
@@ -75,13 +76,13 @@ const DirectorsSection = () => {
                         <div className={'col-12 col-md-3 membercontainer'} style={{marginBottom: "1.25rem"}}>
                             <div>
                                 <img src={images["abhishek"]} className={styles.headshot} style={{borderRadius: "10px"}} />
-                                <h6 className={styles.title}><br />Abhishek<br />Head Operations Director</h6>
+                                <h6 className={styles.title}><br />Abhishek<br />Co-Head Operations Director</h6>
                             </div>
                         </div>
                         <div className={'col-12 col-md-3 membercontainer'} style={{marginBottom: "1.25rem"}}>
                             <div>
                                 <img src={images["ishani"]} className={styles.headshot} style={{borderRadius: "10px"}} />
-                                <h6 className={styles.title}><br />Ishani<br />Operations Director</h6>
+                                <h6 className={styles.title}><br />Ishani<br />Co-Head Operations Director</h6>
                             </div>
                         </div>
                         <div className={'col-12 col-md-3 membercontainer'} style={{marginBottom: "1.25rem"}}>
