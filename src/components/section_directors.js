@@ -110,7 +110,7 @@ const DirectorsSection = () => {
                         </div>
                         <div className={'col-12 col-md-3 membercontainer'} style={{marginBottom: "1.25rem"}} onClick={() => window.open("https://www.linkedin.com/in/alelong/")}>
                             <div>
-                                <img src={images["alex"]} className={styles.headshot} style={{borderRadius: "10px"}} />
+                                <img src={images["alex2"]} className={styles.headshot} style={{borderRadius: "10px"}} />
                                 <h6 className={styles.title}><br />Alex<br />Technical</h6>
                             </div>
                         </div>
