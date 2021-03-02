@@ -95,7 +95,7 @@ const LandingSection = (props) => {
                             </div>
                         </div> */}
                         <div className={styles.keepaneye}>
-                            Apply to join the 2022 HackDavis <br />director team by March 28th!
+                            Join the 2022 HackDavis director team!
                         </div>
                     </div>
                     <div className={styles.buttoncontainer}>
