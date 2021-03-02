@@ -20,8 +20,8 @@ const DirectorBlurb = (props) => {
 	return (
 		<div className={'col-12 col-md-3 membercontainer'} style={{marginBottom: props.sizing}}>
 			<div>
-				<img src={props.directorImage} className={styles.headshot} style={{borderRadius: "10px"}} onClick={handleClick}/>
-				<h6 className={styles.title}><br /> {props.directorName}<br /> {console.log(checkPresident(props.directorName))} {checkPresident(props.directorName) ? 
+				<img src={props.directorImage} className={styles.headshot} onClick={handleClick}/>
+				<h6 className={styles.title}><br /> {props.directorName}<br /> {checkPresident(props.directorName) ? 
 					<>
 						Co-President 
 						<br />{props.directorDesc}
