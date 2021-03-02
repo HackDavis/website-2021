@@ -34,27 +34,27 @@ const DirectorsSection = () => {
     }
 
 
-    const directorInfo = 
-        {
-        "Omid": {description: `Technical Lead`, linkedin: `https://www.linkedin.com/in/omidmogasemi/`},
-        "Vivek": {description: `Sponsorship Lead`, linkedin: `https://www.linkedin.com/in/vivekshome/`},
-        "Cheryl": {description: `Design Lead`, linkedin: `https://www.linkedin.com/in/cherylcai/`},
-        "Stephenie": {description: `Finance Lead`, linkedin: `https://www.linkedin.com/in/stepheniecho/`},
-        "Joyce": {description: `External Lead`, linkedin: `https://www.linkedin.com/in/joyce-lu-b8b96b197/`},
-        "Abhishek": {description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/abhishekhandigol/`},
-        "Ishani": {description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/ishani-pandya/`},
-        "Alex": {description: `Technical`, linkedin: `https://www.linkedin.com/in/alelong/`},
-        "Nick": {description: `Technical`, linkedin: `https://www.linkedin.com/in/nickjsulist/`},
-        "Sivani": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
-        "Shachi": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
-        "Barno": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
-        }
-    function adjustSizing(index) {
-        if (index == Object.keys(directorInfo).length - 1) {
-            return "22rem";
-        }
-        return "3rem";
-    }
+    // const directorInfo = 
+    //     {
+    //     "Omid": {description: `Technical Lead`, linkedin: `https://www.linkedin.com/in/omidmogasemi/`},
+    //     "Vivek": {description: `Sponsorship Lead`, linkedin: `https://www.linkedin.com/in/vivekshome/`},
+    //     "Cheryl": {description: `Design Lead`, linkedin: `https://www.linkedin.com/in/cherylcai/`},
+    //     "Stephenie": {description: `Finance Lead`, linkedin: `https://www.linkedin.com/in/stepheniecho/`},
+    //     "Joyce": {description: `External Lead`, linkedin: `https://www.linkedin.com/in/joyce-lu-b8b96b197/`},
+    //     "Abhishek": {description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/abhishekhandigol/`},
+    //     "Ishani": {description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/ishani-pandya/`},
+    //     "Alex": {description: `Technical`, linkedin: `https://www.linkedin.com/in/alelong/`},
+    //     "Nick": {description: `Technical`, linkedin: `https://www.linkedin.com/in/nickjsulist/`},
+    //     "Sivani": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
+    //     "Shachi": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
+    //     "Barno": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
+    //     }
+    // function adjustSizing(index) {
+    //     if (index == Object.keys(directorInfo).length - 1) {
+    //         return "22rem";
+    //     }
+    //     return "3rem";
+    // }
 
     const images = GetImageMap();
 
