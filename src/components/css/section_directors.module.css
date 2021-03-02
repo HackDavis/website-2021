@@ -12,12 +12,14 @@
     font-weight: 700;
 }
 
+
 .headshot { 
     background-size: cover; 
     background-position: center center; 
     width: 92.5%; 
     height: auto; 
     transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
 } 
 
 .headshot:hover {
