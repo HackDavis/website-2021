@@ -27,6 +27,7 @@ const DirectorsSection = () => {
         for (let i = 0; i < data.allFile.edges.length; i++)
         {
             const image_node = data.allFile.edges[i].node;
+            console.log(image_node.name, image_node.publicURL)
             image_data[image_node.name] = image_node.publicURL;
         }
 

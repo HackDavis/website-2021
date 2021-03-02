@@ -10,7 +10,6 @@ const Badge = (props) => {
         props.hasLoaded ?
             <div alt={props.date} className={`${styles.badge} ${!props.active && styles.inactive}`}>
                 <img src={props.image}></img>
-
             </div>
         : <div className={styles.badge}><Skeleton width={50} height={50} circle={true}/></div>
     )
