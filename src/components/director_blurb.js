@@ -8,7 +8,6 @@ const DirectorBlurb = (props) => {
 	}
 
 	const checkPresident = (name) => {
-		console.log(name)
 		if ((name === 'Omid') || (name === 'Vivek')) {
 			return true
 		}
