@@ -37,18 +37,18 @@ const DirectorsSection = () => {
 
     const directorInfo = 
         {
-        "Omid": {description: `Technical Lead`, linkedin: `https://www.linkedin.com/in/omidmogasemi/`},
-        "Vivek": {description: `Sponsorship Lead`, linkedin: `https://www.linkedin.com/in/vivekshome/`},
-        "Cheryl": {description: `Design Lead`, linkedin: `https://www.linkedin.com/in/cherylcai/`},
-        "Stephenie": {description: `Finance Lead`, linkedin: `https://www.linkedin.com/in/stepheniecho/`},
-        "Joyce": {description: `External Lead`, linkedin: `https://www.linkedin.com/in/joyce-lu-b8b96b197/`},
-        "Abhishek": {description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/abhishekhandigol/`},
-        "Ishani": {description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/ishani-pandya/`},
-        "Alex": {description: `Technical`, linkedin: `https://www.linkedin.com/in/alelong/`},
-        "Nick": {description: `Technical`, linkedin: `https://www.linkedin.com/in/nickjsulist/`},
-        "Sivani": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
-        "Shachi": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
-        "Barno": {description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
+        "omid": {name:"Omid", description: `Technical Lead`, linkedin: `https://www.linkedin.com/in/omidmogasemi/`},
+        "vivek": {name:"Vivek", description: `Sponsorship Lead`, linkedin: `https://www.linkedin.com/in/vivekshome/`},
+        "cheryl": {name:"Cheryl", description: `Design Lead`, linkedin: `https://www.linkedin.com/in/cherylcai/`},
+        "stephenie": {name:"Stephenie", description: `Finance Lead`, linkedin: `https://www.linkedin.com/in/stepheniecho/`},
+        "joyce": {name:"Joyce", description: `External Lead`, linkedin: `https://www.linkedin.com/in/joyce-lu-b8b96b197/`},
+        "abhishek": {name:"Abhishek", description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/abhishekhandigol/`},
+        "ishani": {name:"Ishani", description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/ishani-pandya/`},
+        "nick": {name:"Nick", description: `Technical`, linkedin: `https://www.linkedin.com/in/nickjsulist/`},
+        "alex": {name:"Alex",description: `Technical`, linkedin: `https://www.linkedin.com/in/alelong/`},
+        "sivani": {name:"Sivani", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
+        "shachi": {name:"Shachi", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
+        "barno": {name:"Barno", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
         }
     function adjustSizing(index) {
         if (index == Object.keys(directorInfo).length - 1) {
@@ -66,7 +66,7 @@ const DirectorsSection = () => {
                     <div className={styles.headerText}>Directors</div>
                     <div className={`row no-gutters`}>
                         {Object.keys(directorInfo).map((key, index) => {
-                            return <DirectorBlurb sizing={adjustSizing(index)}directorImage={images[key]} directorName={key} directorDesc={directorInfo[key].description} linkedin={directorInfo[key].linkedin}></DirectorBlurb>;
+                            return <DirectorBlurb sizing={adjustSizing(index)}directorImage={images[key]} directorName={directorInfo[key].name} directorDesc={directorInfo[key].description} linkedin={directorInfo[key].linkedin}></DirectorBlurb>;
                         })}
                     </div>
                 </div>
