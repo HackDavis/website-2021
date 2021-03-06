@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import styles from "./css/big_badge.module.css"
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import $ from "jquery";
+import styles from "../css/big_badge.module.css"
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import Skeleton from 'react-loading-skeleton';
 
 const background_gradients = 

@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from "./css/badge.module.css"
-import $ from "jquery";
 import Skeleton from 'react-loading-skeleton';
 
 

@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import styles from "./css/landing_background.module.css"
-import parallaxstyles from "./css/parallax.module.css"
-import { Parallax } from "react-scroll-parallax"
-import loading_styles from "./css/loadingscreen.module.css"
-import $ from "jquery"
+
 
 const LandingBackground = (props) => {
 

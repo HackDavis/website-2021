@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from "./css/badge_page.module.css"
-import $ from "jquery";
-import Skeleton from 'react-loading-skeleton';
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
-import Badge from './badge';
-import BigBadge from './big_badge'
+import BigBadge from './objects/big_badge'
 import steal from "./css/modal_profile.module.css"
 
 const badge_info = 

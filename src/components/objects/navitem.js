@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import styles from "./css/navbar.module.css"
-import { getUser, isLoggedIn } from "../utils/auth"
+import styles from "../css/navbar.module.css"
+import { getUser, isLoggedIn } from "../../utils/auth"
 
 
 const Navitem = ({ setLoginModalIsOpen, setProfileModalIsOpen, name, section_id, visibility }) => {

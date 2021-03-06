@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import $ from "jquery";
 import styles from "./css/navbar.module.css";
-import Navitem from "./navitem";
+import Navitem from "./objects/navitem";
 import { getUser, isLoggedIn } from "../utils/auth"
 import { useStaticQuery, graphql } from "gatsby"
 const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, setColoredLogo, setFadeAbout, setFadeSocialGood, setHamburgerMenuIsOpen, hamburgerMenuIsOpen}) => {

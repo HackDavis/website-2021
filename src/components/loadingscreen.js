@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"

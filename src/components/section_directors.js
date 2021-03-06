@@ -2,7 +2,8 @@ import React, { useEffect } from "react"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 import styles from "./css/section_directors.module.css"
 import { useStaticQuery, graphql } from "gatsby"
-import DirectorBlurb from "./director_blurb"
+import DirectorBlurb from "./objects/director_blurb"
+import Fade from 'react-reveal/Fade'
 
 const DirectorsSection = () => {
 
@@ -60,19 +61,21 @@ const DirectorsSection = () => {
     const images = GetImageMap();
 
     return (
-        <div className="container-fluid p-0">
-            <div className={`row no-gutters ${styles.background}`}>
-                <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
-                    <div className={styles.headerText}>Directors</div>
-                    <div className={`row no-gutters`}>
-                        {Object.keys(directorInfo).map((key, index) => {
-                            return <DirectorBlurb sizing={adjustSizing(index)}directorImage={images[key]} directorName={directorInfo[key].name} directorDesc={directorInfo[key].description} linkedin={directorInfo[key].linkedin}></DirectorBlurb>;
-                        })}
+            <div className="container-fluid p-0">
+                <div className={`row no-gutters ${styles.background}`}>
+                    <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
+                        <Fade>
+                            <div className={styles.headerText}>Directors</div>
+                                <div className={`row no-gutters`}>
+                                    {Object.keys(directorInfo).map((key, index) => {
+                                        return <DirectorBlurb sizing={adjustSizing(index)}directorImage={images[key]} directorName={directorInfo[key].name} directorDesc={directorInfo[key].description} linkedin={directorInfo[key].linkedin}></DirectorBlurb>;
+                                    })}
+                                </div>
+                        </Fade>
                     </div>
                 </div>
+                <div className={styles.bottom_diagonal}></div>
             </div>
-            <div className={styles.bottom_diagonal}></div>
-        </div>
     )
 }
 
