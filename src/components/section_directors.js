@@ -53,7 +53,7 @@ const DirectorsSection = () => {
         }
     function adjustSizing(index) {
         if (index == Object.keys(directorInfo).length - 1) {
-            return "22rem";
+            return "19rem";
         }
         return "3rem";
     }
