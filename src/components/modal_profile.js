@@ -150,7 +150,7 @@ const ProfileModal = props => {
     }
 
     const images = GetImageMap();
-    console.log(showOthers);
+    // console.log(showOthers);
 
     return (
         <Modal

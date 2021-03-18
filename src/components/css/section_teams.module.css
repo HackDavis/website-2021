@@ -12,12 +12,20 @@
     font-weight: 700;
 }
 
-.qaText {
+.start {
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.qaText {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    cursor: pointer;
 }
 
 .qaText:not(:first-child)
@@ -40,6 +48,8 @@
 }
 
 .content { 
+    cursor: default;
+    pointer-events: none;
     margin-top: 20px;
     padding-top: 10px;
     border-top: 2px solid #9EE7E5;
@@ -130,6 +140,7 @@
     margin-top: 0;
     padding-top: 0;
     margin: 0;
+
 }
 
 .dropdown_image {
@@ -148,8 +159,7 @@
     transform: rotate(180deg);
 }
 
-.collapse_height
-{
+.collapse_height {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
