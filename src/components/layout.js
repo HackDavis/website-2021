@@ -55,12 +55,12 @@ const Layout = ({ children }) => {
             <Section id="section_landing">
                 <LandingSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></LandingSection>
             </Section>
-            <Section id="section_teams">
+            {/* <Section id="section_teams">
                 <TeamsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></TeamsSection>
-            </Section>
-            <Section id="section_directors">
+            </Section> */}
+            {/* <Section id="section_directors">
                 <DirectorsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></DirectorsSection>
-            </Section>
+            </Section> */}
             <Section id="section_about">
                 <StatsSection fadeAbout={fadeAbout}></StatsSection>
             </Section>
