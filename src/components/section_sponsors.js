@@ -41,6 +41,14 @@ const SponsorsSection = () => {
                     <Fade>
                         <div className={`row align-items-center no-gutters`}>
                             <div className="col-12" align="center">
+                                <h2 className={styles.headerText}>2022 Sponsors</h2>
+                            </div>
+                            <div className="col-10 col-lg-8 offset-1 offset-lg-2" align="center">
+                                <a href="https://cloud.google.com/" target="_blank">
+                                    <img className={styles.imageStyle} src={images["FMC"]} />
+                                </a>
+                            </div>
+                            <div className="col-12" align="center">
                                 <h2 className={styles.headerText}>2021 Sponsors</h2>
                             </div>
                             <div className="col-10 col-lg-4 offset-1 offset-lg-2" align="center">
