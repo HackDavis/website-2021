@@ -1,0 +1,190 @@
+@font-face {
+  src: url("../../static/fonts/ProximaNova-Regular.otf");
+  font-family: "Proxima Nova";
+  font-weight: normal;
+}
+
+@font-face {
+  src: url("../../static/fonts/Proxima\ Nova\ Alt\ Extrabold.otf");
+  font-family: "Proxima Nova";
+  font-weight: 1000;
+}
+
+div.background {
+  min-height: 100vh;
+  font-family: "Proxima Nova";
+  font-weight: 1000;
+  overflow-x: hidden;
+  background-color: #0b2638;
+  position: relative;
+}
+
+div.statscontainer {
+  color: black;
+  margin-bottom: 60px;
+}
+
+div.stats {
+  font-size: 40px;
+  line-height: 54px;
+  font-family: "Proxima Nova";
+}
+
+@media (max-width: 575px) {
+  div.stats {
+    font-size: 24px;
+  }
+}
+
+.view_winner_button_container {
+  width: 100%;
+}
+
+.view_winner {
+  /* margin-top: 20px; */
+  font-size: 16px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  color: white;
+  background-color: #57b8be;
+  border-radius: 500px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  transition: 0.2s ease-in-out all;
+
+  margin-bottom: 7%;
+}
+
+@media (max-width: 575px) {
+  .view_winner {
+    margin-top: -14px;
+  }
+}
+
+.view_winner:hover {
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+.winnertext {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+a {
+  /* modify anchor attributes and remove underline */
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  /* remove underline */
+  text-decoration: none;
+  color: white;
+}
+
+.image_container {
+  overflow-x: hidden;
+  margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+  .image_container {
+    padding-top: 50px;
+  }
+
+  .statscontainer {
+    padding-top: 50px;
+  }
+}
+
+.image {
+  width: 70%;
+  height: auto;
+}
+
+.bottom_diagonal {
+  padding-top: 10rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #fafaff;
+  border-left: 100vw solid transparent;
+}
+
+@media (max-width: 768px) {
+  .bottom_diagonal {
+    border-bottom: 40px solid #fafaff;
+  }
+}
+
+.header_date {
+  font-family: "Proxima Nova";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.join_discord {
+  font-size: 24px;
+  margin-top: 56px;
+}
+
+.join_discord_description {
+  font-size: 16px;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  font-weight: normal;
+  margin-top: 8px;
+  line-height: 150%;
+}
+
+.about_header {
+  color: #ffffff;
+  font-size: 96px;
+  margin-bottom: 2%;
+  margin-top: 10%;
+}
+
+.about_text {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 6%;
+  line-height: 150%;
+}
+
+.about_text_alt {
+  color: #0eb1bb;
+  font-weight: bold;
+}
+
+.about_stats_big {
+  color: #86e4db;
+  font-size: 43px;
+  line-height: 130%;
+  margin-top: 6%;
+}
+
+.about_stats_small {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  align-items: center;
+  width: 65%;
+}
+
+.about_stats_text_container {
+  margin-bottom: 3%;
+}
