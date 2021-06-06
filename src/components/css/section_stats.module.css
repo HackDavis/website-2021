@@ -103,6 +103,8 @@ a:hover {
 .image_container {
   overflow-x: hidden;
   opacity: 0;
+  /* height: 80vh;
+  margin-bottom: 3rem; */
 }
 
 @media (max-width: 768px) {
@@ -131,10 +133,8 @@ a:hover {
 }
 
 .image {
-  width: 100%;
+  width: 80%;
   height: auto;
-  transform: scale(0.8, 0.8);
-  float: right;
 }
 
 .bottom_diagonal {

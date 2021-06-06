@@ -116,8 +116,8 @@ const StatsSection = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className={`col-10 offset-1 col-md-4 offset-md-2 ${styles.image_container} ${props.fadeAbout && styles.slideinleft}`}>
-                    <img className={styles.image} src={images['bunnyfloat 1']}></img>
+                <div className={`col-10 offset-1 col-md-4 offset-md-2 d-flex justify-content-end ${styles.image_container} ${props.fadeAbout && styles.slideinleft}`}>
+                    <img className={`${styles.image}`} src={images['bunnyfloat 1']}></img>
                 </div>
             </div>
             <div className={styles.bottom_diagonal}></div>
