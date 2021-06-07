@@ -47,10 +47,21 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                     let anchorTop = $els.page.offset().top - ($els.page.height() * 0.2);
                     let anchorTop_full = $els.page.offset().top;
 
-                    if (i == 1 && scrollTop >= $els.page.offset().top + ($els.page.height() * 0.3))
+                     // use this when order of page is: Stats, Social Good, FAQ, Sponsors
+                    // higher the delay (rn 1.45), the earlier it fades in
+                    // lower the delay, the later it fades in
+                    let delay = 1.45;
+
+                    if ( i == 1 && scrollTop >= $els.page.offset().top - ($els.page.height() * delay))
                     {
                         setFadeSocialGood(true);
                     }
+                    
+                    // use this when order of page is: Teams, Directors, Stats, Social Good, FAQ, Sponsors
+                    // if ( i == 1 && scrollTop >= $els.page.offset().top + ($els.page.height() * 0.3))
+                    // {
+                    //     setFadeSocialGood(true);
+                    // }
 
                     if (scrollTop >= anchorTop) {
                         $(`.${styles.navitem}`).find(`div.${styles.underline}`).removeClass(styles.selected);
