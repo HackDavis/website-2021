@@ -44,7 +44,7 @@ const SponsorsSection = () => {
                                 <h2 className={styles.headerText}>2022 Sponsors and Partners</h2>
                             </div>
                             <div className="col-10 col-lg-8 offset-1 offset-lg-2" align="center">
-                                <a href="https://cloud.google.com/" target="_blank">
+                                <a href="https://www.fordfund.org/" target="_blank">
                                     <img className={styles.imageStyle} src={images["FMC"]} />
                                 </a>
                             </div>
