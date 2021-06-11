@@ -76,7 +76,6 @@ const AboutBotPage = () => {
                         </Fade>
                     </div>
                 </div>
-                <div className={styles.bottom_diagonal}></div>
             </div>
     )
 }

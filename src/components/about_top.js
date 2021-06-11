@@ -36,9 +36,10 @@ const AboutTopPage = () => {
     const images = GetImageMap();
 
     return (
-        <div className = "container-fluid p-0">
-            <div className={`row no-gutters align-items-center ${styles.background}`}>
-                <div className={`${styles.statscontainer} col-10 offset-1 col-md-6 offset-md-1`}>
+        <div className = {`container-fluid p-0 ${styles.background_about}`} id="about_top">
+            <a id="mlh-trust-badge" className={styles.trust_badge} href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg" alt="Major League Hacking 2021 Hackathon Season" style={{width: "100%"}} /></a>
+            <div className={`row no-gutters align-items-center ${styles.main_content}`}>
+                <div className={`${styles.statscontainer} col-10 offset-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-xl-5 offset-xl-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={`${styles.about_header}`}>
@@ -47,7 +48,7 @@ const AboutTopPage = () => {
                         </div>
                     </div>
                     <div className = "row no-gutters">
-                        <div className= "col-11"> {/* note: need to tweak paragraph size to be more accurate to Figma*/}
+                        <div className= {`col-11 col-lg-12`}> {/* note: need to tweak paragraph size to be more accurate to Figma*/}
                             <div className={`${styles.about_text}`}>
                             HackDavis is UC Davis’ 36-hour collegiate hackathon dedicated to empowering student hackers to collaborate 
                             and build impactful projects that make the world a better place. HackDavis 2021 featured 
@@ -116,19 +117,16 @@ const AboutTopPage = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`col-10 offset-1 col-md-4 d-flex justify-content-end ${styles.image_container}`}>
+                <div className={`col-10 col-md-4 offset-md-1 col-lg-5 offset-lg-0 col-xl-5 offset-xl-1 d-flex justify-content-end ${styles.image_container}`}>
                     {/* <div className = "row no-gutters"> </div> */}
                     <div className = "row no-gutters">
                         <div className="col-12 d-flex justify-content-end align-items-start">
                             <img className={ `${styles.image}`} src={images['bunnyfloat 1']}></img>
                         </div>
                     </div>
-                    {/* <div className = "row no-gutters">
-                        
-                    </div> */}
                 </div>
             </div>
-            <div className={styles.bottom_diagonal}></div>
+            <div className={styles.bottom_diagonal_about}></div>
         </div>
     )
 }

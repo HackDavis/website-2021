@@ -10,7 +10,7 @@
   font-weight: 1000;
 }
 
-div.background {
+div.background_about {
   min-height: 100vh;
   font-family: "Proxima Nova";
   font-weight: 1000;
@@ -38,6 +38,18 @@ div.stats {
 
 .view_winner_button_container {
   width: 100%;
+}
+
+.trust_badge {
+  display: block;
+  max-width: 85px;
+  min-width: 60px;
+  position: absolute;
+  left: 140px;
+  top: 0;
+  width: 20%;
+  height: 10%;
+  z-index: 10000;
 }
 
 .view_winner {
@@ -111,20 +123,19 @@ a:hover {
   height: auto;
 }
 
-.bottom_diagonal {
-  padding-top: 10rem;
+.bottom_diagonal_about {
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
   height: 0;
-  border-bottom: 100px solid #fafaff;
+  border-bottom: 100px solid #ffffff;
   border-left: 100vw solid transparent;
 }
 
 @media (max-width: 768px) {
-  .bottom_diagonal {
-    border-bottom: 40px solid #fafaff;
+  .bottom_diagonal_about {
+    border-bottom: 40px solid #ffffff;
   }
 }
 
@@ -152,7 +163,7 @@ a:hover {
 
 .about_header {
   color: #ffffff;
-  font-size: 96px;
+  font-size: 90px;
   margin-bottom: 2%;
   margin-top: 10%;
 }
@@ -187,4 +198,28 @@ a:hover {
 
 .about_stats_text_container {
   margin-bottom: 3%;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1440px) {
+  .main_content {
+    margin-top: 150px;
+  }
+  .about_stats_text_container {
+    margin-bottom: 12%;
+  }
+  .image_container {
+    margin-top: -5%;
+  }
+  .image {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1441px) {
+  .main_content {
+    margin-top: 150px;
+  }
+  .about_header {
+    margin-top: -50px;
+  }
 }
