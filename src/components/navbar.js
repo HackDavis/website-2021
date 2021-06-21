@@ -4,6 +4,8 @@ import styles from "./css/navbar.module.css";
 import Navitem from "./objects/navitem";
 import { getUser, isLoggedIn } from "../utils/auth"
 import { useStaticQuery, graphql } from "gatsby"
+import AboutUsButton from '../components/aboutus_button';
+
 const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, setColoredLogo, setFadeAbout, setFadeSocialGood, setHamburgerMenuIsOpen, hamburgerMenuIsOpen}) => {
     
     const data = useStaticQuery(graphql`
@@ -106,9 +108,10 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
     return (
         <div className={styles.navbarcontainer}>
             <div className={styles.navbar}>
+                {/* <AboutUsButton/> */}
                 <img className={styles.hamburger_menu} src={data.allFile.edges[0].node.publicURL}/>
                 {/* <Navitem name="Teams" section_id="section_teams" visibility={true}></Navitem> */}
-                <Navitem name="About" section_id="section_about" visibility={true}></Navitem>
+                <Navitem name="Info" section_id="section_about" visibility={true}></Navitem>
                 <Navitem name="FAQ" section_id="section_faq" visibility={true}></Navitem>
                 <Navitem name="Sponsors" section_id="section_sponsors" visibility={true}></Navitem>
                 {/* <Navitem setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} name="Log In" section_id="login" visibility={true}></Navitem> */}

@@ -200,26 +200,71 @@ a:hover {
   margin-bottom: 3%;
 }
 
-@media all and (min-width: 1024px) and (max-width: 1440px) {
+.back_button {
+  margin-left: 2.5vw;
+  margin-top: 5vh;
+  background: none;
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+.back_button:focus {
+  outline: none;
+}
+
+.back_text {
+  display: inline;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 24px;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
   .main_content {
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .about_stats_text_container {
     margin-bottom: 12%;
   }
   .image_container {
-    margin-top: -5%;
+    margin-top: -20%;
   }
   .image {
     width: 75%;
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1440px) {
   .main_content {
-    margin-top: 150px;
+    margin-top: 50px;
   }
   .about_header {
     margin-top: -50px;
+  }
+  .image_container {
+    margin-top: -5%;
+  }
+}
+
+@media (max-width: 425px) {
+  .image_container {
+    display: none !important; /*bruh moment*/
+  }
+
+  .about_header {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .about_text {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .about_stats_small {
+    margin-bottom: 50px;
+  }
+  .view_winner_button_container {
+    margin-bottom: 60px;
   }
 }
