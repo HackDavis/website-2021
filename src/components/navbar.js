@@ -63,6 +63,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                         {
                             // We are in stats or social good section
                             $(`.${styles.navitem} button`).addClass(styles.navbarcontainer_gradient)
+                            $(`.${styles.about_us}`).addClass(styles.navbarcontainer_gradient)
                             setColoredLogo(true);
                             setFadeAbout(true);
 
@@ -71,6 +72,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
                         else {
                             // We are past the stats or social good section
                             $(`.${styles.navitem} button`).removeClass(styles.navbarcontainer_gradient)
+                            $(`.${styles.about_us}`).removeClass(styles.navbarcontainer_gradient)
                             $(`.${styles.navitem} button.${styles.profile}`).removeClass(styles.navbarcontainer_gradient_profile);
                             setColoredLogo(false);
                         }
@@ -108,7 +110,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
     return (
         <div className={styles.navbarcontainer}>
             <div className={styles.navbar}>
-                {/* <AboutUsButton/> */}
+                <AboutUsButton/>
                 <img className={styles.hamburger_menu} src={data.allFile.edges[0].node.publicURL}/>
                 {/* <Navitem name="Teams" section_id="section_teams" visibility={true}></Navitem> */}
                 <Navitem name="Info" section_id="section_about" visibility={true}></Navitem>

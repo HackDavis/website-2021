@@ -1,130 +1,145 @@
-@font-face
-{
-    src: url("../../static/fonts/Proxima\ Nova\ Semibold.ttf");
-    font-family: 'Proxima Nova';
-    font-weight: 750;
+@font-face {
+  src: url("../../static/fonts/Proxima\ Nova\ Semibold.ttf");
+  font-family: "Proxima Nova";
+  font-weight: 750;
 }
 
-.navbar
-{
-    font-family: 'Proxima Nova';
-    position: relative;
+.navbar {
+  font-family: "Proxima Nova";
+  position: relative;
 }
 
-.navbarcontainer
-{
-    margin: 2vh;
-    font-size: 18px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 5;
-    background-color: none;
+.navbarcontainer {
+  margin: 2vh;
+  font-size: 18px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  background-color: none;
 }
 
-div.underline
-{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    bottom: -8px;
-    left: 50%;
-    width: 0%;
-    display: block;
-    border-bottom: 4px solid #12A8B1;
-    transition: 0.2s ease-in-out width;
+div.underline {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  bottom: -8px;
+  left: 50%;
+  width: 0%;
+  display: block;
+  border-bottom: 4px solid #12a8b1;
+  transition: 0.2s ease-in-out width;
 }
 
-div.underline.selected
-{
-    width: 85%;
+div.underline.selected {
+  width: 85%;
 }
 
-.navitem
-{
-    display: inline-block;
-    position: relative;
-    margin: 2vh;
-    margin-left: 1vh;
-    margin-right: 1vh;
-    text-align: center;
-    min-width: 100px;
-    width: fit-content;
+.navitem {
+  display: inline-block;
+  position: relative;
+  margin: 2vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  text-align: center;
+  min-width: 100px;
+  width: fit-content;
 }
 
-@media (max-width: 768px)
-{
-    .navitem
-    {
-        display: none;
-    }
+.about_us {
+  display: inline-block;
+  position: relative;
+  margin: 2vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  text-align: center;
+  min-width: 100px;
+  width: fit-content;
+  /* padding: 0; */
+  font-weight: 750;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  transition: 0.5s ease-in-out color, 0.2s ease-in-out transform;
 }
 
-@media(min-width:769px){
-    .hamburger_menu {
-        display:none;
-    }
-}
-.hamburger_menu{
-    margin-top: 20px;
-    margin-right: 10px;
-}
-.navbutton
-{
-    font-weight: 750;
-    position: relative;
-    width: 100%;
-    text-decoration: none;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    color: white;
-    padding: 0.25vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    transition: 0.5s ease-in-out color, 0.2s ease-in-out transform;
+.about_us:focus {
+  border: none;
+  outline: none;
 }
 
-.navbutton:focus
-{
-    outline: none;
-    border: none;
+.about_us:hover {
+  transform: scale(1.1, 1.1);
 }
 
-.profile, .profile:focus
-{
-    background: white;
-    border-radius: 2000px;
-    color: black;
-    text-align: right;
-    padding: 8px;
-    padding-left: 4px;
-    padding-right: 16px;
-    line-height: 30px;
-    transition: 0.5s ease-in-out background-color, 0.2s ease-in-out transform;
+@media (max-width: 768px) {
+  .navitem {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger_menu {
+    display: none;
+  }
+}
+.hamburger_menu {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.navbutton {
+  font-weight: 750;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.25vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  transition: 0.5s ease-in-out color, 0.2s ease-in-out transform;
+}
+
+.navbutton:focus {
+  outline: none;
+  border: none;
+}
+
+.profile,
+.profile:focus {
+  background: white;
+  border-radius: 2000px;
+  color: black;
+  text-align: right;
+  padding: 8px;
+  padding-left: 4px;
+  padding-right: 16px;
+  line-height: 30px;
+  transition: 0.5s ease-in-out background-color, 0.2s ease-in-out transform;
 }
 
 .circle {
-    height: 30px;
-    width: 30px;
-    float: left;
-    background-color: #bbb;
-    border-radius: 50%;
-    margin-right: 14px;
-    margin-left: 6px;
+  height: 30px;
+  width: 30px;
+  float: left;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin-right: 14px;
+  margin-left: 6px;
 }
 
-.navbutton:hover
-{
-    transform: scale(1.1, 1.1);
+.navbutton:hover {
+  transform: scale(1.1, 1.1);
 }
 
-.navbarcontainer_gradient
-{
-    color: #0B2638;
+.navbarcontainer_gradient {
+  color: #0b2638;
 }
 
-.navbarcontainer_gradient_profile
-{
-    color: white;
-    background-color: #0B2638;
+.navbarcontainer_gradient_profile {
+  color: white;
+  background-color: #0b2638;
 }

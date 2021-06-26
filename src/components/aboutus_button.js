@@ -5,8 +5,8 @@ import styles from "./css/navbar.module.css"
 
 export default function AboutUsButton() {
     return (
-        <div className={styles.navitem}>
+        <button className={styles.about_us}>
             About Us
-        </div>
+        </button>
     )
 }
