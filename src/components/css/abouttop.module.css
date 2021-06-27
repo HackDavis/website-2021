@@ -268,3 +268,15 @@ a:hover {
     margin-bottom: 60px;
   }
 }
+
+@media all and (min-width: 426px) and (max-width: 991px) {
+  .image_container {
+    display: none !important; /*bruh moment*/
+  }
+  .about_stats_small {
+    margin-bottom: 50px;
+  }
+  .view_winner_button_container {
+    margin-bottom: 60px;
+  }
+}

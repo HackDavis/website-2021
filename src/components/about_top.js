@@ -51,7 +51,7 @@ const AboutTopPage = ({setAboutIsOpen}) => {
                 <div className={styles.back_text}>Back</div>
             </button>
             <div className={`row no-gutters align-items-center ${styles.main_content}`}>
-                <div className={`${styles.statscontainer} col-11 offset-1 col-md-6 offset-md-1 col-lg-6 offset-lg-1 col-xl-5 offset-xl-1`}>
+                <div className={`${styles.statscontainer} col-11 offset-1 col-md-11 offset-md-1 col-lg-6 offset-lg-1 col-xl-5 offset-xl-1`}>
                     <div className = "row no-gutters">
                         <div className= "col-12">
                             <div className={`${styles.about_header}`}>
