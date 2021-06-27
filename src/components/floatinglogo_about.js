@@ -1,11 +1,7 @@
 import React from 'react';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import styles from "./css/floatinglogo.module.css"
+import styles from "./css/floatinglogo_about.module.css"
 
-function OnClickBehavior2()
-{
-    scrollTo('#about_top')
-}
 
 const FloatingLogoAbout= ({ coloredLogo }) => {
     
@@ -13,8 +9,8 @@ const FloatingLogoAbout= ({ coloredLogo }) => {
 
     return (
         <div>
-            <button className={`${styles.floatinglogo} ${logoColor}`} onClick={()=> OnClickBehavior2()}></button>
-        </div>
+            <a className={`${styles.floatinglogo} ${logoColor}`} href="/"></a>
+        </div> 
       );
 }
 

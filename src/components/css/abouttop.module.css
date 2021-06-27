@@ -228,24 +228,27 @@ a:hover {
   .about_stats_text_container {
     margin-bottom: 12%;
   }
-  .image_container {
+  /* .image_container {
     margin-top: -20%;
-  }
+  } */
   .image {
     width: 75%;
   }
+  /* .statscontainer {
+    padding-left: 20px;
+  } */
 }
 
 @media (min-width: 1440px) {
   .main_content {
     margin-top: 50px;
   }
-  .about_header {
+  /* .about_header {
     margin-top: -50px;
   }
   .image_container {
     margin-top: -5%;
-  }
+  } */
 }
 
 @media (max-width: 425px) {
