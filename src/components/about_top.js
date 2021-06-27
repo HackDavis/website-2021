@@ -34,11 +34,11 @@ const AboutTopPage = ({setAboutIsOpen}) => {
     }
 
     function RedirectToMain() {
-        setAboutIsOpen(false);
+        setAboutIsOpen(false)
     }
 
     const images = GetImageMap();
-    
+
     // Scroll to the top by default
     useEffect(()=>{
         window.scrollTo(0,0);

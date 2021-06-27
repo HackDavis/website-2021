@@ -25,5 +25,4 @@ div.about_container {
   background-color: white;
   overflow-y: hidden;
   z-index: 101;
-  animation: appear 0.3s ease-in-out;
 }
