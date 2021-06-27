@@ -4,7 +4,7 @@ import $ from 'jquery'
 import styles from "./css/abouttop.module.css"
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
-const AboutTopPage = () => {
+const AboutTopPage = ({setAboutIsOpen}) => {
     
     const data = useStaticQuery(graphql`
     {
@@ -33,11 +33,20 @@ const AboutTopPage = () => {
         return image_data;
     }
 
+    function RedirectToMain() {
+        setAboutIsOpen(false);
+    }
+
     const images = GetImageMap();
+    
+    // Scroll to the top by default
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, [])
 
     return (
         <div className = {`container-fluid p-0 ${styles.background_about}`} id="about_top">
-            <button className={`${styles.back_button}`}>
+            <button onClick={RedirectToMain} className={`${styles.back_button}`}>
                 <img src={images['backbutton']}></img>
                 <div className={styles.back_text}>Back</div>
             </button>

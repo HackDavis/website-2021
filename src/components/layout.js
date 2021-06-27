@@ -26,6 +26,7 @@ import TeamsSection from "./section_teams"
 import DirectorsSection from "./section_directors"
 import { ParallaxProvider } from 'react-scroll-parallax';
 import LoadingScreen from "./loadingscreen"
+import About from "./about";
 
 const Layout = ({ children }) => {
   
@@ -38,43 +39,48 @@ const Layout = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadProgress, setLoadProgress] = useState(false);
   const [fadeSocialGood, setFadeSocialGood] = useState(false);
+  const [aboutIsOpen, setAboutIsOpen] = useState(false);
 
   // Main page layout for all the different sections of the website
 
   return (
     <>
         {isLoading && <LoadingScreen loadProgress={loadProgress} isLoading={isLoading}></LoadingScreen>}
-        <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
-        <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
-        <div>
-          {/* <div className={`${styles.navbarGradient} ${onBottomPages && styles.bottomGradient}`}></div> */}
-          <FloatingLogo coloredLogo={coloredLogo}></FloatingLogo>
-          <NavBar hamburgerMenuIsOpen={hamburgerMenuIsOpen} setHamburgerMenuIsOpen={setHamburgerMenuIsOpen} setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} setOnBottomPages={setOnBottomPages} setColoredLogo={setColoredLogo} setFadeAbout={setFadeAbout} setFadeSocialGood={setFadeSocialGood}></NavBar>
-        </div>
-        <ParallaxProvider>
-            <Section id="section_landing">
-                <LandingSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></LandingSection>
-            </Section>
-            {/* <Section id="section_teams">
-                <TeamsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></TeamsSection>
-            </Section> */}
-            {/* <Section id="section_directors">
-                <DirectorsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></DirectorsSection>
-            </Section> */}
-            <Section id="section_about">
-                <StatsSection fadeAbout={fadeAbout}></StatsSection>
-            </Section>
-            <Section id="section_socialgood">
-                <SocialGoodSection fadeSocialGood={fadeSocialGood}></SocialGoodSection>
-            </Section>
-            <Section id= "section_faq">
-              <FAQSection></FAQSection>
-            </Section>
-            <Section id="section_sponsors">
-              <SponsorsSection></SponsorsSection>
-            </Section>
-        </ParallaxProvider>
-        <Footer></Footer>
+        <About aboutIsOpen={aboutIsOpen} setAboutIsOpen={setAboutIsOpen}/>
+          <LoginModal isOpen={loginModalIsOpen} setIsOpen={setLoginModalIsOpen}></LoginModal>
+          <ProfileModal isOpen={profileModalIsOpen} setIsOpen={setProfileModalIsOpen}></ProfileModal>
+          <div>
+            {/* <div className={`${styles.navbarGradient} ${onBottomPages && styles.bottomGradient}`}></div> */}
+            <FloatingLogo coloredLogo={coloredLogo}></FloatingLogo>
+            <NavBar hamburgerMenuIsOpen={hamburgerMenuIsOpen} setHamburgerMenuIsOpen={setHamburgerMenuIsOpen} setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} setOnBottomPages={setOnBottomPages} setColoredLogo={setColoredLogo} setFadeAbout={setFadeAbout} setFadeSocialGood={setFadeSocialGood} setAboutIsOpen={setAboutIsOpen}></NavBar>
+          </div>
+          {/* <ParallaxProvider> */}
+              <Section id="section_landing">
+                  <LandingSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></LandingSection>
+              </Section>
+              {/* <Section id="section_teams">
+                  <TeamsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></TeamsSection>
+              </Section> */}
+              {/* <Section id="section_directors">
+                  <DirectorsSection isLoading={isLoading} setIsLoading={setIsLoading} setLoadProgress={setLoadProgress}></DirectorsSection>
+              </Section> */}
+              <Section id="section_about">
+                  <StatsSection fadeAbout={fadeAbout}></StatsSection>
+              </Section>
+              <Section id="section_socialgood">
+                  <SocialGoodSection fadeSocialGood={fadeSocialGood}></SocialGoodSection>
+              </Section>
+              {!aboutIsOpen && <div>
+                <Section id= "section_faq">
+                  <FAQSection></FAQSection>
+                </Section>
+                <Section id="section_sponsors">
+                  <SponsorsSection></SponsorsSection>
+                </Section>
+            {/* </ParallaxProvider> */}
+                <Footer></Footer>
+              </div>
+            }
     </>
   )
 }

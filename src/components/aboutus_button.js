@@ -3,9 +3,14 @@
 import React from 'react'
 import styles from "./css/navbar.module.css"
 
-export default function AboutUsButton() {
+export default function AboutUsButton({setAboutIsOpen}) {
+    
+    function RedirectToAbout() {
+        setAboutIsOpen(true);
+    }
+    
     return (
-        <button className={styles.about_us}>
+        <button onClick={RedirectToAbout} className={styles.about_us}>
             About Us
         </button>
     )

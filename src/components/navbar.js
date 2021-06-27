@@ -6,7 +6,7 @@ import { getUser, isLoggedIn } from "../utils/auth"
 import { useStaticQuery, graphql } from "gatsby"
 import AboutUsButton from '../components/aboutus_button';
 
-const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, setColoredLogo, setFadeAbout, setFadeSocialGood, setHamburgerMenuIsOpen, hamburgerMenuIsOpen}) => {
+const NavBar = ({ setProfileModalIsOpen, setAboutIsOpen, setLoginModalIsOpen, setOnBottomPages, setColoredLogo, setFadeAbout, setFadeSocialGood, setHamburgerMenuIsOpen, hamburgerMenuIsOpen}) => {
     
     const data = useStaticQuery(graphql`
     {
@@ -110,7 +110,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
     return (
         <div className={styles.navbarcontainer}>
             <div className={styles.navbar}>
-                <AboutUsButton/>
+                <AboutUsButton setAboutIsOpen={setAboutIsOpen} />
                 <img className={styles.hamburger_menu} src={data.allFile.edges[0].node.publicURL}/>
                 {/* <Navitem name="Teams" section_id="section_teams" visibility={true}></Navitem> */}
                 <Navitem name="Info" section_id="section_about" visibility={true}></Navitem>
