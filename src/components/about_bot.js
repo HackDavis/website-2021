@@ -46,6 +46,7 @@ const AboutBotPage = () => {
         "ishani": {name:"Ishani", description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/ishani-pandya/`},
         "nick": {name:"Nick", description: `Technical`, linkedin: `https://www.linkedin.com/in/nickjsulist/`},
         "alex": {name:"Alex",description: `Technical`, linkedin: `https://www.linkedin.com/in/alelong/`},
+        "justin": {name:"Justin", description: `Technical`, linkedin: `https://www.linkedin.com/in/justin-godfrey-rusit-5a2327196/`},
         "sivani": {name:"Sivani", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
         "shachi": {name:"Shachi", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
         "barno": {name:"Barno", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
