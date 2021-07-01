@@ -41,15 +41,21 @@ const AboutBotPage = () => {
         "vivek": {name:"Vivek", description: `Sponsorship Lead`, linkedin: `https://www.linkedin.com/in/vivekshome/`},
         "cheryl": {name:"Cheryl", description: `Design Lead`, linkedin: `https://www.linkedin.com/in/cherylcai/`},
         "stephenie": {name:"Stephenie", description: `Finance Lead`, linkedin: `https://www.linkedin.com/in/stepheniecho/`},
-        "joyce": {name:"Joyce", description: `External Lead`, linkedin: `https://www.linkedin.com/in/joyce-lu-b8b96b197/`},
+        "joyce": {name:"Joyce", description: `External Lead`, linkedin: `https://www.linkedin.com/in/joycelu17/`},
         "abhishek": {name:"Abhishek", description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/abhishekhandigol/`},
         "ishani": {name:"Ishani", description: `Operations Co-Lead`, linkedin: `https://www.linkedin.com/in/ishani-pandya/`},
         "nick": {name:"Nick", description: `Technical`, linkedin: `https://www.linkedin.com/in/nickjsulist/`},
         "alex": {name:"Alex",description: `Technical`, linkedin: `https://www.linkedin.com/in/alelong/`},
         "justin": {name:"Justin", description: `Technical`, linkedin: `https://www.linkedin.com/in/justin-godfrey-rusit-5a2327196/`},
+        "trishna": {name:"Trishna", description: `Technical`, linkedin: `https://www.linkedin.com/in/trishnasharma/`},
         "sivani": {name:"Sivani", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
         "shachi": {name:"Shachi", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
         "barno": {name:"Barno", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
+        "rachel": {name:"Rachel", description: `Design`, linkedin: `https://www.linkedin.com/in/rachelyapp/`},
+        "fajar": {name:"Fajar", description: `Design`, linkedin: `https://www.linkedin.com/in/fajar-akhter/`},
+        "alyson": {name:"Alyson", description: `Finance`, linkedin: `https://www.linkedin.com/in/alyson-lee-5214501b4/`},
+        "shounak": {name:"Shounak", description: `External`, linkedin: `https://www.linkedin.com/in/shounakranabhor`},
+        "ashwin": {name:"Ashwin", description: `Operations`, linkedin: `https://www.linkedin.com/in/ashwin-ramakrishna-5713a51b7/`},
         }
     function adjustSizing(index) {
         if (index == Object.keys(directorInfo).length - 1) {

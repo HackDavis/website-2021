@@ -123,7 +123,7 @@ const AboutTopPage = () => {
                     {/* <div className = "row no-gutters"> </div> */}
                     <div className = "row no-gutters">
                         <div className="col-12 d-flex justify-content-end align-items-start">
-                            <img className={ `${styles.image}`} src={images['bunnyfloat 1']}></img>
+                            <img className={ `${styles.image}`} src={images['bunnyfloat 2']}></img>
                         </div>
                     </div>
                 </div>
