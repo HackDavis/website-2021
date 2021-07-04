@@ -256,6 +256,10 @@ a:hover {
     display: none !important; /*bruh moment*/
   }
 
+  .image {
+    display: none;
+  }
+
   .about_header {
     font-size: 48px;
     margin-bottom: 20px;
@@ -276,6 +280,9 @@ a:hover {
 @media all and (min-width: 426px) and (max-width: 991px) {
   .image_container {
     display: none !important; /*bruh moment*/
+  }
+  .image {
+    display: none;
   }
   .about_stats_small {
     margin-bottom: 50px;
