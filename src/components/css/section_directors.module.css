@@ -48,3 +48,9 @@
 .margin {
   margin-bottom: 19rem;
 }
+
+@media (max-width: 425px) {
+  .headshot{
+    width: 100%;
+  }
+}

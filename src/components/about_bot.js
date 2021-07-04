@@ -51,11 +51,17 @@ const AboutBotPage = () => {
         "sivani": {name:"Sivani", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sivani-voruganti/`},
         "shachi": {name:"Shachi", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/shachichampaneri/`},
         "barno": {name:"Barno", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/sabarno/`},
+        "eva": {name:"Eva", description: `Sponsorship`, linkedin: `http://linkedin.com/in/eva-y-chen`},
+        "nicole": {name:"Nicole", description: `Sponsorship`, linkedin: `https://www.linkedin.com/in/nicole-laz`},
         "rachel": {name:"Rachel", description: `Design`, linkedin: `https://www.linkedin.com/in/rachelyapp/`},
         "fajar": {name:"Fajar", description: `Design`, linkedin: `https://www.linkedin.com/in/fajar-akhter/`},
         "alyson": {name:"Alyson", description: `Finance`, linkedin: `https://www.linkedin.com/in/alyson-lee-5214501b4/`},
+        "jonny": {name:"Jonny", description: `Finance`, linkedin: `http://www.linkedin.com/in/jonny-shen`},
         "shounak": {name:"Shounak", description: `External`, linkedin: `https://www.linkedin.com/in/shounakranabhor`},
+        "jennifer": {name:"Jennifer", description: `Marketing`, linkedin: `http://www.linkedin.com/in/jenniferfrey02`},
         "ashwin": {name:"Ashwin", description: `Operations`, linkedin: `https://www.linkedin.com/in/ashwin-ramakrishna-5713a51b7/`},
+        "eugenia": {name:"Eugenia", description: `Operations`, linkedin: `https://www.linkedin.com/in/eugenia-zhang1`},
+        "sriya": {name:"Sriya", description: `Operations`, linkedin: `https://www.linkedin.com/in/saisriyamudigonda/`},
         }
     function adjustSizing(index) {
         if (index == Object.keys(directorInfo).length - 1) {
@@ -73,7 +79,7 @@ const AboutBotPage = () => {
                         <Fade>
                             <div className={styles.headerText}>Directors</div>
                                 <div className={styles.description}>
-                                    a blurb about the fact that we're all students trying to work for a common goal
+                                    HackDavis is built by students, for students. Each year, we recruit over 30 students from UC Davis to pour hours into ensuring that we can host the best possible experience for hackers around the country.
                                 </div>
                                 <div className={`row no-gutters`}>
                                     {Object.keys(directorInfo).map((key, index) => {

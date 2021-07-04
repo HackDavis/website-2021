@@ -51,7 +51,7 @@ const AboutTopPage = () => {
                         </div>
                     </div>
                     <div className = "row no-gutters">
-                        <div className= {`col-12 col-md-11 col-lg-12`}> {/* note: need to tweak paragraph size to be more accurate to Figma*/}
+                        <div className= {`col-11 col-md-11 col-lg-12`}> {/* note: need to tweak paragraph size to be more accurate to Figma*/}
                             <div className={`${styles.about_text}`}>
                             HackDavis is UC Davis’ 36-hour collegiate hackathon dedicated to empowering student hackers to collaborate 
                             and build impactful projects that make the world a better place. HackDavis 2021 featured 
