@@ -80,7 +80,6 @@ const AboutTopPage = () => {
                                 </div>
                                 <div className = {styles.about_stats_small}>
                                     <p>attendees</p>
-                                    <br></br>
                                 </div>
                             </div>
                         </div>
@@ -113,7 +112,7 @@ const AboutTopPage = () => {
                                     37%
                                 </div>
                                 <div className = {styles.about_stats_small}>
-                                    female or nonbinary
+                                    female/nonbinary
                                 </div>
                             </div>
                         </div>

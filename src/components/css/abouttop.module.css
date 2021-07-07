@@ -271,6 +271,7 @@ a:hover {
   }
   .about_stats_small {
     margin-bottom: 50px;
+    line-height: 20px;
   }
   .view_winner_button_container {
     margin-bottom: 60px;
