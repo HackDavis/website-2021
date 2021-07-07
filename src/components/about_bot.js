@@ -76,7 +76,6 @@ const AboutBotPage = () => {
             <div className="container-fluid p-0">
                 <div className={`row no-gutters ${styles.background}`}>
                     <div className={'col-10 col-md-8 offset-1 offset-md-2'}>
-                        <Fade>
                             <div className={styles.headerText}>Directors</div>
                                 <div className={styles.description}>
                                     HackDavis is built by students, for students. Each year, we recruit over 30 students from UC Davis to pour hours into ensuring that we can host the best possible experience for hackers around the country.
@@ -86,7 +85,6 @@ const AboutBotPage = () => {
                                         return <DirectorBlurb sizing={adjustSizing(index)}directorImage={images[key]} directorName={directorInfo[key].name} directorDesc={directorInfo[key].description} linkedin={directorInfo[key].linkedin}></DirectorBlurb>;
                                     })}
                                 </div>
-                        </Fade>
                     </div>
                 </div>
             </div>
