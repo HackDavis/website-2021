@@ -1,274 +1,254 @@
-@font-face
-{
-    src: url("../../static/fonts/ProximaNova-Regular.otf");
-    font-family: 'Proxima Nova';
-    font-weight: normal;
+@font-face {
+  src: url("../../static/fonts/ProximaNova-Regular.otf");
+  font-family: "Proxima Nova";
+  font-weight: normal;
 }
 
-@font-face
-{
-    src: url("../../static/fonts/ProximaNova-Bold.otf");
-    font-family: 'Proxima Nova';
-    font-weight: bold;
+@font-face {
+  src: url("../../static/fonts/ProximaNova-Bold.otf");
+  font-family: "Proxima Nova";
+  font-weight: bold;
 }
 
-@font-face
-{
-    src: url("../../static/fonts/Proxima\ Nova\ Extrabold.otf");
-    font-family: 'Proxima Nova';
-    font-weight: 900;
-
+@font-face {
+  src: url("../../static/fonts/Proxima\ Nova\ Extrabold.otf");
+  font-family: "Proxima Nova";
+  font-weight: 900;
 }
 
 /* Condensed bold font for "VIEW WINNERS"  */
-@font-face
-{
-    src: url("../../static/fonts/Proxima Nova Alt Condensed Bold.otf");
-    font-family: 'Proxima Nova';
-    font-weight: 800;
+@font-face {
+  src: url("../../static/fonts/Proxima Nova Alt Condensed Bold.otf");
+  font-family: "Proxima Nova";
+  font-weight: 800;
 }
 
-@font-face
-{
-    src: url("../../static/fonts/SourceCodePro-Medium.ttf");
-    font-family: 'Source Code Pro';
-    font-weight: normal;
+@font-face {
+  src: url("../../static/fonts/SourceCodePro-Medium.ttf");
+  font-family: "Source Code Pro";
+  font-weight: normal;
 }
 
-@font-face
-{
-    src: url("../../static/fonts/Retrograde-Regular.otf");
-    font-family: 'Source Code Pro';
-    font-weight: normal;
+@font-face {
+  src: url("../../static/fonts/Retrograde-Regular.otf");
+  font-family: "Source Code Pro";
+  font-weight: normal;
 }
 
-div.background
-{
-    position: relative;
-    height: 100vh;
-    padding: 0;
+div.background {
+  position: relative;
+  height: 100vh;
+  padding: 0;
 }
 
-div.landingContainer 
-{
-    padding: 0;
-    text-align: center;
-    color:black;
+div.landingContainer {
+  padding: 0;
+  text-align: center;
+  color: black;
 }
 
 .block {
-    display: inline-block;
-    width: 500px;
-    height: 120px;
-    max-width: 75vw;
-    background: rgba(18, 168, 177, 0.25);
-    backdrop-filter: blur(30px);
-    border-radius: 20px;
-    /* margin-bottom: 20px; */
+  display: inline-block;
+  width: 500px;
+  height: 120px;
+  max-width: 75vw;
+  background: rgba(18, 168, 177, 0.25);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  /* margin-bottom: 20px; */
 }
 
-
-div.title{
-    font-family: 'Proxima Nova';
-    font-size: 96px;
-    font-weight: 900;
-    color: #FFFFFF;
-    padding:0;
+div.title {
+  font-family: "Proxima Nova";
+  font-size: 96px;
+  font-weight: 900;
+  color: #ffffff;
+  padding: 0;
 }
 div.thankyou {
-    font-size: 24px;
-    margin-top: 28px;
-    font-weight: normal;
+  font-size: 24px;
+  margin-top: 28px;
+  font-weight: normal;
 }
 
 div.keepaneye {
-    margin-top: 12px;
-    font-size: 24px;
-    font-weight: 700;
+  margin-top: 12px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
-.typedtext
-{
-    font-family: 'Retrograde';
-    font-size: 24px;
-    color: #FFFFFF;
-    display: inline-block;
-    
+.typedtext {
+  font-family: "Retrograde";
+  font-size: 24px;
+  color: #ffffff;
+  display: inline-block;
 }
 
-.typedcontainer
-{
-    height: 24px;
-    margin-top: 16px;
-    font-size: 24px;
-    margin-bottom: 32px;
+.typedcontainer {
+  height: 24px;
+  margin-top: 16px;
+  font-size: 24px;
+  margin-bottom: 32px;
 }
 
-@media (max-width: 768px)
-{
-    div.title
-    {
-        font-size: 60px;
-    }
-    
-    .typedtext, .typedcontainer
-    {
-        font-size: 20px;
-    }
+@media (max-width: 768px) {
+  div.title {
+    font-size: 60px;
+  }
 
-    .typedcontainer
-    {
-        height: 20px;
-    }
+  .typedtext,
+  .typedcontainer {
+    font-size: 20px;
+  }
 
-    /* .sponsorButton
+  .typedcontainer {
+    height: 20px;
+  }
+
+  /* .sponsorButton
     {
         display: none;
     } */
-
 }
 
 div.sponsorImage {
-    margin-top: 1rem;
-    position: relative;
-    height: 1rem;
-    background-color: gray;
-    visibility: hidden;
+  margin-top: 1rem;
+  position: relative;
+  height: 1rem;
+  background-color: gray;
+  visibility: hidden;
 }
 
-.buttoncontainer > button
-{
-    margin: 1rem;
-    margin-top: 2rem;
-    padding: 14px;
-    height: fit-content;
-    font-family: Proxima Nova;
-    font-size: 16px;
-    letter-spacing: 1px;
-    border-radius: 50px;
-    border: 0px;
-    font-weight: bold;
-    user-select: none;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-    outline: none;
+.buttoncontainer > button {
+  margin: 1rem;
+  margin-top: 2rem;
+  padding: 14px;
+  height: fit-content;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  border: 0px;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  outline: none;
 }
 
 .buttoncontainer button:hover {
-    transform: scale(1.1);
-    opacity: 0.9;
+  transform: scale(1.1);
+  opacity: 0.9;
 }
 
 .submitButton {
-    background-color: #FFFFFF;
-    color: #12A8B1;
-    width: 220px;
-    padding: 14px;
+  background-color: #ffffff;
+  color: #12a8b1;
+  width: 220px;
+  padding: 14px;
 }
 
 .helpButton {
-    background-color: #12A8B1;
-    color: white;
-    width: 125px;
-    padding: 14px;
+  background-color: #12a8b1;
+  color: white;
+  width: 125px;
+  padding: 14px;
 }
 
 .applyButton {
-    width: 260px;
-    background-color: #FFFFFF;
-    color: #12A8B1;
+  width: 260px;
+  background-color: #ffffff;
+  color: #12a8b1;
 }
 
 .sponsorButton {
-    width: 188px;
-    background-color: #12A8B1;
-    color: white;
+  width: 168px;
+  background-color: #12a8b1;
+  color: white;
 }
 
-.start_button_container
-{
-    text-align: center;
-    font-family: 'Retrograde';
-    color: white;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    margin-bottom: 4px;
-    cursor: pointer;
+.aboutusButton {
+  width: 128px;
+  background-color: white;
+  color: #12a8b1;
 }
 
-.start_button_container:hover
-{
-    opacity: 0.75;
+.start_button_container {
+  text-align: center;
+  font-family: "Retrograde";
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 4px;
+  cursor: pointer;
 }
 
-.start_button_text
-{
-    font-size: 24px;
-    transform: translateY(10px);
+.start_button_container:hover {
+  opacity: 0.75;
 }
 
-.start_button_button
-{
-    animation: start_button 2s ease-in-out infinite;
+.start_button_text {
+  font-size: 24px;
+  transform: translateY(10px);
 }
 
-@keyframes start_button
-{
-    0% {transform: translateY(0);}
-    50% {transform: translateY(5px);}
-    100% {transform: translateY(0);}
+.start_button_button {
+  animation: start_button 2s ease-in-out infinite;
 }
 
-.trust_badge
-{
-    display:block;
-    max-width:100px;
-    min-width:60px;
-    position:fixed;
-    left:140px;
-    top:0;
-    width:10%;
-    z-index:10000;
+@keyframes start_button {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-@media (max-width: 768px)
-{
-    .trust_badge
-    {
-        left: 40px;
-    }
-
-    .start_button_container
-    {
-        display: none;
-    }
-
-    .buttoncontainer 
-    {
-        margin-top: 0.5rem; 
-    }
-
-    .keepaneye 
-    {
-        display: none;
-    }
-
-    .sponsorButton 
-    {
-        display: none;
-    }
+.trust_badge {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  left: 140px;
+  top: 0;
+  width: 10%;
+  z-index: 10000;
 }
 
-.icon
-{
-    font-size: 20px;
-    margin-right: 10px;
-    transform: translateY(2px);
+@media (max-width: 768px) {
+  .trust_badge {
+    left: 40px;
+  }
+
+  .start_button_container {
+    display: none;
+  }
+
+  .buttoncontainer {
+    margin-top: 0.5rem;
+  }
+
+  .keepaneye {
+    display: none;
+  }
+
+  .sponsorButton {
+    display: none;
+  }
 }
 
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+  transform: translateY(2px);
+}
 
 .counter_container {
-    padding-top: 32px;
+  padding-top: 32px;
 }

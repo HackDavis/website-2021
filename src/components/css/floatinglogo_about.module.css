@@ -1,6 +1,6 @@
 .floatinglogo,
 .floatinglogo:focus {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   margin: 40px;
@@ -23,6 +23,15 @@
 @media (max-width: 768px) {
   .floatinglogo,
   .floatinglogo:focus {
-    display: none;
+    margin-left: 20px;
+    margin-top: 20px;
   }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  /* .floatinglogo,
+  .floatinglogo:focus {
+    margin-left: 20px;
+    margin-top: 30px;
+  } */
 }

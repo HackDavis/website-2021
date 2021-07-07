@@ -19,7 +19,7 @@ const DirectorBlurb = (props) => {
 
 	return (
 		<Fade>
-			<div className={'col-12 col-md-3 membercontainer'} style={{marginBottom: props.sizing}}>
+			<div className={'col-12 col-md-6 col-lg-3 membercontainer'} style={{marginBottom: props.sizing}}>
 				<div className={styles.fadeIn}>
 					<img src={props.directorImage} className={styles.headshot} onClick={handleClick}/>
 					<h6 className={styles.title}><br /> {props.directorName}<br /> {checkPresident(props.directorName) ? 

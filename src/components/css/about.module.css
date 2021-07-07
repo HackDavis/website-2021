@@ -1,0 +1,28 @@
+@keyframes appear {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+div.about_container {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Proxima Nova";
+  font-weight: 1000;
+  overflow-x: hidden;
+  background-color: white;
+  overflow-y: hidden;
+  z-index: 101;
+}

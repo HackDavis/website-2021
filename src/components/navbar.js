@@ -119,7 +119,7 @@ const NavBar = ({ setProfileModalIsOpen, setLoginModalIsOpen, setOnBottomPages, 
             <div className={styles.navbar}>
                 <img className={styles.hamburger_menu} src={data.allFile.edges[0].node.publicURL}/>
                 {/* <Navitem name="Teams" section_id="section_teams" visibility={true}></Navitem> */}
-                <Navitem name="About" section_id="section_about" visibility={true}></Navitem>
+                <Navitem name="Info" section_id="section_about" visibility={true}></Navitem>
                 <Navitem name="FAQ" section_id="section_faq" visibility={true}></Navitem>
                 <Navitem name="Sponsors" section_id="section_sponsors" visibility={true}></Navitem>
                 {/* <Navitem setProfileModalIsOpen={setProfileModalIsOpen} setLoginModalIsOpen={setLoginModalIsOpen} name="Log In" section_id="login" visibility={true}></Navitem> */}
