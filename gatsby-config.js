@@ -2,7 +2,7 @@ require("dotenv").config({ path: "./.env" })
 
 module.exports = {
   siteMetadata: {
-    title: `HackDavis 2021 | January 16-17`,
+    title: `HackDavis 2022 | April 2022`,
     domain: `https://hackdavis.io`,
     image: `/src/images/hd_logo.png`,
     author: `HackDavis`,
