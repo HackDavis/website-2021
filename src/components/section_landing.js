@@ -95,7 +95,7 @@ const LandingSection = (props) => {
                             </div>
                         </div> */}
                         <div className={styles.keepaneye}>
-                            Keep an eye out for news about HackDavis 2022!
+                            HackDavis 2022 will be held in mid-April! Keep an eye out for applications in February
                         </div>
                     </div>
                     <div className={styles.buttoncontainer}>
