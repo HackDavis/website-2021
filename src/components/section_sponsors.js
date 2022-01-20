@@ -49,6 +49,11 @@ const SponsorsSection = () => {
                                 </a>
                             </div>
                             <div className="col-10 col-lg-4 offset-1 offset-lg-4" align="center">
+                                <a href="https://mtx.gg/">
+                                    <img className={styles.imageStyle} src={images["matrix"]} />
+                                </a>
+                            </div>
+                            <div className="col-10 col-lg-4 offset-1 offset-lg-4" align="center">
                                 <a href="https://lettersandscience.ucdavis.edu/">
                                     <img className={styles.imageStyle} src={images["ucdl&s"]} />
                                 </a>
