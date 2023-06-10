@@ -9,7 +9,7 @@
     "bootstrap-icons": "^1.1.0",
     "dotenv-webpack": "^1.7.0",
     "firebase": "^7.23.0",
-    "gatsby": "^2.24.85",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-anchor-links": "^1.1.1",
     "gatsby-plugin-create-client-paths": "^2.3.6",
